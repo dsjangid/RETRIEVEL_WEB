@@ -2,15 +2,16 @@
 
 /* Enhanced Glass, Blur & Surface Refinements */
 .glass-card, .touch-card {
-  background: var(--bg-surface) !important;
-  border: 1px solid var(--border-subtle) !important;
-  box-shadow: var(--inner-glow), 0 10px 30px -10px rgba(0, 0, 0, 0.7) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  box-shadow: none !important;
 }
 
 .glass-card:hover, .touch-card:hover {
   border-color: var(--border-highlight) !important;
-  background: var(--bg-card-hover) !important;
-  transform: translateY(-2px) !important;
+  background: transparent !important;
+  transform: none !important;
 }
 
 .touch-btn-primary, .grid-button-primary {
