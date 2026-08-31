@@ -273,22 +273,31 @@ body {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
+/* Buttons & Touch Optimization for iOS Safari */
+button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-item {
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Full-Screen Native Mobile Navigation Modal (Mobile Only) */
 .mobile-nav-overlay {
   position: fixed;
   inset: 0;
-  z-index: 100;
-  background: rgba(5, 6, 8, 0.95);
+  z-index: 9999;
+  background: rgba(5, 6, 8, 0.96);
   backdrop-filter: blur(36px);
   -webkit-backdrop-filter: blur(36px);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: opacity 0.3s var(--ease-apple), transform 0.3s var(--ease-apple);
+  transition: opacity 0.25s var(--ease-apple), transform 0.25s var(--ease-apple);
 }
 
 @media (min-width: 768px) {
@@ -300,9 +309,10 @@ body {
 }
 
 .mobile-nav-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 
 .mobile-nav-item {
@@ -312,11 +322,12 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #d4d4d8;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: color 0.15s ease, transform 0.15s var(--ease-apple);
+  touch-action: manipulation;
 }
 
 .mobile-nav-item:active,

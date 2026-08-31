@@ -2,42 +2,31 @@
  * RETRIEVAL STUDIO — Fail-Proof Mobile Navigation & Atmospheric Engine
  */
 
-// Global Navigation Controller (Works directly via inline onclick and event listeners)
-window.openMobileNav = function() {
+// Global Navigation Controller (Works directly via inline onclick and touch listeners)
+window.openMobileNav = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
   const overlay = document.getElementById('mobile-nav-overlay');
   if (!overlay) return;
   overlay.classList.add('open');
-  overlay.style.display = 'flex';
-  overlay.style.opacity = '1';
-  overlay.style.pointerEvents = 'auto';
-  overlay.style.transform = 'translateY(0)';
   document.body.style.overflow = 'hidden';
-  document.body.style.touchAction = 'none';
 };
 
-window.closeMobileNav = function() {
+window.closeMobileNav = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
   const overlay = document.getElementById('mobile-nav-overlay');
   if (!overlay) return;
   overlay.classList.remove('open');
-  overlay.style.opacity = '0';
-  overlay.style.pointerEvents = 'none';
-  overlay.style.transform = 'translateY(-8px)';
-  setTimeout(() => {
-    if (!overlay.classList.contains('open')) {
-      overlay.style.display = 'none';
-    }
-  }, 300);
   document.body.style.overflow = '';
-  document.body.style.touchAction = '';
 };
 
-window.toggleMobileNav = function() {
+window.toggleMobileNav = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
   const overlay = document.getElementById('mobile-nav-overlay');
   if (!overlay) return;
   if (overlay.classList.contains('open')) {
-    window.closeMobileNav();
+    window.closeMobileNav(e);
   } else {
-    window.openMobileNav();
+    window.openMobileNav(e);
   }
 };
 
