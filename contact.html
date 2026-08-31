@@ -7,14 +7,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   
-  <title>Start a Project — RETRIEVAL</title>
+  <title>Start Your Case — RETRIEVAL</title>
   
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
-  
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -50,7 +47,7 @@
 </head>
 <body class="bg-obsidian text-white min-h-[100dvh] relative antialiased selection:bg-white/20 selection:text-white">
 
-  <!-- Atmospheric Background Layer System (Floating Mesh Orbs, Neural Canvas, Spotlight, Dot Matrix & Grain) -->
+  <!-- Background Atmosphere -->
   <div class="bg-scene">
     <div class="orb orb-primary"></div>
     <div class="orb orb-cyan"></div>
@@ -72,22 +69,22 @@
         </div>
         <div class="flex flex-col justify-center">
           <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">CONTACT</span>
+          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">PROTECTION &amp; RECOVERY</span>
         </div>
       </a>
 
-      <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
-        <a href="index.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
-        <a href="services.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
-        <a href="contact.html" class="px-3.5 py-1 text-xs font-sans text-white bg-white/10 rounded-full transition-colors">Contact</a>
+        <a href="services.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Services</a>
+        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">How It Works</a>
+        <a href="index.html#why-us" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Why Us</a>
+        <a href="index.html#reviews" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Reviews</a>
+        <a href="index.html#faq" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">FAQ</a>
+        <a href="contact.html" class="px-3.5 py-1 text-xs font-sans text-white transition-colors">Contact</a>
       </div>
 
-      <!-- Menu Button -->
       <div class="flex items-center gap-3">
-        <a href="contact.html" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
-          <span>Start Project</span>
+        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
+          <span>WhatsApp Us</span>
         </a>
         <button id="mobile-menu-btn" onclick="window.openMobileNav(event)" class="md:hidden w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
           <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,10 +96,9 @@
     </div>
   </header>
 
-  <!-- Full-Screen Native iPhone Navigation Overlay (Hidden on Desktop) -->
+  <!-- Full-Screen Native iPhone Navigation Overlay -->
   <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-6 safe-top safe-bottom">
     
-    <!-- Top Bar inside Modal: Close Left, Logo Center -->
     <div class="h-16 flex items-center justify-between relative border-b border-white/10 shrink-0">
       <button id="mobile-nav-close" onclick="window.closeMobileNav(event)" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Close Navigation Menu">
         <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,36 +115,39 @@
       <div class="w-10 h-10"></div>
     </div>
 
-    <!-- Navigation Links & Inline CTA (Top-aligned stack as in reference) -->
     <div class="flex flex-col pt-8 pb-8 flex-grow justify-start space-y-6">
       <nav class="flex flex-col space-y-3">
         <a href="index.html" class="mobile-nav-item">
           <span>OVERVIEW</span>
         </a>
-        <a href="index.html#work" class="mobile-nav-item">
-          <span>SELECTED WORK</span>
-        </a>
         <a href="services.html" class="mobile-nav-item">
-          <span>CAPABILITIES</span>
+          <span>OUR SERVICES</span>
         </a>
         <a href="how-it-works.html" class="mobile-nav-item">
-          <span>METHODOLOGY</span>
+          <span>HOW IT WORKS</span>
+        </a>
+        <a href="index.html#why-us" class="mobile-nav-item">
+          <span>WHY CLIENTS TRUST US</span>
+        </a>
+        <a href="index.html#reviews" class="mobile-nav-item">
+          <span>CLIENT REVIEWS</span>
+        </a>
+        <a href="index.html#faq" class="mobile-nav-item">
+          <span>FAQ</span>
         </a>
         <a href="contact.html" class="mobile-nav-item active">
           <span>CONTACT</span>
         </a>
       </nav>
 
-      <!-- Prominent Action CTA Pill -->
       <div class="pt-2">
-        <a href="contact.html" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
-          <span>START AN ENGAGEMENT</span>
-          <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
+          <span>WHATSAPP US DIRECTLY</span>
+          <span class="material-symbols-outlined text-base ml-2">chat</span>
         </a>
       </div>
     </div>
 
-    <!-- Bottom Studio Footer Info in Modal -->
     <div class="py-4 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-zinc-500 shrink-0">
       <span>RETRIEVAL STUDIO</span>
       <span class="text-zinc-400">© 2026</span>
@@ -159,117 +158,91 @@
   <!-- Main Content Area -->
   <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto">
     
-    <div class="space-y-12">
+    <div class="space-y-10">
       
       <!-- Top Title Block -->
       <div>
         <h1 class="font-display font-extrabold text-[2.5rem] leading-[1.08] sm:text-5xl tracking-tight text-white mb-4">
-          Let's build something exceptional.
+          Start Your Case
         </h1>
         <p class="text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
-          Tell us about your systems architecture challenge, scale expectations, and timeline. We respond within one business day.
+          Tell us what you need — recovery, removal, lookup, reputation repair, or WhatsApp API. We will get back to you quickly.
         </p>
       </div>
 
-      <!-- Studio Information Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <!-- Contact Case Form Card -->
+      <div class="touch-card p-6 sm:p-10 border border-white/10">
         
-        <div class="touch-card p-6 border border-white/10">
-          <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-3 pb-2 border-b border-white/5">Studio Hubs</div>
-          <div class="space-y-2 text-xs">
-            <div class="flex justify-between items-center text-zinc-300">
-              <span>San Francisco (HQ)</span>
-              <span class="text-zinc-500 font-mono">PST</span>
-            </div>
-            <div class="flex justify-between items-center text-zinc-300">
-              <span>New York City</span>
-              <span class="text-zinc-500 font-mono">EST</span>
-            </div>
-            <div class="flex justify-between items-center text-zinc-300">
-              <span>London (Research)</span>
-              <span class="text-zinc-500 font-mono">GMT</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="touch-card p-6 border border-white/10">
-          <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-3 pb-2 border-b border-white/5">Direct Channels</div>
-          <div class="space-y-2 text-xs">
-            <div class="flex justify-between items-center">
-              <span class="text-zinc-400">Engagements:</span>
-              <a href="mailto:hello@retrieval.internal" class="text-white font-mono hover:underline">hello@retrieval.internal</a>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-zinc-400">Confidentiality:</span>
-              <span class="text-zinc-300 font-mono">Standard NDA</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Project Brief Form -->
-      <div class="touch-card p-7 sm:p-9 border border-white/10">
-        <h2 class="text-2xl font-display font-bold text-white mb-2">Project Brief</h2>
-        <p class="text-zinc-400 text-sm font-light mb-6">Submit details below to initiate discovery.</p>
-
-        <form id="contact-brief-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Project brief submitted. An architect will respond within 24 hours.');">
+        <form class="space-y-5" onsubmit="event.preventDefault(); alert('Case submitted successfully. We will get back to you quickly.');">
           
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Name</label>
               <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
             </div>
             <div>
-              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Organization</label>
-              <input type="text" required placeholder="Acme Systems Inc." class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">WhatsApp / Phone Number</label>
+              <input type="tel" required placeholder="+91 91559 81730" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
             </div>
           </div>
 
           <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Work Email</label>
-            <input type="email" required placeholder="elena@acme.com" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
-          </div>
-
-          <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Primary Scope</label>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Platform / Service Needed</label>
             <select class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
-              <option value="neural">High-Dimensional Vector Engine</option>
-              <option value="architecture">Systems Architecture &amp; Audit</option>
-              <option value="kernel">Kernel DMA &amp; Low-Latency Cache</option>
-              <option value="enclave">Hardware Confidential Enclaves</option>
+              <option value="account-recovery">Account Recovery (Instagram, Facebook, WhatsApp)</option>
+              <option value="account-removal">Account Removal (Copyright / Legal bases)</option>
+              <option value="lookups-intelligence">Lookups &amp; Intelligence (BM, Ad Accounts, Linked Data)</option>
+              <option value="reputation-repair">Reputation Repair &amp; Post Removals</option>
+              <option value="deindexing-takedowns">De-indexing &amp; Website Takedowns</option>
+              <option value="shielding-whitelisting">Shielding &amp; Whitelisting (Instagram)</option>
+              <option value="whatsapp-api-badge">WhatsApp API + Legacy Blue Badge</option>
             </select>
           </div>
 
           <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Project Notes</label>
-            <textarea rows="4" placeholder="Describe current bottlenecks, target scale (QPS, vector count), and compliance needs..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Short Description of the Issue</label>
+            <textarea rows="4" required placeholder="Tell us what you need — recovery, removal, lookup, reputation repair, or WhatsApp API..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
           </div>
 
-          <button type="submit" class="touch-btn-primary w-full justify-center !min-h-[52px]">
-            <span>Submit Project Brief</span>
-            <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
-          </button>
+          <!-- Buttons: Submit Case + WhatsApp Us -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-2">
+            <button type="submit" class="touch-btn-primary flex-grow justify-center !min-h-[52px]">
+              <span>Submit Case</span>
+              <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+            </button>
+            <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-secondary justify-center !min-h-[52px]">
+              <span>WhatsApp Us</span>
+              <span class="material-symbols-outlined text-base ml-2 text-zinc-400">chat</span>
+            </a>
+          </div>
+
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-2">
+            <span>Confidentiality: 100% Private &amp; Secure</span>
+            <span>Direct WhatsApp: +91 91559 81730</span>
+          </div>
 
         </form>
+
       </div>
 
     </div>
 
   </main>
 
-  <!-- Minimalist Studio Footer -->
   <footer class="border-t border-white/10 bg-black/90 backdrop-blur-xl relative z-10 py-10 safe-bottom">
     <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
       <div class="flex items-center gap-3">
         <span class="text-white font-bold font-display tracking-tight text-sm">RETRIEVAL</span>
         <span class="text-zinc-600 font-mono text-[11px]">/</span>
-        <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
+        <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL.</span>
       </div>
       <div class="flex items-center gap-6 font-mono text-xs">
-        <a href="index.html" class="hover:text-white transition-colors">Overview</a>
-        <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+        <a href="services.html" class="hover:text-white transition-colors">Services</a>
+        <a href="how-it-works.html" class="hover:text-white transition-colors">How It Works</a>
+        <a href="index.html#why-us" class="hover:text-white transition-colors">Why Us</a>
+        <a href="index.html#reviews" class="hover:text-white transition-colors">Reviews</a>
+        <a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
       </div>
       <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
         <span class="w-2 h-2 rounded-full bg-white"></span>

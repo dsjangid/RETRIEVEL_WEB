@@ -7,14 +7,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   
-  <title>Capabilities — RETRIEVAL</title>
+  <title>Our Services — RETRIEVAL</title>
   
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
-  
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -50,7 +47,7 @@
 </head>
 <body class="bg-obsidian text-white min-h-[100dvh] relative antialiased selection:bg-white/20 selection:text-white">
 
-  <!-- Atmospheric Background Layer System (Floating Mesh Orbs, Neural Canvas, Spotlight, Dot Matrix & Grain) -->
+  <!-- Background Atmosphere -->
   <div class="bg-scene">
     <div class="orb orb-primary"></div>
     <div class="orb orb-cyan"></div>
@@ -72,22 +69,22 @@
         </div>
         <div class="flex flex-col justify-center">
           <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">CAPABILITIES</span>
+          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">PROTECTION &amp; RECOVERY</span>
         </div>
       </a>
 
-      <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
-        <a href="index.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
-        <a href="services.html" class="px-3.5 py-1 text-xs font-sans text-white bg-white/10 rounded-full transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="index.html#services" class="px-3.5 py-1 text-xs font-sans text-white transition-colors">Services</a>
+        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">How It Works</a>
+        <a href="index.html#why-us" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Why Us</a>
+        <a href="index.html#reviews" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Reviews</a>
+        <a href="index.html#faq" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">FAQ</a>
         <a href="contact.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Contact</a>
       </div>
 
-      <!-- Menu Button -->
       <div class="flex items-center gap-3">
-        <a href="contact.html" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
-          <span>Start Project</span>
+        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
+          <span>WhatsApp Us</span>
         </a>
         <button id="mobile-menu-btn" onclick="window.openMobileNav(event)" class="md:hidden w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
           <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,10 +96,9 @@
     </div>
   </header>
 
-  <!-- Full-Screen Native iPhone Navigation Overlay (Hidden on Desktop) -->
+  <!-- Full-Screen Native iPhone Navigation Overlay -->
   <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-6 safe-top safe-bottom">
     
-    <!-- Top Bar inside Modal: Close Left, Logo Center -->
     <div class="h-16 flex items-center justify-between relative border-b border-white/10 shrink-0">
       <button id="mobile-nav-close" onclick="window.closeMobileNav(event)" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Close Navigation Menu">
         <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,36 +115,39 @@
       <div class="w-10 h-10"></div>
     </div>
 
-    <!-- Navigation Links & Inline CTA (Top-aligned stack as in reference) -->
     <div class="flex flex-col pt-8 pb-8 flex-grow justify-start space-y-6">
       <nav class="flex flex-col space-y-3">
         <a href="index.html" class="mobile-nav-item">
           <span>OVERVIEW</span>
         </a>
-        <a href="index.html#work" class="mobile-nav-item">
-          <span>SELECTED WORK</span>
-        </a>
         <a href="services.html" class="mobile-nav-item active">
-          <span>CAPABILITIES</span>
+          <span>OUR SERVICES</span>
         </a>
         <a href="how-it-works.html" class="mobile-nav-item">
-          <span>METHODOLOGY</span>
+          <span>HOW IT WORKS</span>
+        </a>
+        <a href="index.html#why-us" class="mobile-nav-item">
+          <span>WHY CLIENTS TRUST US</span>
+        </a>
+        <a href="index.html#reviews" class="mobile-nav-item">
+          <span>CLIENT REVIEWS</span>
+        </a>
+        <a href="index.html#faq" class="mobile-nav-item">
+          <span>FAQ</span>
         </a>
         <a href="contact.html" class="mobile-nav-item">
           <span>CONTACT</span>
         </a>
       </nav>
 
-      <!-- Prominent Action CTA Pill -->
       <div class="pt-2">
-        <a href="contact.html" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
-          <span>START AN ENGAGEMENT</span>
-          <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
+          <span>WHATSAPP US DIRECTLY</span>
+          <span class="material-symbols-outlined text-base ml-2">chat</span>
         </a>
       </div>
     </div>
 
-    <!-- Bottom Studio Footer Info in Modal -->
     <div class="py-4 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-zinc-500 shrink-0">
       <span>RETRIEVAL STUDIO</span>
       <span class="text-zinc-400">© 2026</span>
@@ -157,123 +156,176 @@
   </div>
 
   <!-- Main Content Area -->
-  <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto">
+  <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto space-y-16">
     
-    <section class="mb-12">
+    <section>
       <h1 class="font-display font-extrabold text-[2.5rem] leading-[1.08] sm:text-5xl tracking-tight text-white mb-4">
-        Full-Stack Systems &amp; Neural Engineering
+        Our Services
       </h1>
       <p class="text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
-        We specialize in complex backend architectures, high-dimensional vector search engines, and hardware-accelerated memory layers designed for massive scale.
+        We help individuals, creators and businesses recover, protect and manage their digital presence across major platforms — confidentially and professionally.
       </p>
     </section>
 
-    <!-- Stacked Capability Cards (iPhone-First Touch Targets) -->
-    <section class="space-y-6 mb-20">
+    <!-- Services Cards -->
+    <section class="space-y-5">
       
+      <!-- 1. Account Removals -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">01 // TOPOLOGY</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Distributed HNSW Graphs</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Custom graph partition algorithms engineered to traverse billions of high-dimensional vectors in sub-millisecond cycles without precision loss.
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">LATENCY PROFILE</span>
-          <span class="text-white font-semibold">&lt; 0.35ms P99</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">01 // REMOVALS</span>
+          <span class="text-zinc-400">Facebook • Instagram • WhatsApp • TikTok</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          1. Account Removals
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed mb-4">
+          We remove accounts temporarily or permanently on copyright grounds or other valid legal bases. All removals are handled through proper channels so the process remains fully legitimate and documented.
+        </p>
       </div>
 
+      <!-- 2. Account Recoveries -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">02 // KERNEL</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Zero-Copy Memory Cache</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Eliminating CPU serialization and operating system buffer copying with direct kernel-bypass memory mapping (DMA).
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">IO OVERHEAD</span>
-          <span class="text-white font-semibold">~0% Buffer Copy</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">02 // RECOVERIES</span>
+          <span class="text-zinc-400">Instagram • Facebook • WhatsApp</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          2. Account Recoveries
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed mb-4">
+          No matter the reason an account was banned or disabled (temporary or permanent), we recover it through our internal associates and admin-level access.
+        </p>
       </div>
 
+      <!-- 3. Lookups & Intelligence -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">03 // STREAMING</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Real-Time Ingestion</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Streaming pipelines processing millions of live events and unstructured payloads with immediate vector availability.
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">INDEXING FRESHNESS</span>
-          <span class="text-white font-semibold">Instantaneous</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">03 // INTELLIGENCE</span>
+          <span class="text-zinc-400">BM • Ad Accounts • WhatsApp • IG • FB • LinkedIn</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          3. Lookups &amp; Intelligence
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed mb-4">
+          We provide complete linked information of any account, including:
+        </p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-300">
+          <li class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>Full Business Manager &amp; Ad Account internal details</span>
+          </li>
+          <li class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>WhatsApp contacts and linked data</span>
+          </li>
+          <li class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>Email, phone number, IP address</span>
+          </li>
+          <li class="p-2.5 rounded-lg bg-white/5 border border-white/5 flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            <span>Disabled codes and all other connected information</span>
+          </li>
+        </ul>
       </div>
 
+      <!-- 4. Reputation Repair -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">04 // ENCLAVES</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Hardware Confidential Vaults</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Hardware-enforced encryption in AMD SEV-SNP memory enclaves, guaranteeing total isolation for sensitive proprietary data.
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">ISOLATION STANDARD</span>
-          <span class="text-white font-semibold">Hardware-Enforced</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">04 // ORM</span>
+          <span class="text-zinc-400">Google • Instagram • Facebook • Reddit</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          4. Reputation Repair
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          Get 5-star ratings and positive reviews on Google. Remove any post, reel or story from Instagram, Facebook or Reddit.
+        </p>
       </div>
 
+      <!-- 5. De-indexing & Takedowns -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">05 // BARE METAL</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Dedicated NVMe Clusters</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Zero-virtualization bare-metal deployment with custom PCIe Gen 5 NVMe arrays for unconstrained throughput.
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">THROUGHPUT</span>
-          <span class="text-white font-semibold">100Gbps Direct</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">05 // TAKEDOWNS</span>
+          <span class="text-zinc-400">Search Engines &amp; Web Hosts</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          5. De-indexing &amp; Takedowns
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          Remove negative articles from Google or any other platform. Completely take down unwanted websites.
+        </p>
       </div>
 
+      <!-- 6. Shielding & Whitelisting (Instagram) -->
       <div class="touch-card p-6 sm:p-8 border border-white/10">
-        <div class="font-mono text-xs text-zinc-500 mb-2">06 // SLA</div>
-        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">Enterprise SRE Governance</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
-          Contractual uptime commitments backed by distributed multi-master consensus and dedicated architect on-call support.
-        </p>
-        <div class="hairline mb-4"></div>
-        <div class="flex items-center justify-between font-mono text-xs">
-          <span class="text-zinc-500">UPTIME COMMITMENT</span>
-          <span class="text-white font-semibold">99.999% Guaranteed</span>
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">06 // SHIELDING</span>
+          <span class="text-zinc-400">Instagram Official Whitelist</span>
         </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          6. Shielding &amp; Whitelisting (Instagram)
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          If your Instagram account keeps getting banned repeatedly, we can place it on the official whitelist through admin access. This protection level is normally available only to celebrities and major accounts. Once whitelisted, the account remains protected from future bans.
+        </p>
+      </div>
+
+      <!-- 7. WhatsApp API + Legacy Blue Badge -->
+      <div class="touch-card p-6 sm:p-8 border border-white/10">
+        <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-3">
+          <span class="text-white font-bold">07 // ENTERPRISE VERIFICATION</span>
+          <span class="px-2.5 py-0.5 rounded bg-white/10 text-white font-mono text-[10px]">Only for Brands &amp; Businesses</span>
+        </div>
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+          7. WhatsApp API + Legacy Blue Badge
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed mb-3">
+          We provide powerful, authorised WhatsApp API access so the number never gets banned, along with advanced tools that help grow the business.
+        </p>
+        <p class="text-zinc-300 text-sm font-normal leading-relaxed">
+          You also receive the <strong>Legacy Blue Badge</strong> — a permanent verification that stays for lifetime with no monthly or yearly charges and no risk of suspension.
+        </p>
       </div>
 
     </section>
 
-    <!-- Bottom CTA Card -->
-    <section class="touch-card p-7 sm:p-9 text-center border border-white/10">
-      <h2 class="font-display font-bold text-2xl text-white mb-3">Ready to architect your system?</h2>
-      <p class="text-zinc-400 text-sm font-light mb-6">Discuss scope, timelines, and technical requirements with our engineering team.</p>
-      <a href="contact.html" class="touch-btn-primary justify-center w-full sm:w-auto">
-        <span>Start an Engagement</span>
-        <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
-      </a>
+    <!-- Bottom CTA -->
+    <section class="touch-card p-8 sm:p-10 border border-white/10 text-center">
+      <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
+        Ready to recover, protect or manage your accounts?
+      </h2>
+      <p class="text-zinc-400 text-sm font-light mb-6 max-w-lg mx-auto">
+        Share your case with us. We will review it and guide you on the next steps — confidentially and professionally.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3">
+        <a href="contact.html" class="touch-btn-primary justify-center">
+          <span>Start Your Case</span>
+          <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+        </a>
+        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-secondary justify-center">
+          <span>WhatsApp Us</span>
+          <span class="material-symbols-outlined text-base ml-2 text-zinc-400">chat</span>
+        </a>
+      </div>
     </section>
 
   </main>
 
-  <!-- Minimalist Studio Footer -->
   <footer class="border-t border-white/10 bg-black/90 backdrop-blur-xl relative z-10 py-10 safe-bottom">
     <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
       <div class="flex items-center gap-3">
         <span class="text-white font-bold font-display tracking-tight text-sm">RETRIEVAL</span>
         <span class="text-zinc-600 font-mono text-[11px]">/</span>
-        <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
+        <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL.</span>
       </div>
       <div class="flex items-center gap-6 font-mono text-xs">
-        <a href="index.html" class="hover:text-white transition-colors">Overview</a>
-        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+        <a href="index.html#services" class="hover:text-white transition-colors">Services</a>
+        <a href="how-it-works.html" class="hover:text-white transition-colors">How It Works</a>
+        <a href="index.html#why-us" class="hover:text-white transition-colors">Why Us</a>
+        <a href="index.html#reviews" class="hover:text-white transition-colors">Reviews</a>
+        <a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
       </div>
       <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
