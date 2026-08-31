@@ -1,12 +1,14 @@
-/* RETRIEVAL STUDIO — iPhone-First Mobile Architecture Stylesheet */
+/* RETRIEVAL STUDIO — iPhone-First Mobile Architecture & Atmospheric Glow Engine */
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --bg-obsidian: #050608;
   --bg-surface: #090b10;
-  --bg-card: rgba(13, 16, 23, 0.85);
+  --bg-card: rgba(13, 16, 23, 0.75);
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-highlight: rgba(255, 255, 255, 0.2);
+  --border-highlight: rgba(255, 255, 255, 0.22);
+  --primary-blue: #2f6bff;
+  --primary-glow: rgba(47, 107, 255, 0.35);
   --text-white: #ffffff;
   --text-muted: #8b92a5;
   --text-subtle: #4e5569;
@@ -36,11 +38,142 @@ body {
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(47, 107, 255, 0.4);
   color: #ffffff;
 }
 
-/* Safe Area Utility Containers */
+/* ==========================================================================
+   Atmospheric Background Glow Engine (Orbs, Canvas, Spotlight, Dot Matrix & Grain)
+   ========================================================================== */
+
+.bg-scene {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating Ambient Glow Orbs */
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.orb-primary {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.4) 0%, rgba(30, 58, 138, 0.2) 50%, transparent 70%);
+  top: -10%;
+  left: 15%;
+  animation: floatOrb1 24s ease-in-out infinite alternate;
+}
+
+.orb-cyan {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(14, 116, 144, 0.15) 50%, transparent 70%);
+  top: 35%;
+  right: -5%;
+  animation: floatOrb2 28s ease-in-out infinite alternate;
+}
+
+.orb-violet {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, rgba(76, 29, 149, 0.15) 50%, transparent 70%);
+  bottom: -10%;
+  left: 20%;
+  animation: floatOrb3 32s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 50px) scale(1.1); }
+  100% { transform: translate(-40px, 80px) scale(0.95); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-80px, -60px) scale(1.15); }
+  100% { transform: translate(30px, -30px) scale(0.9); }
+}
+
+@keyframes floatOrb3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.08); }
+  100% { transform: translate(-50px, -20px) scale(0.92); }
+}
+
+/* Interactive Cursor Spotlight Follower */
+#cursor-spotlight {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(47, 107, 255, 0.15) 0%, rgba(56, 189, 248, 0.05) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease;
+  mix-blend-mode: screen;
+}
+
+/* Technical Dot Matrix Grid */
+.agency-dot-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-size: 36px 36px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  mask-image: radial-gradient(ellipse at 50% 40%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 40%, transparent 80%);
+  opacity: 0.7;
+}
+
+.agency-grid-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-size: 100px 100px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 50%, transparent 85%);
+}
+
+/* Micro Film-Grain Texture (Pure Inline SVG Data URI) */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Interactive Neural Particle Canvas */
+#ambient-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+}
+
+/* ==========================================================================
+   Safe Areas & Header
+   ========================================================================== */
+
 .safe-top {
   padding-top: max(16px, env(safe-area-inset-top));
 }
@@ -54,44 +187,10 @@ body {
   padding-right: max(18px, env(safe-area-inset-right));
 }
 
-/* Atmospheric Background Engine (Hardware Accelerated & 60fps Mobile Optimized) */
-.mobile-bg-scene {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.mobile-orb-top {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 380px;
-  height: 380px;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 60%, transparent 80%);
-  filter: blur(80px);
-}
-
-.mobile-dot-grid {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-size: 32px 32px;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
-  mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 85%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 40%, transparent 85%);
-  opacity: 0.6;
-}
-
-/* Header States */
 .header-glass {
-  background: rgba(5, 6, 8, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(5, 6, 8, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid transparent;
   transition: all 0.3s var(--ease-apple);
 }
@@ -99,20 +198,33 @@ body {
 .header-scrolled {
   background: rgba(5, 6, 8, 0.92);
   border-bottom-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Touch & Interaction States (Instant Feedback) */
+/* ==========================================================================
+   Touch Cards & Buttons (Double-Bezel & Haptic Feedback)
+   ========================================================================== */
+
 .touch-card {
   background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--border-subtle);
   border-radius: 1.5rem;
-  transition: transform 0.2s var(--ease-apple), border-color 0.2s ease, background-color 0.2s ease;
+  box-shadow: 
+    0 16px 40px -10px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s var(--ease-apple), border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .touch-card:active {
   transform: scale(0.985);
   border-color: var(--border-highlight);
-  background: rgba(22, 27, 38, 0.95);
+  background: rgba(20, 25, 36, 0.95);
+  box-shadow: 
+    0 20px 50px -10px rgba(0, 0, 0, 0.8),
+    0 0 30px -5px rgba(47, 107, 255, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 /* Touch Buttons */
@@ -128,13 +240,14 @@ body {
   font-weight: 600;
   font-size: 0.9375rem;
   letter-spacing: 0.01em;
-  transition: transform 0.15s var(--ease-apple), opacity 0.15s ease;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.12);
+  transition: transform 0.15s var(--ease-apple), opacity 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.15);
 }
 
 .touch-btn-primary:active {
   transform: scale(0.97);
   opacity: 0.9;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
 .touch-btn-secondary {
@@ -145,16 +258,19 @@ body {
   padding: 0 1.25rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #ffffff;
   font-weight: 500;
   font-size: 0.9375rem;
-  transition: transform 0.15s var(--ease-apple), background-color 0.15s ease;
+  transition: transform 0.15s var(--ease-apple), background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .touch-btn-secondary:active {
   transform: scale(0.97);
   background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 /* Full-Screen Native Mobile Navigation Modal */
@@ -207,11 +323,11 @@ body {
 .timeline-stem::before {
   content: '';
   position: absolute;
-  left: 15px;
+  left: 17px;
   top: 36px;
   bottom: 0;
   width: 1px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 .timeline-node:last-child .timeline-stem::before {
@@ -223,9 +339,10 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: 'Geist Mono', monospace;
   font-size: 0.6875rem;
@@ -237,5 +354,5 @@ body {
 /* Hairline Separator */
 .hairline {
   height: 1px;
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }

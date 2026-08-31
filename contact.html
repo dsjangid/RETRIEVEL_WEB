@@ -50,11 +50,17 @@
 </head>
 <body class="bg-obsidian text-white min-h-[100dvh] relative antialiased selection:bg-white/20 selection:text-white">
 
-  <!-- Atmospheric Background Engine -->
-  <div class="mobile-bg-scene">
-    <div class="mobile-orb-top"></div>
+  <!-- Atmospheric Background Layer System (Floating Mesh Orbs, Neural Canvas, Spotlight, Dot Matrix & Grain) -->
+  <div class="bg-scene">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-violet"></div>
   </div>
-  <div class="mobile-dot-grid"></div>
+  <canvas id="ambient-canvas"></canvas>
+  <div id="cursor-spotlight"></div>
+  <div class="agency-dot-grid"></div>
+  <div class="agency-grid-lines"></div>
+  <div class="film-grain"></div>
 
   <!-- Mobile-First Header -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 header-glass safe-top transition-all duration-300">
