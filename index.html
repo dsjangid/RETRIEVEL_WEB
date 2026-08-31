@@ -258,7 +258,7 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100000;
       background-color: rgba(7, 8, 12, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -403,18 +403,32 @@
     }
 
     .mobile-toggle-btn {
-      display: block;
-      background: rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border-color);
       color: #ffffff;
-      padding: 7px;
+      padding: 8px;
       border-radius: 8px;
       cursor: pointer;
+      min-width: 44px;
+      min-height: 44px;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: auto;
+      position: relative;
+      z-index: 100001;
     }
     @media (min-width: 1024px) {
       .mobile-toggle-btn {
-        display: none;
+        display: none !important;
       }
+    }
+    .mobile-toggle-btn svg {
+      pointer-events: none;
     }
     .icon-svg {
       width: 22px;
@@ -438,7 +452,7 @@
       padding: 20px 16px 60px 16px !important;
       overflow-y: scroll !important;
       -webkit-overflow-scrolling: touch !important;
-      z-index: 999999 !important;
+      z-index: 99999 !important;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: none;
       touch-action: pan-y;
@@ -732,8 +746,8 @@
     <header class="site-header">
       <div class="header-container">
         
-        <!-- Mobile Menu Toggle -->
-        <button type="button" class="mobile-toggle-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle Menu" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;">
+        <!-- Mobile Menu Toggle (Single Clean Trigger) -->
+        <button id="mobile-toggle-btn" type="button" class="mobile-toggle-btn" aria-label="Toggle Navigation">
           <svg id="menu-icon-open" class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="menu-icon-close" class="icon-svg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -860,7 +874,7 @@
     
   <main>
     
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw5fHx3b3JsZHxlbnwwfHx8fDE3NzExOTAzOTJ8MA&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/cyber_defense_laptop.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
             <div class="grid-text-item"><h3 dir="auto">Best <span class="text-blue-500">Social Media Recovery</span> &amp; <span class="text-blue-500">PR Defense</span> in Global</h3></div><div class="grid-text-item">Specialized engineering and direct escalation desk for unbanning disabled accounts, recovering hacked assets, claim management, and executive reputation defense.</div>
         <div class="grid-button-wrapper">
@@ -892,29 +906,29 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto">Why choose the Best Recovery Agency?</h2></div><div class="grid-text-item"><h4 dir="auto"><strong>Recovery Agency is critical for operating a successful business.</strong></h4><p dir="auto" class="body">For businesses and content creators, losing access to an Instagram account can impact marketing campaigns, customer communication, advertising, collaborations, and revenue.</p><p dir="auto" class="body">We understand how important your online presence is. Our team works with businesses, influencers, agencies, and public figures to help organize recovery documentation and provide dedicated support throughout the process.</p></div><div class="grid-image-container"><img src="assets/images/cloud_security_network.jpg" alt="" class="grid-image-element" loading="lazy"></div>
+            <div class="grid-text-item"><h2 dir="auto">Why choose the Best Recovery Agency?</h2></div><div class="grid-text-item"><h4 dir="auto"><strong>Recovery Agency is critical for operating a successful business.</strong></h4><p dir="auto" class="body">For businesses and content creators, losing access to an Instagram account can impact marketing campaigns, customer communication, advertising, collaborations, and revenue.</p><p dir="auto" class="body">We understand how important your online presence is. Our team works with businesses, influencers, agencies, and public figures to help organize recovery documentation and provide dedicated support throughout the process.</p></div><div class="grid-image-container"><img src="assets/images/cyber_defense_laptop.jpg" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxibHVlfGVufDB8fHx8MTc3MTM4OTI1NXww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/whatsapp_telegram_unban.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
             <div class="grid-text-item"><h3 dir="auto"><strong>Serving Brands Across Global</strong></h3></div><div class="grid-text-item"><h3 dir="auto">RETRIEVAL works with clients across multiple industries, offering localized strategies with a global mindset. Our experience in international markets allows us to align messaging with cultural, media, and digital trends specific to each region.</h3></div>
           </div>
         </section>
         
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxfHx3aGl0ZXxlbnwwfHx8fDE3NzE0MDkxMTN8MA&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/orm_defamation_removal.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
             <div class="grid-text-item"><h3 dir="auto"><strong>Reputation Management</strong></h3></div><div class="grid-text-item"><h3 dir="auto">Our strategies are built with search engines and audiences in mind. By improving brand sentiment, authoritative mentions, and online visibility, we help clients dominate search results with positive, trustworthy content.</h3></div>
           </div>
         </section>
         
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxibHVlfGVufDB8fHx8MTc3MTM4OTI1NXww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/meta_verification_portal.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
             <div class="grid-text-item"><h3 dir="auto">Partner With RETRIEVAL</h3></div><div class="grid-text-item"><h3 dir="auto">If you are looking for the best PR & Online Reputation Agency globally, RETRIEVAL is your trusted partner. Let us help you control your narrative, strengthen your brand image, and grow with confidence in Global. Get in touch today and take charge of your reputation.</h3></div>
           </div>
         </section>
         
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxwaG9uZXxlbnwwfHx8fDE3NjcyNzAxNjB8MA&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/instagram_unban_recovery.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
             <div class="grid-text-item"><h2 dir="auto">Recover your banned Instagram account in just a few hours.</h2></div>
         <div class="grid-button-wrapper">
@@ -927,9 +941,9 @@
           </div>
         </section>
         
-        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxCTFVFfGVufDB8fHx8MTc3MTQ5MTQ3M3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/wikipedia_notability_compliance.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto">Reputation Is Built Daily, We Help You Control It</h3></div><div class="grid-text-item"><h3 dir="auto">Your brand is being judged every day — on Google, social media, news platforms, and public forums. What people see online shapes trust, decisions, and revenue. RETRIEVAL exists to make sure that story works in your favor.</h3><p class="body" dir="auto">We help brands, entrepreneurs, and public figures own their digital presence, strengthen credibility, and stay protected in an always-connected world. Our approach combines public relations expertise with advanced online reputation strategies to deliver results that last.</p></div><div class="grid-image-container"><img src="assets/images/cloud_security_network.jpg" alt="" class="grid-image-element" loading="lazy"></div>
+            <div class="grid-text-item"><h3 dir="auto">Reputation Is Built Daily, We Help You Control It</h3></div><div class="grid-text-item"><h3 dir="auto">Your brand is being judged every day — on Google, social media, news platforms, and public forums. What people see online shapes trust, decisions, and revenue. RETRIEVAL exists to make sure that story works in your favor.</h3><p class="body" dir="auto">We help brands, entrepreneurs, and public figures own their digital presence, strengthen credibility, and stay protected in an always-connected world. Our approach combines public relations expertise with advanced online reputation strategies to deliver results that last.</p></div><div class="grid-image-container"><img src="assets/images/inactive_username_claim.jpg" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         
@@ -1089,23 +1103,22 @@
 
     <script>
       function toggleMobileMenu(e) {
-        if (e && e.preventDefault) {
-          e.preventDefault();
-        }
-        const drawer = document.getElementById('mobile-nav-drawer');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
+        var drawer = document.getElementById('mobile-nav-drawer');
+        var iconOpen = document.getElementById('menu-icon-open');
+        var iconClose = document.getElementById('menu-icon-close');
         if (!drawer) return;
 
-        const isHidden = drawer.classList.contains('hidden');
+        var isHidden = drawer.classList.contains('hidden') || drawer.style.display === 'none';
         if (isHidden) {
           drawer.classList.remove('hidden');
+          drawer.style.display = 'block';
           if (iconOpen) iconOpen.classList.add('hidden');
           if (iconClose) iconClose.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
           document.documentElement.style.overflow = 'hidden';
         } else {
           drawer.classList.add('hidden');
+          drawer.style.display = 'none';
           if (iconOpen) iconOpen.classList.remove('hidden');
           if (iconClose) iconClose.classList.add('hidden');
           document.body.style.overflow = '';
@@ -1113,26 +1126,37 @@
         }
       }
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const btn = document.querySelector('.mobile-toggle-btn');
+      function initMobileNav() {
+        var btn = document.getElementById('mobile-toggle-btn') || document.querySelector('.mobile-toggle-btn');
         if (btn) {
-          btn.addEventListener('click', toggleMobileMenu);
+          btn.onclick = function(e) {
+            toggleMobileMenu(e);
+          };
         }
 
-        const drawerLinks = document.querySelectorAll('#mobile-nav-drawer a');
-        drawerLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            const drawer = document.getElementById('mobile-nav-drawer');
-            const iconOpen = document.getElementById('menu-icon-open');
-            const iconClose = document.getElementById('menu-icon-close');
-            if (drawer) drawer.classList.add('hidden');
+        var drawerLinks = document.querySelectorAll('#mobile-nav-drawer a');
+        for (var i = 0; i < drawerLinks.length; i++) {
+          drawerLinks[i].onclick = function() {
+            var drawer = document.getElementById('mobile-nav-drawer');
+            var iconOpen = document.getElementById('menu-icon-open');
+            var iconClose = document.getElementById('menu-icon-close');
+            if (drawer) {
+              drawer.classList.add('hidden');
+              drawer.style.display = 'none';
+            }
             if (iconOpen) iconOpen.classList.remove('hidden');
             if (iconClose) iconClose.classList.add('hidden');
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
-          });
-        });
-      });
+          };
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileNav);
+      } else {
+        initMobileNav();
+      }
     </script>
     
 </body>
