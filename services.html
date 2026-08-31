@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Capabilities &amp; Services — RETRIEVAL Studio</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#050608",
+            surface: "#090b10",
+            card: "rgba(12, 14, 20, 0.7)",
+            primary: {
+              DEFAULT: "#2f6bff",
+              glow: "rgba(47, 107, 255, 0.3)",
+              tint: "#b5c4ff"
+            },
+            cyan: {
+              accent: "#38bdf8"
+            }
+          },
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['Geist Mono', 'monospace'],
+            display: ['Hanken Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/glass.css"/>
+</head>
+<body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-primary selection:text-white">
+
+  <!-- Atmospheric Background Layer System -->
+  <div class="bg-scene">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-violet"></div>
+  </div>
+  <canvas id="ambient-canvas"></canvas>
+  <div id="cursor-spotlight"></div>
+  <div class="agency-dot-grid"></div>
+  <div class="agency-grid-lines"></div>
+  <div class="film-grain"></div>
+
+  <!-- Floating Island Navigation -->
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
+    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-3 flex items-center justify-between transition-all duration-300">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full overflow-hidden border border-white/20 bg-black/80 p-1.5 flex items-center justify-center group-hover:border-white/40 transition-colors">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"/>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
+          <span class="font-mono text-[9px] tracking-widest text-zinc-400 uppercase leading-none mt-1">STUDIO // CAPABILITIES</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
+        <a href="services.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-white bg-white/10 transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex agency-btn-primary">
+          <span>Start a Project</span>
+          <div class="agency-btn-icon-circle">
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </div>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full border border-white/10 bg-white/5 text-zinc-300 hover:text-white" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined text-xl">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-4 top-20 double-bezel rounded-2xl z-50">
+      <div class="double-bezel-inner p-6 flex flex-col gap-3">
+        <a href="index.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Overview</a>
+        <a href="services.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-white bg-white/5">Capabilities</a>
+        <a href="how-it-works.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Methodology</a>
+        <a href="contact.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-36 sm:pt-44 pb-28 max-w-6xl mx-auto px-4 sm:px-8">
+    
+    <section class="max-w-3xl mb-20">
+      <div class="agency-pill-badge mb-6">
+        <span>SPECIALIZED PRACTICES</span>
+      </div>
+      <h1 class="font-display font-extrabold text-4xl sm:text-6xl text-white tracking-tight leading-[1.1] mb-6">
+        Full-Stack Systems &amp; Neural Engineering
+      </h1>
+      <p class="text-zinc-400 text-base sm:text-lg font-light leading-relaxed">
+        We specialize in complex backend architectures, high-dimensional vector search engines, and hardware-accelerated memory layers designed for massive scale.
+      </p>
+    </section>
+
+    <!-- 6 Detailed Capability Cards (Double-Bezel Architecture) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+      
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">01 // TOPOLOGY</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Distributed HNSW Graphs</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Custom graph partition algorithms engineered to traverse billions of high-dimensional vectors in sub-millisecond cycles without precision loss.
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Logarithmic O(log N) traversal</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Multi-region shard synchronization</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>99.9% exact recall accuracy</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>LATENCY</span>
+            <span class="text-emerald-400">&lt; 0.35ms P99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">02 // KERNEL</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Zero-Copy Memory Cache</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Eliminating CPU serialization and operating system buffer copying with direct kernel-bypass memory mapping (DMA).
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>RDMA &amp; DPDK integration</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Atomic zero-downtime updates</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>10M+ queries/sec per cluster</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>IO OVERHEAD</span>
+            <span class="text-emerald-400">~0% Buffer Copy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">03 // STREAMING</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Real-Time Ingestion</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Streaming pipelines processing millions of live events and unstructured payloads with immediate vector availability.
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Sub-15ms indexing latency</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Backpressure &amp; dynamic batching</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>gRPC / WebSocket connectors</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>FRESHNESS</span>
+            <span class="text-emerald-400">Instantaneous</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">04 // ENCLAVES</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Hardware Confidential Vaults</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Hardware-enforced encryption in AMD SEV-SNP memory enclaves, guaranteeing total isolation for sensitive proprietary data.
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Encrypted compute &amp; memory</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>SOC2 Type II &amp; HIPAA standard</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Cryptographic remote attestation</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>ISOLATION</span>
+            <span class="text-emerald-400">Hardware Level</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">05 // BARE METAL</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Dedicated NVMe Clusters</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Zero-virtualization bare-metal deployment with custom PCIe Gen 5 NVMe arrays for unconstrained throughput.
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>100% single-tenant hardware</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>100Gbps redundant uplinks</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Dedicated SRE monitoring</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>THROUGHPUT</span>
+            <span class="text-emerald-400">100Gbps Direct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-7 flex flex-col justify-between h-full">
+          <div>
+            <div class="font-mono text-xs text-zinc-500 mb-4">06 // SLA</div>
+            <h3 class="font-display font-bold text-xl text-white mb-2">Enterprise SRE Governance</h3>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-6">
+              Contractual uptime commitments backed by distributed multi-master consensus and dedicated architect on-call support.
+            </p>
+            <ul class="space-y-1.5 text-xs font-mono text-zinc-300 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>99.999% availability commitment</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>15-minute response SLA</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                <span>Direct engineer Slack / Discord</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-white/5 font-mono text-[11px] text-zinc-500 flex justify-between">
+            <span>UPTIME</span>
+            <span class="text-emerald-400">99.999% Guaranteed</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Engagement Inquiry Banner -->
+    <section class="double-bezel">
+      <div class="double-bezel-inner p-8 sm:p-12 text-center max-w-2xl mx-auto">
+        <h2 class="font-display font-bold text-3xl text-white mb-4">Ready to architect your system?</h2>
+        <p class="text-zinc-400 text-sm font-light mb-8">Discuss scope, timelines, and technical requirements with our engineering team.</p>
+        <a href="contact.html" class="agency-btn-primary">
+          <span>Schedule an Architecture Review</span>
+          <div class="agency-btn-icon-circle">
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimalist Studio Footer -->
+  <footer class="border-t border-white/10 bg-black/80 backdrop-blur-xl relative z-10 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-sans text-zinc-400">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full overflow-hidden border border-white/20 bg-black p-1 flex items-center justify-center">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
+        </div>
+        <div>
+          <span class="text-white font-medium">RETRIEVAL</span>
+          <span class="text-zinc-500 ml-2">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white transition-colors">Overview</a>
+        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>ALL SYSTEMS NOMINAL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

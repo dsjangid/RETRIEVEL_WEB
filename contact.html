@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Start a Project — RETRIEVAL Studio</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#050608",
+            surface: "#090b10",
+            card: "rgba(12, 14, 20, 0.7)",
+            primary: {
+              DEFAULT: "#2f6bff",
+              glow: "rgba(47, 107, 255, 0.3)",
+              tint: "#b5c4ff"
+            },
+            cyan: {
+              accent: "#38bdf8"
+            }
+          },
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['Geist Mono', 'monospace'],
+            display: ['Hanken Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/glass.css"/>
+</head>
+<body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-primary selection:text-white">
+
+  <!-- Atmospheric Background Layer System -->
+  <div class="bg-scene">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-violet"></div>
+  </div>
+  <canvas id="ambient-canvas"></canvas>
+  <div id="cursor-spotlight"></div>
+  <div class="agency-dot-grid"></div>
+  <div class="agency-grid-lines"></div>
+  <div class="film-grain"></div>
+
+  <!-- Floating Island Navigation -->
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
+    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-3 flex items-center justify-between transition-all duration-300">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full overflow-hidden border border-white/20 bg-black/80 p-1.5 flex items-center justify-center group-hover:border-white/40 transition-colors">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"/>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
+          <span class="font-mono text-[9px] tracking-widest text-zinc-400 uppercase leading-none mt-1">STUDIO // CONTACT</span>
+        </div>
+      </a>
+
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
+        <a href="services.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-white bg-white/10 transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex agency-btn-primary">
+          <span>Start a Project</span>
+          <div class="agency-btn-icon-circle">
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </div>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full border border-white/10 bg-white/5 text-zinc-300 hover:text-white" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined text-xl">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-4 top-20 double-bezel rounded-2xl z-50">
+      <div class="double-bezel-inner p-6 flex flex-col gap-3">
+        <a href="index.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Overview</a>
+        <a href="services.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Capabilities</a>
+        <a href="how-it-works.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Methodology</a>
+        <a href="contact.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-white bg-white/5">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-36 sm:pt-44 pb-28 max-w-6xl mx-auto px-4 sm:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Left Column: Agency Info & Studio Locations -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <div class="agency-pill-badge mb-6">
+            <span>GET IN TOUCH</span>
+          </div>
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight leading-[1.1] mb-6">
+            Let's build something exceptional.
+          </h1>
+          <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed">
+            Tell us about your systems architecture challenge, timeline, and goals. We respond to qualified inquiries within one business day.
+          </p>
+        </div>
+
+        <!-- Studio Hubs -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-6 space-y-4 font-sans text-xs">
+            <div class="font-mono text-zinc-500 uppercase tracking-widest pb-2 border-b border-white/5">Studio Hubs</div>
+            <div class="flex justify-between items-center text-zinc-300">
+              <span>San Francisco (HQ)</span>
+              <span class="text-zinc-500 font-mono">PST (UTC-8)</span>
+            </div>
+            <div class="flex justify-between items-center text-zinc-300">
+              <span>New York City</span>
+              <span class="text-zinc-500 font-mono">EST (UTC-5)</span>
+            </div>
+            <div class="flex justify-between items-center text-zinc-300">
+              <span>London (Research)</span>
+              <span class="text-zinc-500 font-mono">GMT (UTC+0)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Contacts -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-6 space-y-3 font-sans text-xs">
+            <div class="font-mono text-zinc-500 uppercase tracking-widest pb-2 border-b border-white/5">Direct Communication</div>
+            <div class="flex justify-between items-center">
+              <span class="text-zinc-400">Client Engagements:</span>
+              <a href="mailto:hello@retrieval.internal" class="text-white hover:underline font-mono">hello@retrieval.internal</a>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-zinc-400">Security Inquiries:</span>
+              <a href="mailto:security@retrieval.internal" class="text-white hover:underline font-mono">security@retrieval.internal</a>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-zinc-400">Confidentiality:</span>
+              <span class="text-emerald-400 font-mono">Standard NDA on Request</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Project Inquiry Form -->
+      <div class="lg:col-span-7">
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-8 sm:p-10">
+            
+            <h2 class="text-2xl font-display font-bold text-white mb-2">Project Brief</h2>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light mb-8">Fill out the details below to start the conversation.</p>
+
+            <form id="agency-contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for reaching out. A principal architect will review your brief and contact you within 24 hours.');">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Your Name</label>
+                  <input type="text" required placeholder="Elena Rostova" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Organization / Domain</label>
+                  <input type="text" required placeholder="Acme Systems" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Work Email</label>
+                <input type="email" required placeholder="elena@acme.com" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Primary Scope</label>
+                  <select class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
+                    <option value="neural">High-Dimensional Vector Engine</option>
+                    <option value="architecture">Systems Architecture &amp; Audit</option>
+                    <option value="kernel">Kernel DMA &amp; Low-Latency Cache</option>
+                    <option value="enclave">Hardware Confidential Enclaves</option>
+                    <option value="dedicated">Dedicated SRE &amp; Cluster Ops</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Estimated Timeline</label>
+                  <select class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
+                    <option value="immediate">Immediate / Next 30 Days</option>
+                    <option value="q3">Q3 / Q4 2026</option>
+                    <option value="exploratory">Exploratory / Discovery Phase</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Project Scope / Technical Requirements</label>
+                <textarea rows="4" placeholder="Describe the problem, target scale (QPS, vector count), current bottlenecks, and any security compliance needs..." class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
+              </div>
+
+              <button type="submit" class="w-full agency-btn-primary justify-center py-3.5">
+                <span>Submit Project Brief</span>
+                <div class="agency-btn-icon-circle">
+                  <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                </div>
+              </button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Minimalist Studio Footer -->
+  <footer class="border-t border-white/10 bg-black/80 backdrop-blur-xl relative z-10 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-sans text-zinc-400">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full overflow-hidden border border-white/20 bg-black p-1 flex items-center justify-center">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
+        </div>
+        <div>
+          <span class="text-white font-medium">RETRIEVAL</span>
+          <span class="text-zinc-500 ml-2">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white transition-colors">Overview</a>
+        <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+      </div>
+      <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>ALL SYSTEMS NOMINAL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

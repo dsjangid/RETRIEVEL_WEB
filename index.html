@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>RETRIEVAL — Digital Systems &amp; High-Performance Engineering Studio</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            obsidian: "#050608",
+            surface: "#090b10",
+            card: "rgba(12, 14, 20, 0.7)",
+            primary: {
+              DEFAULT: "#2f6bff",
+              glow: "rgba(47, 107, 255, 0.3)",
+              tint: "#b5c4ff"
+            },
+            cyan: {
+              accent: "#38bdf8"
+            }
+          },
+          fontFamily: {
+            sans: ['Geist', 'sans-serif'],
+            mono: ['Geist Mono', 'monospace'],
+            display: ['Hanken Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="css/glass.css"/>
+</head>
+<body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-primary selection:text-white">
+
+  <!-- Atmospheric Background Layer System (Orbs, Noise, Dot Matrix & Canvas) -->
+  <div class="bg-scene">
+    <div class="orb orb-primary"></div>
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-violet"></div>
+  </div>
+  <canvas id="ambient-canvas"></canvas>
+  <div id="cursor-spotlight"></div>
+  <div class="agency-dot-grid"></div>
+  <div class="agency-grid-lines"></div>
+  <div class="film-grain"></div>
+
+  <!-- Floating Island Navigation -->
+  <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
+    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-3 flex items-center justify-between transition-all duration-300">
+      
+      <!-- Brand & Geometric Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full overflow-hidden border border-white/20 bg-black/80 p-1.5 flex items-center justify-center group-hover:border-white/40 transition-colors">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"/>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
+          <span class="font-mono text-[9px] tracking-widest text-zinc-400 uppercase leading-none mt-1">STUDIO // SYSTEMS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#work" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Selected Work</a>
+        <a href="services.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden sm:inline-flex agency-btn-primary">
+          <span>Start a Project</span>
+          <div class="agency-btn-icon-circle">
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </div>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full border border-white/10 bg-white/5 text-zinc-300 hover:text-white" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined text-xl">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-4 top-20 double-bezel rounded-2xl z-50">
+      <div class="double-bezel-inner p-6 flex flex-col gap-3">
+        <a href="index.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-white bg-white/5">Overview</a>
+        <a href="#work" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Selected Work</a>
+        <a href="services.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Capabilities</a>
+        <a href="how-it-works.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Methodology</a>
+        <a href="contact.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Contact</a>
+        <div class="pt-2 border-t border-white/10">
+          <a href="contact.html" class="w-full justify-center agency-btn-primary py-3">
+            <span>Start a Project</span>
+            <div class="agency-btn-icon-circle">
+              <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Agency Content -->
+  <main class="relative z-10 pt-36 sm:pt-44 pb-28 max-w-6xl mx-auto px-4 sm:px-8">
+    
+    <!-- Hero Section -->
+    <section class="min-h-[70vh] flex flex-col justify-center items-center text-center max-w-4xl mx-auto">
+      
+      <!-- Eyebrow Pill -->
+      <div class="agency-pill-badge mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>ACCEPTING SELECT CLIENT ENGAGEMENTS</span>
+      </div>
+
+      <!-- Hero Headline -->
+      <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.08] mb-6">
+        We engineer high-performance systems and neural infrastructure.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-10 font-light">
+        A boutique digital engineering &amp; systems agency partnering with tech leaders to architect sub-millisecond vector retrieval, distributed cloud clusters, and mission-critical software.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 w-full sm:w-auto">
+        <a href="contact.html" class="agency-btn-primary w-full sm:w-auto justify-center">
+          <span>Start an Engagement</span>
+          <div class="agency-btn-icon-circle">
+            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+          </div>
+        </a>
+        <a href="#work" class="agency-btn-secondary w-full sm:w-auto justify-center">
+          <span>View Selected Work</span>
+          <span class="material-symbols-outlined text-sm text-zinc-400">south</span>
+        </a>
+      </div>
+
+      <!-- Hero Double-Bezel Showcase Box -->
+      <div class="w-full double-bezel">
+        <div class="double-bezel-inner p-6 sm:p-10">
+          
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left Info -->
+            <div class="md:col-span-4 text-left space-y-4">
+              <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest">STUDIO CORE PHILOSOPHY</div>
+              <h3 class="font-display font-bold text-xl text-white">Deterministic Speed, Zero Bloat</h3>
+              <p class="text-zinc-400 text-xs leading-relaxed font-light">
+                We reject bloated abstractions. Every layer of software we deploy is measured in microseconds and hardened for continuous production uptime.
+              </p>
+            </div>
+
+            <!-- Center Logo Emblem -->
+            <div class="md:col-span-4 flex flex-col items-center justify-center">
+              <div class="w-32 h-32 rounded-3xl border border-white/10 bg-black/90 flex items-center justify-center p-6 shadow-2xl">
+                <img src="assets/logo.jpeg" alt="RETRIEVAL Emblem" class="w-full h-full object-contain"/>
+              </div>
+              <span class="font-mono text-[10px] text-zinc-500 mt-3 tracking-widest uppercase">PRECISION ARCHITECTURE</span>
+            </div>
+
+            <!-- Right Key Metrics -->
+            <div class="md:col-span-4 text-left space-y-3 font-mono text-xs">
+              <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex justify-between items-center">
+                <span class="text-zinc-400">Mean P99 Latency</span>
+                <span class="text-emerald-400 font-semibold">0.42ms</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex justify-between items-center">
+                <span class="text-zinc-400">Client Uptime SLA</span>
+                <span class="text-white font-semibold">99.999%</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/5 border border-white/5 flex justify-between items-center">
+                <span class="text-zinc-400">Global Point of Presences</span>
+                <span class="text-zinc-300">14 Edge Nodes</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Selected Work / Client Engagements (Agency Case Studies) -->
+    <section id="work" class="pt-32">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="agency-pill-badge mb-3">
+            <span>SELECTED CLIENT WORK</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">Proven Under Critical Load</h2>
+        </div>
+        <p class="text-zinc-400 text-xs sm:text-sm font-light max-w-sm">
+          A selection of recent systems architected and deployed by our engineering team for enterprise partners.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Case Study 1 -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-8 flex flex-col justify-between h-full">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-6">
+                <span>01 // FINTECH INFRASTRUCTURE</span>
+                <span class="text-emerald-400">PRODUCTION LIVE</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white mb-3">Sub-Millisecond Market Retrieval Engine</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
+                Architected a custom distributed in-memory vector database for high-frequency algorithmic matching, slashing transaction verification latency by 91%.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">DMA Direct</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Kernel Bypass</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">C++23 / Rust</span>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-500">Benchmark Result</span>
+              <span class="text-white font-semibold">0.38ms P99 Latency</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-8 flex flex-col justify-between h-full">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-6">
+                <span>02 // SOCIAL GRAPH PLATFORM</span>
+                <span class="text-emerald-400">250M+ USERS</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white mb-3">Distributed Real-Time Semantic Index</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
+                Engineered a sharded HNSW graph topology capable of dispatching 14 million queries per second with real-time continuous vector updates.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Sharded HNSW</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">14M QPS</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Distributed Raft</span>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-500">Scale Profile</span>
+              <span class="text-white font-semibold">99.999% Reliability</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-8 flex flex-col justify-between h-full">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-6">
+                <span>03 // HEALTH &amp; GENOMICS</span>
+                <span class="text-emerald-400">SOC2 COMPLIANT</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white mb-3">Hardware Confidential Enclave Vault</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
+                Deployed zero-knowledge vector similarity compute inside AMD SEV-SNP encrypted memory, enabling secure multi-party biological research.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">AMD SEV-SNP</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Zero-Trust</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Hardware Attested</span>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-500">Security Standard</span>
+              <span class="text-white font-semibold">Hardware-Enforced</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 4 -->
+        <div class="double-bezel">
+          <div class="double-bezel-inner p-8 flex flex-col justify-between h-full">
+            <div>
+              <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-6">
+                <span>04 // CLOUD INFRASTRUCTURE</span>
+                <span class="text-emerald-400">GLOBAL MULTI-REGION</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white mb-3">Zero-Copy Edge Caching System</h3>
+              <p class="text-zinc-400 text-sm leading-relaxed font-light mb-6">
+                Replaced traditional database query tiers with an edge-replicated memory mapping layer, reducing server compute overhead by 68%.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Edge Caching</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">eBPF Networking</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[11px] font-mono text-zinc-300">Multi-Cloud</span>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/5 flex items-center justify-between text-xs font-mono">
+              <span class="text-zinc-500">Cost &amp; Performance</span>
+              <span class="text-white font-semibold">-68% Cloud Spend</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Core Capabilities (Minimal Agency Grid) -->
+    <section class="pt-32">
+      <div class="max-w-2xl mb-12">
+        <div class="agency-pill-badge mb-3">
+          <span>WHAT WE DO</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">Core Studio Capabilities</h2>
+        <p class="text-zinc-400 text-sm font-light mt-2">Specialized disciplines where we deliver disproportionate engineering advantage.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="agency-card rounded-2xl p-7 border border-white/10">
+          <span class="font-mono text-xs text-zinc-500">01 // ARCHITECTURE</span>
+          <h3 class="font-display font-bold text-xl text-white mt-2 mb-3">Systems Design &amp; Audit</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+            Auditing bottlenecked database tiers, modeling distributed topologies, and designing high-concurrency protocols for scale.
+          </p>
+          <a href="services.html" class="inline-flex items-center gap-1 text-xs font-mono text-zinc-300 hover:text-white transition-colors">
+            <span>Learn more</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="agency-card rounded-2xl p-7 border border-white/10">
+          <span class="font-mono text-xs text-zinc-500">02 // VECTOR &amp; NEURAL</span>
+          <h3 class="font-display font-bold text-xl text-white mt-2 mb-3">High-Dimensional Indexing</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+            Bespoke vector search engines, scalar quantization algorithms, and sub-millisecond semantic retrieval pipelines.
+          </p>
+          <a href="services.html" class="inline-flex items-center gap-1 text-xs font-mono text-zinc-300 hover:text-white transition-colors">
+            <span>Learn more</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="agency-card rounded-2xl p-7 border border-white/10">
+          <span class="font-mono text-xs text-zinc-500">03 // PERFORMANCE &amp; SRE</span>
+          <h3 class="font-display font-bold text-xl text-white mt-2 mb-3">Kernel &amp; Enclave SRE</h3>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed mb-4">
+            Kernel bypass memory tuning, hardware enclave isolation, zero-downtime migrations, and 24/7 site reliability governance.
+          </p>
+          <a href="services.html" class="inline-flex items-center gap-1 text-xs font-mono text-zinc-300 hover:text-white transition-colors">
+            <span>Learn more</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Agency Working Model / Methodology -->
+    <section class="pt-32">
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-8 sm:p-12">
+          
+          <div class="max-w-xl mb-12">
+            <div class="agency-pill-badge mb-3">
+              <span>HOW WE ENGAGE</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">Our Working Model</h2>
+            <p class="text-zinc-400 text-xs sm:text-sm font-light mt-1">We embed directly with your engineering leads to ship production solutions.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-mono text-xs text-zinc-500">PHASE 01</span>
+              <h4 class="font-display font-bold text-base text-white mt-1 mb-2">Discovery &amp; Vector Audit</h4>
+              <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                Deep analysis of existing latency bottlenecks, memory footprint, and concurrency targets.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-mono text-xs text-zinc-500">PHASE 02</span>
+              <h4 class="font-display font-bold text-base text-white mt-1 mb-2">Bespoke Architecture</h4>
+              <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                Mathematical modeling of graph topologies, quantization codebooks, and memory caching layers.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-mono text-xs text-zinc-500">PHASE 03</span>
+              <h4 class="font-display font-bold text-base text-white mt-1 mb-2">Hardened Build</h4>
+              <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                Implementing zero-copy kernel pipelines, custom benchmarks, and hardware enclave attestation.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-mono text-xs text-zinc-500">PHASE 04</span>
+              <h4 class="font-display font-bold text-base text-white mt-1 mb-2">Global Scale &amp; Handover</h4>
+              <p class="text-zinc-400 text-xs font-light leading-relaxed">
+                Zero-downtime deployment, continuous monitoring telemetry, and team knowledge transfer.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Agency Project Inquiry Section -->
+    <section class="pt-32">
+      <div class="double-bezel">
+        <div class="double-bezel-inner p-8 sm:p-14 text-center max-w-3xl mx-auto">
+          
+          <div class="w-12 h-12 rounded-2xl border border-white/20 bg-black/80 p-2 mx-auto mb-6 flex items-center justify-center">
+            <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight mb-4">
+            Have a mission-critical challenge?
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base mb-8 font-light max-w-xl mx-auto">
+            We partner with select venture-backed startups and enterprise leaders. Speak directly with a principal architect.
+          </p>
+
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="contact.html" class="agency-btn-primary w-full sm:w-auto justify-center">
+              <span>Initialize Project Conversation</span>
+              <div class="agency-btn-icon-circle">
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </div>
+            </a>
+            <a href="mailto:hello@retrieval.internal" class="agency-btn-secondary w-full sm:w-auto justify-center">
+              <span>Direct: hello@retrieval.internal</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Minimalist Studio Footer -->
+  <footer class="border-t border-white/10 bg-black/80 backdrop-blur-xl relative z-10 py-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-sans text-zinc-400">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full overflow-hidden border border-white/20 bg-black p-1 flex items-center justify-center">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
+        </div>
+        <div>
+          <span class="text-white font-medium">RETRIEVAL</span>
+          <span class="text-zinc-500 ml-2">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#work" class="hover:text-white transition-colors">Work</a>
+        <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>STUDIO ONLINE // SFO &amp; NYC</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
