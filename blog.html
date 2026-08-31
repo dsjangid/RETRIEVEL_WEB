@@ -2,1106 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Your blog post — RETRIEVAL</title>
+  <meta name="description" content="Direct internal administrative recovery, VIP whitelist protection, negative link removal, and forensic metadata lookups.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --font-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-secondary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --color-primary: #2563eb;
-      --color-primary-hover: #1d4ed8;
-      --bg-dark: #07080c;
-      --bg-card: #0c0e15;
-      --text-white: #ffffff;
-      --text-muted: #cbd5e1;
-      --text-dim: #94a3b8;
-      --border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    body {
-      font-family: var(--font-primary);
-      background-color: var(--bg-dark);
-      color: var(--text-white);
-      line-height: 1.5;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Hero Section Prominent Typography */
-    .with-bg-image h1, .with-bg-image h2, .with-bg-image h3,
-    .block-section:first-of-type h1, .block-section:first-of-type h2, .block-section:first-of-type h3 {
-      font-size: 52px !important;
-      font-weight: 800 !important;
-      line-height: 1.16 !important;
-      letter-spacing: -0.025em !important;
-      color: #ffffff !important;
-      margin-bottom: 20px !important;
-      max-width: 900px;
-    }
-    .with-bg-image p.body, .block-section:first-of-type p.body {
-      font-size: 18px !important;
-      line-height: 1.6 !important;
-      color: #cbd5e1 !important;
-      max-width: 780px;
-    }
-    @media (max-width: 1024px) {
-      .with-bg-image h1, .with-bg-image h2, .with-bg-image h3,
-      .block-section:first-of-type h1, .block-section:first-of-type h2, .block-section:first-of-type h3 {
-        font-size: 40px !important;
-        line-height: 1.2 !important;
-        margin-bottom: 16px !important;
-      }
-      .with-bg-image p.body, .block-section:first-of-type p.body {
-        font-size: 16px !important;
-      }
-    }
-    @media (max-width: 768px) {
-      .with-bg-image h1, .with-bg-image h2, .with-bg-image h3,
-      .block-section:first-of-type h1, .block-section:first-of-type h2, .block-section:first-of-type h3 {
-        font-size: 32px !important;
-        line-height: 1.25 !important;
-        letter-spacing: -0.015em !important;
-        margin-bottom: 14px !important;
-      }
-      .with-bg-image p.body, .block-section:first-of-type p.body {
-        font-size: 15px !important;
-        line-height: 1.55 !important;
-      }
-    }
-
-    /* RETRIEVAL Dynamic Responsive Typography */
-    h1, .h1 {
-      font-family: var(--font-primary);
-      font-size: 42px;
-      font-weight: 700;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 20px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      h1, .h1 {
-        font-size: 26px !important;
-        line-height: 1.3 !important;
-        margin-bottom: 16px;
-      }
-    }
-
-    h2, .h2 {
-      font-family: var(--font-primary);
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 18px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      h2, .h2 {
-        font-size: 22px !important;
-        line-height: 1.3 !important;
-        margin-bottom: 14px;
-      }
-    }
-
-    h3, .h3 {
-      font-family: var(--font-primary);
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1.35;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 16px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      h3, .h3 {
-        font-size: 20px !important;
-        line-height: 1.35 !important;
-        margin-bottom: 12px;
-      }
-    }
-
-    h4, .h4 {
-      font-family: var(--font-primary);
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 1.4;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 12px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      h4, .h4 {
-        font-size: 18px !important;
-        line-height: 1.4 !important;
-        margin-bottom: 10px;
-      }
-    }
-
-    h5, .h5 {
-      font-family: var(--font-primary);
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.4;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 10px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      h5, .h5 {
-        font-size: 16px !important;
-        line-height: 1.4 !important;
-        margin-bottom: 8px;
-      }
-    }
-
-    h6, .h6 {
-      font-family: var(--font-primary);
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 1.45;
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    p, .body {
-      font-family: var(--font-secondary);
-      font-size: 15.5px;
-      font-weight: 400;
-      line-height: 1.65;
-      color: var(--text-muted);
-      margin-top: 0;
-      margin-bottom: 16px;
-      overflow-wrap: break-word;
-      word-break: break-word;
-    }
-    @media (max-width: 920px) {
-      p, .body {
-        font-size: 14.5px !important;
-        line-height: 1.6 !important;
-      }
-    }
-
-    .body-large {
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 1.65;
-      color: var(--text-muted);
-      overflow-wrap: break-word;
-      word-break: break-word;
-      margin-bottom: 16px;
-    }
-    @media (max-width: 920px) {
-      .body-large {
-        font-size: 15px !important;
-        line-height: 1.6 !important;
-      }
-    }
-
-    span {
-      font-size: inherit;
-      line-height: inherit;
-    }
-
-    .text-blue-500 {
-      color: #3b82f6 !important;
-      font-weight: 700;
-    }
-
-    /* Exact Block Dimensions & Spacings */
-    .block-container {
-      max-width: 1224px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-    @media (max-width: 920px) {
-      .block-container {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-    }
-
-    .block-section {
-      padding-top: 64px;
-      padding-bottom: 64px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    @media (max-width: 920px) {
-      .block-section {
-        padding-top: 40px;
-        padding-bottom: 40px;
-      }
-    }
-
-    .grid-text-item {
-      margin-bottom: 16px;
-    }
-
-    /* Clean Non-Glowing Flat Buttons */
-    .grid-button-wrapper {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-    .grid-button-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 28px;
-      border-radius: 999px;
-      background-color: var(--color-primary);
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: normal;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-      cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: none;
-    }
-    .grid-button-primary:hover {
-      background-color: var(--color-primary-hover);
-      box-shadow: none;
-      transform: none;
-    }
-    @media (max-width: 920px) {
-      .grid-button-primary {
-        padding: 10px 20px;
-        font-size: 13px;
-      }
-    }
-
-    /* Header Nav */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100000;
-      background-color: rgba(7, 8, 12, 0.95);
-      
-      -webkit-
-      border-bottom: 1px solid var(--border-color);
-      box-shadow: none;
-    }
-    .hero-title {
-      font-size: clamp(30px, 5.2vw, 52px);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-      color: #ffffff;
-      margin-bottom: 22px;
-      word-break: break-word;
-    }
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(37, 99, 235, 0.1);
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      border-radius: 999px;
-      padding: 6px 14px;
-      margin-bottom: 20px;
-      max-width: 100%;
-    }
-    .hero-eyebrow span {
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #60a5fa;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .header-container {
-      max-width: 1224px;
-      margin: 0 auto;
-      height: 72px;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    @media (max-width: 920px) {
-      .header-container {
-        height: 64px;
-        padding: 0 16px;
-      }
-    }
-
-    .brand-logo-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .brand-logo-badge {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background-color: #000000;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4px;
-      box-shadow: none;
-    }
-    .brand-svg {
-      width: 100%;
-      height: 100%;
-      fill: #ffffff;
-    }
-    .brand-text-col {
-      display: flex;
-      flex-direction: column;
-    }
-    .brand-name {
-      font-weight: 800;
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      color: #ffffff;
-      line-height: 1;
-    }
-    .brand-domain {
-      font-family: 'Geist Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-top: 3px;
-    }
-
-    .desktop-nav {
-      display: none;
-      align-items: center;
-      gap: 24px;
-    }
-    @media (min-width: 1024px) {
-      .desktop-nav {
-        display: flex;
-      }
-    }
-    .nav-item, .nav-dropdown-trigger {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--text-muted);
-      text-decoration: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px 0;
-      transition: color 0.2s ease;
-    }
-    .nav-item:hover, .nav-dropdown-trigger:hover {
-      color: #ffffff;
-    }
-    .nav-dropdown-wrapper {
-      position: relative;
-    }
-    .nav-dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      min-width: 250px;
-      background-color: #0c0e15;
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 8px 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-      display: none;
-      z-index: 60;
-    }
-    .nav-dropdown-wrapper:hover .nav-dropdown-menu {
-      display: block;
-    }
-    .dropdown-item {
-      display: block;
-      padding: 10px 18px;
-      font-size: 13.5px;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: all 0.15s ease;
-    }
-    .dropdown-item:hover {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #ffffff;
-    }
-
-    .contact-header-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: none;
-    }
-    .contact-header-btn:hover {
-      background-color: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #ffffff;
-      transform: none;
-      box-shadow: none;
-    }
-
-    .mobile-toggle-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-color);
-      color: #ffffff;
-      padding: 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      min-width: 44px;
-      min-height: 44px;
-      touch-action: manipulation;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-      -webkit-user-select: none;
-      pointer-events: auto;
-      position: relative;
-      z-index: 100001;
-    }
-    @media (min-width: 1024px) {
-      .mobile-toggle-btn {
-        display: none !important;
-      }
-    }
-    .mobile-toggle-btn svg {
-      pointer-events: none;
-    }
-    .icon-svg {
-      width: 22px;
-      height: 22px;
-    }
-    .hidden {
-      display: none !important;
-    }
-
-    /* Ultra-Minimal Typographic iOS Mobile Drawer - Solid & Stable */
-    .mobile-drawer {
-      position: fixed !important;
-      top: 64px !important;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      width: 100% !important;
-      height: auto !important;
-      max-height: calc(100vh - 64px) !important;
-      background-color: #07080c !important;
-      padding: 16px 20px 60px 20px !important;
-      overflow-y: auto !important;
-      overscroll-behavior: contain !important;
-      -webkit-overflow-scrolling: touch !important;
-      z-index: 99999 !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
-      touch-action: pan-y;
-      transform: translateZ(0);
-      will-change: transform;
-    }
-    .mobile-drawer.hidden {
-      display: none !important;
-    }
-    .drawer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      padding-bottom: 40px;
-      max-width: 480px;
-      background-color: #07080c;
-    }
-    .drawer-link-main {
-      font-size: 15px;
-      font-weight: 500;
-      color: #94a3b8;
-      text-decoration: none;
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: block;
-      transition: color 0.15s ease;
-    }
-    .drawer-link-main:hover, .drawer-link-main:active {
-      color: #ffffff;
-    }
-    .drawer-accordion-group {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .drawer-accordion-trigger {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: transparent;
-      border: none;
-      padding: 13px 0;
-      color: #cbd5e1;
-      font-family: var(--font-primary);
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      text-align: left;
-      -webkit-tap-highlight-color: transparent;
-      outline: none;
-    }
-    .drawer-accordion-trigger span {
-      font-size: 15px;
-      font-weight: 500;
-      color: #cbd5e1;
-      pointer-events: none;
-      transition: color 0.15s ease;
-    }
-    .drawer-accordion-trigger:hover span, .drawer-accordion-trigger:active span {
-      color: #ffffff;
-    }
-    .accordion-arrow {
-      color: #64748b;
-      transition: transform 0.2s ease, color 0.2s ease;
-      flex-shrink: 0;
-      pointer-events: none;
-    }
-    .drawer-accordion-group.active .accordion-arrow {
-      transform: rotate(180deg);
-      color: #3b82f6;
-    }
-    .drawer-accordion-group.active .drawer-accordion-trigger span {
-      color: #ffffff;
-      font-weight: 600;
-    }
-    .drawer-sublinks {
-      display: none;
-      flex-direction: column;
-      gap: 0;
-      padding: 2px 0 10px 14px;
-      border-left: 1px solid rgba(59, 130, 246, 0.4);
-      margin-left: 2px;
-      margin-bottom: 6px;
-    }
-    .drawer-accordion-group.active .drawer-sublinks {
-      display: flex;
-    }
-    .drawer-sublinks a {
-      display: block;
-      font-size: 14px;
-      font-weight: 400;
-      color: #94a3b8;
-      text-decoration: none;
-      padding: 7px 0;
-      transition: color 0.15s ease;
-      -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
-    }
-    .drawer-sublinks a:active, .drawer-sublinks a:hover {
-      color: #3b82f6;
-    }
-    .drawer-contact-link {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 600;
-      color: #60a5fa;
-      text-decoration: none;
-      padding: 8px 0;
-      transition: color 0.15s ease;
-    }
-    .drawer-contact-link:hover, .drawer-contact-link:active {
-      color: #93c5fd;
-    }
-
-    /* Media Press Logos Badges */
-    .press-logos-flex-grid {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      max-width: 960px;
-      margin: 32px auto;
-    }
-    .press-logo-badge {
-      width: 80px;
-      height: 80px;
-      border-radius: 999px;
-      background-color: #ffffff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px;
-      box-shadow: none;
-      transition: transform 0.2s ease;
-      flex-shrink: 0;
-    }
-    @media (max-width: 640px) {
-      .press-logo-badge {
-        width: 64px;
-        height: 64px;
-        padding: 8px;
-      }
-    }
-    .press-logo-badge:hover {
-      transform: scale(1.04);
-    }
-    .press-logo-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .grid-image-container {
-      margin: 24px 0;
-      text-align: center;
-    }
-    .grid-image-element {
-      width: 100%;
-      max-width: 640px;
-      max-height: 380px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      box-shadow: none;
-    }
-    @media (max-width: 920px) {
-      .grid-image-element {
-        max-height: 240px;
-      }
-    }
-
-    /* Video Embed Card */
-    .grid-video-wrapper {
-      margin: 24px 0;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .video-card-ratio {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      background-color: #000000;
-    }
-    .video-card-ratio iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* Form Card */
-    .grid-form-card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 32px;
-      max-width: 540px;
-      margin: 32px auto;
-      box-shadow: none;
-    }
-    .form-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 8px;
-    }
-    .form-subtitle {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    .form-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .form-input {
-      width: 100%;
-      background-color: #07080c;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 14px;
-      color: #ffffff;
-      outline: none;
-      transition: border-color 0.2s ease;
-    }
-    .form-input:focus {
-      border-color: var(--color-primary);
-    }
-
-    /* Footer */
-    .site-footer {
-      background-color: #050608;
-      border-top: 1px solid var(--border-color);
-      padding: 56px 0 36px 0;
-      color: var(--text-dim);
-    }
-    .footer-container {
-      max-width: 1224px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 36px;
-    }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .footer-desc {
-      font-size: 13.5px;
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .footer-icon-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.06);
-      color: #cbd5e1;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: none;
-    }
-    .footer-icon-btn:hover {
-      background-color: var(--color-primary);
-      border-color: var(--color-primary);
-      color: #ffffff;
-    }
-    .footer-copy {
-      font-size: 12px;
-      margin-top: 16px;
-    }
-    .footer-title {
-      font-family: 'Geist Mono', monospace;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #ffffff;
-      margin-bottom: 14px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .footer-links a {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-    .footer-links a:hover {
-      color: #ffffff;
-    }
-
-    /* Floating CTA */
-    .floating-cta {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background-color: var(--color-primary);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 40;
-      transition: background-color 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    }
-    .floating-cta:hover {
-      background-color: var(--color-primary-hover);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      transform: none;
-    }
-    @media (max-width: 920px) {
-      .floating-cta {
-        bottom: 20px;
-        right: 20px;
-        width: 44px;
-        height: 44px;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/retrieval-core.css">
 </head>
 <body>
-  
-    <header class="site-header">
-      <div class="header-container">
-        
-        <!-- Mobile Menu Toggle (Single Clean Trigger) -->
-        <button id="mobile-toggle-btn" type="button" class="mobile-toggle-btn" aria-label="Toggle Navigation">
-          <svg id="menu-icon-open" class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="menu-icon-close" class="icon-svg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
 
-        <!-- Brand Monogram & Name -->
-        <a href="index.html" class="brand-logo-link">
-          <div class="brand-logo-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
-              <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-              <polygon points="325,166 492,233 275,348 368,245" />
-              <polygon points="266,335 334,472 443,468 322,382" />
-            </svg>
+  <!-- Site Header Navigation (Fixed on Scroll) -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand & Monogram -->
+      <a href="index.html" class="brand-logo-link">
+        <div class="brand-logo-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
+            <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+            <polygon points="325,166 492,233 275,348 368,245" />
+            <polygon points="266,335 334,472 443,468 322,382" />
+          </svg>
+        </div>
+        <div class="brand-text-col">
+          <span class="brand-name">RETRIEVAL</span>
+          <span class="brand-domain">retrievel.co.in</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        
+        <!-- Recoveries Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Recoveries</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="instagram-recovery.html" class="dropdown-item">Instagram Account Recovery</a>
+            <a href="social-media-recovery.html" class="dropdown-item">Facebook &amp; WhatsApp Recovery</a>
+            <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="dropdown-item">Business Manager &amp; Ad Accounts</a>
           </div>
-          <div class="brand-text-col">
-            <span class="brand-name">RETRIEVAL</span>
-            <span class="brand-domain">retrievel.co.in</span>
+        </div>
+
+        <!-- Removals & Takedowns Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Removals</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="account-removal.html" class="dropdown-item">Account &amp; Page Takedowns</a>
+            <a href="negative-news-links-removal-service.html" class="dropdown-item">Google Search De-Indexing</a>
+            <a href="negative-links-removal.html" class="dropdown-item">DMCA &amp; Article Removal</a>
+            <a href="orm-services.html" class="dropdown-item">Reputation Management &amp; Reviews</a>
           </div>
+        </div>
+
+        <!-- Forensic Intelligence Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Intelligence</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="lookup-spy.html" class="dropdown-item">Account Lookups &amp; SPY Desk</a>
+            <a href="lookup-spy.html#bm-spy" class="dropdown-item">Business Manager &amp; Ad SPY</a>
+            <a href="lookup-spy.html#details-lookup" class="dropdown-item">Linked Emails, Numbers &amp; IP Logs</a>
+          </div>
+        </div>
+
+        <!-- Verification & Shield Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Verification</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="instagram-verification.html" class="dropdown-item">Instagram Custom Meta Verification</a>
+            <a href="instagram-verification.html#shield" class="dropdown-item">VIP Whitelist Ban Shield</a>
+            <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp API &amp; Legacy Badge</a>
+            <a href="google-knowledge-panel.html" class="dropdown-item">Google Knowledge Panel</a>
+            <a href="wikipedia-creation.html" class="dropdown-item">Wikipedia Creation &amp; Defense</a>
+          </div>
+        </div>
+
+        <!-- Trust & Protocol Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Company</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="dropdown-item">Capabilities Directory</a>
+            <a href="how-it-works.html" class="dropdown-item">Standard Operating Protocol</a>
+            <a href="our-story.html" class="dropdown-item">Security &amp; About Us</a>
+            <a href="clients.html" class="dropdown-item">Enterprise Case Studies</a>
+            <a href="refund.html" class="dropdown-item">Escrow &amp; Refund Policy</a>
+            <a href="careers.html" class="dropdown-item">Careers</a>
+            <a href="blog.html" class="dropdown-item">Threat Intelligence Blog</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-action">
+        <a href="https://t.me/unban777" target="_blank" class="btn-header-cta">
+          <span>Direct Desk</span>
+          <span style="font-family: var(--font-mono); font-size: 10px;">→</span>
         </a>
 
-        <!-- Desktop Dropdown Nav -->
-        <nav class="desktop-nav">
-          <a href="index.html" class="nav-item">Home</a>
-          
-                    <!-- Segment 1: Recoveries -->
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Recoveries</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="instagram-recovery.html" class="dropdown-item">Instagram Account Recovery</a>
-              <a href="social-media-recovery.html" class="dropdown-item">Facebook &amp; WhatsApp Recovery</a>
-              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="dropdown-item">Business Manager &amp; Ad Account</a>
-            </div>
-          </div>
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="mobile-toggle-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle Navigation">
+          <svg id="menu-icon-open" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="hidden" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
 
-          <!-- Segment 2: Removals & Takedowns -->
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Removals</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="account-removal.html" class="dropdown-item">Account &amp; Page Removals</a>
-              <a href="negative-news-links-removal-service.html" class="dropdown-item">Google Search De-Indexing</a>
-              <a href="orm-services.html" class="dropdown-item">Post &amp; Video Removals</a>
-            </div>
-          </div>
+    </div>
+  </header>
 
-          <!-- Segment 3: Lookups & SPY -->
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Lookups &amp; SPY</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="lookup-spy.html" class="dropdown-item">Account Lookups &amp; SPY Desk</a>
-              <a href="lookup-spy.html#bm-spy" class="dropdown-item">Business Manager &amp; Ad SPY</a>
-              <a href="lookup-spy.html#details-lookup" class="dropdown-item">Linked Emails, Numbers &amp; IP Lookup</a>
-            </div>
-          </div>
-
-          <!-- Segment 4: Reputation & Google Reviews -->
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Reputation Repair</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="orm-services.html" class="dropdown-item">Reputation Management &amp; Post Removal</a>
-              <a href="orm-services.html#google-reviews" class="dropdown-item">5-Star Google Reviews &amp; Rating</a>
-            </div>
-          </div>
-
-          <!-- Segment 5: Verification & VIP Whitelist -->
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Badges &amp; Shield</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="instagram-verification.html" class="dropdown-item">Instagram Custom Meta Verification</a>
-              <a href="instagram-verification.html#shield" class="dropdown-item">VIP Whitelist Ban Protection</a>
-              <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp API &amp; Legacy Badge</a>
-            </div>
-          </div>
-
-          <!-- Segment 6: PR & Media -->
-          <a href="https://t.me/unban777" target="_blank" class="nav-item">PR &amp; Media (DM)</a>
-
-          <div class="nav-dropdown-wrapper">
-            <button class="nav-dropdown-trigger">
-              <span>Company &amp; Trust</span>
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="nav-dropdown-menu">
-              <a href="our-story.html" class="dropdown-item">Our Story &amp; Security</a>
-              <a href="clients.html" class="dropdown-item">Enterprise Case Studies</a>
-              <a href="refund.html" class="dropdown-item">Escrow &amp; Refund Policy</a>
-              <a href="careers.html" class="dropdown-item">Careers</a>
-              <a href="blog.html" class="dropdown-item">Security Blog</a>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Right Header Action (Clean Icon Buttons) -->
-        <div class="header-action">
-          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn" title="Direct to Telegram" aria-label="Direct to Telegram">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-          </a>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-drawer hidden">
+    <div class="drawer-inner">
+      <a href="index.html" class="drawer-link-main">Home</a>
+      
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Asset Recoveries</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="instagram-recovery.html">Instagram Account Recovery</a>
+          <a href="social-media-recovery.html">Facebook &amp; WhatsApp Recovery</a>
+          <a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager &amp; Ad Accounts</a>
         </div>
       </div>
-    </header>
 
-    <!-- iOS Native Top-Level Mobile Drawer Navigation (Ultra-Minimal Text Accordion) -->
-    <div id="mobile-nav-drawer" class="mobile-drawer hidden">
-      <div class="drawer-inner">
-        <a href="index.html" class="drawer-link-main">Home</a>
-        
-        <!-- Segment 1: Recoveries -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Recoveries</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="instagram-recovery.html">Instagram Account Recovery</a>
-            <a href="social-media-recovery.html">Facebook &amp; WhatsApp Recovery</a>
-            <a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager &amp; Ad Accounts</a>
-          </div>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Account Removals &amp; Takedowns</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="account-removal.html">Account &amp; Page Takedowns</a>
+          <a href="negative-news-links-removal-service.html">Google Search De-Indexing</a>
+          <a href="negative-links-removal.html">DMCA &amp; Defamation Removal</a>
+          <a href="orm-services.html">Reputation Management &amp; Reviews</a>
         </div>
+      </div>
 
-        <!-- Segment 2: Account Removals -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Account Removals</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="account-removal.html">Account &amp; Page Removals Desk</a>
-            <a href="account-removal.html#instagram">Instagram Account Removal</a>
-            <a href="account-removal.html#facebook">Facebook Page / Account Removal</a>
-            <a href="account-removal.html#whatsapp">WhatsApp Number Removal</a>
-            <a href="account-removal.html#tiktok">TikTok Account Removal</a>
-          </div>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Lookups &amp; SPY Intelligence</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="lookup-spy.html">Account Lookups &amp; SPY Desk</a>
+          <a href="lookup-spy.html#bm-spy">Business Manager &amp; Ad SPY</a>
+          <a href="lookup-spy.html#details-lookup">Linked Emails, Numbers &amp; IP Lookup</a>
         </div>
+      </div>
 
-        <!-- Segment 3: Lookups & SPY Intelligence -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Lookups &amp; SPY Intelligence</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="lookup-spy.html">Account Lookups &amp; SPY Desk</a>
-            <a href="lookup-spy.html#bm-spy">Business Manager &amp; Ad SPY</a>
-            <a href="lookup-spy.html#details-lookup">Linked Emails, Numbers &amp; IP Lookup</a>
-          </div>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Verification &amp; Shield</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="instagram-verification.html">Instagram Custom Verification</a>
+          <a href="instagram-verification.html#shield">VIP Whitelist Ban Protection</a>
+          <a href="whatsapp-api-service.html">WhatsApp API &amp; Legacy Badge</a>
+          <a href="google-knowledge-panel.html">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html">Wikipedia Page Management</a>
         </div>
+      </div>
 
-        <!-- Segment 4: De-Indexing & Websites -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Google De-Indexing</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="negative-news-links-removal-service.html">Google Negative Articles Removal</a>
-            <a href="negative-news-links-removal-service.html#website-takedowns">Rogue Website Takedowns</a>
-          </div>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Company &amp; Trust</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="services.html">Capabilities Directory</a>
+          <a href="how-it-works.html">Standard Operating Protocol</a>
+          <a href="our-story.html">Security &amp; About Us</a>
+          <a href="clients.html">Enterprise Case Studies</a>
+          <a href="refund.html">Escrow &amp; Refund Policy</a>
+          <a href="careers.html">Careers</a>
+          <a href="blog.html">Threat Intelligence Blog</a>
         </div>
+      </div>
 
-        <!-- Segment 5: Reputation Repair & Post Removals -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Reputation &amp; Reviews</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="orm-services.html">Post &amp; Reel Removals</a>
-            <a href="orm-services.html#reddit">Reddit &amp; YouTube Removals</a>
-            <a href="orm-services.html#google-reviews">5-Star Google Reviews &amp; Rating</a>
-          </div>
-        </div>
-
-        <!-- Segment 6: Verification & VIP Whitelisting -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Badges &amp; VIP Shield</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="instagram-verification.html">Instagram Custom Verification</a>
-            <a href="instagram-verification.html#shield">VIP Whitelist Ban Protection</a>
-            <a href="whatsapp-api-service.html">WhatsApp API &amp; Legacy Badge</a>
-          </div>
-        </div>
-
-        <!-- Segment 7: PR & Media -->
-        <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>PR &amp; Media</span>
-            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div class="drawer-sublinks">
-            <a href="https://t.me/unban777" target="_blank">Direct to Telegram</a>
-          </div>
-        </div>
-
-        <!-- Direct Telegram Link -->
-        <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08);">
-          <a href="https://t.me/unban777" target="_blank" class="drawer-link-main">
-            Direct to Telegram
-          </a>
-        </div>
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+        <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; justify-content: center;">
+          <span>Direct Support Desk</span>
+          <span style="font-family: var(--font-mono);">→</span>
+        </a>
       </div>
     </div>
-    
+  </div>
+
   <main>
     
-        <!-- Official Contact & Instant Telegram Inquiry Dispatch Section -->
+<!-- Official Contact & Instant Telegram Inquiry Dispatch Section -->
         <section id="contact-hub" class="block-section" style="background-color: #07080c; border-top: 1px solid rgba(255,255,255,0.06); padding: 80px 0;">
           <div class="block-container" style="max-width: 860px; margin: 0 auto;">
             
@@ -1182,160 +289,89 @@
 
           </div>
         </section>
-        
   </main>
-  
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <div class="footer-brand">
-            <div class="brand-logo-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
-                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-                <polygon points="325,166 492,233 275,348 368,245" />
-                <polygon points="266,335 334,472 443,468 322,382" />
-              </svg>
-            </div>
-            <div class="brand-text-col">
-              <span class="brand-name">RETRIEVAL</span>
-              <span class="brand-domain">retrievel.co.in</span>
-            </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="brand-logo-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
+              <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+              <polygon points="325,166 492,233 275,348 368,245" />
+              <polygon points="266,335 334,472 443,468 322,382" />
+            </svg>
           </div>
-          <p class="footer-desc">
-            High-tier social media recovery, enterprise verification, and digital asset defense. Zero credential exposure with 100% escrow protection.
-          </p>
-          <div class="footer-contacts" style="display: flex; align-items: center; gap: 12px; margin-top: 18px; margin-bottom: 20px;">
-            <a href="mailto:support@retrievel.co.in" class="footer-icon-btn" title="support@retrievel.co.in" aria-label="Email Support">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </a>
-            <a href="https://t.me/unban777" target="_blank" class="footer-icon-btn" title="Direct to Telegram" aria-label="Direct to Telegram">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-            </a>
-            <a href="https://t.me/retrieval" target="_blank" class="footer-icon-btn" title="Telegram Channel (t.me/retrieval)" aria-label="Telegram Channel">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </a>
-            <a href="https://retrievel.co.in" class="footer-icon-btn" title="retrievel.co.in" aria-label="Official Website">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </a>
+          <div class="brand-text-col">
+            <span class="brand-name">RETRIEVAL</span>
+            <span class="brand-domain">retrievel.co.in</span>
           </div>
-          <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
         </div>
-
-        <div class="footer-col">
-          <h4 class="footer-title">Asset Recovery</h4>
-          <ul class="footer-links">
-            <li><a href="instagram-recovery.html">Instagram Permanent Unban</a></li>
-            <li><a href="instagram-recovery.html#compromised">Hacked & 2FA Bypass</a></li>
-            <li><a href="social-media-recovery.html">Facebook BM & Ad Accounts</a></li>
-            <li><a href="social-media-recovery.html#whatsapp">WhatsApp & Telegram Unbans</a></li>
-          </ul>
+        <p class="footer-desc">
+          High-tier social media recovery, enterprise verification, and digital asset defense. Zero credential exposure with 100% escrow protection.
+        </p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 18px;">
+          <a href="mailto:support@retrievel.co.in" class="footer-icon-btn" title="Email Support" aria-label="Email Support">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://t.me/unban777" target="_blank" class="footer-icon-btn" title="Telegram Desk" aria-label="Telegram Desk">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+          <a href="https://t.me/retrieval" target="_blank" class="footer-icon-btn" title="Official Channel" aria-label="Official Channel">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </a>
+          <a href="https://retrievel.co.in" class="footer-icon-btn" title="Official Domain" aria-label="Official Domain">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
         </div>
-
-        <div class="footer-col">
-          <h4 class="footer-title">Verification & ORM</h4>
-          <ul class="footer-links">
-            <li><a href="instagram-verification.html">Meta Blue Tick Portal</a></li>
-            <li><a href="instagram-verification.html#shield">Official Account Whitelist</a></li>
-            <li><a href="negative-news-links-removal-service.html">Defamatory Link Removal</a></li>
-            <li><a href="google-knowledge-panel-1.html">Google Knowledge Panel</a></li>
-            <li><a href="orm-services.html">Reputation Management (ORM)</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-title">Company & Trust</h4>
-          <ul class="footer-links">
-            <li><a href="our-story.html">Our Story & Security</a></li>
-            <li><a href="clients.html">Enterprise Case Studies</a></li>
-            <li><a href="refund.html">Escrow & Refund Policy</a></li>
-            <li><a href="careers.html">Careers</a></li>
-          </ul>
-        </div>
+        <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
       </div>
-    </footer>
 
-    <!-- Floating Action Button (Pure Circular Telegram Logo) -->
-    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct to Telegram" title="Direct to Telegram">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffffff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-    </a>
+      <div class="footer-col">
+        <h4 class="footer-title">Asset Recovery</h4>
+        <ul class="footer-links">
+          <li><a href="instagram-recovery.html">Instagram Permanent Unban</a></li>
+          <li><a href="instagram-recovery.html#compromised">Hacked &amp; 2FA Bypass</a></li>
+          <li><a href="social-media-recovery.html">Facebook BM &amp; Ad Accounts</a></li>
+          <li><a href="social-media-recovery.html#whatsapp">WhatsApp &amp; Telegram Unbans</a></li>
+        </ul>
+      </div>
 
-    <script>
-      function toggleMobileMenu(e) {
-        var drawer = document.getElementById('mobile-nav-drawer');
-        var iconOpen = document.getElementById('menu-icon-open');
-        var iconClose = document.getElementById('menu-icon-close');
-        if (!drawer) return;
+      <div class="footer-col">
+        <h4 class="footer-title">Verification &amp; Defense</h4>
+        <ul class="footer-links">
+          <li><a href="instagram-verification.html">Meta Blue Tick Portal</a></li>
+          <li><a href="instagram-verification.html#shield">Official VIP Whitelist</a></li>
+          <li><a href="negative-news-links-removal-service.html">Defamatory Link Removal</a></li>
+          <li><a href="google-knowledge-panel.html">Google Knowledge Panel</a></li>
+          <li><a href="orm-services.html">Reputation Management (ORM)</a></li>
+        </ul>
+      </div>
 
-        var isHidden = drawer.classList.contains('hidden') || drawer.style.display === 'none';
-        if (isHidden) {
-          drawer.classList.remove('hidden');
-          drawer.style.display = 'block';
-          if (iconOpen) iconOpen.classList.add('hidden');
-          if (iconClose) iconClose.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        } else {
-          drawer.classList.add('hidden');
-          drawer.style.display = 'none';
-          if (iconOpen) iconOpen.classList.remove('hidden');
-          if (iconClose) iconClose.classList.add('hidden');
-          document.body.style.overflow = '';
-        }
-      }
+      <div class="footer-col">
+        <h4 class="footer-title">Company &amp; Escrow</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Capabilities Directory</a></li>
+          <li><a href="how-it-works.html">Operating Protocol</a></li>
+          <li><a href="our-story.html">Security &amp; About Us</a></li>
+          <li><a href="clients.html">Enterprise Case Studies</a></li>
+          <li><a href="refund.html">Escrow &amp; Refund Terms</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Threat Intelligence Blog</a></li>
+        </ul>
+      </div>
 
-      function initMobileNav() {
-        var btn = document.getElementById('mobile-toggle-btn') || document.querySelector('.mobile-toggle-btn');
-        if (btn) {
-          btn.onclick = function(e) {
-            toggleMobileMenu(e);
-          };
-        }
+    </div>
+  </footer>
 
-        // Accordion triggers
-        var accordionTriggers = document.querySelectorAll('.drawer-accordion-trigger');
-        for (var k = 0; k < accordionTriggers.length; k++) {
-          accordionTriggers[k].onclick = function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            var parent = this.closest('.drawer-accordion-group');
-            if (parent) {
-              var isActive = parent.classList.contains('active');
-              // Toggle clicked accordion
-              if (isActive) {
-                parent.classList.remove('active');
-                this.setAttribute('aria-expanded', 'false');
-              } else {
-                parent.classList.add('active');
-                this.setAttribute('aria-expanded', 'true');
-              }
-            }
-          };
-        }
+  <!-- Floating Direct Action CTA Button -->
+  <a href="https://t.me/unban777" target="_blank" class="floating-cta" title="Direct to Telegram Desk">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+    <span class="label">Telegram Desk</span>
+  </a>
 
-        // Close drawer on clicking actual navigation links
-        var drawerLinks = document.querySelectorAll('#mobile-nav-drawer .drawer-sublinks a, #mobile-nav-drawer .drawer-link-main');
-        for (var i = 0; i < drawerLinks.length; i++) {
-          drawerLinks[i].onclick = function() {
-            var drawer = document.getElementById('mobile-nav-drawer');
-            var iconOpen = document.getElementById('menu-icon-open');
-            var iconClose = document.getElementById('menu-icon-close');
-            if (drawer) {
-              drawer.classList.add('hidden');
-              drawer.style.display = 'none';
-            }
-            if (iconOpen) iconOpen.classList.remove('hidden');
-            if (iconClose) iconClose.classList.add('hidden');
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
-          };
-        }
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMobileNav);
-      } else {
-        initMobileNav();
-      }
-    </script>
-    
+  <script src="js/main.js"></script>
 </body>
 </html>

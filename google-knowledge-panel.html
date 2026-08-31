@@ -2,186 +2,222 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Google Knowledge Panel & Wikipedia — RETRIEVAL</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Direct internal administrative recovery, VIP whitelist protection, negative link removal, and forensic metadata lookups.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      -webkit-tap-highlight-color: transparent;
-    }
-    body {
-      font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #07080c;
-      color: #f8fafc;
-      overflow-x: hidden;
-    }
-    .font-mono {
-      font-family: 'Geist Mono', monospace;
-    }
-    .glass-card {
-      background: rgba(13, 17, 26, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    .glass-card:hover {
-      border-color: rgba(37, 99, 235, 0.4);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/retrieval-core.css">
 </head>
-<body class="bg-[#07080c] text-[#f8fafc] antialiased selection:bg-[#2563eb] selection:text-white">
-  
-<header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
-    
-    <!-- Left: Mobile Menu Toggle & Brand Logo -->
-    <div class="flex items-center gap-3">
-      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 focus:outline-none transition-all active:scale-95" aria-label="Toggle Navigation Menu">
-        <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+<body>
 
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:border-blue-500/50 transition-all">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+  <!-- Site Header Navigation (Fixed on Scroll) -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand & Monogram -->
+      <a href="index.html" class="brand-logo-link">
+        <div class="brand-logo-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
             <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
             <polygon points="325,166 492,233 275,348 368,245" />
             <polygon points="266,335 334,472 443,468 322,382" />
           </svg>
         </div>
-        <div class="flex flex-col">
-          <span class="font-black text-sm sm:text-base tracking-[0.15em] text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[8px] sm:text-[9px] tracking-[0.25em] text-[#94a3b8] uppercase leading-none mt-1">retrievel.co.in</span>
+        <div class="brand-text-col">
+          <span class="brand-name">RETRIEVAL</span>
+          <span class="brand-domain">retrievel.co.in</span>
         </div>
       </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        
+        <!-- Recoveries Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Recoveries</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="instagram-recovery.html" class="dropdown-item">Instagram Account Recovery</a>
+            <a href="social-media-recovery.html" class="dropdown-item">Facebook &amp; WhatsApp Recovery</a>
+            <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="dropdown-item">Business Manager &amp; Ad Accounts</a>
+          </div>
+        </div>
+
+        <!-- Removals & Takedowns Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Removals</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="account-removal.html" class="dropdown-item">Account &amp; Page Takedowns</a>
+            <a href="negative-news-links-removal-service.html" class="dropdown-item">Google Search De-Indexing</a>
+            <a href="negative-links-removal.html" class="dropdown-item">DMCA &amp; Article Removal</a>
+            <a href="orm-services.html" class="dropdown-item">Reputation Management &amp; Reviews</a>
+          </div>
+        </div>
+
+        <!-- Forensic Intelligence Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Intelligence</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="lookup-spy.html" class="dropdown-item">Account Lookups &amp; SPY Desk</a>
+            <a href="lookup-spy.html#bm-spy" class="dropdown-item">Business Manager &amp; Ad SPY</a>
+            <a href="lookup-spy.html#details-lookup" class="dropdown-item">Linked Emails, Numbers &amp; IP Logs</a>
+          </div>
+        </div>
+
+        <!-- Verification & Shield Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Verification</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="instagram-verification.html" class="dropdown-item">Instagram Custom Meta Verification</a>
+            <a href="instagram-verification.html#shield" class="dropdown-item">VIP Whitelist Ban Shield</a>
+            <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp API &amp; Legacy Badge</a>
+            <a href="google-knowledge-panel.html" class="dropdown-item">Google Knowledge Panel</a>
+            <a href="wikipedia-creation.html" class="dropdown-item">Wikipedia Creation &amp; Defense</a>
+          </div>
+        </div>
+
+        <!-- Trust & Protocol Dropdown -->
+        <div class="nav-dropdown-wrapper">
+          <button class="nav-dropdown-trigger" type="button">
+            <span>Company</span>
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="services.html" class="dropdown-item">Capabilities Directory</a>
+            <a href="how-it-works.html" class="dropdown-item">Standard Operating Protocol</a>
+            <a href="our-story.html" class="dropdown-item">Security &amp; About Us</a>
+            <a href="clients.html" class="dropdown-item">Enterprise Case Studies</a>
+            <a href="refund.html" class="dropdown-item">Escrow &amp; Refund Policy</a>
+            <a href="careers.html" class="dropdown-item">Careers</a>
+            <a href="blog.html" class="dropdown-item">Threat Intelligence Blog</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-action">
+        <a href="https://t.me/unban777" target="_blank" class="btn-header-cta">
+          <span>Direct Desk</span>
+          <span style="font-family: var(--font-mono); font-size: 10px;">→</span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="mobile-toggle-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle Navigation">
+          <svg id="menu-icon-open" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="hidden" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
     </div>
+  </header>
 
-    <!-- Desktop Navigation Menu -->
-    <nav class="hidden lg:flex items-center gap-6 xl:gap-8 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
-      <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-drawer hidden">
+    <div class="drawer-inner">
+      <a href="index.html" class="drawer-link-main">Home</a>
       
-      <!-- Dropdown: Recoveries -->
-      <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
-          <span>Recoveries</span>
-          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Asset Recoveries</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
-          <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Unbans & Recovery</a>
-          <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook BM & Page Recovery</a>
-          <a href="social-media-recovery.html#whatsapp" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">WhatsApp & Telegram Unban</a>
+        <div class="drawer-sublinks">
+          <a href="instagram-recovery.html">Instagram Account Recovery</a>
+          <a href="social-media-recovery.html">Facebook &amp; WhatsApp Recovery</a>
+          <a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager &amp; Ad Accounts</a>
         </div>
       </div>
 
-      <!-- Dropdown: Verification & Shielding -->
-      <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
-          <span>Verification & Shield</span>
-          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Account Removals &amp; Takedowns</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
-          <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Meta & Instagram Verification</a>
-          <a href="instagram-verification.html#shield" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Official Account Whitelisting</a>
-          <a href="google-knowledge-panel.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
-          <a href="google-knowledge-panel.html#wiki" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Page Management</a>
+        <div class="drawer-sublinks">
+          <a href="account-removal.html">Account &amp; Page Takedowns</a>
+          <a href="negative-news-links-removal-service.html">Google Search De-Indexing</a>
+          <a href="negative-links-removal.html">DMCA &amp; Defamation Removal</a>
+          <a href="orm-services.html">Reputation Management &amp; Reviews</a>
         </div>
       </div>
 
-      <!-- Dropdown: Removals & ORM -->
-      <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
-          <span>Removals & ORM</span>
-          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Lookups &amp; SPY Intelligence</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
-        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
-          <a href="negative-links-removal.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Negative Article Removal</a>
-          <a href="negative-links-removal.html#dmca" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">DMCA & Copyright Takedowns</a>
-          <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Reputation Management (ORM)</a>
+        <div class="drawer-sublinks">
+          <a href="lookup-spy.html">Account Lookups &amp; SPY Desk</a>
+          <a href="lookup-spy.html#bm-spy">Business Manager &amp; Ad SPY</a>
+          <a href="lookup-spy.html#details-lookup">Linked Emails, Numbers &amp; IP Lookup</a>
         </div>
       </div>
 
-      <a href="services.html" class="hover:text-white transition-colors py-2">Directory</a>
-      <a href="how-it-works.html" class="hover:text-white transition-colors py-2">Protocol</a>
-      <a href="our-story.html" class="hover:text-white transition-colors py-2">About</a>
-    </nav>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Verification &amp; Shield</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="instagram-verification.html">Instagram Custom Verification</a>
+          <a href="instagram-verification.html#shield">VIP Whitelist Ban Protection</a>
+          <a href="whatsapp-api-service.html">WhatsApp API &amp; Legacy Badge</a>
+          <a href="google-knowledge-panel.html">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html">Wikipedia Page Management</a>
+        </div>
+      </div>
 
-    <!-- Right: Consultation CTA Button -->
-    <div class="flex items-center gap-2 sm:gap-3">
-      <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md hover:shadow-blue-500/25 active:scale-95 whitespace-nowrap">
-        <span>Consult Agent</span>
-        <span class="font-mono">→</span>
-      </a>
+      <div class="drawer-accordion-group">
+        <button type="button" class="drawer-accordion-trigger">
+          <span>Company &amp; Trust</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="drawer-sublinks">
+          <a href="services.html">Capabilities Directory</a>
+          <a href="how-it-works.html">Standard Operating Protocol</a>
+          <a href="our-story.html">Security &amp; About Us</a>
+          <a href="clients.html">Enterprise Case Studies</a>
+          <a href="refund.html">Escrow &amp; Refund Policy</a>
+          <a href="careers.html">Careers</a>
+          <a href="blog.html">Threat Intelligence Blog</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+        <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; justify-content: center;">
+          <span>Direct Support Desk</span>
+          <span style="font-family: var(--font-mono);">→</span>
+        </a>
+      </div>
     </div>
   </div>
-
-  <!-- iOS Slide-Out Mobile Navigation Drawer -->
-  <div id="mobile-nav-drawer" class="hidden lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#07080c]/98 backdrop-blur-2xl border-t border-white/10 p-6 overflow-y-auto z-50">
-    <div class="flex flex-col space-y-6">
-      <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
-      
-      <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Recoveries</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Unbans & Recovery</a>
-          <a href="social-media-recovery.html" class="py-1 hover:text-white">Facebook BM & Page Recovery</a>
-          <a href="social-media-recovery.html#whatsapp" class="py-1 hover:text-white">WhatsApp & Telegram Unban</a>
-        </div>
-      </div>
-
-      <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Verification & Shield</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="instagram-verification.html" class="py-1 hover:text-white">Meta & Instagram Verification</a>
-          <a href="instagram-verification.html#shield" class="py-1 hover:text-white">Official Account Whitelisting</a>
-          <a href="google-knowledge-panel.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
-          <a href="google-knowledge-panel.html#wiki" class="py-1 hover:text-white">Wikipedia Page Management</a>
-        </div>
-      </div>
-
-      <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removals & ORM</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="negative-links-removal.html" class="py-1 hover:text-white">Negative Article Removal</a>
-          <a href="negative-links-removal.html#dmca" class="py-1 hover:text-white">DMCA & Copyright Takedowns</a>
-          <a href="orm-services.html" class="py-1 hover:text-white">Reputation Management (ORM)</a>
-        </div>
-      </div>
-
-      <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Navigation</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="services.html" class="py-1 hover:text-white">Capabilities Directory</a>
-          <a href="how-it-works.html" class="py-1 hover:text-white">Execution Protocol</a>
-          <a href="our-story.html" class="py-1 hover:text-white">About Retrieval</a>
-          <a href="contact.html" class="py-1 hover:text-white">Direct Dispatch</a>
-        </div>
-      </div>
-
-      <a href="https://t.me/unban777" target="_blank" class="w-full py-3.5 rounded-xl bg-[#2563eb] text-white text-center font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25">
-        Chat with Direct Desk (@unban777) →
-      </a>
-    </div>
-  </div>
-</header>
 
   <main>
     
 <section class="py-20 px-4 sm:px-6 lg:px-8 border-b border-white/10" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.98)), url('assets/images/executive_desk.jpg'); background-size: cover; background-position: center;">
   <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#cbd5e1] mb-6">
-      <span class="w-2 h-2 rounded-full bg-[#2563eb]"></span>
-      <span>SEARCH ENGINE ENTITY AUTHORITY</span>
-    </div>
+    
     <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6">
       Google Knowledge Panel <span class="text-[#3b82f6]">& Wikipedia Creation</span>
     </h1>
     <p class="text-base text-[#94a3b8] font-light leading-relaxed max-w-2xl mx-auto mb-8">
       Establish instant institutional authority with an official Google Knowledge Panel and an encyclopedic Wikipedia presence.
     </p>
-    <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:bg-[#1d4ed8]">
+    <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
       <span>Initiate Entity Build</span>
       <span class="font-mono">→</span>
     </a>
@@ -204,93 +240,89 @@
     </div>
   </div>
 </section>
-
   </main>
-  
-<footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-    <div>
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-10 h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
-            <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-            <polygon points="325,166 492,233 275,348 368,245" />
-            <polygon points="266,335 334,472 443,468 322,382" />
-          </svg>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="brand-logo-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
+              <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+              <polygon points="325,166 492,233 275,348 368,245" />
+              <polygon points="266,335 334,472 443,468 322,382" />
+            </svg>
+          </div>
+          <div class="brand-text-col">
+            <span class="brand-name">RETRIEVAL</span>
+            <span class="brand-domain">retrievel.co.in</span>
+          </div>
         </div>
-        <div class="flex flex-col">
-          <span class="font-black text-base text-white tracking-[0.15em] leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[9px] tracking-[0.25em] text-[#64748b] uppercase leading-none mt-1">retrievel.co.in</span>
+        <p class="footer-desc">
+          High-tier social media recovery, enterprise verification, and digital asset defense. Zero credential exposure with 100% escrow protection.
+        </p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 18px;">
+          <a href="mailto:support@retrievel.co.in" class="footer-icon-btn" title="Email Support" aria-label="Email Support">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://t.me/unban777" target="_blank" class="footer-icon-btn" title="Telegram Desk" aria-label="Telegram Desk">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          </a>
+          <a href="https://t.me/retrieval" target="_blank" class="footer-icon-btn" title="Official Channel" aria-label="Official Channel">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </a>
+          <a href="https://retrievel.co.in" class="footer-icon-btn" title="Official Domain" aria-label="Official Domain">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
         </div>
+        <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
       </div>
-      <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
-        High-tier social media recovery, enterprise verification, and targeted digital asset defense.
-      </p>
-      <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
-        <div>Email: <a href="mailto:support@retrievel.co.in" class="text-white hover:text-blue-400">support@retrievel.co.in</a></div>
-        <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
-        <div>Updates: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Asset Recovery</h4>
+        <ul class="footer-links">
+          <li><a href="instagram-recovery.html">Instagram Permanent Unban</a></li>
+          <li><a href="instagram-recovery.html#compromised">Hacked &amp; 2FA Bypass</a></li>
+          <li><a href="social-media-recovery.html">Facebook BM &amp; Ad Accounts</a></li>
+          <li><a href="social-media-recovery.html#whatsapp">WhatsApp &amp; Telegram Unbans</a></li>
+        </ul>
       </div>
-      <div class="text-[11px] text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Verification &amp; Defense</h4>
+        <ul class="footer-links">
+          <li><a href="instagram-verification.html">Meta Blue Tick Portal</a></li>
+          <li><a href="instagram-verification.html#shield">Official VIP Whitelist</a></li>
+          <li><a href="negative-news-links-removal-service.html">Defamatory Link Removal</a></li>
+          <li><a href="google-knowledge-panel.html">Google Knowledge Panel</a></li>
+          <li><a href="orm-services.html">Reputation Management (ORM)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Company &amp; Escrow</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Capabilities Directory</a></li>
+          <li><a href="how-it-works.html">Operating Protocol</a></li>
+          <li><a href="our-story.html">Security &amp; About Us</a></li>
+          <li><a href="clients.html">Enterprise Case Studies</a></li>
+          <li><a href="refund.html">Escrow &amp; Refund Terms</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Threat Intelligence Blog</a></li>
+        </ul>
+      </div>
+
     </div>
+  </footer>
 
-    <div>
-      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Asset Recovery</h4>
-      <ul class="space-y-2 text-xs text-[#cbd5e1]">
-        <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Permanent Unban</a></li>
-        <li><a href="instagram-recovery.html#compromised" class="hover:text-white transition-colors">Hacked & 2FA Bypass Recovery</a></li>
-        <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Facebook BM & Page Restoration</a></li>
-        <li><a href="social-media-recovery.html#whatsapp" class="hover:text-white transition-colors">WhatsApp & Telegram Unbans</a></li>
-      </ul>
-    </div>
+  <!-- Floating Direct Action CTA Button -->
+  <a href="https://t.me/unban777" target="_blank" class="floating-cta" title="Direct to Telegram Desk">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+    <span class="label">Telegram Desk</span>
+  </a>
 
-    <div>
-      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification & ORM</h4>
-      <ul class="space-y-2 text-xs text-[#cbd5e1]">
-        <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Meta Blue Tick Verification</a></li>
-        <li><a href="instagram-verification.html#shield" class="hover:text-white transition-colors">Instagram Official Whitelist</a></li>
-        <li><a href="negative-links-removal.html" class="hover:text-white transition-colors">Defamatory Article Takedowns</a></li>
-        <li><a href="google-knowledge-panel.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
-        <li><a href="orm-services.html" class="hover:text-white transition-colors">Online Reputation Management</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Protocol & Trust</h4>
-      <ul class="space-y-2 text-xs text-[#cbd5e1]">
-        <li><a href="services.html" class="hover:text-white transition-colors">Capabilities Directory</a></li>
-        <li><a href="how-it-works.html" class="hover:text-white transition-colors">Execution SLA & Security</a></li>
-        <li><a href="our-story.html" class="hover:text-white transition-colors">Security Infrastructure</a></li>
-        <li><a href="contact.html" class="hover:text-white transition-colors">Encrypted Case Dispatch</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating Action Button for Telegram / WhatsApp Direct Desk -->
-<a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
-  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-  <span>Direct Desk</span>
-</a>
-
-<script>
-  function toggleMobileMenu() {
-    const drawer = document.getElementById('mobile-nav-drawer');
-    const iconOpen = document.getElementById('menu-icon-open');
-    const iconClose = document.getElementById('menu-icon-close');
-    if (drawer.classList.contains('hidden')) {
-      drawer.classList.remove('hidden');
-      iconOpen.classList.add('hidden');
-      iconClose.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    } else {
-      drawer.classList.add('hidden');
-      iconOpen.classList.remove('hidden');
-      iconClose.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  }
-</script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
