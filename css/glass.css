@@ -2,16 +2,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg-obsidian: #050608;
-  --bg-surface: #090b10;
-  --bg-card: rgba(13, 16, 23, 0.75);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-highlight: rgba(255, 255, 255, 0.22);
-  --primary-blue: #2f6bff;
-  --primary-glow: rgba(47, 107, 255, 0.35);
+  /* Best Shades of Obsidian & Void Black */
+  --bg-obsidian: #07080c;
+  --bg-surface: #0c0e15;
+  --bg-card: rgba(13, 17, 26, 0.78);
+  --bg-card-hover: rgba(18, 24, 38, 0.92);
+
+  /* Best Shades of Electric Precision & Midnight Blue */
+  --primary-blue: #2563eb;
+  --accent-blue: #3b82f6;
+  --sky-blue: #38bdf8;
+  --midnight-blue: #1d4ed8;
+  --primary-glow: rgba(37, 99, 235, 0.38);
+  --blue-glow-subtle: rgba(59, 130, 246, 0.16);
+  --border-active-blue: rgba(59, 130, 246, 0.45);
+
+  /* Best Shades of Slate & Titanium Gray */
   --text-white: #ffffff;
-  --text-muted: #8b92a5;
-  --text-subtle: #4e5569;
+  --text-bright: #f8fafc;
+  --text-body: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+  --text-faint: #475569;
+
+  /* Best Shades of Crisp Optical White & Glass Borders */
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-card: rgba(148, 163, 184, 0.14);
+  --border-highlight: rgba(255, 255, 255, 0.24);
+  --inner-glow: rgba(255, 255, 255, 0.08);
+
   --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -43,7 +62,7 @@ body {
 }
 
 ::selection {
-  background: rgba(47, 107, 255, 0.4);
+  background: rgba(37, 99, 235, 0.45);
   color: #ffffff;
 }
 
@@ -64,33 +83,33 @@ body {
   position: absolute;
   border-radius: 9999px;
   filter: blur(120px);
-  opacity: 0.5;
+  opacity: 0.55;
   mix-blend-mode: screen;
   pointer-events: none;
 }
 
 .orb-primary {
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(47, 107, 255, 0.4) 0%, rgba(30, 58, 138, 0.2) 50%, transparent 70%);
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.42) 0%, rgba(29, 78, 216, 0.22) 50%, transparent 70%);
   top: -10%;
   left: 15%;
   animation: floatOrb1 24s ease-in-out infinite alternate;
 }
 
 .orb-cyan {
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(14, 116, 144, 0.15) 50%, transparent 70%);
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.32) 0%, rgba(37, 99, 235, 0.18) 50%, transparent 70%);
   top: 35%;
   right: -5%;
   animation: floatOrb2 28s ease-in-out infinite alternate;
 }
 
 .orb-violet {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(129, 140, 248, 0.25) 0%, rgba(76, 29, 149, 0.15) 50%, transparent 70%);
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.28) 0%, rgba(30, 58, 138, 0.2) 50%, transparent 70%);
   bottom: -10%;
   left: 20%;
   animation: floatOrb3 32s ease-in-out infinite alternate;
@@ -214,21 +233,30 @@ body {
   background: var(--bg-card);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-card);
   border-radius: 1.5rem;
   box-shadow: 
-    0 16px 40px -10px rgba(0, 0, 0, 0.6),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    0 16px 40px -10px rgba(0, 0, 0, 0.7),
+    inset 0 1px 1px var(--inner-glow);
   transition: transform 0.2s var(--ease-apple), border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.touch-card:hover {
+  border-color: var(--border-highlight);
+  background: var(--bg-card-hover);
+  box-shadow: 
+    0 20px 48px -10px rgba(0, 0, 0, 0.8),
+    0 0 24px -6px var(--blue-glow-subtle),
+    inset 0 1px 1px rgba(255, 255, 255, 0.12);
 }
 
 .touch-card:active {
   transform: scale(0.985);
-  border-color: var(--border-highlight);
-  background: rgba(20, 25, 36, 0.95);
+  border-color: var(--border-active-blue);
+  background: rgba(18, 26, 42, 0.95);
   box-shadow: 
-    0 20px 50px -10px rgba(0, 0, 0, 0.8),
-    0 0 30px -5px rgba(47, 107, 255, 0.2),
+    0 20px 50px -10px rgba(0, 0, 0, 0.85),
+    0 0 30px -5px var(--primary-glow),
     inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
@@ -242,19 +270,23 @@ body {
   padding: 0.65rem 1.4rem;
   border-radius: 9999px;
   background: #ffffff;
-  color: #050608;
+  color: #07080c;
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: -0.01em;
   white-space: nowrap;
   transition: transform 0.15s var(--ease-apple), opacity 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15), 0 0 15px var(--blue-glow-subtle);
   touch-action: manipulation;
+}
+
+.touch-btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25), 0 0 25px var(--primary-glow);
 }
 
 .touch-btn-primary:active {
   transform: scale(0.97);
-  opacity: 0.9;
+  opacity: 0.92;
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -266,23 +298,30 @@ body {
   min-height: 46px;
   padding: 0.65rem 1.4rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-bright);
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: -0.01em;
   white-space: nowrap;
-  transition: transform 0.15s var(--ease-apple), background-color 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s var(--ease-apple), background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   touch-action: manipulation;
+}
+
+.touch-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-active-blue);
+  color: #ffffff;
+  box-shadow: 0 0 20px var(--blue-glow-subtle);
 }
 
 .touch-btn-secondary:active {
   transform: scale(0.97);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--border-active-blue);
 }
 
 /* Buttons & Touch Optimization for iOS Safari */
