@@ -1,5 +1,5 @@
 /**
- * RETRIEVAL STUDIO — Fail-Proof Mobile Navigation & Atmospheric Engine
+ * RETRIEVAL STUDIO — Fail-Proof Mobile Navigation, FAQ Accordion & Atmospheric Engine
  */
 
 // Global Navigation Controller (Works directly via inline onclick and touch listeners)
@@ -27,6 +27,26 @@ window.toggleMobileNav = function(e) {
     window.closeMobileNav(e);
   } else {
     window.openMobileNav(e);
+  }
+};
+
+// Global FAQ Accordion Toggle
+window.toggleFaq = function(button) {
+  const answer = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  const isOpen = !answer.classList.contains('hidden');
+
+  // Close all other FAQs in the same container for clean accordion behavior
+  document.querySelectorAll('.faq-answer').forEach(el => {
+    el.classList.add('hidden');
+  });
+  document.querySelectorAll('.faq-icon').forEach(el => {
+    el.style.transform = 'rotate(0deg)';
+  });
+
+  if (!isOpen) {
+    answer.classList.remove('hidden');
+    if (icon) icon.style.transform = 'rotate(45deg)';
   }
 };
 

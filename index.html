@@ -48,7 +48,7 @@
     }
   </script>
 
-  <!-- iPhone Optimized Stylesheet -->
+  <!-- iPhone Optimized Stylesheet & Atmospheric Glow -->
   <link rel="stylesheet" href="css/glass.css"/>
 </head>
 <body class="bg-obsidian text-white min-h-[100dvh] relative antialiased selection:bg-white/20 selection:text-white">
@@ -80,11 +80,12 @@
         </div>
       </a>
 
-      <!-- Desktop Links (Hidden on iPhone) -->
+      <!-- Desktop Links (Hidden on Mobile) -->
       <div class="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
-        <a href="#work" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Work</a>
-        <a href="services.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="#solutions" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Solutions</a>
+        <a href="#why-us" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Why Us</a>
+        <a href="#case-studies" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Results</a>
+        <a href="#faq" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">FAQ</a>
         <a href="contact.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Contact</a>
       </div>
 
@@ -103,7 +104,7 @@
     </div>
   </header>
 
-  <!-- Full-Screen Native iPhone Navigation Overlay (Hidden on Desktop) -->
+  <!-- Full-Screen Native iPhone Navigation Overlay (Matching Reference Layout) -->
   <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-6 safe-top safe-bottom">
     
     <!-- Top Bar inside Modal: Close Left, Logo Center -->
@@ -123,27 +124,30 @@
       <div class="w-10 h-10"></div>
     </div>
 
-    <!-- Navigation Links & Inline CTA (Top-aligned stack as in reference) -->
+    <!-- Navigation Links & Inline CTA (Top-aligned stack) -->
     <div class="flex flex-col pt-8 pb-8 flex-grow justify-start space-y-6">
       <nav class="flex flex-col space-y-3">
         <a href="index.html" class="mobile-nav-item active">
           <span>OVERVIEW</span>
         </a>
-        <a href="#work" class="mobile-nav-item">
-          <span>SELECTED WORK</span>
+        <a href="#solutions" class="mobile-nav-item">
+          <span>PLATFORMS &amp; SERVICES</span>
         </a>
-        <a href="services.html" class="mobile-nav-item">
-          <span>CAPABILITIES</span>
+        <a href="#why-us" class="mobile-nav-item">
+          <span>WHY RETRIEVAL</span>
         </a>
-        <a href="how-it-works.html" class="mobile-nav-item">
-          <span>METHODOLOGY</span>
+        <a href="#case-studies" class="mobile-nav-item">
+          <span>CLIENT RESULTS</span>
+        </a>
+        <a href="#faq" class="mobile-nav-item">
+          <span>FREQUENTLY ASKED</span>
         </a>
         <a href="contact.html" class="mobile-nav-item">
           <span>CONTACT</span>
         </a>
       </nav>
 
-      <!-- Prominent Action CTA Pill placed directly below the navigation items -->
+      <!-- Prominent Action CTA Pill -->
       <div class="pt-2">
         <a href="contact.html" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
           <span>START AN ENGAGEMENT</span>
@@ -160,45 +164,42 @@
 
   </div>
 
-  <!-- Main Mobile Content Area -->
-  <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto">
+  <!-- Main Content Structure -->
+  <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto space-y-28">
     
-    <!-- 1. HERO SECTION (iPhone-First Vertical Storytelling) -->
-    <section class="min-h-[75dvh] flex flex-col justify-center py-6">
+    <!-- 1. HERO SECTION -->
+    <section class="min-h-[70dvh] flex flex-col justify-center py-6">
       
       <!-- Small Technical Status Label -->
       <div class="mb-6">
         <div class="mono-pill">
           <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
-          <span>SYSTEM ARCHITECTURE &amp; SYSTEMS</span>
+          <span>HIGH-PERFORMANCE DATA &amp; SYSTEMS RETRIEVAL</span>
         </div>
       </div>
 
-      <!-- Large Headline (Balanced 4-5 lines on iPhone) -->
-      <h1 class="font-display font-extrabold text-[2.5rem] leading-[1.08] sm:text-5xl md:text-6xl tracking-tight text-white mb-6">
-        We engineer<br/>
-        high-performance<br/>
-        systems and neural<br/>
-        infrastructure.
+      <!-- Large Headline (Balanced lines on iPhone) -->
+      <h1 class="font-display font-extrabold text-[2.4rem] leading-[1.08] sm:text-5xl md:text-6xl tracking-tight text-white mb-6">
+        Sub-Millisecond Vector Retrieval &amp; Mission-Critical Cloud Architecture.
       </h1>
 
-      <!-- Short Supporting Description -->
+      <!-- Supporting Description -->
       <p class="text-zinc-400 text-base sm:text-lg leading-[1.65] font-light max-w-xl mb-9">
-        A boutique digital systems studio partnering with ambitious companies to architect sub-millisecond retrieval, distributed memory layers, and mission-critical cloud software.
+        When latency spikes and unoptimized infrastructure slow your product down, RETRIEVAL deploys custom zero-copy memory layers, HNSW graph clusters, and hardware-isolated enclaves to restore unconstrained speed.
       </p>
 
       <!-- Primary & Secondary CTAs -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-14">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-12">
         <a href="contact.html" class="touch-btn-primary">
-          <span>Start an Engagement</span>
+          <span>Schedule Architecture Review</span>
           <span class="material-symbols-outlined text-base ml-2">arrow_outward</span>
         </a>
-        <a href="#work" class="touch-btn-secondary">
-          <span>View Selected Work</span>
+        <a href="#solutions" class="touch-btn-secondary">
+          <span>Explore Capabilities</span>
         </a>
       </div>
 
-      <!-- Telemetry Highlights (Minimalist Mobile Specs Card) -->
+      <!-- Key Snapshot Metric Card -->
       <div class="touch-card p-6 border border-white/10">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 divide-x-0 sm:divide-x divide-white/10">
           <div>
@@ -219,304 +220,144 @@
     </section>
 
 
-    <!-- 2. SELECTED WORK (Substantial Vertical Story Moments) -->
-    <section id="work" class="pt-24 sm:pt-32">
-      
-      <div class="mb-10">
-        <div class="mono-pill mb-3">
-          <span>SELECTED WORK</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-          Proven Under Critical Load
-        </h2>
-        <p class="text-zinc-400 text-sm font-light mt-2 max-w-lg">
-          Systems architected and deployed for high-scale enterprise operations.
-        </p>
+    <!-- 2. FEATURED / VERIFIED PROOF BAR (Matching Reference Section 2) -->
+    <section class="border-y border-white/10 py-6">
+      <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-widest text-center mb-4">
+        ENGINEERED FOR PRODUCTION &amp; ENTERPRISE PROTOCOLS
       </div>
-
-      <div class="space-y-8 sm:space-y-12">
-        
-        <!-- Project 01 -->
-        <article class="touch-card p-7 sm:p-9 border border-white/10">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-5">
-            <span class="font-semibold text-white">01</span>
-            <span class="tracking-widest uppercase">PRODUCTION</span>
-          </div>
-          
-          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight mb-3">
-            Sub-Millisecond Market Retrieval Engine
-          </h3>
-          
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
-            Architected a custom distributed in-memory vector engine for high-frequency trading and matching, reducing transaction validation latency by 91%.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-8">
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[C++23]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[RUST]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[DMA DIRECT]</span>
-          </div>
-
-          <div class="hairline mb-6"></div>
-
-          <div class="flex items-baseline justify-between">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-white">0.38ms</div>
-            <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider">P99 LATENCY</div>
-          </div>
-        </article>
-
-        <!-- Project 02 -->
-        <article class="touch-card p-7 sm:p-9 border border-white/10">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-5">
-            <span class="font-semibold text-white">02</span>
-            <span class="tracking-widest uppercase">250M+ USERS</span>
-          </div>
-          
-          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight mb-3">
-            Distributed Real-Time Semantic Index
-          </h3>
-          
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
-            Engineered a sharded HNSW graph topology capable of dispatching 14 million queries per second with real-time continuous vector updates.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-8">
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[SHARDED HNSW]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[14M QPS]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[RAFT CLUSTER]</span>
-          </div>
-
-          <div class="hairline mb-6"></div>
-
-          <div class="flex items-baseline justify-between">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-white">99.999%</div>
-            <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider">RELIABILITY</div>
-          </div>
-        </article>
-
-        <!-- Project 03 -->
-        <article class="touch-card p-7 sm:p-9 border border-white/10">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-5">
-            <span class="font-semibold text-white">03</span>
-            <span class="tracking-widest uppercase">SOC2 TYPE II</span>
-          </div>
-          
-          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight mb-3">
-            Hardware Confidential Enclave Vault
-          </h3>
-          
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
-            Deployed zero-knowledge vector similarity compute inside AMD SEV-SNP encrypted memory, enabling secure multi-party genomics research.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-8">
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[AMD SEV-SNP]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[ZERO TRUST]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[HARDWARE ATTESTED]</span>
-          </div>
-
-          <div class="hairline mb-6"></div>
-
-          <div class="flex items-baseline justify-between">
-            <div class="font-mono text-2xl sm:text-3xl font-extrabold text-white">ENCLAVE</div>
-            <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider">HARDWARE ISOLATED</div>
-          </div>
-        </article>
-
-        <!-- Project 04 -->
-        <article class="touch-card p-7 sm:p-9 border border-white/10">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-5">
-            <span class="font-semibold text-white">04</span>
-            <span class="tracking-widest uppercase">GLOBAL MULTI-REGION</span>
-          </div>
-          
-          <h3 class="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight mb-3">
-            Zero-Copy Edge Caching System
-          </h3>
-          
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
-            Replaced traditional database tiers with an edge-replicated memory mapping layer, reducing server compute overhead by 68%.
-          </p>
-
-          <div class="flex flex-wrap gap-2 mb-8">
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[eBPF KERNEL]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[ZERO-COPY DMA]</span>
-            <span class="px-3 py-1 rounded-md bg-white/5 border border-white/10 font-mono text-xs text-zinc-300">[MULTI-CLOUD]</span>
-          </div>
-
-          <div class="hairline mb-6"></div>
-
-          <div class="flex items-baseline justify-between">
-            <div class="font-mono text-3xl sm:text-4xl font-extrabold text-white">-68%</div>
-            <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider">COMPUTE OVERHEAD</div>
-          </div>
-        </article>
-
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-mono text-xs text-zinc-300">
+        <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">AMD SEV-SNP ENCLAVES</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">C++23 / RUST KERNELS</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">eBPF NETWORKING</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">SOC2 TYPE II</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">ZERO-DOWNTIME MIGRATION</span>
       </div>
-
     </section>
 
 
-    <!-- 3. CAPABILITIES (Vertically Stacked Touch Cards) -->
-    <section class="pt-24 sm:pt-32">
-      
-      <div class="mb-10">
-        <div class="mono-pill mb-3">
-          <span>CAPABILITIES</span>
+    <!-- 3. CORE PROMISE & VALUE PROPOSITION (Matching Reference Section 3) -->
+    <section class="touch-card p-7 sm:p-10 border border-white/10">
+      <div class="mono-pill mb-4">
+        <span>CORE MISSION</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight mb-4">
+        Regain Speed. Eliminate Bottlenecks. Secure Your Infrastructure.
+      </h2>
+      <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
+        Has your database or AI search tier hit a performance wall under high concurrency? RETRIEVAL provides an elite engineering lifeline. We diagnose CPU serialization, bypass operating system socket overhead, and deploy mathematically modeled graph partitions that scale effortlessly.
+      </p>
+      <div class="hairline mb-6"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-zinc-300">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span>Zero Memory Leaks</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-          Core Studio Disciplines
-        </h2>
-        <p class="text-zinc-400 text-sm font-light mt-2 max-w-lg">
-          Specialized practices where we deliver disproportionate engineering advantage.
-        </p>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span>Hardware Remote Attestation</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span>15-Minute Emergency SLA</span>
+        </div>
       </div>
-
-      <div class="space-y-4">
-        
-        <a href="services.html" class="touch-card p-6 block border border-white/10 group">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="font-mono text-xs font-bold text-white">01</span>
-                <span class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider">SYSTEMS DESIGN</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white group-active:text-zinc-300 transition-colors">
-                Systems Architecture &amp; Audit
-              </h3>
-              <p class="text-zinc-400 text-sm font-light leading-relaxed mt-2">
-                Auditing bottlenecked database tiers, modeling distributed topologies, and designing high-concurrency protocols.
-              </p>
-            </div>
-            <span class="material-symbols-outlined text-zinc-500 group-hover:text-white transition-colors shrink-0 ml-4">arrow_forward</span>
-          </div>
-        </a>
-
-        <a href="services.html" class="touch-card p-6 block border border-white/10 group">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="font-mono text-xs font-bold text-white">02</span>
-                <span class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider">NEURAL VECTOR</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white group-active:text-zinc-300 transition-colors">
-                High-Dimensional Vector Engines
-              </h3>
-              <p class="text-zinc-400 text-sm font-light leading-relaxed mt-2">
-                Bespoke HNSW graph algorithms, scalar quantization codebooks, and sub-millisecond retrieval pipelines.
-              </p>
-            </div>
-            <span class="material-symbols-outlined text-zinc-500 group-hover:text-white transition-colors shrink-0 ml-4">arrow_forward</span>
-          </div>
-        </a>
-
-        <a href="services.html" class="touch-card p-6 block border border-white/10 group">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="font-mono text-xs font-bold text-white">03</span>
-                <span class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider">KERNEL &amp; MEMORY</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white group-active:text-zinc-300 transition-colors">
-                Kernel DMA &amp; Low-Latency Cache
-              </h3>
-              <p class="text-zinc-400 text-sm font-light leading-relaxed mt-2">
-                Direct kernel-bypass memory access, zero-copy socket buffers, and atomic distributed state synchronization.
-              </p>
-            </div>
-            <span class="material-symbols-outlined text-zinc-500 group-hover:text-white transition-colors shrink-0 ml-4">arrow_forward</span>
-          </div>
-        </a>
-
-        <a href="services.html" class="touch-card p-6 block border border-white/10 group">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="flex items-center gap-3 mb-2">
-                <span class="font-mono text-xs font-bold text-white">04</span>
-                <span class="font-mono text-[10px] text-zinc-500 uppercase tracking-wider">SECURITY</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-white group-active:text-zinc-300 transition-colors">
-                Hardware Confidential Enclaves
-              </h3>
-              <p class="text-zinc-400 text-sm font-light leading-relaxed mt-2">
-                AMD SEV-SNP hardware-encrypted compute enclaves, cryptographic remote attestation, and zero-trust data protection.
-              </p>
-            </div>
-            <span class="material-symbols-outlined text-zinc-500 group-hover:text-white transition-colors shrink-0 ml-4">arrow_forward</span>
-          </div>
-        </a>
-
-      </div>
-
     </section>
 
 
-    <!-- 4. HOW WE ENGAGE (Mobile Vertical Timeline) -->
-    <section class="pt-24 sm:pt-32">
+    <!-- 4. PLATFORMS & SERVICES MATRIX (Matching Reference Section 4) -->
+    <section id="solutions" class="space-y-6">
       
-      <div class="mb-10">
+      <div>
         <div class="mono-pill mb-3">
-          <span>METHODOLOGY</span>
+          <span>PLATFORMS &amp; SYSTEMS WE SUPPORT</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-          How We Engage
+          Specialized Recovery &amp; Acceleration Disciplines
         </h2>
         <p class="text-zinc-400 text-sm font-light mt-2 max-w-lg">
-          A disciplined 4-stage engineering lifecycle designed for precision.
+          Dedicated engineering modules designed to tackle specific bottlenecks at enterprise scale.
         </p>
       </div>
 
-      <div class="space-y-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
         
-        <!-- Timeline Stage 01 -->
-        <div class="timeline-node timeline-stem flex gap-5">
-          <div class="w-8 h-8 rounded-full border border-white/20 bg-black flex items-center justify-center font-mono text-xs text-white shrink-0 z-10 shadow-sm">
-            01
-          </div>
-          <div class="touch-card p-6 border border-white/10 flex-grow mb-2">
-            <h3 class="font-display font-bold text-lg text-white mb-1.5">Discovery &amp; Vector Audit</h3>
-            <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Granular profiling of latency bottlenecks, memory footprint, and concurrency targets.
+        <!-- Platform 1 -->
+        <div class="touch-card p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-4">
+              <span class="text-white font-bold">01 // TOPOLOGY</span>
+              <span>SUB-0.35ms</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+              High-Dimensional Vector Engines
+            </h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+              Custom HNSW graph algorithms and scalar quantization codebooks engineered to traverse billions of embeddings in sub-millisecond cycles without precision loss.
             </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-300">
+            <span>RECALL ACCURACY</span>
+            <span class="text-white font-semibold">&gt; 99.9%</span>
           </div>
         </div>
 
-        <!-- Timeline Stage 02 -->
-        <div class="timeline-node timeline-stem flex gap-5">
-          <div class="w-8 h-8 rounded-full border border-white/20 bg-black flex items-center justify-center font-mono text-xs text-white shrink-0 z-10 shadow-sm">
-            02
-          </div>
-          <div class="touch-card p-6 border border-white/10 flex-grow mb-2">
-            <h3 class="font-display font-bold text-lg text-white mb-1.5">Bespoke Architecture</h3>
-            <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Mathematical modeling of graph topologies, quantization codebooks, and caching layers.
+        <!-- Platform 2 -->
+        <div class="touch-card p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-4">
+              <span class="text-white font-bold">02 // KERNEL</span>
+              <span>ZERO-COPY</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+              Zero-Copy Memory Cache
+            </h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+              Direct kernel-bypass DMA memory mapping, eliminating CPU serialization and buffer copying to handle 10M+ continuous queries per second.
             </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-300">
+            <span>BUFFER OVERHEAD</span>
+            <span class="text-white font-semibold">~0% Copy</span>
           </div>
         </div>
 
-        <!-- Timeline Stage 03 -->
-        <div class="timeline-node timeline-stem flex gap-5">
-          <div class="w-8 h-8 rounded-full border border-white/20 bg-black flex items-center justify-center font-mono text-xs text-white shrink-0 z-10 shadow-sm">
-            03
-          </div>
-          <div class="touch-card p-6 border border-white/10 flex-grow mb-2">
-            <h3 class="font-display font-bold text-lg text-white mb-1.5">Hardened Build</h3>
-            <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Zero-copy kernel pipelines, custom benchmarks, and hardware enclave attestation.
+        <!-- Platform 3 -->
+        <div class="touch-card p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-4">
+              <span class="text-white font-bold">03 // SECURITY</span>
+              <span>AMD SEV-SNP</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+              Hardware Confidential Enclaves
+            </h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+              Hardware-enforced encryption in secure memory enclaves with cryptographic remote attestation for SOC2 Type II and HIPAA compliance.
             </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-300">
+            <span>DATA ISOLATION</span>
+            <span class="text-white font-semibold">Hardware Enforced</span>
           </div>
         </div>
 
-        <!-- Timeline Stage 04 -->
-        <div class="timeline-node timeline-stem flex gap-5">
-          <div class="w-8 h-8 rounded-full border border-white/20 bg-black flex items-center justify-center font-mono text-xs text-white shrink-0 z-10 shadow-sm">
-            04
-          </div>
-          <div class="touch-card p-6 border border-white/10 flex-grow">
-            <h3 class="font-display font-bold text-lg text-white mb-1.5">Global Scale &amp; Handover</h3>
-            <p class="text-zinc-400 text-sm font-light leading-relaxed">
-              Zero-downtime deployment, continuous monitoring telemetry, and team knowledge transfer.
+        <!-- Platform 4 -->
+        <div class="touch-card p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-4">
+              <span class="text-white font-bold">04 // BARE METAL</span>
+              <span>100Gbps LINK</span>
+            </div>
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white mb-2">
+              Dedicated NVMe Clusters
+            </h3>
+            <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+              Zero-virtualization bare-metal servers equipped with PCIe Gen 5 NVMe arrays and redundant fiber uplinks for unconstrained scale.
             </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-300">
+            <span>THROUGHPUT</span>
+            <span class="text-white font-semibold">14M+ QPS</span>
           </div>
         </div>
 
@@ -525,27 +366,256 @@
     </section>
 
 
-    <!-- 5. INQUIRY / CONTACT (Mobile-First Form) -->
-    <section class="pt-24 sm:pt-32">
+    <!-- 5. SPEED & SLA CALLOUT BANNER (Matching Reference Section 5) -->
+    <section class="touch-card p-8 sm:p-12 text-center border border-white/15 relative overflow-hidden">
+      <div class="mono-pill mb-4">
+        <span>RAPID DEPLOYMENT &amp; SLA</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight mb-4 max-w-xl mx-auto">
+        Resolve performance bottlenecks in days, not quarters.
+      </h2>
+      <p class="text-zinc-400 text-sm sm:text-base font-light max-w-lg mx-auto mb-8">
+        Our principal systems architects plug directly into your repository, run deep latency profiling, and deploy hardened cluster kernels with a 99.999% contractual uptime commitment.
+      </p>
+      <a href="contact.html" class="touch-btn-primary justify-center w-full sm:w-auto inline-flex">
+        <span>Request System Review</span>
+        <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+      </a>
+    </section>
+
+
+    <!-- 6. WHY US / KEY ADVANTAGES (Matching Reference Section 6) -->
+    <section id="why-us" class="space-y-6">
+      
+      <div>
+        <div class="mono-pill mb-3">
+          <span>THE RETRIEVAL ADVANTAGE</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+          Why Engineering Teams Partner With Us
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 mb-2">01 // ZERO ABSTRACTIONS</div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Bare Metal &amp; Native C++/Rust</h4>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed">
+            We avoid slow interpreters and managed cloud bloat. Every system is built on bare metal with kernel DMA for maximum hardware utilization.
+          </p>
+        </div>
+
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 mb-2">02 // DIRECT ACCESS</div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Direct Principal Architect Slack Bridge</h4>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed">
+            No sales middlemen or junior staff. You communicate directly with senior systems architects who write the code and manage deployment.
+          </p>
+        </div>
+
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 mb-2">03 // CONFIDENTIALITY</div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">Hardware-Attested Privacy</h4>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed">
+            Zero-knowledge compute architectures ensure your proprietary dataset and user data are cryptographically shielded at the hardware level.
+          </p>
+        </div>
+
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 mb-2">04 // RELIABILITY</div>
+          <h4 class="font-display font-bold text-lg text-white mb-2">15-Minute Incident Response SLA</h4>
+          <p class="text-zinc-400 text-xs sm:text-sm font-light leading-relaxed">
+            Enterprise clients receive guaranteed contractual incident resolution windows backed by 24/7 automated microsecond telemetry.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 7. TECHNICAL KNOWLEDGE DEEP DIVE (Matching Reference Section 7) -->
+    <section class="touch-card p-7 sm:p-10 border border-white/10">
+      <div class="mono-pill mb-4">
+        <span>TECHNICAL DIAGNOSTIC</span>
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight mb-3">
+        Knowledge Insight: Why Vector Stores &amp; Cloud Tiers Fail Under Scale
+      </h3>
+      <p class="text-zinc-400 text-sm sm:text-base leading-relaxed font-light mb-6">
+        Most off-the-shelf vector databases rely on standard operating system sockets and generic memory allocators. As embedding dimensions and concurrent requests scale past 50,000 QPS, CPU context switching and unpartitioned HNSW graph traversal lead to explosive latency spikes and memory starvation.
+      </p>
+      
+      <div class="space-y-3 font-mono text-xs text-zinc-300">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+          <span class="text-zinc-400">Socket Buffer Copy Overhead</span>
+          <span class="text-white font-medium">Bypassed via RDMA / DMA</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+          <span class="text-zinc-400">Graph Index Traversal Complexity</span>
+          <span class="text-white font-medium">Logarithmic O(log N) Partitioning</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/5 flex items-center justify-between">
+          <span class="text-zinc-400">Memory Bloat &amp; Compression</span>
+          <span class="text-white font-medium">8.2x Lossless INT8 Quantization</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. CLIENT RESULTS & CASE PROOF (Matching Reference Section 8) -->
+    <section id="case-studies" class="space-y-6">
+      
+      <div>
+        <div class="mono-pill mb-3">
+          <span>CLIENT RESULTS &amp; BENCHMARKS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+          Proven Under Critical Production Load
+        </h2>
+      </div>
+
+      <div class="space-y-5">
+        
+        <article class="touch-card p-6 sm:p-8 border border-white/10">
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-3">
+            <span class="text-white font-bold">CASE 01 // FINTECH INFRASTRUCTURE</span>
+            <span>PRODUCTION LIVE</span>
+          </div>
+          <h4 class="font-display font-bold text-xl text-white mb-2">Sub-Millisecond Market Retrieval Engine</h4>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-4">
+            "RETRIEVAL rebuilt our matching memory architecture with zero-copy DMA. Transaction validation latency dropped by 91% while eliminating cluster spikes."
+          </p>
+          <div class="hairline mb-4"></div>
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="text-zinc-500">Benchmark Result</span>
+            <span class="text-white font-semibold">0.38ms P99 Latency</span>
+          </div>
+        </article>
+
+        <article class="touch-card p-6 sm:p-8 border border-white/10">
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-3">
+            <span class="text-white font-bold">CASE 02 // SOCIAL GRAPH PLATFORM</span>
+            <span>250M+ USERS</span>
+          </div>
+          <h4 class="font-display font-bold text-xl text-white mb-2">Distributed Real-Time Semantic Index</h4>
+          <p class="text-zinc-400 text-sm font-light leading-relaxed mb-4">
+            "Engineered a sharded HNSW graph topology capable of dispatching 14 million queries per second with real-time vector updates and zero downtime."
+          </p>
+          <div class="hairline mb-4"></div>
+          <div class="flex items-center justify-between font-mono text-xs">
+            <span class="text-zinc-500">Reliability SLA</span>
+            <span class="text-white font-semibold">99.999% Sustained</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- 9. FREQUENTLY ASKED QUESTIONS (Matching Reference Section 9) -->
+    <section id="faq" class="space-y-6">
+      
+      <div>
+        <div class="mono-pill mb-3">
+          <span>FAQ</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <!-- FAQ 1 -->
+        <div class="touch-card border border-white/10 overflow-hidden">
+          <button onclick="window.toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-zinc-300 transition-colors">
+            <span>What is RETRIEVAL's Architecture &amp; Acceleration Service?</span>
+            <span class="faq-icon material-symbols-outlined text-zinc-400 shrink-0 transition-transform duration-300">add</span>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 text-zinc-400 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+            RETRIEVAL is a specialized digital systems engineering studio. We partner with tech leaders to architect, benchmark, and deploy custom low-latency vector databases, zero-copy kernel memory caches, and hardware-isolated enclaves.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="touch-card border border-white/10 overflow-hidden">
+          <button onclick="window.toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-zinc-300 transition-colors">
+            <span>What types of performance bottlenecks do you resolve?</span>
+            <span class="faq-icon material-symbols-outlined text-zinc-400 shrink-0 transition-transform duration-300">add</span>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 text-zinc-400 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+            We resolve high-concurrency latency spikes, slow vector search convergence, memory buffer serialization overhead, database failover delays, and complex multi-region shard desynchronizations.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="touch-card border border-white/10 overflow-hidden">
+          <button onclick="window.toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-zinc-300 transition-colors">
+            <span>How fast can our team expect deployment?</span>
+            <span class="faq-icon material-symbols-outlined text-zinc-400 shrink-0 transition-transform duration-300">add</span>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 text-zinc-400 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+            Our Phase 01 discovery and latency profiling takes under 48 hours. Hardened kernel builds and zero-downtime cluster migrations are typically completed within 2 to 4 weeks depending on database scale.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="touch-card border border-white/10 overflow-hidden">
+          <button onclick="window.toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-zinc-300 transition-colors">
+            <span>Is our data secure and confidential during migration?</span>
+            <span class="faq-icon material-symbols-outlined text-zinc-400 shrink-0 transition-transform duration-300">add</span>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 text-zinc-400 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+            Yes. We execute mutual enterprise NDAs prior to any code access. For sensitive proprietary datasets, compute runs strictly inside AMD SEV-SNP hardware-encrypted memory enclaves with full remote cryptographic attestation.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="touch-card border border-white/10 overflow-hidden">
+          <button onclick="window.toggleFaq(this)" class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-white hover:text-zinc-300 transition-colors">
+            <span>What is your uptime and latency SLA commitment?</span>
+            <span class="faq-icon material-symbols-outlined text-zinc-400 shrink-0 transition-transform duration-300">add</span>
+          </button>
+          <div class="faq-answer hidden px-5 sm:px-6 pb-6 text-zinc-400 text-sm font-light leading-relaxed border-t border-white/5 pt-4">
+            We provide contractual 99.999% availability SLAs and sub-millisecond P99 latency guarantees, supported by direct Slack/Discord channels to our principal SRE architects.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- 10. DIRECT INTAKE / CONSULTATION FORM (Matching Reference Section 10) -->
+    <section id="contact" class="pt-6">
       
       <div class="touch-card p-7 sm:p-10 border border-white/10">
         
         <div class="mono-pill mb-4">
-          <span>START A PROJECT</span>
+          <span>HAVE ANY QUESTIONS?</span>
         </div>
 
         <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight mb-2">
-          Have a mission-critical challenge?
+          Schedule an Architecture Consultation
         </h2>
         <p class="text-zinc-400 text-sm font-light mb-8">
-          We partner with select venture-backed startups and enterprise leaders. Speak directly with a principal architect.
+          Submit your project requirements below. A principal systems architect will respond within one business day.
         </p>
 
-        <form id="mobile-contact-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Brief received. A principal architect will respond within 24 hours.');">
+        <form id="mobile-contact-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Inquiry received. A principal architect will respond within 24 hours.');">
           
-          <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
-            <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+              <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+            </div>
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Organization</label>
+              <input type="text" required placeholder="Acme Systems Inc." class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+            </div>
           </div>
 
           <div>
@@ -554,7 +624,7 @@
           </div>
 
           <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Primary Scope</label>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Primary Architecture Scope</label>
             <select class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
               <option value="neural">High-Dimensional Vector Engine</option>
               <option value="architecture">Systems Architecture &amp; Audit</option>
@@ -564,18 +634,19 @@
           </div>
 
           <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Project Notes</label>
-            <textarea rows="3" placeholder="Target scale, concurrency, latency constraints..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Technical Requirements / Bottlenecks</label>
+            <textarea rows="3" placeholder="Target QPS, current latency footprint, vector count, compliance..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
           </div>
 
           <button type="submit" class="touch-btn-primary w-full justify-center !min-h-[52px]">
-            <span>Submit Project Brief</span>
+            <span>Submit Architecture Brief</span>
             <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
           </button>
 
-          <p class="text-center text-xs font-mono text-zinc-500 pt-2">
-            Standard NDA provided on request.
-          </p>
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-2">
+            <span>Confidentiality: Standard NDA</span>
+            <span>Direct: hello@retrieval.internal</span>
+          </div>
 
         </form>
 
@@ -586,7 +657,7 @@
   </main>
 
 
-  <!-- Minimalist Studio Footer -->
+  <!-- 11. MINIMALIST STUDIO FOOTER -->
   <footer class="border-t border-white/10 bg-black/90 backdrop-blur-xl relative z-10 py-10 safe-bottom">
     <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
       
@@ -599,9 +670,10 @@
 
       <!-- Links -->
       <div class="flex items-center gap-6 font-mono text-xs">
-        <a href="#work" class="hover:text-white transition-colors">Work</a>
-        <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
+        <a href="#solutions" class="hover:text-white transition-colors">Solutions</a>
+        <a href="#why-us" class="hover:text-white transition-colors">Why Us</a>
+        <a href="#case-studies" class="hover:text-white transition-colors">Results</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
       </div>
 
