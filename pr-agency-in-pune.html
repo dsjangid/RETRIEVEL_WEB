@@ -4,224 +4,777 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>PR Agency in Pune — RETRIEVAL</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --font-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-secondary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --color-primary: #2563eb;
+      --color-primary-hover: #1d4ed8;
+      --bg-dark: #07080c;
+      --bg-card: #0c0e15;
+      --text-white: #ffffff;
+      --text-muted: #cbd5e1;
+      --text-dim: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+
     * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
       -webkit-tap-highlight-color: transparent;
     }
+
     body {
-      font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #07080c;
-      color: #f8fafc;
+      font-family: var(--font-primary);
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.5;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-    .prose-content h1, .prose-content h2, .prose-content h3, .prose-content h4 {
-      color: #ffffff !important;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 0.8em;
-      margin-bottom: 0.4em;
+
+    /* Exact Heading Scales from Fametick Spec */
+    h1 {
+      font-family: var(--font-primary);
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 24px;
     }
-    .prose-content h1 { font-size: clamp(1.75rem, 5vw, 3.2rem); line-height: 1.15; }
-    .prose-content h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); line-height: 1.2; }
-    .prose-content h3 { font-size: clamp(1.2rem, 3.5vw, 2rem); line-height: 1.25; }
-    .prose-content h4 { font-size: clamp(1.05rem, 3vw, 1.5rem); line-height: 1.3; }
-    
-    .prose-content p {
-      color: #cbd5e1 !important;
-      font-weight: 300;
-      font-size: clamp(0.9rem, 2vw, 1.05rem);
-      line-height: 1.7;
-      margin-top: 0.6em;
-      margin-bottom: 0.6em;
+    @media (max-width: 920px) {
+      h1 {
+        font-size: 40px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+      }
     }
-    .prose-content strong, .prose-content b {
-      color: #ffffff !important;
+
+    h2 {
+      font-family: var(--font-primary);
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 920px) {
+      h2 {
+        font-size: 36px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+      }
+    }
+
+    h3 {
+      font-family: var(--font-primary);
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 920px) {
+      h3 {
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+    }
+
+    h4 {
+      font-family: var(--font-primary);
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 920px) {
+      h4 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+    }
+
+    h5 {
+      font-family: var(--font-primary);
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 920px) {
+      h5 {
+        font-size: 20px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+      }
+    }
+
+    h6 {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    p, .body {
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .body-large {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    .text-blue-500 {
+      color: #3b82f6 !important;
       font-weight: 700;
+    }
+
+    /* Exact Block Dimensions & Spacings */
+    .block-container {
+      max-width: 1224px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @media (max-width: 920px) {
+      .block-container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    .block-section {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    @media (max-width: 920px) {
+      .block-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    .grid-text-item {
+      margin-bottom: 16px;
+    }
+
+    /* Exact Button Spec */
+    .grid-button-wrapper {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .grid-button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 40px;
+      border-radius: 999px;
+      background-color: var(--color-primary);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: normal;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      cursor: pointer;
+      border: none;
+    }
+    .grid-button-primary:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+    @media (max-width: 920px) {
+      .grid-button-primary {
+        padding: 14px 36px;
+        font-size: 16px;
+      }
+    }
+
+    /* Header Nav */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(7, 8, 12, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .header-container {
+      max-width: 1224px;
+      margin: 0 auto;
+      height: 80px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width: 920px) {
+      .header-container {
+        height: 72px;
+        padding: 0 16px;
+      }
+    }
+
+    .brand-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+    .brand-svg {
+      width: 100%;
+      height: 100%;
+      fill: #ffffff;
+    }
+    .brand-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-name {
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+      line-height: 1;
+    }
+    .brand-domain {
+      font-family: 'Geist Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    .desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+    @media (min-width: 1024px) {
+      .desktop-nav {
+        display: flex;
+      }
+    }
+    .nav-item, .nav-dropdown-trigger {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 0;
+      transition: color 0.2s ease;
+    }
+    .nav-item:hover, .nav-dropdown-trigger:hover {
+      color: #ffffff;
+    }
+    .nav-dropdown-wrapper {
+      position: relative;
+    }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      background-color: #0c0e15;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 8px 0;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      display: none;
+      z-index: 60;
+    }
+    .nav-dropdown-wrapper:hover .nav-dropdown-menu {
+      display: block;
+    }
+    .dropdown-item {
+      display: block;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+    }
+
+    .contact-header-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 24px;
+      border-radius: 999px;
+      background-color: #ffffff;
+      color: #07080c;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .contact-header-btn:hover {
+      background-color: var(--color-primary);
+      color: #ffffff;
+    }
+
+    .mobile-toggle-btn {
+      display: block;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #ffffff;
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @media (min-width: 1024px) {
+      .mobile-toggle-btn {
+        display: none;
+      }
+    }
+    .icon-svg {
+      width: 24px;
+      height: 24px;
+    }
+    .hidden {
+      display: none !important;
+    }
+
+    /* iOS Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      inset: 72px 0 0 0;
+      background-color: rgba(7, 8, 12, 0.98);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      padding: 24px;
+      overflow-y: auto;
+      z-index: 50;
+    }
+    .drawer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .drawer-link-main {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .drawer-group {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+    .drawer-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .drawer-sublinks a {
+      display: block;
+      font-size: 15px;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 6px 0;
+    }
+
+    /* Media Press Logos Badges */
+    .press-logos-flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 960px;
+      margin: 32px auto;
+    }
+    .press-logo-badge {
+      width: 90px;
+      height: 90px;
+      border-radius: 999px;
+      background-color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .press-logo-badge {
+        width: 72px;
+        height: 72px;
+        padding: 10px;
+      }
+    }
+    .press-logo-badge:hover {
+      transform: scale(1.08);
+    }
+    .press-logo-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .grid-image-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .grid-image-element {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    /* Video Embed Card */
+    .grid-video-wrapper {
+      margin: 24px 0;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-card-ratio {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      background-color: #000000;
+    }
+    .video-card-ratio iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Form Card */
+    .grid-form-card {
+      background-color: #0d111a;
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 32px;
+      max-width: 560px;
+      margin: 32px auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .form-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .form-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .form-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-input {
+      width: 100%;
+      background-color: #07080c;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 15px;
+      color: #ffffff;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .form-input:focus {
+      border-color: var(--color-primary);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #050608;
+      border-top: 1px solid var(--border-color);
+      padding: 64px 0 40px 0;
+      color: var(--text-dim);
+    }
+    .footer-container {
+      max-width: 1224px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .footer-contacts div {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .footer-contacts a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer-contacts a:hover {
+      color: #3b82f6;
+    }
+    .footer-copy {
+      font-size: 12px;
+      margin-top: 16px;
+    }
+    .footer-title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 16px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Floating CTA */
+    .floating-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background-color: var(--color-primary);
+      color: #ffffff;
+      font-family: 'Geist Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+      transition: transform 0.2s ease;
+    }
+    .floating-cta:hover {
+      transform: scale(1.06);
     }
   </style>
 </head>
-<body class="bg-[#07080c] text-[#f8fafc] antialiased selection:bg-[#2563eb] selection:text-white">
+<body>
   
-    <!-- Header Navigation (Exact Fametick Structure & Hierarchy) -->
-    <header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+    <header class="site-header">
+      <div class="header-container">
         
-        <!-- Left: Mobile Menu Toggle & Brand Logo -->
-        <div class="flex items-center gap-3">
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 focus:outline-none transition-all active:scale-95" aria-label="Toggle Navigation Menu">
-            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="mobile-toggle-btn" aria-label="Toggle Menu">
+          <svg id="menu-icon-open" class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="icon-svg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
 
-          <a href="index.html" class="flex items-center gap-3 group">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:border-blue-500/50 transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
-                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-                <polygon points="325,166 492,233 275,348 368,245" />
-                <polygon points="266,335 334,472 443,468 322,382" />
-              </svg>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-black text-sm sm:text-base tracking-[0.15em] text-white leading-none">RETRIEVAL</span>
-              <span class="font-mono text-[8px] sm:text-[9px] tracking-[0.25em] text-[#94a3b8] uppercase leading-none mt-1">retrieval.co.in</span>
-            </div>
-          </a>
-        </div>
+        <!-- Brand Monogram & Name -->
+        <a href="index.html" class="brand-logo-link">
+          <div class="brand-logo-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
+              <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+              <polygon points="325,166 492,233 275,348 368,245" />
+              <polygon points="266,335 334,472 443,468 322,382" />
+            </svg>
+          </div>
+          <div class="brand-text-col">
+            <span class="brand-name">RETRIEVAL</span>
+            <span class="brand-domain">retrieval.co.in</span>
+          </div>
+        </a>
 
-        <!-- Desktop Navigation Menu (Matching Fametick Dropdowns) -->
-        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
-          <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
+        <!-- Desktop Dropdown Nav -->
+        <nav class="desktop-nav">
+          <a href="index.html" class="nav-item">Home</a>
           
-          <!-- Dropdown: ABOUT -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>About</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-52 z-50 backdrop-blur-2xl">
-              <a href="our-story.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Story</a>
-              <a href="clients.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Clients</a>
-              <a href="careers.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Careers</a>
-              <a href="blog.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Blog</a>
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">About ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="our-story.html" class="dropdown-item">Our Story</a>
+              <a href="clients.html" class="dropdown-item">Our Clients</a>
+              <a href="careers.html" class="dropdown-item">Careers</a>
+              <a href="blog.html" class="dropdown-item">Blog</a>
             </div>
           </div>
 
-          <!-- Dropdown: REACH -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Reach</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="ipo-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">IPO Marketing Service</a>
-              <a href="twitter-trending-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Trending Services</a>
-              <a href="podcast-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Podcast Marketing</a>
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">Reach ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="ipo-marketing-service.html" class="dropdown-item">IPO Marketing Service</a>
+              <a href="twitter-trending-services.html" class="dropdown-item">Twitter Trending Services</a>
+              <a href="podcast-marketing-service.html" class="dropdown-item">Podcast Marketing</a>
             </div>
           </div>
 
-          <!-- Dropdown: REPUTATION -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Reputation</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="personal-branding.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Personal Branding</a>
-              <a href="wikipedia-creation.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Creation</a>
-              <a href="twitter-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Verification</a>
-              <a href="telegram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Telegram Verification</a>
-              <a href="facebook-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook Verification</a>
-              <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Verification</a>
-              <a href="social-media-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Verification</a>
-              <a href="google-knowledge-panel-1.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
-              <a href="instagram-username-claim.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Username Claim</a>
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">Reputation ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="personal-branding.html" class="dropdown-item">Personal Branding</a>
+              <a href="wikipedia-creation.html" class="dropdown-item">Wikipedia Creation</a>
+              <a href="twitter-verification.html" class="dropdown-item">Twitter Verification</a>
+              <a href="telegram-verification.html" class="dropdown-item">Telegram Verification</a>
+              <a href="facebook-verification.html" class="dropdown-item">Facebook Verification</a>
+              <a href="instagram-verification.html" class="dropdown-item">Instagram Verification</a>
+              <a href="google-knowledge-panel-1.html" class="dropdown-item">Google Knowledge Panel</a>
+              <a href="instagram-username-claim.html" class="dropdown-item">Username Claim</a>
             </div>
           </div>
 
-          <!-- Dropdown: RECOVERY -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Recovery</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Recovery</a>
-              <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Recovery</a>
-              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Business Manager Recovery</a>
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">Recovery ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="instagram-recovery.html" class="dropdown-item">Instagram Recovery</a>
+              <a href="social-media-recovery.html" class="dropdown-item">Social Media Recovery</a>
+              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="dropdown-item">Business Manager Recovery</a>
             </div>
           </div>
 
-          <!-- Dropdown: REMOVAL -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Removal</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="negative-news-links-removal-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Negative Links Removal</a>
-              <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">ORM Services</a>
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">Removal ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="negative-news-links-removal-service.html" class="dropdown-item">Negative Links Removal</a>
+              <a href="orm-services.html" class="dropdown-item">ORM Services</a>
             </div>
           </div>
 
-          <!-- Dropdown: PR -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>PR</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 max-h-80 overflow-y-auto z-50 backdrop-blur-2xl">
-              <a href="pr-agency-in-delhi.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Delhi</a>
-              <a href="pr-agency-in-pune.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Pune</a>
-              <a href="pr-agency-in-goa.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Goa</a>
-              <a href="pr-agency-in-bangalore.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Bangalore</a>
-              <a href="pr-agency-in-jaipur.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Jaipur</a>
-              <a href="pr-agency-in-kolkata.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Kolkata</a>
-              <a href="pr-agency-in-ahmedabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Ahmedabad</a>
-              <a href="pr-agency-in-hyderabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Hyderabad</a>
-            </div>
-          </div>
-
-          <a href="refund.html" class="hover:text-white transition-colors py-2">Refund</a>
+          <a href="refund.html" class="nav-item">Refund</a>
         </nav>
 
-        <!-- Right: Contact CTA Button -->
-        <div class="flex items-center gap-2">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md active:scale-95 whitespace-nowrap">
+        <!-- Right Header Action -->
+        <div class="header-action">
+          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn">
             Contact Now
           </a>
         </div>
       </div>
 
-      <!-- iOS Slide-Out Mobile Navigation Drawer -->
-      <div id="mobile-nav-drawer" class="hidden lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#07080c]/98 backdrop-blur-2xl border-t border-white/10 p-6 overflow-y-auto z-50">
-        <div class="flex flex-col space-y-6">
-          <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
+      <!-- iOS Mobile Drawer Navigation -->
+      <div id="mobile-nav-drawer" class="mobile-drawer hidden">
+        <div class="drawer-inner">
+          <a href="index.html" class="drawer-link-main">Home</a>
           
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Recovery</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Recovery</a>
-              <a href="social-media-recovery.html" class="py-1 hover:text-white">Social Media Recovery</a>
-              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="py-1 hover:text-white">Business Manager Recovery</a>
+          <div class="drawer-group">
+            <span class="drawer-label">Recovery</span>
+            <div class="drawer-sublinks">
+              <a href="instagram-recovery.html">Instagram Recovery</a>
+              <a href="social-media-recovery.html">Social Media Recovery</a>
+              <a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager Recovery</a>
             </div>
           </div>
 
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Reputation & Verification</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="personal-branding.html" class="py-1 hover:text-white">Personal Branding</a>
-              <a href="instagram-verification.html" class="py-1 hover:text-white">Instagram Verification</a>
-              <a href="facebook-verification.html" class="py-1 hover:text-white">Facebook Verification</a>
-              <a href="twitter-verification.html" class="py-1 hover:text-white">Twitter Verification</a>
-              <a href="google-knowledge-panel-1.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
+          <div class="drawer-group">
+            <span class="drawer-label">Reputation & Verification</span>
+            <div class="drawer-sublinks">
+              <a href="personal-branding.html">Personal Branding</a>
+              <a href="instagram-verification.html">Instagram Verification</a>
+              <a href="facebook-verification.html">Facebook Verification</a>
+              <a href="twitter-verification.html">Twitter Verification</a>
+              <a href="google-knowledge-panel-1.html">Google Knowledge Panel</a>
             </div>
           </div>
 
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removal & PR</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="negative-news-links-removal-service.html" class="py-1 hover:text-white">Negative Links Removal</a>
-              <a href="orm-services.html" class="py-1 hover:text-white">ORM Services</a>
-              <a href="pr-agency-in-delhi.html" class="py-1 hover:text-white">PR Agency in Delhi</a>
-              <a href="pr-agency-in-bangalore.html" class="py-1 hover:text-white">PR Agency in Bangalore</a>
+          <div class="drawer-group">
+            <span class="drawer-label">Removal & Company</span>
+            <div class="drawer-sublinks">
+              <a href="negative-news-links-removal-service.html">Negative Links Removal</a>
+              <a href="orm-services.html">ORM Services</a>
+              <a href="our-story.html">Our Story</a>
+              <a href="clients.html">Our Clients</a>
+              <a href="refund.html">Refund Policy</a>
             </div>
           </div>
 
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Company</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="our-story.html" class="py-1 hover:text-white">Our Story</a>
-              <a href="clients.html" class="py-1 hover:text-white">Our Clients</a>
-              <a href="careers.html" class="py-1 hover:text-white">Careers</a>
-              <a href="refund.html" class="py-1 hover:text-white">Refund Policy</a>
-            </div>
-          </div>
-
-          <a href="https://t.me/unban777" target="_blank" class="w-full py-3.5 rounded-xl bg-[#2563eb] text-white text-center font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25">
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary w-full text-center">
             Chat on Telegram (@unban777) →
           </a>
         </div>
@@ -230,208 +783,174 @@
     
   <main>
     
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h1 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 24px;" dir="auto">Best PR Agency in <span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, serif; font-weight: 400;">Pune</span></h1></div><div class="prose-content my-2 leading-relaxed"><h2 style="--lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 24px; --fontSizeDesktop: 24px;" dir="auto"><span style="font-weight: 400;">Building Brands Through Strategic Public Relations</span></h2><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 16px;" class="body" dir="auto"><strong>RETRIEVAL</strong> stands as a trusted <strong>PR Agency in </strong><span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, serif; font-weight: 400;">Pune</span>, helping startups, entrepreneurs, and established brands build a powerful presence across media platforms and digital channels. With a strategic combination of media outreach, reputation management, and storytelling, the agency works to position brands in front of the audiences that matter most.</p></div>
-        <div class="my-5 text-center">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
-            <span>Consult Desk →</span>
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h1 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 24px;" dir="auto">Best PR Agency in <span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, serif; font-weight: 400;">Pune</span></h1></div><div class="grid-text-item"><h2 style="--lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 24px; --fontSizeDesktop: 24px;" dir="auto"><span style="font-weight: 400;">Building Brands Through Strategic Public Relations</span></h2><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 16px;" class="body" dir="auto"><strong>RETRIEVAL</strong> stands as a trusted <strong>PR Agency in </strong><span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, serif; font-weight: 400;">Pune</span>, helping startups, entrepreneurs, and established brands build a powerful presence across media platforms and digital channels. With a strategic combination of media outreach, reputation management, and storytelling, the agency works to position brands in front of the audiences that matter most.</p></div>
+        <div class="grid-button-wrapper">
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
+            WhatsApp Us →
           </a>
         </div>
         
-            
-            
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 style=" letter-spacing: normal; margin-bottom: 40px" dir="auto">Featured On</h3></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><a href="https://www.tribuneindia.com/news/brand-connect/afzal-anis-shares-his-global-expansion-goals-for-his-firms-fametick-media-and-first-helpcare-329443" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-1-aw5ZPhfIwp4ViB60.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://yourstory.com/companies/fametick-media" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-7-XPcKKTsQXAAXtDGd.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.theweek.in/news/biz-tech/2022/07/07/Afzal-Anis-founder-of-First-HelpCare-NGO-and-Fametick-Media-and-Rony-Das-a-cyber-security-researcher-partnered-up-for-new-endeavours.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-2-aWR71kbIEfLPPeHL.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.businessworld.in/article/fametick-helping-businesses-to-grow-exponentially-with-mastermind-strategies-311743" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-GJTk0BLzJeVfyJFi.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.news18.com/news/press-release/afzal-anis-the-youngest-digital-marketer-in-india-making-it-big-in-digital-marketing-worldwide-2504201.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-5-ONciFjej6iGdXVJl.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.jagran.com/jharkhand/ranchi-ranchi-based-afzal-anis-become-young-digital-marketer-of-india-20361659.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-3-getXcrGBXiVn8axK.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.indiatoday.in/impact-feature/story/in-conversation-with-afzal-anis-founder-of-first-helpcare-ngo-and-fametick-media-and-rony-das-a-cyber-security-researcher-1983231-2022-08-03" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-6-2SWSLHOLptuOn2yu.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.oneindia.com/india/exclusive-interview-find-out-more-about-fametick-media-and-first-helpcare-founder-afzal-anis-3322941.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-4-hwnHTXOQSmZgV1wd.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.telegraphindia.com/india/afzal-anis-founder-of-first-helpcare-ngo-fametick-media-and-rony-das-a-cyber-security-researcher-teamed-up-for-a-startup/cid/1875643" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-8-neNXNiiROsItvg3u.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div>
-            </div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h3 style=" letter-spacing: normal; margin-bottom: 40px" dir="auto">Featured On</h3></div><div class="press-logos-flex-grid"><a href="https://www.tribuneindia.com/news/brand-connect/afzal-anis-shares-his-global-expansion-goals-for-his-firms-fametick-media-and-first-helpcare-329443" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-1-aw5ZPhfIwp4ViB60.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://yourstory.com/companies/fametick-media" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-7-XPcKKTsQXAAXtDGd.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.theweek.in/news/biz-tech/2022/07/07/Afzal-Anis-founder-of-First-HelpCare-NGO-and-Fametick-Media-and-Rony-Das-a-cyber-security-researcher-partnered-up-for-new-endeavours.html" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-2-aWR71kbIEfLPPeHL.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.businessworld.in/article/fametick-helping-businesses-to-grow-exponentially-with-mastermind-strategies-311743" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-GJTk0BLzJeVfyJFi.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.news18.com/news/press-release/afzal-anis-the-youngest-digital-marketer-in-india-making-it-big-in-digital-marketing-worldwide-2504201.html" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-5-ONciFjej6iGdXVJl.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.jagran.com/jharkhand/ranchi-ranchi-based-afzal-anis-become-young-digital-marketer-of-india-20361659.html" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-3-getXcrGBXiVn8axK.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.indiatoday.in/impact-feature/story/in-conversation-with-afzal-anis-founder-of-first-helpcare-ngo-and-fametick-media-and-rony-das-a-cyber-security-researcher-1983231-2022-08-03" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-6-2SWSLHOLptuOn2yu.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.oneindia.com/india/exclusive-interview-find-out-more-about-fametick-media-and-first-helpcare-founder-afzal-anis-3322941.html" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-4-hwnHTXOQSmZgV1wd.webp" alt="" class="press-logo-img" loading="lazy"></div></a><a href="https://www.telegraphindia.com/india/afzal-anis-founder-of-first-helpcare-ngo-fametick-media-and-rony-das-a-cyber-security-researcher-teamed-up-for-a-startup/cid/1875643" target="_blank" rel="nofollow" class="grid-image-link"><div class="press-logo-badge"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-8-neNXNiiROsItvg3u.webp" alt="" class="press-logo-img" loading="lazy"></div></a></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 40px;">Why Choose RETRIEVAL as Your PR Partner?</h2></div><div class="prose-content my-2 leading-relaxed"><p class="body" dir="auto">Clients choose RETRIEVAL because of its structured approach to brand storytelling, strategic media outreach, and commitment to ethical public relations practices. Each campaign is tailored to the brand’s industry, goals, and audience, ensuring that communication efforts produce real impact.</p><p class="body" dir="auto">From startups seeking early visibility to established companies managing reputation and authority, RETRIEVAL helps brands navigate the media landscape with clarity and confidence.</p></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/img_electronic_media2-VHdoqtb9lH2y6qJI.png" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div>
-            </div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 40px;">Why Choose RETRIEVAL as Your PR Partner?</h2></div><div class="grid-text-item"><p class="body" dir="auto">Clients choose RETRIEVAL because of its structured approach to brand storytelling, strategic media outreach, and commitment to ethical public relations practices. Each campaign is tailored to the brand’s industry, goals, and audience, ensuring that communication efforts produce real impact.</p><p class="body" dir="auto">From startups seeking early visibility to established companies managing reputation and authority, RETRIEVAL helps brands navigate the media landscape with clarity and confidence.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/img_electronic_media2-VHdoqtb9lH2y6qJI.png" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 relative bg-[#07080c] border-b border-white/10" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxibHVlfGVufDB8fHx8MTc3MjczMjcyN3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 dir="auto" style=" letter-spacing: -0.4px; margin-bottom: 15px;"><span style="font-family: Roboto; font-weight: 500;"><strong>Schedule a Call to</strong><br>Understand Your Business</span></h2></div>
-        <div class="my-5 text-center">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
-            <span>Schedule Now</span>
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxibHVlfGVufDB8fHx8MTc3MjczMjcyN3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+          <div class="block-container">
+            <div class="grid-text-item"><h2 dir="auto" style=" letter-spacing: -0.4px; margin-bottom: 15px;"><span style="font-family: Roboto; font-weight: 500;"><strong>Schedule a Call to</strong><br>Understand Your Business</span></h2></div>
+        <div class="grid-button-wrapper">
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
+            Schedule Now
           </a>
         </div>
         
-            
-            
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px" dir="auto"><span style="">Daisy Shah</span></h3></div><div class="prose-content my-2 leading-relaxed"><p class="body" style="" dir="auto"><span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, arial, sans-serif; font-weight: 400">Daisy Shah is an <span class='text-[#3b82f6] font-extrabold'>India</span>n actress, model and dancer who primarily appears in Hindi and Kannada films. She has worked as an assistant to choreographer Ganesh Acharya. Her first breakthrough came when she was selected to play the lead role in the 2011 Kannada film Bhadra.</span></p></div><div class="prose-content my-2 leading-relaxed"><h1 style="" dir="auto">Client Testimonial</h1></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Sahil Khan</h3></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body"><span style="font-weight: bold">Sahil Khan</span> (born 5 November 1976) an <span class='text-[#3b82f6] font-extrabold'>India</span>n actor, fitness entrepreneur, and YouTuber, known for his role in Hindi-language films Style and Xcuse Me. Khan started his career with a musical video of Stereo Nation Nachange Sari Raat.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Jannat Zubair Rahmani is an <span class='text-[#3b82f6] font-extrabold'>India</span>n actress who predominantly acts in Hindi-language television shows and films. She is best known for portraying Kashi in Kashi – Ab Na Rahe Tera Kagaz Kora, Phulwa in Phulwa, and Pankti in Tu Aashiqui.</p></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Jannat Zubair</h3></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Muddassar Khan</h3></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Mudassar Khan is an <span class='text-[#3b82f6] font-extrabold'>India</span>n dancer and film choreographer. He was a dance teacher in Thakur Public School Kandivali from 2001 to 2006. He is a judge in the dance reality television series Dance <span class='text-[#3b82f6] font-extrabold'>India</span> Dance.</p></div>
-            
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/OJ36--TfmCc?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h3 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px" dir="auto"><span style="">Daisy Shah</span></h3></div><div class="grid-text-item"><p class="body" style="" dir="auto"><span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, arial, sans-serif; font-weight: 400">Daisy Shah is an <span class='text-blue-500'>India</span>n actress, model and dancer who primarily appears in Hindi and Kannada films. She has worked as an assistant to choreographer Ganesh Acharya. Her first breakthrough came when she was selected to play the lead role in the 2011 Kannada film Bhadra.</span></p></div>
+            <div class="grid-video-wrapper">
+              <div class="video-card-ratio">
+                <iframe src="https://www.youtube.com/embed/OJ36--TfmCc?rel=0" title="Proof player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/AK0U_Ua0D-k?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="grid-text-item"><h1 style="" dir="auto">Client Testimonial</h1></div>
+            <div class="grid-video-wrapper">
+              <div class="video-card-ratio">
+                <iframe src="https://www.youtube.com/embed/AK0U_Ua0D-k?rel=0" title="Proof player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dfR6-zn0u6w?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Sahil Khan</h3></div><div class="grid-text-item"><p dir="auto" style="" class="body"><span style="font-weight: bold">Sahil Khan</span> (born 5 November 1976) an <span class='text-blue-500'>India</span>n actor, fitness entrepreneur, and YouTuber, known for his role in Hindi-language films Style and Xcuse Me. Khan started his career with a musical video of Stereo Nation Nachange Sari Raat.</p></div>
+            <div class="grid-video-wrapper">
+              <div class="video-card-ratio">
+                <iframe src="https://www.youtube.com/embed/dfR6-zn0u6w?rel=0" title="Proof player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/SELrQ1jo3AY?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="grid-text-item"><p dir="auto" style="" class="body">Jannat Zubair Rahmani is an <span class='text-blue-500'>India</span>n actress who predominantly acts in Hindi-language television shows and films. She is best known for portraying Kashi in Kashi – Ab Na Rahe Tera Kagaz Kora, Phulwa in Phulwa, and Pankti in Tu Aashiqui.</p></div><div class="grid-text-item"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Jannat Zubair</h3></div>
+            <div class="grid-video-wrapper">
+              <div class="video-card-ratio">
+                <iframe src="https://www.youtube.com/embed/SELrQ1jo3AY?rel=0" title="Proof player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
             </div>
-            
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Muddassar Khan</h3></div><div class="grid-text-item"><p dir="auto" style="" class="body">Mudassar Khan is an <span class='text-blue-500'>India</span>n dancer and film choreographer. He was a dance teacher in Thakur Public School Kandivali from 2001 to 2006. He is a judge in the dance reality television series Dance <span class='text-blue-500'>India</span> Dance.</p></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto"><span style="font-weight: 700;"><strong>Comprehensive PR Services</strong></span></h2></div><div class="prose-content my-2 leading-relaxed"><p style="" class="body" dir="auto">A modern PR agency provides a wide range of services designed to strengthen brand authority and communication strategy. These services typically include media relations, press coverage, brand storytelling, reputation management, crisis communication, and event publicity.</p><p style="" class="body" dir="auto">PR agencies also support businesses through digital PR campaigns, influencer collaborations, product launches, and leadership positioning. By combining creative storytelling with strong media networks, they help brands secure coverage across news publications, business portals, and online media platforms.</p></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/img_traditional_media2-fq9AB97P7gjhoE3E.png" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div>
-            </div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h2 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto"><span style="font-weight: 700;"><strong>Comprehensive PR Services</strong></span></h2></div><div class="grid-text-item"><p style="" class="body" dir="auto">A modern PR agency provides a wide range of services designed to strengthen brand authority and communication strategy. These services typically include media relations, press coverage, brand storytelling, reputation management, crisis communication, and event publicity.</p><p style="" class="body" dir="auto">PR agencies also support businesses through digital PR campaigns, influencer collaborations, product launches, and leadership positioning. By combining creative storytelling with strong media networks, they help brands secure coverage across news publications, business portals, and online media platforms.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/img_traditional_media2-fq9AB97P7gjhoE3E.png" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto">Why Businesses Need a PR Agency?</h2></div><div class="prose-content my-2 leading-relaxed"><p class="body" dir="auto">Thousands of companies compete for attention across industries such as technology, real estate, startups, fashion, healthcare, and finance. A well-planned PR strategy helps brands stand out in this crowded environment.</p><p class="body" dir="auto">Professional PR agencies specialize in media relations, crisis communication, brand positioning, and digital reputation management to help businesses gain credibility and long-term visibility. These agencies maintain strong relationships with journalists, editors, and influencers to ensure brands receive authentic media exposure.</p><p class="body" dir="auto">When handled correctly, public relations can influence how customers, investors, and partners perceive a company.</p></div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h2 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto">Why Businesses Need a PR Agency?</h2></div><div class="grid-text-item"><p class="body" dir="auto">Thousands of companies compete for attention across industries such as technology, real estate, startups, fashion, healthcare, and finance. A well-planned PR strategy helps brands stand out in this crowded environment.</p><p class="body" dir="auto">Professional PR agencies specialize in media relations, crisis communication, brand positioning, and digital reputation management to help businesses gain credibility and long-term visibility. These agencies maintain strong relationships with journalists, editors, and influencers to ensure brands receive authentic media exposure.</p><p class="body" dir="auto">When handled correctly, public relations can influence how customers, investors, and partners perceive a company.</p></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 52px; --fontSizeDesktop: 52px;" dir="auto">Hear from our clients</h3></div><div class="prose-content my-2 leading-relaxed"><p style=" --lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto">Discover what our clients think about our service</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" class="body"><span style="font-weight: 400">Daisy Shah</span></p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" class="body"><span style="font-weight: 400">Angad Bajwa</span></p></div><div class="prose-content my-2 leading-relaxed"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div><div class="prose-content my-2 leading-relaxed"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div><div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div>
-            </div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h3 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 52px; --fontSizeDesktop: 52px;" dir="auto">Hear from our clients</h3></div><div class="grid-text-item"><p style=" --lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto">Discover what our clients think about our service</p></div><div class="grid-text-item"><p dir="auto" style="" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Daisy Shah</span></p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" style="" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Angad Bajwa</span></p></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;">How a PR Agency Helps Your Brand Grow?</h2></div><div class="prose-content my-2 leading-relaxed"><p class="body" dir="auto">Hiring a PR agency allows businesses to focus on their core operations while communication experts manage their public image. Effective PR strategies help businesses increase visibility, build credibility, and establish authority within their industry.</p><p class="body" dir="auto">Strong media coverage can improve search visibility, strengthen brand trust, and attract new opportunities. Companies often use PR campaigns to launch products, manage public perception, handle crisis situations, and build long-term relationships with audiences.</p><p class="body" dir="auto">With the right PR partner, businesses can turn their achievements, ideas, and stories into impactful media narratives.</p></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/undraw_social-update_jbhv-uZRy4srkcayhViry.svg" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div>
-            </div>
-            
-            
+        <section class="block-section" style="">
+          <div class="block-container">
+            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;">How a PR Agency Helps Your Brand Grow?</h2></div><div class="grid-text-item"><p class="body" dir="auto">Hiring a PR agency allows businesses to focus on their core operations while communication experts manage their public image. Effective PR strategies help businesses increase visibility, build credibility, and establish authority within their industry.</p><p class="body" dir="auto">Strong media coverage can improve search visibility, strengthen brand trust, and attract new opportunities. Companies often use PR campaigns to launch products, manage public perception, handle crisis situations, and build long-term relationships with audiences.</p><p class="body" dir="auto">With the right PR partner, businesses can turn their achievements, ideas, and stories into impactful media narratives.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/undraw_social-update_jbhv-uZRy4srkcayhViry.svg" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 relative bg-[#07080c] border-b border-white/10" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxibHVlfGVufDB8fHx8MTc3MjczMjcyN3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 48px; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Have any questions?</h4></div>
-        <div class="my-5 text-center">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
-            <span>Consult Desk →</span>
+        <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxibHVlfGVufDB8fHx8MTc3MjczMjcyN3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
+          <div class="block-container">
+            <div class="grid-text-item"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 48px; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Have any questions?</h4></div>
+        <div class="grid-button-wrapper">
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
+            WhatsApp Us →
           </a>
         </div>
         
-            
-            
           </div>
         </section>
         
   </main>
   
-    <!-- Footer (Exact Fametick Layout) -->
-    <footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <div class="brand-logo-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="brand-svg">
                 <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
                 <polygon points="325,166 492,233 275,348 368,245" />
                 <polygon points="266,335 334,472 443,468 322,382" />
               </svg>
             </div>
-            <div class="flex flex-col">
-              <span class="font-black text-base text-white tracking-[0.15em] leading-none">RETRIEVAL</span>
-              <span class="font-mono text-[9px] tracking-[0.25em] text-[#64748b] uppercase leading-none mt-1">retrieval.co.in</span>
+            <div class="brand-text-col">
+              <span class="brand-name">RETRIEVAL</span>
+              <span class="brand-domain">retrieval.co.in</span>
             </div>
           </div>
-          <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
+          <p class="footer-desc">
             Leading social media recovery, verification, and reputation agency.
           </p>
-          <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
-            <div>Email: <a href="mailto:support@retrieval.co.in" class="text-white hover:text-blue-400">support@retrieval.co.in</a></div>
-            <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
-            <div>Channel: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
+          <div class="footer-contacts">
+            <div>Email: <a href="mailto:support@retrieval.co.in">support@retrieval.co.in</a></div>
+            <div>Desk: <a href="https://t.me/unban777" target="_blank">@unban777</a></div>
+            <div>Channel: <a href="https://t.me/retrieval" target="_blank">t.me/retrieval</a></div>
           </div>
-          <div class="text-xs text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+          <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
         </div>
 
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Recovery Services</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Recovery</a></li>
-            <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Social Media Recovery</a></li>
-            <li><a href="facebook-ad-account-and-business-manager-recovery-service.html" class="hover:text-white transition-colors">Business Manager Recovery</a></li>
-            <li><a href="negative-news-links-removal-service.html" class="hover:text-white transition-colors">Negative Links Removal</a></li>
+        <div class="footer-col">
+          <h4 class="footer-title">Recovery Services</h4>
+          <ul class="footer-links">
+            <li><a href="instagram-recovery.html">Instagram Recovery</a></li>
+            <li><a href="social-media-recovery.html">Social Media Recovery</a></li>
+            <li><a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager Recovery</a></li>
+            <li><a href="negative-news-links-removal-service.html">Negative Links Removal</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Instagram Verification</a></li>
-            <li><a href="facebook-verification.html" class="hover:text-white transition-colors">Facebook Verification</a></li>
-            <li><a href="twitter-verification.html" class="hover:text-white transition-colors">Twitter Verification</a></li>
-            <li><a href="google-knowledge-panel-1.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
-            <li><a href="whatsapp-api-service.html" class="hover:text-white transition-colors">WhatsApp API</a></li>
+        <div class="footer-col">
+          <h4 class="footer-title">Verification</h4>
+          <ul class="footer-links">
+            <li><a href="instagram-verification.html">Instagram Verification</a></li>
+            <li><a href="facebook-verification.html">Facebook Verification</a></li>
+            <li><a href="twitter-verification.html">Twitter Verification</a></li>
+            <li><a href="google-knowledge-panel-1.html">Google Knowledge Panel</a></li>
+            <li><a href="whatsapp-api-service.html">WhatsApp API</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Quick Links</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="our-story.html" class="hover:text-white transition-colors">Our Story</a></li>
-            <li><a href="clients.html" class="hover:text-white transition-colors">Our Clients</a></li>
-            <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+        <div class="footer-col">
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="clients.html">Our Clients</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
           </ul>
         </div>
       </div>
     </footer>
 
     <!-- Floating Action Button -->
-    <a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#2563eb] text-white font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
+    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct Telegram Dispatch">
       <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      <span class="hidden sm:inline">Direct Desk</span>
+      <span>Direct Desk</span>
     </a>
 
     <script>
