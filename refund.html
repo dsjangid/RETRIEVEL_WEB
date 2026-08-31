@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>REFUND — RETRIEVAL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #07080c;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .prose-content h1, .prose-content h2, .prose-content h3, .prose-content h4 {
+      color: #ffffff !important;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-top: 0.8em;
+      margin-bottom: 0.4em;
+    }
+    .prose-content h1 { font-size: clamp(1.75rem, 5vw, 3.2rem); line-height: 1.15; }
+    .prose-content h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); line-height: 1.2; }
+    .prose-content h3 { font-size: clamp(1.2rem, 3.5vw, 2rem); line-height: 1.25; }
+    .prose-content h4 { font-size: clamp(1.05rem, 3vw, 1.5rem); line-height: 1.3; }
+    
+    .prose-content p {
+      color: #cbd5e1 !important;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      line-height: 1.7;
+      margin-top: 0.6em;
+      margin-bottom: 0.6em;
+    }
+    .prose-content strong, .prose-content b {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-[#07080c] text-[#f8fafc] antialiased selection:bg-[#2563eb] selection:text-white">
+  
+    <!-- Header Navigation (Exact Fametick Structure & Hierarchy) -->
+    <header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+        
+        <!-- Left: Mobile Menu Toggle & Brand Logo -->
+        <div class="flex items-center gap-3">
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 focus:outline-none transition-all active:scale-95" aria-label="Toggle Navigation Menu">
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:border-blue-500/50 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+                <polygon points="325,166 492,233 275,348 368,245" />
+                <polygon points="266,335 334,472 443,468 322,382" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-black text-sm sm:text-base tracking-[0.15em] text-white leading-none">RETRIEVAL</span>
+              <span class="font-mono text-[8px] sm:text-[9px] tracking-[0.25em] text-[#94a3b8] uppercase leading-none mt-1">retrieval.co.in</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Menu (Matching Fametick Dropdowns) -->
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
+          <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
+          
+          <!-- Dropdown: ABOUT -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>About</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-52 z-50 backdrop-blur-2xl">
+              <a href="our-story.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Story</a>
+              <a href="clients.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Clients</a>
+              <a href="careers.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Careers</a>
+              <a href="blog.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Blog</a>
+            </div>
+          </div>
+
+          <!-- Dropdown: REACH -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>Reach</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
+              <a href="ipo-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">IPO Marketing Service</a>
+              <a href="twitter-trending-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Trending Services</a>
+              <a href="podcast-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Podcast Marketing</a>
+            </div>
+          </div>
+
+          <!-- Dropdown: REPUTATION -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>Reputation</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
+              <a href="personal-branding.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Personal Branding</a>
+              <a href="wikipedia-creation.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Creation</a>
+              <a href="twitter-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Verification</a>
+              <a href="telegram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Telegram Verification</a>
+              <a href="facebook-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook Verification</a>
+              <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Verification</a>
+              <a href="social-media-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Verification</a>
+              <a href="google-knowledge-panel-1.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
+              <a href="instagram-username-claim.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Username Claim</a>
+            </div>
+          </div>
+
+          <!-- Dropdown: RECOVERY -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>Recovery</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
+              <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Recovery</a>
+              <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Recovery</a>
+              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Business Manager Recovery</a>
+            </div>
+          </div>
+
+          <!-- Dropdown: REMOVAL -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>Removal</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
+              <a href="negative-news-links-removal-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Negative Links Removal</a>
+              <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">ORM Services</a>
+            </div>
+          </div>
+
+          <!-- Dropdown: PR -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+              <span>PR</span>
+              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+            </button>
+            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 max-h-80 overflow-y-auto z-50 backdrop-blur-2xl">
+              <a href="pr-agency-in-delhi.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Delhi</a>
+              <a href="pr-agency-in-pune.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Pune</a>
+              <a href="pr-agency-in-goa.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Goa</a>
+              <a href="pr-agency-in-bangalore.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Bangalore</a>
+              <a href="pr-agency-in-jaipur.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Jaipur</a>
+              <a href="pr-agency-in-kolkata.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Kolkata</a>
+              <a href="pr-agency-in-ahmedabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Ahmedabad</a>
+              <a href="pr-agency-in-hyderabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Hyderabad</a>
+            </div>
+          </div>
+
+          <a href="refund.html" class="hover:text-white transition-colors py-2">Refund</a>
+        </nav>
+
+        <!-- Right: Contact CTA Button -->
+        <div class="flex items-center gap-2">
+          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md active:scale-95 whitespace-nowrap">
+            Contact Now
+          </a>
+        </div>
+      </div>
+
+      <!-- iOS Slide-Out Mobile Navigation Drawer -->
+      <div id="mobile-nav-drawer" class="hidden lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#07080c]/98 backdrop-blur-2xl border-t border-white/10 p-6 overflow-y-auto z-50">
+        <div class="flex flex-col space-y-6">
+          <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
+          
+          <div class="border-b border-white/5 pb-3">
+            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Recovery</span>
+            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+              <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Recovery</a>
+              <a href="social-media-recovery.html" class="py-1 hover:text-white">Social Media Recovery</a>
+              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="py-1 hover:text-white">Business Manager Recovery</a>
+            </div>
+          </div>
+
+          <div class="border-b border-white/5 pb-3">
+            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Reputation & Verification</span>
+            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+              <a href="personal-branding.html" class="py-1 hover:text-white">Personal Branding</a>
+              <a href="instagram-verification.html" class="py-1 hover:text-white">Instagram Verification</a>
+              <a href="facebook-verification.html" class="py-1 hover:text-white">Facebook Verification</a>
+              <a href="twitter-verification.html" class="py-1 hover:text-white">Twitter Verification</a>
+              <a href="google-knowledge-panel-1.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
+            </div>
+          </div>
+
+          <div class="border-b border-white/5 pb-3">
+            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removal & PR</span>
+            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+              <a href="negative-news-links-removal-service.html" class="py-1 hover:text-white">Negative Links Removal</a>
+              <a href="orm-services.html" class="py-1 hover:text-white">ORM Services</a>
+              <a href="pr-agency-in-delhi.html" class="py-1 hover:text-white">PR Agency in Delhi</a>
+              <a href="pr-agency-in-bangalore.html" class="py-1 hover:text-white">PR Agency in Bangalore</a>
+            </div>
+          </div>
+
+          <div class="border-b border-white/5 pb-3">
+            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Company</span>
+            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+              <a href="our-story.html" class="py-1 hover:text-white">Our Story</a>
+              <a href="clients.html" class="py-1 hover:text-white">Our Clients</a>
+              <a href="careers.html" class="py-1 hover:text-white">Careers</a>
+              <a href="refund.html" class="py-1 hover:text-white">Refund Policy</a>
+            </div>
+          </div>
+
+          <a href="https://t.me/unban777" target="_blank" class="w-full py-3.5 rounded-xl bg-[#2563eb] text-white text-center font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25">
+            Chat on Telegram (@unban777) →
+          </a>
+        </div>
+      </div>
+    </header>
+    
+  <main>
+    
+        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
+          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
+            <div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --fontSizeMobile: 32px; margin-bottom: 40px;"><span style="font-weight: 700;"><strong>Refund policy</strong></span></h3><p dir="auto" class="body" style="margin-bottom: 16px;">1. Introduction</p><p dir="auto" class="body">This Refund Policy ("Policy") applies to all services provided by RETRIEVAL ("Company", "we", "us", "our") to its clients ("Client", "you"). This Policy is designed to apply uniformly across all service categories offered by the Company, regardless of the specific nature of the engagement. By making payment and engaging our services, the Client agrees to the terms set out below.</p><p dir="auto" class="body">2. General Refund Principles</p><ul dir="auto"><li><p dir="auto" class="body">All services offered by the Company are effort-, time-, and process-based; refunds are considered strictly as per the terms of this Policy and not merely on the basis of the Client's expectations of an outcome.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Refund requests must be raised in writing (via email or the official support channel) within 7 working days of the disputed deliverable, milestone, or incident.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any amount already spent on third-party platforms, tools, verification fees, subscriptions, or services procured on the Client's behalf is non-refundable.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Approved refunds, where applicable, will be processed only through the original mode of payment, within 15–21 working days of approval.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Advance payments, onboarding fees, and processing/administrative fees are non-refundable once work has commenced on the Client's request.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">This Policy applies to one-time engagements, ongoing/retainer-based engagements, and long-term contracts, unless a separately signed agreement states otherwise.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">In the event of any disagreement over a refund, the decision of the Company's management, based on documented records of the engagement, shall be treated as final.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Where a signed Service Agreement or Statement of Work exists between the Company and the Client, and its terms differ from this Policy, the signed agreement shall prevail.</p><p dir="auto" class="body"></p></li></ul><p dir="auto" class="body">3. Client Responsibilities</p><p dir="auto" class="body"><em>The Company's ability to complete any engagement successfully depends directly on the Client meeting the following responsibilities.</em></p><ul dir="auto"><li><p dir="auto" class="body">The Client must provide accurate, complete, and truthful information at the time of onboarding and throughout the engagement; the Company relies entirely on the information and access provided by the Client.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Client must provide timely access to all accounts, platforms, documents, credentials, or resources required for the Company to carry out the requested work.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Client must respond to requests for information, verification, approvals, or documents within the timeframes communicated by the Company; delays on the Client's part will extend the expected timeline accordingly.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">If the Client does not have a particular account, document, access, or resource that is required for the Company to begin or continue the work, the Company shall not be held responsible for the resulting delay or inability to proceed, and the timeline shall stand extended until the Client makes it available.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Client is solely responsible for the authenticity and ownership of any account, identity, or information submitted to the Company in connection with the engagement.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Client must not interfere with, hamper, or disrupt the process once work has commenced — including but not limited to making changes on their own accounts mid-process, sharing conflicting instructions, engaging another party for the same task simultaneously, or withdrawing access midway.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">If any act, omission, or delay on the part of the Client — including any action taken directly by the Client on their own account, platform, or process while the Company's work is in progress — causes the outcome to be affected, incomplete, or unsuccessful, the Company shall not be held responsible for the same, and no refund shall be applicable in such cases.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Client must not hold the Company responsible for decisions, actions, or policies of third-party platforms that are outside the Company's control.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any request that falls outside the originally agreed scope will be treated as an additional/new request and billed separately; this shall not be treated as non-performance by the Company.</p><p dir="auto" class="body"></p></li></ul><p dir="auto" class="body">4. Company Responsibility & Refund Cap</p><ul dir="auto"><li><p dir="auto" class="body">The Company is responsible only for the specific work, process, and effort that falls directly within its own scope and control, from the point the Client has fulfilled all requirements under Section 3.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Where it is established, based on the Company's internal records and communication history, that a shortfall, error, or failure to deliver is genuinely due to a fault on the part of the Company — and not due to any act, omission, delay, or interference on the part of the Client — the Client shall be entitled to a refund equal to 50% of the fee paid for that specific deliverable or engagement.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">This 50% refund is the maximum amount payable by the Company under this Policy for any single deliverable, milestone, or engagement, and is inclusive of any effort, resources, or third-party costs already committed by the Company towards it.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The 50% refund clause applies only to the specific affected deliverable or engagement and does not extend to any other part of the work that has already been completed and accepted by the Client.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">In between the process of any ongoing engagement, if something goes wrong that is not attributable to any fault of the Company — including any external, platform-related, or Client-side factor — the Company shall not be held responsible, and this Policy's refund terms shall not apply to that occurrence.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Company shall not be liable for any indirect, consequential, or incidental loss, including loss of data, loss of access, loss of reputation, or loss of opportunity, arising out of any engagement.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Company's total liability under this Policy, for any claim arising out of a single engagement, shall not exceed 50% of the amount paid by the Client for that specific engagement.</p><p dir="auto" class="body"></p></li></ul><p dir="auto" class="body">5. Non-Refundable Circumstances</p><p dir="auto" class="body"><em>Refunds will not be issued under the following circumstances.</em></p><ul dir="auto"><li><p dir="auto" class="body">Change of mind by the Client after the work has already commenced.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Delay, incompleteness, or failure directly caused by the Client's own action, inaction, or interference during the process.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Failure of the Client to provide required access, information, documents, or approvals in a timely manner.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Third-party costs, subscriptions, or fees already incurred on the Client's behalf.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Work that has already been completed, delivered, and accepted by the Client.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Outcomes that depend on the decision, policy, or action of a third-party platform and are outside the Company's control.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Services availed under a promotional, discounted, or complimentary offer, unless stated otherwise in writing.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Refund requests raised after the window specified in Section 2 has lapsed.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any case where the Client is found to have provided false, misleading, or incomplete information at the time of onboarding.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any breach of the Service Agreement or non-payment of dues by the Client.</p><p dir="auto" class="body"></p></li></ul><p dir="auto" class="body">6. Refund Request Process</p><ul dir="auto"><li><p dir="auto" class="body">Submit a written refund request through the Company's official support/email channel, clearly stating the reason and the specific engagement or deliverable in question.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Company will acknowledge the request within 2–3 working days and may request additional details or clarification.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">The Company's internal team will review the engagement records and communication history before making a decision.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">A written decision, including the refund amount approved (if any) as per this Policy, will be shared with the Client within 7–10 working days.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Approved refunds will be processed to the original payment method within 15–21 working days of the decision.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any disagreement with the refund decision must be raised within 7 days, after which the decision shall be treated as final and binding.</p><p dir="auto" class="body"></p></li></ul><p dir="auto" class="body">7. Miscellaneous</p><ul dir="auto"><li><p dir="auto" class="body">This Policy may be updated by the Company from time to time; the latest version published through the Company's official channels shall apply to engagements availed thereafter.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">This Policy is to be read together with the Company's Terms of Service and any specific agreement signed with the Client.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Any dispute arising out of this Policy shall first be addressed through mutual discussion in good faith between the parties.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">Nothing in this Policy shall be construed as a guarantee of any specific result, timeline, or outcome.</p><p dir="auto" class="body"></p></li><li><p dir="auto" class="body">By making payment and engaging the Company's services, the Client confirms having read, understood, and agreed to this Refund Policy.</p></li></ul><p dir="auto" class="body"></p><p dir="auto" class="body"><em>For any refund-related queries, please contact RETRIEVAL's support team through the official email or contact number provided at the time of onboarding.</em></p></div>
+            
+            
+          </div>
+        </section>
+        
+  </main>
+  
+    <!-- Footer (Exact Fametick Layout) -->
+    <footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+                <polygon points="325,166 492,233 275,348 368,245" />
+                <polygon points="266,335 334,472 443,468 322,382" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-black text-base text-white tracking-[0.15em] leading-none">RETRIEVAL</span>
+              <span class="font-mono text-[9px] tracking-[0.25em] text-[#64748b] uppercase leading-none mt-1">retrieval.co.in</span>
+            </div>
+          </div>
+          <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
+            Leading social media recovery, verification, and reputation agency.
+          </p>
+          <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
+            <div>Email: <a href="mailto:support@retrieval.co.in" class="text-white hover:text-blue-400">support@retrieval.co.in</a></div>
+            <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
+            <div>Channel: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
+          </div>
+          <div class="text-xs text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+        </div>
+
+        <div>
+          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Recovery Services</h4>
+          <ul class="space-y-2 text-xs text-[#cbd5e1]">
+            <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Recovery</a></li>
+            <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Social Media Recovery</a></li>
+            <li><a href="facebook-ad-account-and-business-manager-recovery-service.html" class="hover:text-white transition-colors">Business Manager Recovery</a></li>
+            <li><a href="negative-news-links-removal-service.html" class="hover:text-white transition-colors">Negative Links Removal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification</h4>
+          <ul class="space-y-2 text-xs text-[#cbd5e1]">
+            <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Instagram Verification</a></li>
+            <li><a href="facebook-verification.html" class="hover:text-white transition-colors">Facebook Verification</a></li>
+            <li><a href="twitter-verification.html" class="hover:text-white transition-colors">Twitter Verification</a></li>
+            <li><a href="google-knowledge-panel-1.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
+            <li><a href="whatsapp-api-service.html" class="hover:text-white transition-colors">WhatsApp API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-[#cbd5e1]">
+            <li><a href="our-story.html" class="hover:text-white transition-colors">Our Story</a></li>
+            <li><a href="clients.html" class="hover:text-white transition-colors">Our Clients</a></li>
+            <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
+            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#2563eb] text-white font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+      <span class="hidden sm:inline">Direct Desk</span>
+    </a>
+
+    <script>
+      function toggleMobileMenu() {
+        const drawer = document.getElementById('mobile-nav-drawer');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+        if (drawer.classList.contains('hidden')) {
+          drawer.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        } else {
+          drawer.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      }
+    </script>
+    
+</body>
+</html>
