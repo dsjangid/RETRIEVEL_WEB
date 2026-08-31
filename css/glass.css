@@ -25,6 +25,9 @@ html {
   color-scheme: dark;
   background-color: var(--bg-obsidian);
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -32,6 +35,8 @@ body {
   color: var(--text-white);
   font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-overflow-scrolling: touch;
@@ -382,13 +387,13 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
 /* Floating Telegram Button (Bottom Right) */
 .floating-telegram-btn {
   position: fixed;
-  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-  right: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  right: calc(1.25rem + env(safe-area-inset-right, 0px));
   z-index: 50;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.1rem;
+  gap: 0.45rem;
+  padding: 0.55rem 0.95rem;
   background: #ffffff;
   color: #050608;
   border-radius: 9999px;
