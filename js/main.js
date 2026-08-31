@@ -89,6 +89,15 @@ function initMobileNavListeners() {
       window.closeMobileNav();
     }
   });
+
+  // Auto-close and clear overlay state when resizing to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      window.closeMobileNav();
+      const overlay = document.getElementById('mobile-nav-overlay');
+      if (overlay) overlay.style.display = '';
+    }
+  }, { passive: true });
 }
 
 // 2. Interactive Ambient Particle & Neural Constellation Canvas

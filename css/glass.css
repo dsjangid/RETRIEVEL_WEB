@@ -273,7 +273,7 @@ body {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* Full-Screen Native Mobile Navigation Modal */
+/* Full-Screen Native Mobile Navigation Modal (Mobile Only) */
 .mobile-nav-overlay {
   position: fixed;
   inset: 0;
@@ -288,6 +288,14 @@ body {
   pointer-events: none;
   transform: translateY(-8px);
   transition: opacity 0.3s var(--ease-apple), transform 0.3s var(--ease-apple);
+}
+
+@media (min-width: 768px) {
+  .mobile-nav-overlay {
+    display: none !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
 }
 
 .mobile-nav-overlay.open {

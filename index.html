@@ -93,7 +93,7 @@
         <a href="contact.html" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
           <span>Start Project</span>
         </a>
-        <button id="mobile-menu-btn" onclick="window.openMobileNav()" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
+        <button id="mobile-menu-btn" onclick="window.openMobileNav()" class="md:hidden w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
           <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -103,8 +103,8 @@
     </div>
   </header>
 
-  <!-- Full-Screen Native iPhone Navigation Overlay -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay px-5 sm:px-6 safe-top safe-bottom">
+  <!-- Full-Screen Native iPhone Navigation Overlay (Hidden on Desktop) -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-5 sm:px-6 safe-top safe-bottom">
     
     <!-- Top Bar inside Modal -->
     <div class="h-16 flex items-center justify-between">
