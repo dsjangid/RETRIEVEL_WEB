@@ -476,31 +476,64 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: block;
     }
-    .drawer-group {
+    .drawer-accordion-group {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 12px;
+      padding-bottom: 2px;
     }
-    .drawer-label {
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #60a5fa;
+    .drawer-accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      border: none;
+      padding: 12px 4px;
+      color: #ffffff;
+      font-family: var(--font-primary);
+      font-size: 15.5px;
       font-weight: 600;
-      display: block;
-      margin-bottom: 8px;
+      cursor: pointer;
+      text-align: left;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
+    }
+    .drawer-accordion-trigger span {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: #f1f5f9;
+      pointer-events: none;
+    }
+    .accordion-arrow {
+      color: #64748b;
+      transition: transform 0.25s ease, color 0.25s ease;
+      flex-shrink: 0;
+      pointer-events: none;
+    }
+    .drawer-accordion-group.active .accordion-arrow {
+      transform: rotate(180deg);
+      color: #3b82f6;
+    }
+    .drawer-accordion-group.active .drawer-accordion-trigger span {
+      color: #60a5fa;
     }
     .drawer-sublinks {
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 2px;
+      padding: 4px 0 10px 14px;
+      border-left: 2px solid rgba(59, 130, 246, 0.35);
+      margin-left: 6px;
+      margin-bottom: 8px;
+    }
+    .drawer-accordion-group.active .drawer-sublinks {
+      display: flex;
     }
     .drawer-sublinks a {
       display: block;
       font-size: 14.5px;
-      color: #cbd5e1;
+      color: #94a3b8;
       text-decoration: none;
-      padding: 8px 0;
+      padding: 7px 0;
       transition: color 0.15s ease;
       -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
     }
@@ -834,14 +867,17 @@
       </div>
     </header>
 
-    <!-- iOS Native Top-Level Mobile Drawer Navigation -->
+    <!-- iOS Native Top-Level Mobile Drawer Navigation (Interactive Accordion) -->
     <div id="mobile-nav-drawer" class="mobile-drawer hidden">
       <div class="drawer-inner">
         <a href="index.html" class="drawer-link-main">Home</a>
         
         <!-- Segment 1: Recoveries -->
-        <div class="drawer-group">
-          <span class="drawer-label">Recoveries</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Recoveries</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="instagram-recovery.html">Instagram</a>
             <a href="social-media-recovery.html">Facebook</a>
@@ -850,8 +886,11 @@
         </div>
 
         <!-- Segment 2: Verification (Blue Badge) -->
-        <div class="drawer-group">
-          <span class="drawer-label">Verification (Blue Badge)</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Verification (Blue Badge)</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="instagram-verification.html">Instagram Custom Meta</a>
             <a href="whatsapp-api-service.html">WhatsApp Meta</a>
@@ -862,8 +901,11 @@
         </div>
 
         <!-- Segment 3: Removals -->
-        <div class="drawer-group">
-          <span class="drawer-label">Removals</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Removals</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="negative-news-links-removal-service.html#instagram-removal">Instagram Acc Removal</a>
             <a href="negative-news-links-removal-service.html#facebook-removal">FB Acc/Page Removal</a>
@@ -872,8 +914,11 @@
         </div>
 
         <!-- Segment 4: Reputation Repair -->
-        <div class="drawer-group">
-          <span class="drawer-label">Reputation Repair</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Reputation Repair</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="orm-services.html#social-post-removal">IG/FB Post Removals</a>
             <a href="orm-services.html#youtube-removal">YT Video Removals</a>
@@ -881,27 +926,39 @@
         </div>
 
         <!-- Segment 5: De-Indexing -->
-        <div class="drawer-group">
-          <span class="drawer-label">De-Indexing</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>De-Indexing</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="negative-news-links-removal-service.html">Negative Articles Removal</a>
           </div>
         </div>
 
         <!-- Segment 6: PR & Media -->
-        <div class="drawer-group">
-          <span class="drawer-label">PR &amp; Media</span>
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>PR &amp; Media</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="https://t.me/unban777" target="_blank" style="color: #60a5fa; font-weight: 600;">DM for Info (Telegram) ↗</a>
           </div>
         </div>
 
-        <div class="drawer-group" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; margin-top: 8px;">
-          <span class="drawer-label">Company &amp; Trust</span>
+        <!-- Segment 7: Company & Trust -->
+        <div class="drawer-accordion-group" style="border-top: 1px solid rgba(255,255,255,0.06); padding-top: 6px;">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Company &amp; Trust</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
           <div class="drawer-sublinks">
             <a href="our-story.html">Our Security Protocol</a>
             <a href="clients.html">Enterprise Case Studies</a>
             <a href="refund.html">Escrow &amp; Refund Policy</a>
+            <a href="careers.html">Careers</a>
+            <a href="blog.html">Security Blog</a>
           </div>
         </div>
 
@@ -1315,7 +1372,29 @@
           };
         }
 
-        var drawerLinks = document.querySelectorAll('#mobile-nav-drawer a');
+        // Accordion triggers
+        var accordionTriggers = document.querySelectorAll('.drawer-accordion-trigger');
+        for (var k = 0; k < accordionTriggers.length; k++) {
+          accordionTriggers[k].onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var parent = this.closest('.drawer-accordion-group');
+            if (parent) {
+              var isActive = parent.classList.contains('active');
+              // Toggle clicked accordion
+              if (isActive) {
+                parent.classList.remove('active');
+                this.setAttribute('aria-expanded', 'false');
+              } else {
+                parent.classList.add('active');
+                this.setAttribute('aria-expanded', 'true');
+              }
+            }
+          };
+        }
+
+        // Close drawer on clicking actual navigation links
+        var drawerLinks = document.querySelectorAll('#mobile-nav-drawer .drawer-sublinks a, #mobile-nav-drawer .drawer-link-main');
         for (var i = 0; i < drawerLinks.length; i++) {
           drawerLinks[i].onclick = function() {
             var drawer = document.getElementById('mobile-nav-drawer');
