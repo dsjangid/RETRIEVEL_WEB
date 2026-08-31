@@ -1,6 +1,6 @@
 # RETRIEVAL — Social Media Recovery, Removal & Protection Services
 
-Official web portal and service platform for **RETRIEVAL** (`retrieval.co.in`).
+Official web portal and service platform for **RETRIEVAL** (`retrievel.co.in`).
 
 ---
 
@@ -33,7 +33,7 @@ RETRIEVAL-WEB/
 
 - **iPhone-First Architecture**: Viewport-fit optimization, safe area insets (`safe-top`, `safe-bottom`), and touch targets configured with `touch-action: manipulation`.
 - **Atmospheric Glow UI**: Dynamic particle constellation canvas, ambient floating mesh orbs, and cursor spotlight tracker.
-- **Direct Official Contacts**: Integrated links for Telegram Admin (`@unban777`), Official Channel (`@retrieval`), and support email (`support@retrieval.co.in`).
+- **Direct Official Contacts**: Integrated links for Telegram Admin (`@unban777`), Official Channel (`@retrieval`), and support email (`support@retrievel.co.in`).
 - **Floating Telegram Action Widget**: Bottom-right floating button for instant channel access.
 
 ---
@@ -53,10 +53,10 @@ python3 -m http.server 3000
 
 ## 🔒 Official Channels
 
-- **Domain**: [retrieval.co.in](https://retrieval.co.in)
+- **Domain**: [retrievel.co.in](https://retrievel.co.in)
 - **Direct Admin**: [@unban777](https://t.me/unban777)
 - **Official Channel**: [@retrieval](https://t.me/retrieval)
-- **Email**: [support@retrieval.co.in](mailto:support@retrieval.co.in)
+- **Email**: [support@retrievel.co.in](mailto:support@retrievel.co.in)
 
 ---
 
