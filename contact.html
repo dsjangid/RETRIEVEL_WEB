@@ -2,8 +2,12 @@
 <html class="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Start a Project — RETRIEVAL Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#050608"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  
+  <title>Start a Project — RETRIEVAL</title>
   
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
   
@@ -13,7 +17,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@300;400;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
   <script>
@@ -24,20 +28,18 @@
           colors: {
             obsidian: "#050608",
             surface: "#090b10",
-            card: "rgba(12, 14, 20, 0.7)",
-            primary: {
-              DEFAULT: "#2f6bff",
-              glow: "rgba(47, 107, 255, 0.3)",
-              tint: "#b5c4ff"
-            },
-            cyan: {
-              accent: "#38bdf8"
+            card: "rgba(13, 16, 23, 0.85)",
+            zinc: {
+              300: "#d4d4d8",
+              400: "#a1a1aa",
+              500: "#71717a",
+              600: "#52525b"
             }
           },
           fontFamily: {
-            sans: ['Geist', 'sans-serif'],
+            sans: ['Geist', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             mono: ['Geist Mono', 'monospace'],
-            display: ['Hanken Grotesk', 'sans-serif']
+            display: ['Hanken Grotesk', '-apple-system', 'sans-serif']
           }
         }
       }
@@ -46,210 +48,217 @@
 
   <link rel="stylesheet" href="css/glass.css"/>
 </head>
-<body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-primary selection:text-white">
+<body class="bg-obsidian text-white min-h-[100dvh] relative antialiased selection:bg-white/20 selection:text-white">
 
-  <!-- Atmospheric Background Layer System -->
-  <div class="bg-scene">
-    <div class="orb orb-primary"></div>
-    <div class="orb orb-cyan"></div>
-    <div class="orb orb-violet"></div>
+  <!-- Atmospheric Background Engine -->
+  <div class="mobile-bg-scene">
+    <div class="mobile-orb-top"></div>
   </div>
-  <canvas id="ambient-canvas"></canvas>
-  <div id="cursor-spotlight"></div>
-  <div class="agency-dot-grid"></div>
-  <div class="agency-grid-lines"></div>
-  <div class="film-grain"></div>
+  <div class="mobile-dot-grid"></div>
 
-  <!-- Floating Island Navigation -->
-  <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
-    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-2.5 flex items-center justify-between transition-all duration-300">
+  <!-- Mobile-First Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 header-glass safe-top transition-all duration-300">
+    <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto h-16 flex items-center justify-between">
       
-      <!-- Brand & Geometric Logo (Clean Vertically Aligned) -->
-      <a href="index.html" class="flex items-center gap-3 group shrink-0">
-        <div class="w-8 h-8 rounded-lg overflow-hidden border border-white/20 bg-black flex items-center justify-center p-0.5 group-hover:border-white/40 transition-colors shrink-0 shadow-sm">
-          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"/>
+      <a href="index.html" class="flex items-center gap-3 shrink-0 group">
+        <div class="w-8 h-8 rounded-lg overflow-hidden bg-black border border-white/20 flex items-center justify-center p-0.5 shrink-0 shadow-sm group-active:scale-95 transition-transform">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL Logo" class="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"/>
         </div>
         <div class="flex flex-col justify-center">
           <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">SYSTEMS STUDIO</span>
+          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">CONTACT</span>
         </div>
       </a>
 
-      <div class="hidden md:flex items-center gap-1">
-        <a href="index.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
-        <a href="services.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
-        <a href="how-it-works.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
-        <a href="contact.html" class="px-3.5 py-1.5 rounded-full text-xs font-sans text-white bg-white/10 transition-colors">Contact</a>
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-3 py-1.5">
+        <a href="index.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Overview</a>
+        <a href="services.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Capabilities</a>
+        <a href="how-it-works.html" class="px-3.5 py-1 text-xs font-sans text-zinc-300 hover:text-white transition-colors">Methodology</a>
+        <a href="contact.html" class="px-3.5 py-1 text-xs font-sans text-white bg-white/10 rounded-full transition-colors">Contact</a>
       </div>
 
+      <!-- Menu Button -->
       <div class="flex items-center gap-3">
-        <a href="contact.html" class="hidden sm:inline-flex agency-btn-primary">
-          <span>Start a Project</span>
-          <div class="agency-btn-icon-circle">
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </div>
+        <a href="contact.html" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
+          <span>Start Project</span>
         </a>
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full border border-white/10 bg-white/5 text-zinc-300 hover:text-white" aria-label="Toggle Menu">
+        <button id="mobile-menu-btn" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform" aria-label="Open Navigation Menu">
           <span class="material-symbols-outlined text-xl">menu</span>
         </button>
       </div>
-    </nav>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-4 top-20 double-bezel rounded-2xl z-50">
-      <div class="double-bezel-inner p-6 flex flex-col gap-3">
-        <a href="index.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Overview</a>
-        <a href="services.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Capabilities</a>
-        <a href="how-it-works.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-zinc-400 hover:text-white">Methodology</a>
-        <a href="contact.html" class="px-4 py-2.5 rounded-xl font-sans text-sm text-white bg-white/5">Contact</a>
-      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="relative z-10 pt-36 sm:pt-44 pb-28 max-w-6xl mx-auto px-4 sm:px-8">
+  <!-- Full-Screen Native Mobile Navigation Overlay -->
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay px-5 sm:px-6 safe-top safe-bottom">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      
-      <!-- Left Column: Agency Info & Studio Locations -->
-      <div class="lg:col-span-5 space-y-8">
-        <div>
-          <div class="agency-pill-badge mb-6">
-            <span>GET IN TOUCH</span>
-          </div>
-          <h1 class="font-display font-extrabold text-4xl sm:text-5xl text-white tracking-tight leading-[1.1] mb-6">
-            Let's build something exceptional.
-          </h1>
-          <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed">
-            Tell us about your systems architecture challenge, timeline, and goals. We respond to qualified inquiries within one business day.
-          </p>
+    <div class="h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg overflow-hidden bg-black border border-white/20 flex items-center justify-center p-0.5 shrink-0">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
         </div>
+        <span class="font-display font-bold text-sm text-white">RETRIEVAL</span>
+      </div>
+      <button id="mobile-nav-close" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform" aria-label="Close Navigation Menu">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
 
-        <!-- Studio Hubs -->
-        <div class="double-bezel">
-          <div class="double-bezel-inner p-6 space-y-4 font-sans text-xs">
-            <div class="font-mono text-zinc-500 uppercase tracking-widest pb-2 border-b border-white/5">Studio Hubs</div>
+    <div class="flex flex-col justify-center my-auto py-6">
+      <a href="index.html" class="mobile-nav-link">
+        <span>Overview</span>
+        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">01</span>
+      </a>
+      <a href="index.html#work" class="mobile-nav-link">
+        <span>Selected Work</span>
+        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">02</span>
+      </a>
+      <a href="services.html" class="mobile-nav-link">
+        <span>Capabilities</span>
+        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">03</span>
+      </a>
+      <a href="how-it-works.html" class="mobile-nav-link">
+        <span>Methodology</span>
+        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">04</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link active">
+        <span>Contact</span>
+        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">05</span>
+      </a>
+    </div>
+
+    <div class="pt-4 pb-2 border-t border-white/10">
+      <a href="contact.html" class="touch-btn-primary w-full justify-between">
+        <span>START AN ENGAGEMENT</span>
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="relative z-10 pt-28 sm:pt-36 pb-24 px-5 sm:px-6 md:px-8 max-w-4xl mx-auto">
+    
+    <div class="space-y-12">
+      
+      <!-- Top Title Block -->
+      <div>
+        <div class="mono-pill mb-4">
+          <span>GET IN TOUCH</span>
+        </div>
+        <h1 class="font-display font-extrabold text-[2.5rem] leading-[1.08] sm:text-5xl tracking-tight text-white mb-4">
+          Let's build something exceptional.
+        </h1>
+        <p class="text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
+          Tell us about your systems architecture challenge, scale expectations, and timeline. We respond within one business day.
+        </p>
+      </div>
+
+      <!-- Studio Information Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-3 pb-2 border-b border-white/5">Studio Hubs</div>
+          <div class="space-y-2 text-xs">
             <div class="flex justify-between items-center text-zinc-300">
               <span>San Francisco (HQ)</span>
-              <span class="text-zinc-500 font-mono">PST (UTC-8)</span>
+              <span class="text-zinc-500 font-mono">PST</span>
             </div>
             <div class="flex justify-between items-center text-zinc-300">
               <span>New York City</span>
-              <span class="text-zinc-500 font-mono">EST (UTC-5)</span>
+              <span class="text-zinc-500 font-mono">EST</span>
             </div>
             <div class="flex justify-between items-center text-zinc-300">
               <span>London (Research)</span>
-              <span class="text-zinc-500 font-mono">GMT (UTC+0)</span>
+              <span class="text-zinc-500 font-mono">GMT</span>
             </div>
           </div>
         </div>
 
-        <!-- Direct Contacts -->
-        <div class="double-bezel">
-          <div class="double-bezel-inner p-6 space-y-3 font-sans text-xs">
-            <div class="font-mono text-zinc-500 uppercase tracking-widest pb-2 border-b border-white/5">Direct Communication</div>
+        <div class="touch-card p-6 border border-white/10">
+          <div class="font-mono text-xs text-zinc-500 uppercase tracking-widest mb-3 pb-2 border-b border-white/5">Direct Channels</div>
+          <div class="space-y-2 text-xs">
             <div class="flex justify-between items-center">
-              <span class="text-zinc-400">Client Engagements:</span>
-              <a href="mailto:hello@retrieval.internal" class="text-white hover:underline font-mono">hello@retrieval.internal</a>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-zinc-400">Security Inquiries:</span>
-              <a href="mailto:security@retrieval.internal" class="text-white hover:underline font-mono">security@retrieval.internal</a>
+              <span class="text-zinc-400">Engagements:</span>
+              <a href="mailto:hello@retrieval.internal" class="text-white font-mono hover:underline">hello@retrieval.internal</a>
             </div>
             <div class="flex justify-between items-center">
               <span class="text-zinc-400">Confidentiality:</span>
-              <span class="text-zinc-300 font-mono">Standard NDA on Request</span>
+              <span class="text-zinc-300 font-mono">Standard NDA</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Right Column: Project Inquiry Form -->
-      <div class="lg:col-span-7">
-        <div class="double-bezel">
-          <div class="double-bezel-inner p-8 sm:p-10">
-            
-            <h2 class="text-2xl font-display font-bold text-white mb-2">Project Brief</h2>
-            <p class="text-zinc-400 text-xs sm:text-sm font-light mb-8">Fill out the details below to start the conversation.</p>
+      <!-- Project Brief Form -->
+      <div class="touch-card p-7 sm:p-9 border border-white/10">
+        <h2 class="text-2xl font-display font-bold text-white mb-2">Project Brief</h2>
+        <p class="text-zinc-400 text-sm font-light mb-6">Submit details below to initiate discovery.</p>
 
-            <form id="agency-contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for reaching out. A principal architect will review your brief and contact you within 24 hours.');">
-              
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Your Name</label>
-                  <input type="text" required placeholder="Elena Rostova" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Organization / Domain</label>
-                  <input type="text" required placeholder="Acme Systems" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Work Email</label>
-                <input type="email" required placeholder="elena@acme.com" class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Primary Scope</label>
-                  <select class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
-                    <option value="neural">High-Dimensional Vector Engine</option>
-                    <option value="architecture">Systems Architecture &amp; Audit</option>
-                    <option value="kernel">Kernel DMA &amp; Low-Latency Cache</option>
-                    <option value="enclave">Hardware Confidential Enclaves</option>
-                    <option value="dedicated">Dedicated SRE &amp; Cluster Ops</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Estimated Timeline</label>
-                  <select class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
-                    <option value="immediate">Immediate / Next 30 Days</option>
-                    <option value="q3">Q3 / Q4 2026</option>
-                    <option value="exploratory">Exploratory / Discovery Phase</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-xs font-mono text-zinc-400 mb-2 uppercase tracking-wider">Project Scope / Technical Requirements</label>
-                <textarea rows="4" placeholder="Describe the problem, target scale (QPS, vector count), current bottlenecks, and any security compliance needs..." class="w-full px-4 py-3 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
-              </div>
-
-              <button type="submit" class="w-full agency-btn-primary justify-center py-3.5">
-                <span>Submit Project Brief</span>
-                <div class="agency-btn-icon-circle">
-                  <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-                </div>
-              </button>
-
-            </form>
-
+        <form id="contact-brief-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Project brief submitted. An architect will respond within 24 hours.');">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+              <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+            </div>
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Organization</label>
+              <input type="text" required placeholder="Acme Systems Inc." class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+            </div>
           </div>
-        </div>
+
+          <div>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Work Email</label>
+            <input type="email" required placeholder="elena@acme.com" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+          </div>
+
+          <div>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Primary Scope</label>
+            <select class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
+              <option value="neural">High-Dimensional Vector Engine</option>
+              <option value="architecture">Systems Architecture &amp; Audit</option>
+              <option value="kernel">Kernel DMA &amp; Low-Latency Cache</option>
+              <option value="enclave">Hardware Confidential Enclaves</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Project Notes</label>
+            <textarea rows="4" placeholder="Describe current bottlenecks, target scale (QPS, vector count), and compliance needs..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
+          </div>
+
+          <button type="submit" class="touch-btn-primary w-full justify-center !min-h-[52px]">
+            <span>Submit Project Brief</span>
+            <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+          </button>
+
+        </form>
       </div>
 
     </div>
 
   </main>
 
-  <!-- Minimalist Studio Footer (Clean Typographic Branding, No Logo Image) -->
-  <footer class="border-t border-white/10 bg-black/80 backdrop-blur-xl relative z-10 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-sans text-zinc-400">
+  <!-- Minimalist Studio Footer -->
+  <footer class="border-t border-white/10 bg-black/90 backdrop-blur-xl relative z-10 py-10 safe-bottom">
+    <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
       <div class="flex items-center gap-3">
         <span class="text-white font-bold font-display tracking-tight text-sm">RETRIEVAL</span>
         <span class="text-zinc-600 font-mono text-[11px]">/</span>
         <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
       </div>
-      <div class="flex items-center gap-6">
+      <div class="flex items-center gap-6 font-mono text-xs">
         <a href="index.html" class="hover:text-white transition-colors">Overview</a>
         <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
         <a href="how-it-works.html" class="hover:text-white transition-colors">Methodology</a>
       </div>
       <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
         <span class="w-2 h-2 rounded-full bg-white"></span>
-        <span>ALL SYSTEMS NOMINAL</span>
+        <span>STUDIO ONLINE</span>
       </div>
     </div>
   </footer>
