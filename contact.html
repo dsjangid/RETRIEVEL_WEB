@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   
-  <title>Start Your Case — RETRIEVAL</title>
+  <title>Contact &amp; Case Support — RETRIEVAL</title>
   
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -59,6 +59,14 @@
   <div class="agency-grid-lines"></div>
   <div class="film-grain"></div>
 
+  <!-- Floating Telegram Widget (Bottom Right) -->
+  <a href="https://t.me/retrieval" target="_blank" rel="noopener noreferrer" class="floating-telegram-btn" aria-label="Join Official Telegram Channel">
+    <svg class="w-4 h-4 text-black fill-current" viewBox="0 0 24 24">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.63 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.05-.49-.83-.27-1.49-.42-1.43-.88.03-.24.37-.49 1.02-.75 3.98-1.73 6.64-2.87 7.97-3.44 3.79-1.58 4.58-1.86 5.1-1.87.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.19-.04.33z"/>
+    </svg>
+    <span>Telegram</span>
+  </a>
+
   <!-- Mobile-First Header -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 header-glass safe-top transition-all duration-300">
     <div class="px-5 sm:px-6 md:px-8 max-w-5xl mx-auto h-16 flex items-center justify-between">
@@ -69,7 +77,7 @@
         </div>
         <div class="flex flex-col justify-center">
           <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">PROTECTION &amp; RECOVERY</span>
+          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">retrieval.co.in</span>
         </div>
       </a>
 
@@ -83,8 +91,8 @@
       </div>
 
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
-          <span>WhatsApp Us</span>
+        <a href="https://t.me/unban777" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
+          <span>Contact on Telegram</span>
         </a>
         <button id="mobile-menu-btn" onclick="window.openMobileNav(event)" class="md:hidden w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
           <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,17 +148,21 @@
         </a>
       </nav>
 
-      <div class="pt-2">
-        <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
-          <span>WHATSAPP US DIRECTLY</span>
-          <span class="material-symbols-outlined text-base ml-2">chat</span>
+      <div class="pt-2 space-y-3">
+        <a href="https://t.me/unban777" target="_blank" rel="noopener noreferrer" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full inline-flex">
+          <span>MESSAGE ADMIN: @unban777</span>
+          <span class="material-symbols-outlined text-base ml-2">send</span>
+        </a>
+        <a href="https://t.me/retrieval" target="_blank" rel="noopener noreferrer" class="touch-btn-secondary !min-h-[50px] px-6 py-3 justify-center w-full inline-flex">
+          <span>OFFICIAL CHANNEL: @retrieval</span>
+          <span class="material-symbols-outlined text-base ml-2 text-zinc-400">campaign</span>
         </a>
       </div>
     </div>
 
     <div class="py-4 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-zinc-500 shrink-0">
-      <span>RETRIEVAL STUDIO</span>
-      <span class="text-zinc-400">© 2026</span>
+      <span>retrieval.co.in</span>
+      <span class="text-zinc-400">support@retrieval.co.in</span>
     </div>
 
   </div>
@@ -166,62 +178,113 @@
           Start Your Case
         </h1>
         <p class="text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
-          Tell us what you need — recovery, removal, lookup, reputation repair, or WhatsApp API. We will get back to you quickly.
+          Tell us what you need — recovery, removal, lookup, reputation repair, or WhatsApp API. Connect directly via our secure official channels.
         </p>
       </div>
 
-      <!-- Contact Case Form Card -->
+      <!-- Direct Contact Channels Card -->
       <div class="touch-card p-6 sm:p-10 border border-white/10">
         
-        <form class="space-y-5" onsubmit="event.preventDefault(); alert('Case submitted successfully. We will get back to you quickly.');">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Admin Direct Telegram -->
+          <a href="https://t.me/unban777" target="_blank" rel="noopener noreferrer" class="touch-card p-5 border border-white/10 bg-white/5 hover:border-white/30 transition-all flex flex-col justify-between group">
             <div>
-              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Name</label>
-              <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-3">
+                <span class="text-white font-bold">DIRECT ADMIN</span>
+                <span class="text-zinc-400">FAST RESPONSE</span>
+              </div>
+              <div class="font-display font-bold text-lg text-white group-hover:translate-x-1 transition-transform">
+                t.me/unban777
+              </div>
+              <p class="text-zinc-400 text-xs font-light mt-1">
+                Direct one-on-one consultation with lead case admin.
+              </p>
             </div>
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white">
+              <span>Message Admin</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Official Telegram Channel -->
+          <a href="https://t.me/retrieval" target="_blank" rel="noopener noreferrer" class="touch-card p-5 border border-white/10 bg-white/5 hover:border-white/30 transition-all flex flex-col justify-between group">
             <div>
-              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">WhatsApp / Phone Number</label>
-              <input type="tel" required placeholder="+91 91559 81730" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-3">
+                <span class="text-white font-bold">OFFICIAL CHANNEL</span>
+                <span class="text-zinc-400">UPDATES &amp; PROOF</span>
+              </div>
+              <div class="font-display font-bold text-lg text-white group-hover:translate-x-1 transition-transform">
+                t.me/retrieval
+              </div>
+              <p class="text-zinc-400 text-xs font-light mt-1">
+                Official announcements, recovery feeds, and platform alerts.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white">
+              <span>Join Channel</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Official Email -->
+          <a href="mailto:support@retrieval.co.in" class="touch-card p-5 border border-white/10 bg-white/5 hover:border-white/30 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-3">
+                <span class="text-white font-bold">OFFICIAL EMAIL</span>
+                <span class="text-zinc-400">FORMAL INQUIRIES</span>
+              </div>
+              <div class="font-display font-bold text-lg text-white group-hover:translate-x-1 transition-transform">
+                support@retrieval.co.in
+              </div>
+              <p class="text-zinc-400 text-xs font-light mt-1">
+                Enterprise NDAs, business inquiries, and documented submissions.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-white">
+              <span>Send Email</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </a>
+
+          <!-- Official Domain -->
+          <div class="touch-card p-5 border border-white/10 bg-white/5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-3">
+                <span class="text-white font-bold">PORTAL DOMAIN</span>
+                <span class="text-zinc-400">VERIFIED WEB</span>
+              </div>
+              <div class="font-display font-bold text-lg text-white">
+                retrieval.co.in
+              </div>
+              <p class="text-zinc-400 text-xs font-light mt-1">
+                Official secure web terminal and service hub.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
+              <span>Secure SSL</span>
+              <span class="text-white">Active</span>
             </div>
           </div>
 
-          <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Platform / Service Needed</label>
-            <select class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
-              <option value="account-recovery">Account Recovery (Instagram, Facebook, WhatsApp)</option>
-              <option value="account-removal">Account Removal (Copyright / Legal bases)</option>
-              <option value="lookups-intelligence">Lookups &amp; Intelligence (BM, Ad Accounts, Linked Data)</option>
-              <option value="reputation-repair">Reputation Repair &amp; Post Removals</option>
-              <option value="deindexing-takedowns">De-indexing &amp; Website Takedowns</option>
-              <option value="shielding-whitelisting">Shielding &amp; Whitelisting (Instagram)</option>
-              <option value="whatsapp-api-badge">WhatsApp API + Legacy Blue Badge</option>
-            </select>
-          </div>
+        </div>
 
-          <div>
-            <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Short Description of the Issue</label>
-            <textarea rows="4" required placeholder="Tell us what you need — recovery, removal, lookup, reputation repair, or WhatsApp API..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
-          </div>
+        <!-- Quick Action Row -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a href="https://t.me/unban777" target="_blank" rel="noopener noreferrer" class="touch-btn-primary flex-grow justify-center !min-h-[52px]">
+            <span>Message Admin on Telegram (@unban777)</span>
+            <span class="material-symbols-outlined text-base ml-2">send</span>
+          </a>
+          <a href="https://t.me/retrieval" target="_blank" rel="noopener noreferrer" class="touch-btn-secondary justify-center !min-h-[52px]">
+            <span>Join Official Channel (@retrieval)</span>
+            <span class="material-symbols-outlined text-base ml-2 text-zinc-400">campaign</span>
+          </a>
+        </div>
 
-          <!-- Buttons: Submit Case + WhatsApp Us -->
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <button type="submit" class="touch-btn-primary flex-grow justify-center !min-h-[52px]">
-              <span>Submit Case</span>
-              <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
-            </button>
-            <a href="https://wa.me/9155981730" target="_blank" rel="noopener noreferrer" class="touch-btn-secondary justify-center !min-h-[52px]">
-              <span>WhatsApp Us</span>
-              <span class="material-symbols-outlined text-base ml-2 text-zinc-400">chat</span>
-            </a>
-          </div>
-
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-2">
-            <span>Confidentiality: 100% Private &amp; Secure</span>
-            <span>Direct WhatsApp: +91 91559 81730</span>
-          </div>
-
-        </form>
+        <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-4 border-t border-white/10 mt-6">
+          <span>Confidentiality: 100% Private &amp; Secure</span>
+          <span>Official: support@retrieval.co.in</span>
+        </div>
 
       </div>
 

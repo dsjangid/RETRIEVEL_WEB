@@ -369,7 +369,40 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
   font-size: 0.6875rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #8b92a5;
+  color: #a1a1aa;
+}
+
+/* Floating Telegram Button (Bottom Right) */
+.floating-telegram-btn {
+  position: fixed;
+  bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  right: 1.25rem;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  background: #ffffff;
+  color: #050608;
+  border-radius: 9999px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s var(--ease-apple), box-shadow 0.2s ease;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+.floating-telegram-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.floating-telegram-btn:active {
+  transform: scale(0.95);
 }
 
 /* Hairline Separator */
