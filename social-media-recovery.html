@@ -419,49 +419,73 @@
       display: none !important;
     }
 
-    /* iOS Mobile Drawer */
+    /* iOS WebKit Native Optimized Mobile Drawer */
     .mobile-drawer {
-      position: fixed;
-      inset: 72px 0 0 0;
-      background-color: rgba(7, 8, 12, 0.98);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      padding: 24px;
-      overflow-y: auto;
-      z-index: 50;
+      position: fixed !important;
+      top: 72px !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: 100vw !important;
+      height: calc(100vh - 72px) !important;
+      height: calc(100dvh - 72px) !important;
+      background-color: #07080c !important;
+      padding: 24px 20px 60px 20px !important;
+      overflow-y: scroll !important;
+      -webkit-overflow-scrolling: touch !important;
+      z-index: 999999 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+      touch-action: pan-y;
+    }
+    .mobile-drawer.hidden {
+      display: none !important;
     }
     .drawer-inner {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      padding-bottom: 60px;
     }
     .drawer-link-main {
       font-size: 18px;
       font-weight: 700;
       color: #ffffff;
       text-decoration: none;
-      padding-bottom: 12px;
+      padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: block;
     }
     .drawer-group {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 12px;
+      padding-bottom: 16px;
     }
     .drawer-label {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      color: var(--text-dim);
+      color: #60a5fa;
+      font-weight: 600;
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .drawer-sublinks {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
     .drawer-sublinks a {
       display: block;
       font-size: 15px;
-      color: var(--text-muted);
+      color: #cbd5e1;
       text-decoration: none;
-      padding: 6px 0;
+      padding: 10px 0;
+      transition: color 0.15s ease;
+      -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
+    }
+    .drawer-sublinks a:active, .drawer-sublinks a:hover {
+      color: #3b82f6;
     }
 
     /* Media Press Logos Badges */
@@ -679,8 +703,8 @@
     <header class="site-header">
       <div class="header-container">
         
-        <!-- Mobile Drawer Toggle -->
-        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="mobile-toggle-btn" aria-label="Toggle Menu">
+        <!-- Mobile Menu Toggle -->
+        <button type="button" class="mobile-toggle-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle Menu" style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;">
           <svg id="menu-icon-open" class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="menu-icon-close" class="icon-svg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -755,50 +779,54 @@
           </a>
         </div>
       </div>
+    </header>
 
-      <!-- iOS Mobile Drawer Navigation -->
-      <div id="mobile-nav-drawer" class="mobile-drawer hidden">
-        <div class="drawer-inner">
-          <a href="index.html" class="drawer-link-main">Home</a>
-          
-          <div class="drawer-group">
-            <span class="drawer-label">Asset Recoveries</span>
-            <div class="drawer-sublinks">
-              <a href="instagram-recovery.html">Instagram Permanent Unbans</a>
-              <a href="instagram-recovery.html#compromised">Hacked & 2FA Bypass</a>
-              <a href="social-media-recovery.html">Facebook BM & Ad Accounts</a>
-              <a href="social-media-recovery.html#whatsapp">WhatsApp & Telegram Unbans</a>
-            </div>
+    <!-- iOS Native Top-Level Mobile Drawer Navigation -->
+    <div id="mobile-nav-drawer" class="mobile-drawer hidden">
+      <div class="drawer-inner">
+        <a href="index.html" class="drawer-link-main">Home</a>
+        
+        <div class="drawer-group">
+          <span class="drawer-label">Asset Recoveries</span>
+          <div class="drawer-sublinks">
+            <a href="instagram-recovery.html">Instagram Permanent Unbans</a>
+            <a href="instagram-recovery.html#compromised">Hacked & 2FA Bypass</a>
+            <a href="social-media-recovery.html">Facebook BM & Ad Accounts</a>
+            <a href="social-media-recovery.html#whatsapp">WhatsApp & Telegram Unbans</a>
+            <a href="instagram-username-claim.html">Inactive Username Claims</a>
           </div>
+        </div>
 
-          <div class="drawer-group">
-            <span class="drawer-label">Verification & Shield</span>
-            <div class="drawer-sublinks">
-              <a href="instagram-verification.html">Meta Blue Tick Verification</a>
-              <a href="instagram-verification.html#shield">Official Account Whitelisting</a>
-              <a href="twitter-verification.html">Twitter / X Verification</a>
-              <a href="google-knowledge-panel-1.html">Google Knowledge Panel</a>
-              <a href="wikipedia-creation.html">Wikipedia Page Management</a>
-            </div>
+        <div class="drawer-group">
+          <span class="drawer-label">Verification & Authority</span>
+          <div class="drawer-sublinks">
+            <a href="instagram-verification.html">Meta Blue Tick Verification</a>
+            <a href="instagram-verification.html#shield">Official Account Whitelisting</a>
+            <a href="twitter-verification.html">Twitter / X Verification</a>
+            <a href="telegram-verification.html">Telegram Star Verification</a>
+            <a href="google-knowledge-panel-1.html">Google Knowledge Panel</a>
+            <a href="wikipedia-creation.html">Wikipedia Page Management</a>
           </div>
+        </div>
 
-          <div class="drawer-group">
-            <span class="drawer-label">Removals & Company</span>
-            <div class="drawer-sublinks">
-              <a href="negative-news-links-removal-service.html">Defamatory Links Removal</a>
-              <a href="orm-services.html">ORM Services</a>
-              <a href="our-story.html">Our Story</a>
-              <a href="clients.html">Enterprise Clients</a>
-              <a href="refund.html">Escrow Policy</a>
-            </div>
+        <div class="drawer-group">
+          <span class="drawer-label">Removals & Trust</span>
+          <div class="drawer-sublinks">
+            <a href="negative-news-links-removal-service.html">Defamatory Content Removal</a>
+            <a href="orm-services.html">Online Reputation (ORM)</a>
+            <a href="our-story.html">Our Security Protocol</a>
+            <a href="clients.html">Enterprise Case Studies</a>
+            <a href="refund.html">Escrow & Refund Policy</a>
           </div>
+        </div>
 
-          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary w-full text-center">
-            Chat on Telegram (@unban777) →
+        <div style="padding-top: 12px;">
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; text-align: center; justify-content: center; box-sizing: border-box;">
+            Direct Desk (@unban777) →
           </a>
         </div>
       </div>
-    </header>
+    </div>
     
   <main>
     
@@ -1000,22 +1028,51 @@
     </a>
 
     <script>
-      function toggleMobileMenu() {
+      function toggleMobileMenu(e) {
+        if (e && e.preventDefault) {
+          e.preventDefault();
+        }
         const drawer = document.getElementById('mobile-nav-drawer');
         const iconOpen = document.getElementById('menu-icon-open');
         const iconClose = document.getElementById('menu-icon-close');
-        if (drawer.classList.contains('hidden')) {
+        if (!drawer) return;
+
+        const isHidden = drawer.classList.contains('hidden');
+        if (isHidden) {
           drawer.classList.remove('hidden');
-          iconOpen.classList.add('hidden');
-          iconClose.classList.remove('hidden');
+          if (iconOpen) iconOpen.classList.add('hidden');
+          if (iconClose) iconClose.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
+          document.documentElement.style.overflow = 'hidden';
         } else {
           drawer.classList.add('hidden');
-          iconOpen.classList.remove('hidden');
-          iconClose.classList.add('hidden');
+          if (iconOpen) iconOpen.classList.remove('hidden');
+          if (iconClose) iconClose.classList.add('hidden');
           document.body.style.overflow = '';
+          document.documentElement.style.overflow = '';
         }
       }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const btn = document.querySelector('.mobile-toggle-btn');
+        if (btn) {
+          btn.addEventListener('click', toggleMobileMenu);
+        }
+
+        const drawerLinks = document.querySelectorAll('#mobile-nav-drawer a');
+        drawerLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            const drawer = document.getElementById('mobile-nav-drawer');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            if (drawer) drawer.classList.add('hidden');
+            if (iconOpen) iconOpen.classList.remove('hidden');
+            if (iconClose) iconClose.classList.add('hidden');
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+          });
+        });
+      });
     </script>
     
 </body>
