@@ -231,17 +231,20 @@ body {
 .touch-btn-primary {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 52px;
-  padding: 0 1.25rem;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 46px;
+  padding: 0.65rem 1.4rem;
   border-radius: 9999px;
   background: #ffffff;
   color: #050608;
   font-weight: 600;
-  font-size: 0.9375rem;
-  letter-spacing: 0.01em;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
   transition: transform 0.15s var(--ease-apple), opacity 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 4px 25px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.12);
+  touch-action: manipulation;
 }
 
 .touch-btn-primary:active {
@@ -254,22 +257,26 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 0 1.25rem;
+  gap: 0.5rem;
+  min-height: 46px;
+  padding: 0.65rem 1.4rem;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #ffffff;
   font-weight: 500;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
   transition: transform 0.15s var(--ease-apple), background-color 0.15s ease, border-color 0.15s ease;
+  touch-action: manipulation;
 }
 
 .touch-btn-secondary:active {
   transform: scale(0.97);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.25);
 }
 
