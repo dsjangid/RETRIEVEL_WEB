@@ -37,103 +37,109 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Exact Heading Scales from Fametick Spec */
-    h1 {
+    /* RETRIEVAL Dynamic Responsive Typography */
+    h1, .h1 {
       font-family: var(--font-primary);
-      font-size: 64px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 56px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 24px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h1 {
-        font-size: 40px;
-        line-height: 1.3;
+      h1, .h1 {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
         margin-bottom: 16px;
       }
     }
 
-    h2 {
+    h2, .h2 {
       font-family: var(--font-primary);
-      font-size: 56px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 44px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.01em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 20px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h2 {
-        font-size: 36px;
-        line-height: 1.3;
-        margin-bottom: 16px;
+      h2, .h2 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 14px;
       }
     }
 
-    h3 {
+    h3, .h3 {
       font-family: var(--font-primary);
-      font-size: 48px;
+      font-size: var(--fontSizeDesktop, 32px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.3);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h3 {
-        font-size: 32px;
-        line-height: 1.3;
+      h3, .h3 {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
         margin-bottom: 12px;
       }
     }
 
-    h4 {
+    h4, .h4 {
       font-family: var(--font-primary);
-      font-size: 40px;
+      font-size: var(--fontSizeDesktop, 24px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h4 {
-        font-size: 24px;
-        line-height: 1.3;
-        margin-bottom: 12px;
+      h4, .h4 {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px;
       }
     }
 
-    h5 {
+    h5, .h5 {
       font-family: var(--font-primary);
-      font-size: 26px;
+      font-size: var(--fontSizeDesktop, 20px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 12px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h5 {
-        font-size: 20px;
-        line-height: 1.3;
+      h5, .h5 {
+        font-size: 17px !important;
+        line-height: 1.35 !important;
         margin-bottom: 8px;
       }
     }
 
-    h6 {
+    h6, .h6 {
       font-family: var(--font-primary);
-      font-size: 18px;
+      font-size: var(--fontSizeDesktop, 17px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.4);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 8px;
@@ -143,17 +149,38 @@
       font-family: var(--font-secondary);
       font-size: 16px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      p, .body {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
     }
 
     .body-large {
       font-size: 18px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      .body-large {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+    }
+
+    span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .text-blue-500 {
@@ -795,7 +822,7 @@
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px">Get Verified on Instagram, Facebook & Twitter in <span class='text-blue-500'>Global</span></h2></div><div class="grid-text-item"><h4 dir="auto" style=" letter-spacing: normal; margin-bottom: 24px"><span style="--fontSizeDesktop: 18px">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.</span><br></h4><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in <span class='text-blue-500'>Global</span>. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body"><span style="font-weight: bold">Justification for Verification</span></p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">You may get a natural SEO boost from verified accounts because they show up higher in search results.</p><p dir="auto" class="body"><span style="font-weight: bold">Comprehending Platform-Dependent Needs</span></p><p dir="auto" class="body">Verification requirements could change over time and vary across different social networking platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter. Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p><p dir="auto" class="body"> Additionally, we will review the level of detail in your profile, the metrics for interaction, and how well you follow the platform's standards.</p></div>
+            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px">Get Verified on Instagram, Facebook & Twitter in <span class='text-blue-500'>Global</span></h2></div><div class="grid-text-item"><p class="body-large"  dir="auto" style=" letter-spacing: normal; margin-bottom: 24px"><span style="--fontSizeDesktop: 18px">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.</span><br></p><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in <span class='text-blue-500'>Global</span>. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body"><span style="font-weight: bold">Justification for Verification</span></p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">You may get a natural SEO boost from verified accounts because they show up higher in search results.</p><p dir="auto" class="body"><span style="font-weight: bold">Comprehending Platform-Dependent Needs</span></p><p dir="auto" class="body">Verification requirements could change over time and vary across different social networking platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter. Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p><p dir="auto" class="body"> Additionally, we will review the level of detail in your profile, the metrics for interaction, and how well you follow the platform's standards.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
             Consult Desk →

@@ -37,103 +37,109 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Exact Heading Scales from Fametick Spec */
-    h1 {
+    /* RETRIEVAL Dynamic Responsive Typography */
+    h1, .h1 {
       font-family: var(--font-primary);
-      font-size: 64px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 56px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 24px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h1 {
-        font-size: 40px;
-        line-height: 1.3;
+      h1, .h1 {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
         margin-bottom: 16px;
       }
     }
 
-    h2 {
+    h2, .h2 {
       font-family: var(--font-primary);
-      font-size: 56px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 44px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.01em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 20px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h2 {
-        font-size: 36px;
-        line-height: 1.3;
-        margin-bottom: 16px;
+      h2, .h2 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 14px;
       }
     }
 
-    h3 {
+    h3, .h3 {
       font-family: var(--font-primary);
-      font-size: 48px;
+      font-size: var(--fontSizeDesktop, 32px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.3);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h3 {
-        font-size: 32px;
-        line-height: 1.3;
+      h3, .h3 {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
         margin-bottom: 12px;
       }
     }
 
-    h4 {
+    h4, .h4 {
       font-family: var(--font-primary);
-      font-size: 40px;
+      font-size: var(--fontSizeDesktop, 24px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h4 {
-        font-size: 24px;
-        line-height: 1.3;
-        margin-bottom: 12px;
+      h4, .h4 {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px;
       }
     }
 
-    h5 {
+    h5, .h5 {
       font-family: var(--font-primary);
-      font-size: 26px;
+      font-size: var(--fontSizeDesktop, 20px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 12px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h5 {
-        font-size: 20px;
-        line-height: 1.3;
+      h5, .h5 {
+        font-size: 17px !important;
+        line-height: 1.35 !important;
         margin-bottom: 8px;
       }
     }
 
-    h6 {
+    h6, .h6 {
       font-family: var(--font-primary);
-      font-size: 18px;
+      font-size: var(--fontSizeDesktop, 17px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.4);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 8px;
@@ -143,17 +149,38 @@
       font-family: var(--font-secondary);
       font-size: 16px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      p, .body {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
     }
 
     .body-large {
       font-size: 18px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      .body-large {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+    }
+
+    span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .text-blue-500 {
@@ -801,19 +828,19 @@
         
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxibHVlfGVufDB8fHx8MTc3MTM4OTI1NXww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 700;"><strong>Serving Brands Across <span class='text-blue-500'>Global</span></strong></span></h3></div><div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 400;">RETRIEVAL works with clients across multiple industries, offering localized strategies with a global mindset. Our experience in international markets allows us to align messaging with cultural, media, and digital trends specific to each region.</span></h3></div>
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 700;"><strong>Serving Brands Across <span class='text-blue-500'>Global</span></strong></span></h3></div><div class="grid-text-item"><p class="body-large"  dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 400;">RETRIEVAL works with clients across multiple industries, offering localized strategies with a global mindset. Our experience in international markets allows us to align messaging with cultural, media, and digital trends specific to each region.</span></p></div>
           </div>
         </section>
         
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxfHx3aGl0ZXxlbnwwfHx8fDE3NzE0MDkxMTN8MA&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;"><span style="font-weight: 700;"><strong>Reputation Management</strong></span></h3></div><div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="font-weight: 400;">Our strategies are built with search engines and audiences in mind. By improving brand sentiment, authoritative mentions, and online visibility, we help clients dominate search results with positive, trustworthy content.</span></h3></div>
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;"><span style="font-weight: 700;"><strong>Reputation Management</strong></span></h3></div><div class="grid-text-item"><p class="body-large"  dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="font-weight: 400;">Our strategies are built with search engines and audiences in mind. By improving brand sentiment, authoritative mentions, and online visibility, we help clients dominate search results with positive, trustworthy content.</span></p></div>
           </div>
         </section>
         
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxibHVlfGVufDB8fHx8MTc3MTM4OTI1NXww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;">Partner With RETRIEVAL</h3></div><div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 400;">If you are looking for the best PR & Online Reputation Agency globally, RETRIEVAL is your trusted partner. Let us help you control your narrative, strengthen your brand image, and grow with confidence in <span class='text-blue-500'>Global</span>. Get in touch today and take charge of your reputation.</span></h3></div>
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 48px; --fontSizeDesktop: 52px; margin-bottom: 0px;">Partner With RETRIEVAL</h3></div><div class="grid-text-item"><p class="body-large"  dir="auto" style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 14px; --fontSizeDesktop: 18px; margin-bottom: 0px;"><span style="color: inherit; font-weight: 400;">If you are looking for the best PR & Online Reputation Agency globally, RETRIEVAL is your trusted partner. Let us help you control your narrative, strengthen your brand image, and grow with confidence in <span class='text-blue-500'>Global</span>. Get in touch today and take charge of your reputation.</span></p></div>
           </div>
         </section>
         
@@ -831,7 +858,7 @@
         
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw1fHxCTFVFfGVufDB8fHx8MTc3MTQ5MTQ3M3ww&ixlib=rb-4.1.0?w=1366&q=70&auto=format'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h3 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 0px;" dir="auto">Reputation Is Built Daily, We Help You Control It</h3></div><div class="grid-text-item"><h3 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 16px; --fontSizeDesktop: 18px; margin-bottom: 32px;" dir="auto"><span style="font-weight: 400;">Your brand is being judged every day — on Google, social media, news platforms, and public forums. What people see online shapes trust, decisions, and revenue. RETRIEVAL exists to make sure that story works in your favor.</span></h3><p style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 16px; --fontSizeDesktop: 18px; margin-bottom: 0px;" class="body" dir="auto"><span style="font-weight: 400;">We help brands, entrepreneurs, and public figures own their digital presence, strengthen credibility, and stay protected in an always-connected world. Our approach combines public relations expertise with advanced online reputation strategies to deliver results that last.</span></p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/undraw_writing-online_x665-arLkevvpUHlB5qzS.svg" alt="" class="grid-image-element" loading="lazy"></div>
+            <div class="grid-text-item"><h3 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; letter-spacing: normal; --fontSizeMobile: 35px; --fontSizeDesktop: 48px; margin-bottom: 0px;" dir="auto">Reputation Is Built Daily, We Help You Control It</h3></div><div class="grid-text-item"><p class="body-large"  style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 16px; --fontSizeDesktop: 18px; margin-bottom: 32px;" dir="auto"><span style="font-weight: 400;">Your brand is being judged every day — on Google, social media, news platforms, and public forums. What people see online shapes trust, decisions, and revenue. RETRIEVAL exists to make sure that story works in your favor.</span></p><p style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 16px; --fontSizeDesktop: 18px; margin-bottom: 0px;" class="body" dir="auto"><span style="font-weight: 400;">We help brands, entrepreneurs, and public figures own their digital presence, strengthen credibility, and stay protected in an always-connected world. Our approach combines public relations expertise with advanced online reputation strategies to deliver results that last.</span></p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/undraw_writing-online_x665-arLkevvpUHlB5qzS.svg" alt="" class="grid-image-element" loading="lazy"></div>
           </div>
         </section>
         

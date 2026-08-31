@@ -37,103 +37,109 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Exact Heading Scales from Fametick Spec */
-    h1 {
+    /* RETRIEVAL Dynamic Responsive Typography */
+    h1, .h1 {
       font-family: var(--font-primary);
-      font-size: 64px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 56px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 24px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h1 {
-        font-size: 40px;
-        line-height: 1.3;
+      h1, .h1 {
+        font-size: 32px !important;
+        line-height: 1.25 !important;
         margin-bottom: 16px;
       }
     }
 
-    h2 {
+    h2, .h2 {
       font-family: var(--font-primary);
-      font-size: 56px;
-      font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      font-size: var(--fontSizeDesktop, 44px);
+      font-weight: 700;
+      line-height: var(--lineHeightDesktop, 1.25);
+      letter-spacing: -0.01em;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 20px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h2 {
-        font-size: 36px;
-        line-height: 1.3;
-        margin-bottom: 16px;
+      h2, .h2 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 14px;
       }
     }
 
-    h3 {
+    h3, .h3 {
       font-family: var(--font-primary);
-      font-size: 48px;
+      font-size: var(--fontSizeDesktop, 32px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.3);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h3 {
-        font-size: 32px;
-        line-height: 1.3;
+      h3, .h3 {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
         margin-bottom: 12px;
       }
     }
 
-    h4 {
+    h4, .h4 {
       font-family: var(--font-primary);
-      font-size: 40px;
+      font-size: var(--fontSizeDesktop, 24px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h4 {
-        font-size: 24px;
-        line-height: 1.3;
-        margin-bottom: 12px;
+      h4, .h4 {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+        margin-bottom: 10px;
       }
     }
 
-    h5 {
+    h5, .h5 {
       font-family: var(--font-primary);
-      font-size: 26px;
+      font-size: var(--fontSizeDesktop, 20px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.35);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 12px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     @media (max-width: 920px) {
-      h5 {
-        font-size: 20px;
-        line-height: 1.3;
+      h5, .h5 {
+        font-size: 17px !important;
+        line-height: 1.35 !important;
         margin-bottom: 8px;
       }
     }
 
-    h6 {
+    h6, .h6 {
       font-family: var(--font-primary);
-      font-size: 18px;
+      font-size: var(--fontSizeDesktop, 17px);
       font-weight: 600;
-      line-height: 1.3;
-      letter-spacing: 0;
+      line-height: var(--lineHeightDesktop, 1.4);
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 8px;
@@ -143,17 +149,38 @@
       font-family: var(--font-secondary);
       font-size: 16px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
       margin-top: 0;
       margin-bottom: 16px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      p, .body {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+      }
     }
 
     .body-large {
       font-size: 18px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
       color: var(--text-muted);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
+      .body-large {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+    }
+
+    span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .text-blue-500 {
@@ -808,7 +835,7 @@
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Our Expertise</h3></div><div class="grid-text-item"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 18px; --fontSizeDesktop: 14px;" dir="auto"><span style="--fontSizeMobile: 16px; font-weight: 400;">Our team of digital maestros specializes in a spectrum of services designed to maximize your online presence. From search engine optimization (SEO) that ensures your brand ranks at the top in Google searches, to compelling social media marketing strategies that engage and expand your audience, we have the tools and talent to revolutionize your digital footprint.</span><br></h4><ul dir="auto"><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Innovative Solutions: Staying ahead of the curve is our mantra. Our team continually explores emerging trends and technologies to provide innovative and effective marketing solutions.</p><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto"></p></li><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Results-Driven: At the heart of RETRIEVAL is a relentless drive to deliver measurable results. Whether it's enhancing your SEO rankings, boosting social media engagement, or increasing website traffic, our focus is on achieving your business objectives.</p><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto"></p></li><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Transparency and Trust: Building lasting relationships with our clients is paramount. We maintain complete transparency in our processes and strategies, ensuring you're always informed and in control.</p></li></ul></div>
+            <div class="grid-text-item"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Our Expertise</h3></div><div class="grid-text-item"><p class="body-large"  style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 18px; --fontSizeDesktop: 14px;" dir="auto"><span style="--fontSizeMobile: 16px; font-weight: 400;">Our team of digital maestros specializes in a spectrum of services designed to maximize your online presence. From search engine optimization (SEO) that ensures your brand ranks at the top in Google searches, to compelling social media marketing strategies that engage and expand your audience, we have the tools and talent to revolutionize your digital footprint.</span><br></p><ul dir="auto"><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Innovative Solutions: Staying ahead of the curve is our mantra. Our team continually explores emerging trends and technologies to provide innovative and effective marketing solutions.</p><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto"></p></li><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Results-Driven: At the heart of RETRIEVAL is a relentless drive to deliver measurable results. Whether it's enhancing your SEO rankings, boosting social media engagement, or increasing website traffic, our focus is on achieving your business objectives.</p><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto"></p></li><li style=""><p style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 14px;" class="body" dir="auto">Transparency and Trust: Building lasting relationships with our clients is paramount. We maintain complete transparency in our processes and strategies, ensuring you're always informed and in control.</p></li></ul></div>
           </div>
         </section>
         
