@@ -763,8 +763,8 @@
 
         </div>
 
-        <!-- Action Row -->
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+        <!-- Direct Action Row -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2 mb-10">
           <a href="https://t.me/unban777" target="_blank" rel="noopener noreferrer" class="touch-btn-primary flex-grow justify-center !min-h-[52px]">
             <span>Message Admin on Telegram (@unban777)</span>
             <span class="material-symbols-outlined text-base ml-2">send</span>
@@ -775,9 +775,60 @@
           </a>
         </div>
 
-        <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-4 border-t border-white/10 mt-6">
-          <span>Confidentiality: 100% Private &amp; Secure</span>
-          <span>Official: support@retrieval.co.in</span>
+        <!-- Query Form Block -->
+        <div class="pt-8 border-t border-white/10">
+          <div class="mb-6">
+            <h3 class="font-display font-bold text-xl text-white mb-1">
+              Submit Case Query
+            </h3>
+            <p class="text-zinc-400 text-xs font-light">
+              Fill out the query form below. A senior specialist will review your details and respond via Telegram or Email.
+            </p>
+          </div>
+
+          <form id="case-query-form" class="space-y-4" onsubmit="event.preventDefault(); alert('Query received. We will respond via Telegram / Email promptly.');">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Your Name</label>
+                <input type="text" required placeholder="Elena Rostova" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              </div>
+              <div>
+                <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Telegram Username or Email</label>
+                <input type="text" required placeholder="@username or name@example.com" class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"/>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Select Service</label>
+              <select class="w-full min-h-[48px] px-4 bg-black/70 border border-white/10 rounded-xl text-xs font-mono text-white focus:outline-none focus:border-white/40 transition-colors">
+                <option value="recoveries">1. Account Recoveries (Instagram, Facebook, WhatsApp)</option>
+                <option value="shielding">2. Shielding &amp; Whitelisting (Instagram)</option>
+                <option value="removals">3. Account Removals (Copyright / Valid Legal Bases)</option>
+                <option value="lookups">4. Lookups &amp; Intelligence (BM, Ad Accounts, Linked Data)</option>
+                <option value="whatsapp-api">5. WhatsApp API + Legacy Blue Badge</option>
+                <option value="reputation">6. Reputation Repair &amp; Post Removals</option>
+                <option value="takedowns">7. De-indexing &amp; Website Takedowns</option>
+                <option value="general">General Case Inquiry</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-mono text-xs text-zinc-400 uppercase tracking-wider mb-2">Query Details / Case Description</label>
+              <textarea rows="3" required placeholder="Describe what happened with your account or what service you require..." class="w-full p-4 bg-black/70 border border-white/10 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-white/40 transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="touch-btn-primary w-full justify-center !min-h-[52px]">
+              <span>Send Query</span>
+              <span class="material-symbols-outlined text-base ml-2">send</span>
+            </button>
+
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 pt-2">
+              <span>Confidentiality: 100% Private &amp; Secure</span>
+              <span>Direct Support: support@retrieval.co.in</span>
+            </div>
+
+          </form>
         </div>
 
       </div>
