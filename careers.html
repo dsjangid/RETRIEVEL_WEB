@@ -40,9 +40,9 @@
     /* RETRIEVAL Dynamic Responsive Typography */
     h1, .h1 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 48px);
+      font-size: 42px;
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.2);
+      line-height: 1.25;
       letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
@@ -52,37 +52,37 @@
     }
     @media (max-width: 920px) {
       h1, .h1 {
-        font-size: 24px !important;
-        line-height: 1.25 !important;
+        font-size: 26px !important;
+        line-height: 1.3 !important;
         margin-bottom: 16px;
       }
     }
 
     h2, .h2 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 36px);
+      font-size: 32px;
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.25);
+      line-height: 1.3;
       letter-spacing: -0.01em;
       color: var(--text-white);
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       overflow-wrap: break-word;
       word-break: break-word;
     }
     @media (max-width: 920px) {
       h2, .h2 {
         font-size: 22px !important;
-        line-height: 1.25 !important;
+        line-height: 1.3 !important;
         margin-bottom: 14px;
       }
     }
 
     h3, .h3 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 30px);
+      font-size: 24px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.3);
+      line-height: 1.35;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
@@ -99,28 +99,9 @@
 
     h4, .h4 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 24px);
+      font-size: 20px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.35);
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 16px;
-      overflow-wrap: normal;
-      word-break: normal;
-    }
-    @media (max-width: 920px) {
-      h4, .h4 {
-        font-size: 18px !important;
-        line-height: 1.35 !important;
-        margin-bottom: 10px;
-      }
-    }
-
-    h5, .h5 {
-      font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 20px);
-      font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.35);
+      line-height: 1.4;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 12px;
@@ -128,18 +109,37 @@
       word-break: break-word;
     }
     @media (max-width: 920px) {
+      h4, .h4 {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px;
+      }
+    }
+
+    h5, .h5 {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 10px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
       h5, .h5 {
-        font-size: 17px !important;
-        line-height: 1.35 !important;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
         margin-bottom: 8px;
       }
     }
 
     h6, .h6 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 17px);
+      font-size: 16px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.4);
+      line-height: 1.45;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 8px;
@@ -147,9 +147,9 @@
 
     p, .body {
       font-family: var(--font-secondary);
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text-muted);
       margin-top: 0;
       margin-bottom: 16px;
@@ -158,23 +158,24 @@
     }
     @media (max-width: 920px) {
       p, .body {
-        font-size: 15px !important;
-        line-height: 1.5 !important;
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
       }
     }
 
     .body-large {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text-muted);
       overflow-wrap: break-word;
       word-break: break-word;
+      margin-bottom: 16px;
     }
     @media (max-width: 920px) {
       .body-large {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
       }
     }
 
@@ -876,7 +877,7 @@
     
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto">Join the outstanding team at RETRIEVAL!</h3></div><div class="grid-text-item"><p dir="auto" class="body">We guarantee that our comprehensive digital marketing services will help our clients expand their online enterprises. Look over our available positions if you're interested in being a part of our exciting company culture.</p><p dir="auto" class="body">What our teammates receive from RETRIEVAL goes beyond a simple job description; it's a path to advancement in their careers. We offer excellent compensation, health insurance, educational opportunities, exposure to clients in the Fortune 500, and a positive work atmosphere.</p></div>
+            <div class="grid-text-item"><h3>Join the outstanding team at RETRIEVAL!</h3></div><div class="grid-text-item"><p dir="auto" class="body">We guarantee that our comprehensive digital asset recovery & defense services will help our clients expand their online enterprises. Look over our available positions if you're interested in being a part of our exciting company culture.</p><p dir="auto" class="body">What our teammates receive from RETRIEVAL goes beyond a simple job description; it's a path to advancement in their careers. We offer excellent compensation, health insurance, educational opportunities, exposure to clients in the Fortune 500, and a positive work atmosphere.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
@@ -906,7 +907,7 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 dir="auto">Join Our Team</h4><p dir="auto" class="body">When it comes to digital marketing, we believe that the best people in the world should be hired. Our candidates are provided with many opportunities to become acquainted with us, just as we are eager to become acquainted with them.</p><p dir="auto" class="body"><br></p><p dir="auto" class="body">If you're interested in one of our open positions, start by applying here and attaching your resume.</p><p dir="auto" class="body"><br></p><p dir="auto" class="body"></p><ul dir="auto"><li><p dir="auto" class="body"><strong>Graphic Designer</strong></p></li><li><p dir="auto" class="body"><strong>SEO Strategist</strong></p></li><li><p dir="auto" class="body"><strong>Marketing Consultant</strong></p></li><li><p dir="auto" class="body"><strong>eCommerce SEO Strategists</strong></p></li><li><p dir="auto" class="body"><strong>Web Project Manager</strong></p></li><li><p dir="auto" class="body"><strong>Account Manager</strong></p></li><li><p dir="auto" class="body"><strong>Social Media Manager</strong></p></li></ul><p dir="auto" class="body"></p><p dir="auto" class="body"><br></p></div>
+            <div class="grid-text-item"><h4>Join Our Team</h4><p dir="auto" class="body">When it comes to digital asset recovery & defense, we believe that the best people in the world should be hired. Our candidates are provided with many opportunities to become acquainted with us, just as we are eager to become acquainted with them.</p><p dir="auto" class="body"><br></p><p dir="auto" class="body">If you're interested in one of our open positions, start by applying here and attaching your resume.</p><p dir="auto" class="body"><br></p><p dir="auto" class="body"></p><ul dir="auto"><li><p dir="auto" class="body"><strong>Graphic Designer</strong></p></li><li><p dir="auto" class="body"><strong>SEO Strategist</strong></p></li><li><p dir="auto" class="body"><strong>Marketing Consultant</strong></p></li><li><p dir="auto" class="body"><strong>eCommerce SEO Strategists</strong></p></li><li><p dir="auto" class="body"><strong>Web Project Manager</strong></p></li><li><p dir="auto" class="body"><strong>Account Manager</strong></p></li><li><p dir="auto" class="body"><strong>Social Media Manager</strong></p></li></ul><p dir="auto" class="body"></p><p dir="auto" class="body"><br></p></div>
         <div class="grid-form-card">
           <h4 class="form-title">Direct Escalation Desk</h4>
           <p class="form-subtitle">Submit your target username or suspension details. Cases are reviewed within 60 minutes.</p>
@@ -944,13 +945,13 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto">Our Culture</h3></div><div class="grid-text-item"><h4 dir="auto">Empowerment:</h4><h4 dir="auto">We encourage our employees to reach beyond their daily responsibilities, explore their interests and stretch their capabilities.</h4><h4 dir="auto">Appreciation:   </h4><h4 dir="auto">We recognize and celebrate the accomplishments and hard work of our team members, as well as how they elevate others to reach their desired goals.</h4><p class="body" dir="auto"></p><h4 dir="auto">Teamwork:   </h4><h4 dir="auto">Our collaboration is based on empathy, support and trust in each other’s expertise, skills, opinion and good intentions.</h4><p class="body" dir="auto"></p><h4 dir="auto">Nurturing:   </h4><h4 dir="auto">We encourage and support all our employees with their personal and professional development.</h4></div>
+            <div class="grid-text-item"><h3>Our Culture</h3></div><div class="grid-text-item"><h4>Empowerment:</h4><p class="body-large">We encourage our employees to reach beyond their daily responsibilities, explore their interests and stretch their capabilities.</p><h4>Appreciation:   </h4><p class="body-large">We recognize and celebrate the accomplishments and hard work of our team members, as well as how they elevate others to reach their desired goals.</p><p class="body" dir="auto"></p><h4>Teamwork:   </h4><p class="body-large">Our collaboration is based on empathy, support and trust in each other’s expertise, skills, opinion and good intentions.</p><p class="body" dir="auto"></p><h4>Nurturing:   </h4><p class="body-large">We encourage and support all our employees with their personal and professional development.</p></div>
           </div>
         </section>
         
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/executive_forensic_desk.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto">Ready to kickstart your project?</h2></div>
+            <div class="grid-text-item"><h2>Ready to kickstart your project?</h2></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>

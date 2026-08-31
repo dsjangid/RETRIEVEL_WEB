@@ -40,9 +40,9 @@
     /* RETRIEVAL Dynamic Responsive Typography */
     h1, .h1 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 48px);
+      font-size: 42px;
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.2);
+      line-height: 1.25;
       letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
@@ -52,37 +52,37 @@
     }
     @media (max-width: 920px) {
       h1, .h1 {
-        font-size: 24px !important;
-        line-height: 1.25 !important;
+        font-size: 26px !important;
+        line-height: 1.3 !important;
         margin-bottom: 16px;
       }
     }
 
     h2, .h2 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 36px);
+      font-size: 32px;
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.25);
+      line-height: 1.3;
       letter-spacing: -0.01em;
       color: var(--text-white);
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       overflow-wrap: break-word;
       word-break: break-word;
     }
     @media (max-width: 920px) {
       h2, .h2 {
         font-size: 22px !important;
-        line-height: 1.25 !important;
+        line-height: 1.3 !important;
         margin-bottom: 14px;
       }
     }
 
     h3, .h3 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 30px);
+      font-size: 24px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.3);
+      line-height: 1.35;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
@@ -99,28 +99,9 @@
 
     h4, .h4 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 24px);
+      font-size: 20px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.35);
-      color: var(--text-white);
-      margin-top: 0;
-      margin-bottom: 16px;
-      overflow-wrap: normal;
-      word-break: normal;
-    }
-    @media (max-width: 920px) {
-      h4, .h4 {
-        font-size: 18px !important;
-        line-height: 1.35 !important;
-        margin-bottom: 10px;
-      }
-    }
-
-    h5, .h5 {
-      font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 20px);
-      font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.35);
+      line-height: 1.4;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 12px;
@@ -128,18 +109,37 @@
       word-break: break-word;
     }
     @media (max-width: 920px) {
+      h4, .h4 {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 10px;
+      }
+    }
+
+    h5, .h5 {
+      font-family: var(--font-primary);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-white);
+      margin-top: 0;
+      margin-bottom: 10px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    @media (max-width: 920px) {
       h5, .h5 {
-        font-size: 17px !important;
-        line-height: 1.35 !important;
+        font-size: 16px !important;
+        line-height: 1.4 !important;
         margin-bottom: 8px;
       }
     }
 
     h6, .h6 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 17px);
+      font-size: 16px;
       font-weight: 600;
-      line-height: var(--lineHeightDesktop, 1.4);
+      line-height: 1.45;
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 8px;
@@ -147,9 +147,9 @@
 
     p, .body {
       font-family: var(--font-secondary);
-      font-size: 16px;
+      font-size: 15.5px;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text-muted);
       margin-top: 0;
       margin-bottom: 16px;
@@ -158,23 +158,24 @@
     }
     @media (max-width: 920px) {
       p, .body {
-        font-size: 15px !important;
-        line-height: 1.5 !important;
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
       }
     }
 
     .body-large {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.65;
       color: var(--text-muted);
       overflow-wrap: break-word;
       word-break: break-word;
+      margin-bottom: 16px;
     }
     @media (max-width: 920px) {
       .body-large {
-        font-size: 16px !important;
-        line-height: 1.5 !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
       }
     }
 
@@ -912,13 +913,13 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto">About Us</h3></div><div class="grid-text-item"><p dir="auto" class="body">Welcome to RETRIEVAL, where your brand's visibility is our top priority. Nestled in the heart of Global's bustling digital ecosystem, we stand out as the premier digital marketing company, dedicated to elevating businesses to new heights of online success.</p><p dir="auto" class="body">At RETRIEVAL, we believe in the power of digital transformation to unlock unprecedented growth for our clients. Our journey began with a simple yet profound mission: to redefine the digital marketing landscape in Global. Today, we take pride in being the go-to digital catalyst for a diverse clientele, ranging from vibrant startups to established industry leaders.</p></div>
+            <div class="grid-text-item"><h3>About Us</h3></div><div class="grid-text-item"><p dir="auto" class="body">Welcome to RETRIEVAL, where your brand's visibility is our top priority. Nestled in the heart of Global's bustling digital ecosystem, we stand out as the premier digital asset recovery & defense company, dedicated to elevating businesses to new heights of online success.</p><p dir="auto" class="body">At RETRIEVAL, we believe in the power of digital transformation to unlock unprecedented growth for our clients. Our journey began with a simple yet profound mission: to redefine the digital asset recovery & defense landscape in Global. Today, we take pride in being the go-to digital catalyst for a diverse clientele, ranging from vibrant startups to established industry leaders.</p></div>
           </div>
         </section>
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto">Our Expertise</h3></div><div class="grid-text-item"><h4 dir="auto">Our team of digital maestros specializes in a spectrum of services designed to maximize your online presence. From search engine optimization (SEO) that ensures your brand ranks at the top in Google searches, to compelling social media marketing strategies that engage and expand your audience, we have the tools and talent to revolutionize your digital footprint.<br></h4><ul dir="auto"><li><p class="body" dir="auto">Innovative Solutions: Staying ahead of the curve is our mantra. Our team continually explores emerging trends and technologies to provide innovative and effective marketing solutions.</p><p class="body" dir="auto"></p></li><li><p class="body" dir="auto">Results-Driven: At the heart of RETRIEVAL is a relentless drive to deliver measurable results. Whether it's enhancing your SEO rankings, boosting social media engagement, or increasing website traffic, our focus is on achieving your business objectives.</p><p class="body" dir="auto"></p></li><li><p class="body" dir="auto">Transparency and Trust: Building lasting relationships with our clients is paramount. We maintain complete transparency in our processes and strategies, ensuring you're always informed and in control.</p></li></ul></div>
+            <div class="grid-text-item"><h3>Our Expertise</h3></div><div class="grid-text-item"><p class="body-large">Our team of cyber intelligence & recovery engineers specializes in a spectrum of services designed to maximize your online presence. From search engine optimization (SEO) that ensures your brand ranks at the top in Google searches, to compelling social media marketing strategies that engage and expand your audience, we have the tools and talent to revolutionize your digital footprint.<br></p><ul dir="auto"><li><p class="body" dir="auto">Innovative Solutions: Staying ahead of the curve is our mantra. Our team continually explores emerging trends and technologies to provide innovative and effective marketing solutions.</p><p class="body" dir="auto"></p></li><li><p class="body" dir="auto">Results-Driven: At the heart of RETRIEVAL is a relentless drive to deliver measurable results. Whether it's enhancing your SEO rankings, boosting social media engagement, or increasing website traffic, our focus is on achieving your business objectives.</p><p class="body" dir="auto"></p></li><li><p class="body" dir="auto">Transparency and Trust: Building lasting relationships with our clients is paramount. We maintain complete transparency in our processes and strategies, ensuring you're always informed and in control.</p></li></ul></div>
           </div>
         </section>
         
@@ -964,7 +965,7 @@
             
         <section class="block-section with-bg-image" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.96)), url('assets/images/executive_forensic_desk.jpg'); background-size: cover; background-position: center;">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto">Ready to kickstart your project?</h2></div>
+            <div class="grid-text-item"><h2>Ready to kickstart your project?</h2></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
