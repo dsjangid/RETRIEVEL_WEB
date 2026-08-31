@@ -40,19 +40,19 @@
     /* RETRIEVAL Dynamic Responsive Typography */
     h1, .h1 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 56px);
+      font-size: var(--fontSizeDesktop, 48px);
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.25);
+      line-height: var(--lineHeightDesktop, 1.2);
       letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       overflow-wrap: break-word;
       word-break: break-word;
     }
     @media (max-width: 920px) {
       h1, .h1 {
-        font-size: 32px !important;
+        font-size: 24px !important;
         line-height: 1.25 !important;
         margin-bottom: 16px;
       }
@@ -60,7 +60,7 @@
 
     h2, .h2 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 44px);
+      font-size: var(--fontSizeDesktop, 36px);
       font-weight: 700;
       line-height: var(--lineHeightDesktop, 1.25);
       letter-spacing: -0.01em;
@@ -72,7 +72,7 @@
     }
     @media (max-width: 920px) {
       h2, .h2 {
-        font-size: 26px !important;
+        font-size: 22px !important;
         line-height: 1.25 !important;
         margin-bottom: 14px;
       }
@@ -80,7 +80,7 @@
 
     h3, .h3 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 32px);
+      font-size: var(--fontSizeDesktop, 30px);
       font-weight: 600;
       line-height: var(--lineHeightDesktop, 1.3);
       color: var(--text-white);
@@ -91,8 +91,8 @@
     }
     @media (max-width: 920px) {
       h3, .h3 {
-        font-size: 22px !important;
-        line-height: 1.3 !important;
+        font-size: 20px !important;
+        line-height: 1.35 !important;
         margin-bottom: 12px;
       }
     }
@@ -105,12 +105,12 @@
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
-      overflow-wrap: break-word;
-      word-break: break-word;
+      overflow-wrap: normal;
+      word-break: normal;
     }
     @media (max-width: 920px) {
       h4, .h4 {
-        font-size: 19px !important;
+        font-size: 18px !important;
         line-height: 1.35 !important;
         margin-bottom: 10px;
       }
@@ -219,37 +219,38 @@
       margin-bottom: 16px;
     }
 
-    /* Exact Button Spec */
+    /* Clean Non-Glowing Flat Buttons */
     .grid-button-wrapper {
-      margin-top: 24px;
-      margin-bottom: 24px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .grid-button-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 16px 40px;
+      gap: 8px;
+      padding: 12px 28px;
       border-radius: 999px;
       background-color: var(--color-primary);
       color: #ffffff;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       line-height: normal;
       text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: background-color 0.2s ease;
       cursor: pointer;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: none;
     }
     .grid-button-primary:hover {
       background-color: var(--color-primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+      box-shadow: none;
+      transform: none;
     }
     @media (max-width: 920px) {
       .grid-button-primary {
-        padding: 14px 36px;
-        font-size: 16px;
+        padding: 10px 20px;
+        font-size: 13px;
       }
     }
 
@@ -258,16 +259,16 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background-color: rgba(7, 8, 12, 0.92);
+      background-color: rgba(7, 8, 12, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: none;
     }
     .header-container {
       max-width: 1224px;
       margin: 0 auto;
-      height: 80px;
+      height: 72px;
       padding: 0 24px;
       display: flex;
       align-items: center;
@@ -275,7 +276,7 @@
     }
     @media (max-width: 920px) {
       .header-container {
-        height: 72px;
+        height: 64px;
         padding: 0 16px;
       }
     }
@@ -287,16 +288,16 @@
       text-decoration: none;
     }
     .brand-logo-badge {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
       background-color: #000000;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 4px;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+      box-shadow: none;
     }
     .brand-svg {
       width: 100%;
@@ -308,25 +309,25 @@
       flex-direction: column;
     }
     .brand-name {
-      font-weight: 900;
-      font-size: 16px;
-      letter-spacing: 0.15em;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.12em;
       color: #ffffff;
       line-height: 1;
     }
     .brand-domain {
       font-family: 'Geist Mono', monospace;
       font-size: 9px;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-dim);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     .desktop-nav {
       display: none;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
     }
     @media (min-width: 1024px) {
       .desktop-nav {
@@ -334,7 +335,7 @@
       }
     }
     .nav-item, .nav-dropdown-trigger {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--text-muted);
       text-decoration: none;
@@ -357,9 +358,9 @@
       min-width: 250px;
       background-color: #0c0e15;
       border: 1px solid var(--border-color);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 8px 0;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
       display: none;
       z-index: 60;
     }
@@ -368,8 +369,8 @@
     }
     .dropdown-item {
       display: block;
-      padding: 10px 20px;
-      font-size: 14px;
+      padding: 10px 18px;
+      font-size: 13.5px;
       color: var(--text-muted);
       text-decoration: none;
       transition: all 0.15s ease;
@@ -383,18 +384,22 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 24px;
-      border-radius: 999px;
-      background-color: #ffffff;
-      color: #07080c;
-      font-size: 14px;
-      font-weight: 700;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
       text-decoration: none;
       transition: all 0.2s ease;
+      box-shadow: none;
     }
     .contact-header-btn:hover {
       background-color: var(--color-primary);
+      border-color: var(--color-primary);
       color: #ffffff;
+      transform: none;
+      box-shadow: none;
     }
 
     .mobile-toggle-btn {
@@ -402,8 +407,8 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border-color);
       color: #ffffff;
-      padding: 8px;
-      border-radius: 10px;
+      padding: 7px;
+      border-radius: 8px;
       cursor: pointer;
     }
     @media (min-width: 1024px) {
@@ -412,8 +417,8 @@
       }
     }
     .icon-svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
     .hidden {
       display: none !important;
@@ -422,20 +427,20 @@
     /* iOS WebKit Native Optimized Mobile Drawer */
     .mobile-drawer {
       position: fixed !important;
-      top: 72px !important;
+      top: 64px !important;
       left: 0 !important;
       right: 0 !important;
       bottom: 0 !important;
       width: 100vw !important;
-      height: calc(100vh - 72px) !important;
-      height: calc(100dvh - 72px) !important;
+      height: calc(100vh - 64px) !important;
+      height: calc(100dvh - 64px) !important;
       background-color: #07080c !important;
-      padding: 24px 20px 60px 20px !important;
+      padding: 20px 16px 60px 16px !important;
       overflow-y: scroll !important;
       -webkit-overflow-scrolling: touch !important;
       z-index: 999999 !important;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+      box-shadow: none;
       touch-action: pan-y;
     }
     .mobile-drawer.hidden {
@@ -444,21 +449,21 @@
     .drawer-inner {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
       padding-bottom: 60px;
     }
     .drawer-link-main {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       color: #ffffff;
       text-decoration: none;
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: block;
     }
     .drawer-group {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 16px;
+      padding-bottom: 12px;
     }
     .drawer-label {
       font-family: 'Geist Mono', monospace;
@@ -468,7 +473,7 @@
       color: #60a5fa;
       font-weight: 600;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .drawer-sublinks {
       display: flex;
@@ -477,10 +482,10 @@
     }
     .drawer-sublinks a {
       display: block;
-      font-size: 15px;
+      font-size: 14.5px;
       color: #cbd5e1;
       text-decoration: none;
-      padding: 10px 0;
+      padding: 8px 0;
       transition: color 0.15s ease;
       -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
     }
@@ -499,27 +504,27 @@
       margin: 32px auto;
     }
     .press-logo-badge {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 999px;
       background-color: #ffffff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      box-shadow: none;
       transition: transform 0.2s ease;
       flex-shrink: 0;
     }
     @media (max-width: 640px) {
       .press-logo-badge {
-        width: 72px;
-        height: 72px;
-        padding: 10px;
+        width: 64px;
+        height: 64px;
+        padding: 8px;
       }
     }
     .press-logo-badge:hover {
-      transform: scale(1.08);
+      transform: scale(1.04);
     }
     .press-logo-img {
       max-width: 100%;
@@ -528,13 +533,24 @@
     }
 
     .grid-image-container {
-      margin: 20px 0;
+      margin: 24px 0;
       text-align: center;
     }
     .grid-image-element {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
+      width: 100%;
+      max-width: 640px;
+      max-height: 380px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+    @media (max-width: 920px) {
+      .grid-image-element {
+        max-height: 240px;
+      }
     }
 
     /* Video Embed Card */
@@ -564,16 +580,16 @@
 
     /* Form Card */
     .grid-form-card {
-      background-color: #0d111a;
+      background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 24px;
+      border-radius: 16px;
       padding: 32px;
-      max-width: 560px;
+      max-width: 540px;
       margin: 32px auto;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: none;
     }
     .form-title {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 8px;
@@ -581,20 +597,20 @@
     .form-subtitle {
       font-size: 14px;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .form-inner {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
     .form-input {
       width: 100%;
       background-color: #07080c;
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 14px 18px;
-      font-size: 15px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 14px;
       color: #ffffff;
       outline: none;
       transition: border-color 0.2s ease;
@@ -607,7 +623,7 @@
     .site-footer {
       background-color: #050608;
       border-top: 1px solid var(--border-color);
-      padding: 64px 0 40px 0;
+      padding: 56px 0 36px 0;
       color: var(--text-dim);
     }
     .footer-container {
@@ -616,29 +632,37 @@
       padding: 0 24px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px;
+      gap: 36px;
     }
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .footer-desc {
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .footer-contacts div {
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-    .footer-contacts a {
-      color: #ffffff;
+    .footer-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: none;
     }
-    .footer-contacts a:hover {
-      color: #3b82f6;
+    .footer-icon-btn:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #ffffff;
     }
     .footer-copy {
       font-size: 12px;
@@ -646,12 +670,12 @@
     }
     .footer-title {
       font-family: 'Geist Mono', monospace;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #ffffff;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       padding-bottom: 6px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -659,10 +683,10 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
     .footer-links a {
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.15s ease;
@@ -676,25 +700,30 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      z-index: 50;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 22px;
-      border-radius: 999px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
       background-color: var(--color-primary);
-      color: #ffffff;
-      font-family: 'Geist Mono', monospace;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-      transition: transform 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     .floating-cta:hover {
-      transform: scale(1.06);
+      background-color: var(--color-primary-hover);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transform: none;
+    }
+    @media (max-width: 920px) {
+      .floating-cta {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+      }
     }
   </style>
 </head>
@@ -772,10 +801,10 @@
           </div>
         </nav>
 
-        <!-- Right Header Action -->
+        <!-- Right Header Action (Clean Icon Buttons) -->
         <div class="header-action">
-          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn">
-            Consult Desk →
+          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn" title="Direct Telegram Desk (@unban777)" aria-label="Direct Telegram Desk">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
           </a>
         </div>
       </div>
@@ -821,8 +850,9 @@
         </div>
 
         <div style="padding-top: 12px;">
-          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; text-align: center; justify-content: center; box-sizing: border-box;">
-            Direct Desk (@unban777) →
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; text-align: center; justify-content: center; box-sizing: border-box; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Telegram Desk (@unban777)</span>
           </a>
         </div>
       </div>
@@ -832,10 +862,11 @@
     
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h1 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 24px">Instagram, Facebook & Twitter Verification Agency</h1></div><div class="grid-text-item"><p dir="auto" style=" --lineHeightMobile: 1.3; --fontSizeMobile: 14px" class="body">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.<br></p><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in <span class='text-blue-500'>Global</span>. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">The standards for verification vary across different social media platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter.</p><p dir="auto" class="body">Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p></div>
+            <div class="grid-text-item"><h1 dir="auto">Instagram, Facebook & Twitter Verification Agency</h1></div><div class="grid-text-item"><p dir="auto" class="body">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.<br></p><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in Global. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">The standards for verification vary across different social media platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter.</p><p dir="auto" class="body">Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -861,10 +892,11 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px">Get Verified on Instagram, Facebook & Twitter in <span class='text-blue-500'>Global</span></h2></div><div class="grid-text-item"><p class="body-large"  dir="auto" style=" letter-spacing: normal; margin-bottom: 24px"><span style="--fontSizeDesktop: 18px">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.</span><br></p><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in <span class='text-blue-500'>Global</span>. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body"><span style="font-weight: bold">Justification for Verification</span></p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">You may get a natural SEO boost from verified accounts because they show up higher in search results.</p><p dir="auto" class="body"><span style="font-weight: bold">Comprehending Platform-Dependent Needs</span></p><p dir="auto" class="body">Verification requirements could change over time and vary across different social networking platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter. Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p><p dir="auto" class="body"> Additionally, we will review the level of detail in your profile, the metrics for interaction, and how well you follow the platform's standards.</p></div>
+            <div class="grid-text-item"><h2 dir="auto">Get Verified on Instagram, Facebook & Twitter in Global</h2></div><div class="grid-text-item"><h4 dir="auto">The establishment of authenticity is crucial in the modern digital world. Instagram, Facebook, and Twitter all provide the highly sought-after blue badge, which increases your brand's credibility and visibility.<br></h4><p dir="auto" class="body">Boost your social media presence to new heights with the assistance of RETRIEVAL, an industry-leading digital marketing firm in Global. We will guide you through the verification procedure and help you obtain that badge.</p><p dir="auto" class="body">Justification for Verification</p><p dir="auto" class="body">You can't only think of a verified badge as a mark of prestige. It improves your discoverability on social media, raises brand recognition, and wins over your audience's trust.</p><p dir="auto" class="body">People will know your account is legit and trustworthy the second they see the blue checkmark. Increased engagement, stronger brand loyalty, and more success for your organization are all results of this credibility.</p><p dir="auto" class="body">You may get a natural SEO boost from verified accounts because they show up higher in search results.</p><p dir="auto" class="body">Comprehending Platform-Dependent Needs</p><p dir="auto" class="body">Verification requirements could change over time and vary across different social networking platforms. RETRIEVAL is always aware of the most recent changes to the verification policies of social media platforms including Instagram, Facebook, and Twitter. Factors such as credibility, community support, and public interest will be considered by our experienced team when determining if your brand is eligible.</p><p dir="auto" class="body"> Additionally, we will review the level of detail in your profile, the metrics for interaction, and how well you follow the platform's standards.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -913,10 +945,11 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto" style=" letter-spacing: normal; margin-bottom: 40px">Ready to Get Verified?</h2></div><div class="grid-text-item"><p dir="auto" class="body">Online, standing out may be challenging. If you want to be taken seriously on social media, get the blue badge. RETRIEVAL can assist you in obtaining Instagram, Facebook, and Twitter verification in <span class='text-blue-500'>Global</span>.</p><p dir="auto" class="body"><span style="font-weight: bold">Just How Great Is Verification?</span></p><p dir="auto" class="body">Gain credibility, raise your profile, and make yourself more discoverable with the blue badge. By seeing it, users may tell they've landed on the official website. A rise in your company's number of followers, likes, and comments is the result of this.</p><p dir="auto" class="body"><span style="font-weight: bold">Rules Are Familiar to Us</span></p><p dir="auto" class="body">There is a unique verification procedure for each platform. Rest assured, RETRIEVAL diligently monitors all the newest updates. If your brand meets the requirements, we will assist you in enhancing your profile so that it has a better chance of being validated.</p><p dir="auto" class="body"><span style="font-weight: bold">Save Time on Verification</span></p><p dir="auto" class="body">Accuracy checks aren't always clear. If you want some help with the application or some advice on how to boost your internet presence, we're here to help. Among these goals can include expanding your audience and producing higher-quality content.</p><p dir="auto" class="body"><span style="font-weight: bold">Is Verification Something You're Feeling?</span></p><p dir="auto" class="body">Unleash the power of social media verification by partnering with RETRIEVAL. Get your brand certified by contacting us today!</p></div>
+            <div class="grid-text-item"><h2 dir="auto">Ready to Get Verified?</h2></div><div class="grid-text-item"><p dir="auto" class="body">Online, standing out may be challenging. If you want to be taken seriously on social media, get the blue badge. RETRIEVAL can assist you in obtaining Instagram, Facebook, and Twitter verification in Global.</p><p dir="auto" class="body">Just How Great Is Verification?</p><p dir="auto" class="body">Gain credibility, raise your profile, and make yourself more discoverable with the blue badge. By seeing it, users may tell they've landed on the official website. A rise in your company's number of followers, likes, and comments is the result of this.</p><p dir="auto" class="body">Rules Are Familiar to Us</p><p dir="auto" class="body">There is a unique verification procedure for each platform. Rest assured, RETRIEVAL diligently monitors all the newest updates. If your brand meets the requirements, we will assist you in enhancing your profile so that it has a better chance of being validated.</p><p dir="auto" class="body">Save Time on Verification</p><p dir="auto" class="body">Accuracy checks aren't always clear. If you want some help with the application or some advice on how to boost your internet presence, we're here to help. Among these goals can include expanding your audience and producing higher-quality content.</p><p dir="auto" class="body">Is Verification Something You're Feeling?</p><p dir="auto" class="body">Unleash the power of social media verification by partnering with RETRIEVAL. Get your brand certified by contacting us today!</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -925,22 +958,23 @@
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style="--lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Hear from our clients</h3></div><div class="grid-text-item"><p class="body" style="" dir="auto">Discover what our clients think about our service</p></div><div class="grid-text-item"><p dir="auto" style="" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Daisy Shah</span></p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" style="" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Angad Bajwa</span></p></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div>
+            <div class="grid-text-item"><h3 dir="auto">Hear from our clients</h3></div><div class="grid-text-item"><p class="body" dir="auto">Discover what our clients think about our service</p></div><div class="grid-text-item"><p dir="auto" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="grid-text-item"><p dir="auto" class="body">Daisy Shah</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body">Angad Bajwa</p></div><div class="grid-text-item"><h6 dir="auto">★★★★★</h6></div><div class="grid-text-item"><h6 dir="auto">★★★★★</h6></div>
           </div>
         </section>
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h2 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px">Establish Brand Credibility with Social Media Verification</h2></div><div class="grid-text-item"><p dir="auto" class="body">Honesty and reliability are of utmost importance in the modern digital world. Users are immediately informed that they are interacting with the official brand presence when they see the desired blue verification badge on Instagram, Facebook, and Twitter. It works as a digital marker of authenticity.</p><p dir="auto" class="body">RETRIEVAL is an industry-leading digital marketing agency in <span class='text-blue-500'>Global</span>. We help businesses get verified on social media and get the benefits it offers.</p><p dir="auto" class="body"><span style="font-weight: bold">Raise Awareness and Involvement in the Brand</span></p><p dir="auto" class="body">A status symbol isn't the only thing verification is—it's also an instrument for strategy. With the blue badge, consumers will be more likely to engage with your content since they trust and recognize your brand. Increased organic reach and follower growth may be achieved by using verified accounts.<br></p><p dir="auto" class="body">These accounts are more likely to be identified in search results. Stronger client connections and valued brand loyalty are the results of this.</p><p dir="auto" class="body"><span style="font-weight: bold">Professional Assistance with All Steps of the Validation Procedure</span></p><p dir="auto" class="body">Different verification requirements are in place on each social networking site. Keeping up with the always changing verification environment is second nature to the social media experts at RETRIEVAL.</p><p dir="auto" class="body">We will carefully evaluate your brand's suitability and create an enticing application that showcases your brand's credibility and impact.</p></div>
+            <div class="grid-text-item"><h2 dir="auto">Establish Brand Credibility with Social Media Verification</h2></div><div class="grid-text-item"><p dir="auto" class="body">Honesty and reliability are of utmost importance in the modern digital world. Users are immediately informed that they are interacting with the official brand presence when they see the desired blue verification badge on Instagram, Facebook, and Twitter. It works as a digital marker of authenticity.</p><p dir="auto" class="body">RETRIEVAL is an industry-leading digital marketing agency in Global. We help businesses get verified on social media and get the benefits it offers.</p><p dir="auto" class="body">Raise Awareness and Involvement in the Brand</p><p dir="auto" class="body">A status symbol isn't the only thing verification is—it's also an instrument for strategy. With the blue badge, consumers will be more likely to engage with your content since they trust and recognize your brand. Increased organic reach and follower growth may be achieved by using verified accounts.<br></p><p dir="auto" class="body">These accounts are more likely to be identified in search results. Stronger client connections and valued brand loyalty are the results of this.</p><p dir="auto" class="body">Professional Assistance with All Steps of the Validation Procedure</p><p dir="auto" class="body">Different verification requirements are in place on each social networking site. Keeping up with the always changing verification environment is second nature to the social media experts at RETRIEVAL.</p><p dir="auto" class="body">We will carefully evaluate your brand's suitability and create an enticing application that showcases your brand's credibility and impact.</p></div>
           </div>
         </section>
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 48px; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Have any questions?</h4></div>
+            <div class="grid-text-item"><h4 dir="auto">Have any questions?</h4></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -968,10 +1002,19 @@
           <p class="footer-desc">
             High-tier social media recovery, enterprise verification, and digital asset defense. Zero credential exposure with 100% escrow protection.
           </p>
-          <div class="footer-contacts">
-            <div>Email: <a href="mailto:support@retrieval.co.in">support@retrieval.co.in</a></div>
-            <div>Desk: <a href="https://t.me/unban777" target="_blank">@unban777</a></div>
-            <div>Channel: <a href="https://t.me/retrieval" target="_blank">t.me/retrieval</a></div>
+          <div class="footer-contacts" style="display: flex; align-items: center; gap: 12px; margin-top: 18px; margin-bottom: 20px;">
+            <a href="mailto:support@retrieval.co.in" class="footer-icon-btn" title="support@retrieval.co.in" aria-label="Email Support">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://t.me/unban777" target="_blank" class="footer-icon-btn" title="Telegram Desk (@unban777)" aria-label="Telegram Desk">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </a>
+            <a href="https://t.me/retrieval" target="_blank" class="footer-icon-btn" title="Telegram Channel (t.me/retrieval)" aria-label="Telegram Channel">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </a>
+            <a href="https://retrieval.co.in" class="footer-icon-btn" title="retrieval.co.in" aria-label="Official Website">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
           </div>
           <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
         </div>
@@ -1009,10 +1052,9 @@
       </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct Telegram Dispatch">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      <span>Direct Desk</span>
+    <!-- Floating Action Button (Pure Circular Telegram Logo) -->
+    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct Telegram Desk" title="Telegram Desk (@unban777)">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffffff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
     </a>
 
     <script>

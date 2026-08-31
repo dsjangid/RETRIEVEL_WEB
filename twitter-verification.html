@@ -40,19 +40,19 @@
     /* RETRIEVAL Dynamic Responsive Typography */
     h1, .h1 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 56px);
+      font-size: var(--fontSizeDesktop, 48px);
       font-weight: 700;
-      line-height: var(--lineHeightDesktop, 1.25);
+      line-height: var(--lineHeightDesktop, 1.2);
       letter-spacing: -0.02em;
       color: var(--text-white);
       margin-top: 0;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       overflow-wrap: break-word;
       word-break: break-word;
     }
     @media (max-width: 920px) {
       h1, .h1 {
-        font-size: 32px !important;
+        font-size: 24px !important;
         line-height: 1.25 !important;
         margin-bottom: 16px;
       }
@@ -60,7 +60,7 @@
 
     h2, .h2 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 44px);
+      font-size: var(--fontSizeDesktop, 36px);
       font-weight: 700;
       line-height: var(--lineHeightDesktop, 1.25);
       letter-spacing: -0.01em;
@@ -72,7 +72,7 @@
     }
     @media (max-width: 920px) {
       h2, .h2 {
-        font-size: 26px !important;
+        font-size: 22px !important;
         line-height: 1.25 !important;
         margin-bottom: 14px;
       }
@@ -80,7 +80,7 @@
 
     h3, .h3 {
       font-family: var(--font-primary);
-      font-size: var(--fontSizeDesktop, 32px);
+      font-size: var(--fontSizeDesktop, 30px);
       font-weight: 600;
       line-height: var(--lineHeightDesktop, 1.3);
       color: var(--text-white);
@@ -91,8 +91,8 @@
     }
     @media (max-width: 920px) {
       h3, .h3 {
-        font-size: 22px !important;
-        line-height: 1.3 !important;
+        font-size: 20px !important;
+        line-height: 1.35 !important;
         margin-bottom: 12px;
       }
     }
@@ -105,12 +105,12 @@
       color: var(--text-white);
       margin-top: 0;
       margin-bottom: 16px;
-      overflow-wrap: break-word;
-      word-break: break-word;
+      overflow-wrap: normal;
+      word-break: normal;
     }
     @media (max-width: 920px) {
       h4, .h4 {
-        font-size: 19px !important;
+        font-size: 18px !important;
         line-height: 1.35 !important;
         margin-bottom: 10px;
       }
@@ -219,37 +219,38 @@
       margin-bottom: 16px;
     }
 
-    /* Exact Button Spec */
+    /* Clean Non-Glowing Flat Buttons */
     .grid-button-wrapper {
-      margin-top: 24px;
-      margin-bottom: 24px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
     .grid-button-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 16px 40px;
+      gap: 8px;
+      padding: 12px 28px;
       border-radius: 999px;
       background-color: var(--color-primary);
       color: #ffffff;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       line-height: normal;
       text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: background-color 0.2s ease;
       cursor: pointer;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: none;
     }
     .grid-button-primary:hover {
       background-color: var(--color-primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+      box-shadow: none;
+      transform: none;
     }
     @media (max-width: 920px) {
       .grid-button-primary {
-        padding: 14px 36px;
-        font-size: 16px;
+        padding: 10px 20px;
+        font-size: 13px;
       }
     }
 
@@ -258,16 +259,16 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background-color: rgba(7, 8, 12, 0.92);
+      background-color: rgba(7, 8, 12, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: none;
     }
     .header-container {
       max-width: 1224px;
       margin: 0 auto;
-      height: 80px;
+      height: 72px;
       padding: 0 24px;
       display: flex;
       align-items: center;
@@ -275,7 +276,7 @@
     }
     @media (max-width: 920px) {
       .header-container {
-        height: 72px;
+        height: 64px;
         padding: 0 16px;
       }
     }
@@ -287,16 +288,16 @@
       text-decoration: none;
     }
     .brand-logo-badge {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
       background-color: #000000;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 4px;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+      box-shadow: none;
     }
     .brand-svg {
       width: 100%;
@@ -308,25 +309,25 @@
       flex-direction: column;
     }
     .brand-name {
-      font-weight: 900;
-      font-size: 16px;
-      letter-spacing: 0.15em;
+      font-weight: 800;
+      font-size: 15px;
+      letter-spacing: 0.12em;
       color: #ffffff;
       line-height: 1;
     }
     .brand-domain {
       font-family: 'Geist Mono', monospace;
       font-size: 9px;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-dim);
-      margin-top: 4px;
+      margin-top: 3px;
     }
 
     .desktop-nav {
       display: none;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
     }
     @media (min-width: 1024px) {
       .desktop-nav {
@@ -334,7 +335,7 @@
       }
     }
     .nav-item, .nav-dropdown-trigger {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--text-muted);
       text-decoration: none;
@@ -357,9 +358,9 @@
       min-width: 250px;
       background-color: #0c0e15;
       border: 1px solid var(--border-color);
-      border-radius: 16px;
+      border-radius: 12px;
       padding: 8px 0;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
       display: none;
       z-index: 60;
     }
@@ -368,8 +369,8 @@
     }
     .dropdown-item {
       display: block;
-      padding: 10px 20px;
-      font-size: 14px;
+      padding: 10px 18px;
+      font-size: 13.5px;
       color: var(--text-muted);
       text-decoration: none;
       transition: all 0.15s ease;
@@ -383,18 +384,22 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 24px;
-      border-radius: 999px;
-      background-color: #ffffff;
-      color: #07080c;
-      font-size: 14px;
-      font-weight: 700;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
       text-decoration: none;
       transition: all 0.2s ease;
+      box-shadow: none;
     }
     .contact-header-btn:hover {
       background-color: var(--color-primary);
+      border-color: var(--color-primary);
       color: #ffffff;
+      transform: none;
+      box-shadow: none;
     }
 
     .mobile-toggle-btn {
@@ -402,8 +407,8 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border-color);
       color: #ffffff;
-      padding: 8px;
-      border-radius: 10px;
+      padding: 7px;
+      border-radius: 8px;
       cursor: pointer;
     }
     @media (min-width: 1024px) {
@@ -412,8 +417,8 @@
       }
     }
     .icon-svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
     .hidden {
       display: none !important;
@@ -422,20 +427,20 @@
     /* iOS WebKit Native Optimized Mobile Drawer */
     .mobile-drawer {
       position: fixed !important;
-      top: 72px !important;
+      top: 64px !important;
       left: 0 !important;
       right: 0 !important;
       bottom: 0 !important;
       width: 100vw !important;
-      height: calc(100vh - 72px) !important;
-      height: calc(100dvh - 72px) !important;
+      height: calc(100vh - 64px) !important;
+      height: calc(100dvh - 64px) !important;
       background-color: #07080c !important;
-      padding: 24px 20px 60px 20px !important;
+      padding: 20px 16px 60px 16px !important;
       overflow-y: scroll !important;
       -webkit-overflow-scrolling: touch !important;
       z-index: 999999 !important;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+      box-shadow: none;
       touch-action: pan-y;
     }
     .mobile-drawer.hidden {
@@ -444,21 +449,21 @@
     .drawer-inner {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
       padding-bottom: 60px;
     }
     .drawer-link-main {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       color: #ffffff;
       text-decoration: none;
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       display: block;
     }
     .drawer-group {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding-bottom: 16px;
+      padding-bottom: 12px;
     }
     .drawer-label {
       font-family: 'Geist Mono', monospace;
@@ -468,7 +473,7 @@
       color: #60a5fa;
       font-weight: 600;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .drawer-sublinks {
       display: flex;
@@ -477,10 +482,10 @@
     }
     .drawer-sublinks a {
       display: block;
-      font-size: 15px;
+      font-size: 14.5px;
       color: #cbd5e1;
       text-decoration: none;
-      padding: 10px 0;
+      padding: 8px 0;
       transition: color 0.15s ease;
       -webkit-tap-highlight-color: rgba(37, 99, 235, 0.2);
     }
@@ -499,27 +504,27 @@
       margin: 32px auto;
     }
     .press-logo-badge {
-      width: 90px;
-      height: 90px;
+      width: 80px;
+      height: 80px;
       border-radius: 999px;
       background-color: #ffffff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+      padding: 12px;
+      box-shadow: none;
       transition: transform 0.2s ease;
       flex-shrink: 0;
     }
     @media (max-width: 640px) {
       .press-logo-badge {
-        width: 72px;
-        height: 72px;
-        padding: 10px;
+        width: 64px;
+        height: 64px;
+        padding: 8px;
       }
     }
     .press-logo-badge:hover {
-      transform: scale(1.08);
+      transform: scale(1.04);
     }
     .press-logo-img {
       max-width: 100%;
@@ -528,13 +533,24 @@
     }
 
     .grid-image-container {
-      margin: 20px 0;
+      margin: 24px 0;
       text-align: center;
     }
     .grid-image-element {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
+      width: 100%;
+      max-width: 640px;
+      max-height: 380px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      box-shadow: none;
+    }
+    @media (max-width: 920px) {
+      .grid-image-element {
+        max-height: 240px;
+      }
     }
 
     /* Video Embed Card */
@@ -564,16 +580,16 @@
 
     /* Form Card */
     .grid-form-card {
-      background-color: #0d111a;
+      background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 24px;
+      border-radius: 16px;
       padding: 32px;
-      max-width: 560px;
+      max-width: 540px;
       margin: 32px auto;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      box-shadow: none;
     }
     .form-title {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       color: #ffffff;
       margin-bottom: 8px;
@@ -581,20 +597,20 @@
     .form-subtitle {
       font-size: 14px;
       color: var(--text-muted);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .form-inner {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
     .form-input {
       width: 100%;
       background-color: #07080c;
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 14px 18px;
-      font-size: 15px;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 14px;
       color: #ffffff;
       outline: none;
       transition: border-color 0.2s ease;
@@ -607,7 +623,7 @@
     .site-footer {
       background-color: #050608;
       border-top: 1px solid var(--border-color);
-      padding: 64px 0 40px 0;
+      padding: 56px 0 36px 0;
       color: var(--text-dim);
     }
     .footer-container {
@@ -616,29 +632,37 @@
       padding: 0 24px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px;
+      gap: 36px;
     }
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .footer-desc {
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
-    .footer-contacts div {
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-    .footer-contacts a {
-      color: #ffffff;
+    .footer-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: none;
     }
-    .footer-contacts a:hover {
-      color: #3b82f6;
+    .footer-icon-btn:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #ffffff;
     }
     .footer-copy {
       font-size: 12px;
@@ -646,12 +670,12 @@
     }
     .footer-title {
       font-family: 'Geist Mono', monospace;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: #ffffff;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       padding-bottom: 6px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
@@ -659,10 +683,10 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
     .footer-links a {
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.15s ease;
@@ -676,25 +700,30 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      z-index: 50;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 22px;
-      border-radius: 999px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
       background-color: var(--color-primary);
-      color: #ffffff;
-      font-family: 'Geist Mono', monospace;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
-      transition: transform 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 40;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
     .floating-cta:hover {
-      transform: scale(1.06);
+      background-color: var(--color-primary-hover);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      transform: none;
+    }
+    @media (max-width: 920px) {
+      .floating-cta {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+      }
     }
   </style>
 </head>
@@ -772,10 +801,10 @@
           </div>
         </nav>
 
-        <!-- Right Header Action -->
+        <!-- Right Header Action (Clean Icon Buttons) -->
         <div class="header-action">
-          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn">
-            Consult Desk →
+          <a href="https://t.me/unban777" target="_blank" class="contact-header-btn" title="Direct Telegram Desk (@unban777)" aria-label="Direct Telegram Desk">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
           </a>
         </div>
       </div>
@@ -821,8 +850,9 @@
         </div>
 
         <div style="padding-top: 12px;">
-          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; text-align: center; justify-content: center; box-sizing: border-box;">
-            Direct Desk (@unban777) →
+          <a href="https://t.me/unban777" target="_blank" class="grid-button-primary" style="width: 100%; text-align: center; justify-content: center; box-sizing: border-box; gap: 8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Telegram Desk (@unban777)</span>
           </a>
         </div>
       </div>
@@ -832,10 +862,11 @@
     
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h1 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Twitter Verification Service in <span class='text-blue-500'>Global</span></h1></div><div class="grid-text-item"><p class="body" style=" --lineHeightMobile: 1.3; --fontSizeMobile: 14px" dir="auto">When seeking to establish one's legitimacy and reliability, Twitter Verification, which is represented by the desired blue checkmark, is a hallmark. It differentiates authentic accounts from those that are designed to be fakes, thereby promoting confidence among users and improving the reputation of the brand.</p><p class="body" dir="auto">Enhanced visibility, credibility, and security against impersonation are just some of the many advantages that come with verified accounts.</p><p class="body" dir="auto">When it comes to attracting the attention of their target audience in the midst of the massive ocean of content, it is of the utmost importance for businesses to establish a respectable online presence.</p><p class="body" dir="auto">The importance of credibility in the digital sphere is something that we at RETRIEVAL are well aware of, which is why we are pleased to provide our unrivaled Twitter Verification Service.</p><p class="body" dir="auto">You will have access to a reliable partner who is committed to enhancing your online presence and promoting credibility in the digital sphere when you use the Twitter Verification Service offered by RETRIEVAL.</p><p class="body" dir="auto">Join the ranks of the countless pleased customers who have received verification from RETRIEVAL and seen the revolutionary influence it has had on their lives.</p></div>
+            <div class="grid-text-item"><h1 dir="auto">Twitter Verification Service in Global</h1></div><div class="grid-text-item"><p class="body" dir="auto">When seeking to establish one's legitimacy and reliability, Twitter Verification, which is represented by the desired blue checkmark, is a hallmark. It differentiates authentic accounts from those that are designed to be fakes, thereby promoting confidence among users and improving the reputation of the brand.</p><p class="body" dir="auto">Enhanced visibility, credibility, and security against impersonation are just some of the many advantages that come with verified accounts.</p><p class="body" dir="auto">When it comes to attracting the attention of their target audience in the midst of the massive ocean of content, it is of the utmost importance for businesses to establish a respectable online presence.</p><p class="body" dir="auto">The importance of credibility in the digital sphere is something that we at RETRIEVAL are well aware of, which is why we are pleased to provide our unrivaled Twitter Verification Service.</p><p class="body" dir="auto">You will have access to a reliable partner who is committed to enhancing your online presence and promoting credibility in the digital sphere when you use the Twitter Verification Service offered by RETRIEVAL.</p><p class="body" dir="auto">Join the ranks of the countless pleased customers who have received verification from RETRIEVAL and seen the revolutionary influence it has had on their lives.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -861,10 +892,11 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 style=" letter-spacing: normal; margin-bottom: 24px" dir="auto">Why Choose Our Twitter Verification Service?</h4></div><div class="grid-text-item"><p class="body" dir="auto">Our meticulous approach ensures a seamless verification process, guiding you through every step with expertise and precision.<br></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Strategic Guidance: </span>Navigating the verification process can be daunting, especially for those unfamiliar with the intricate requirements and guidelines set forth by Twitter. Our team of seasoned experts provides strategic guidance, analyzing your account to determine eligibility and devising a tailored verification strategy.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Optimized Profile Enhancement: </span>A well-optimized Twitter profile is fundamental to successful verification. We meticulously enhance your profile, optimizing key elements such as bio, header, profile picture, and tweet content to align with Twitter's verification criteria. Our goal is to present your brand in the best possible light, increasing the likelihood of approval.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Document Preparation: </span>Twitter requires supporting documentation to verify your identity and legitimacy as a public figure, brand, or organization. We assist you in compiling and preparing the necessary documents, ensuring compliance with Twitter's stringent verification requirements. From official identification to press coverage and business documentation, we meticulously organize and submit the requisite materials on your behalf.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Application Submission and Follow-Up: </span>Once all prerequisites are met, we submit your verification application to Twitter, leveraging our expertise to maximize approval chances. Our proactive approach includes diligent follow-up and communication with Twitter's verification team, addressing any inquiries or concerns promptly and professionally.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Ongoing Support and Maintenance: </span>Our commitment to your success extends beyond verification approval. We provide ongoing support and maintenance, assisting you in maintaining compliance with Twitter's guidelines and optimizing your verified status for continued growth and engagement.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto"><span style="font-weight: bold">Experience the RETRIEVAL Difference: </span>With RETRIEVAL's Twitter Verification Service, you gain access to a trusted partner dedicated to elevating your online presence and fostering credibility in the digital sphere. Join countless satisfied clients who have experienced the transformative impact of verification with RETRIEVAL.</p></li></ul></div>
+            <div class="grid-text-item"><h4 dir="auto">Why Choose Our Twitter Verification Service?</h4></div><div class="grid-text-item"><p class="body" dir="auto">Our meticulous approach ensures a seamless verification process, guiding you through every step with expertise and precision.<br></p><ul dir="auto"><li><p class="body" dir="auto">Strategic Guidance: Navigating the verification process can be daunting, especially for those unfamiliar with the intricate requirements and guidelines set forth by Twitter. Our team of seasoned experts provides strategic guidance, analyzing your account to determine eligibility and devising a tailored verification strategy.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto">Optimized Profile Enhancement: A well-optimized Twitter profile is fundamental to successful verification. We meticulously enhance your profile, optimizing key elements such as bio, header, profile picture, and tweet content to align with Twitter's verification criteria. Our goal is to present your brand in the best possible light, increasing the likelihood of approval.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto">Document Preparation: Twitter requires supporting documentation to verify your identity and legitimacy as a public figure, brand, or organization. We assist you in compiling and preparing the necessary documents, ensuring compliance with Twitter's stringent verification requirements. From official identification to press coverage and business documentation, we meticulously organize and submit the requisite materials on your behalf.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto">Application Submission and Follow-Up: Once all prerequisites are met, we submit your verification application to Twitter, leveraging our expertise to maximize approval chances. Our proactive approach includes diligent follow-up and communication with Twitter's verification team, addressing any inquiries or concerns promptly and professionally.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto">Ongoing Support and Maintenance: Our commitment to your success extends beyond verification approval. We provide ongoing support and maintenance, assisting you in maintaining compliance with Twitter's guidelines and optimizing your verified status for continued growth and engagement.</p></li></ul><p class="body" dir="auto"></p><ul dir="auto"><li><p class="body" dir="auto">Experience the RETRIEVAL Difference: With RETRIEVAL's Twitter Verification Service, you gain access to a trusted partner dedicated to elevating your online presence and fostering credibility in the digital sphere. Join countless satisfied clients who have experienced the transformative impact of verification with RETRIEVAL.</p></li></ul></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -913,10 +945,11 @@
             
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 style=" letter-spacing: normal; margin-bottom: 24px" dir="auto">Understanding Twitter Verification in <span class='text-blue-500'>Global</span></h4></div><div class="grid-text-item"><p class="body" dir="auto"><span>Building trust in your brand on Twitter is essential in the modern digital marketplace. The highly sought-after blue verification badge is a strong sign of credibility, encouraging trust and improving discoverability.</span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span>RETRIEVAL is a top digital marketing agency, and we're here to help you understand how to use Twitter Blue, the new subscription service, for Twitter Verification in <span class='text-blue-500'>Global</span>.<br></span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span><strong>Twitter Verification and Its Importance</strong><br></span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span>If your Twitter account has been verified, it means that others find your content interesting and valuable. Increased legitimacy, audience trust, and organic reach in search results are just a few of the benefits that come from this differentiation.</span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span>The blue badge is like a digital stamp of approval for companies, journalists, influencers, and thought leaders; it sets them apart from the crowd and strengthens their status in their fields.<br></span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span><strong>Getting Verified with Twitter Blue</strong><br></span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span>At one point, you had to wait for an invitation from Twitter to finally be able to verify your account. However, becoming verified is now easier than ever thanks to Twitter Blue in <span class='text-blue-500'>Global</span>. In addition to useful services like tweet editing and app icon customization, this subscription service offers the blue badge as part of its monthly package.<br></span></p><p class="body" style=" letter-spacing: normal; margin-bottom: 0px" dir="auto"><span>Please be aware that Twitter Blue does not ensure verification. Your account's legitimacy, activity, and compliance with Twitter's community rules will still be carefully assessed.</span></p></div>
+            <div class="grid-text-item"><h4 dir="auto">Understanding Twitter Verification in Global</h4></div><div class="grid-text-item"><p class="body" dir="auto">Building trust in your brand on Twitter is essential in the modern digital marketplace. The highly sought-after blue verification badge is a strong sign of credibility, encouraging trust and improving discoverability.</p><p class="body" dir="auto">RETRIEVAL is a top digital marketing agency, and we're here to help you understand how to use Twitter Blue, the new subscription service, for Twitter Verification in Global.<br></p><p class="body" dir="auto"><strong>Twitter Verification and Its Importance</strong><br></p><p class="body" dir="auto">If your Twitter account has been verified, it means that others find your content interesting and valuable. Increased legitimacy, audience trust, and organic reach in search results are just a few of the benefits that come from this differentiation.</p><p class="body" dir="auto"></p><p class="body" dir="auto">The blue badge is like a digital stamp of approval for companies, journalists, influencers, and thought leaders; it sets them apart from the crowd and strengthens their status in their fields.<br></p><p class="body" dir="auto"><strong>Getting Verified with Twitter Blue</strong><br></p><p class="body" dir="auto">At one point, you had to wait for an invitation from Twitter to finally be able to verify your account. However, becoming verified is now easier than ever thanks to Twitter Blue in Global. In addition to useful services like tweet editing and app icon customization, this subscription service offers the blue badge as part of its monthly package.<br></p><p class="body" dir="auto">Please be aware that Twitter Blue does not ensure verification. Your account's legitimacy, activity, and compliance with Twitter's community rules will still be carefully assessed.</p></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -925,22 +958,23 @@
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h3 dir="auto" style="--lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Hear from our clients</h3></div><div class="grid-text-item"><p class="body" style="" dir="auto">Discover what our clients think about our service</p></div><div class="grid-text-item"><p dir="auto" style="" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Daisy Shah</span></p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" style="" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body"><span style="font-weight: 400">Angad Bajwa</span></p></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div><div class="grid-text-item"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div>
+            <div class="grid-text-item"><h3 dir="auto">Hear from our clients</h3></div><div class="grid-text-item"><p class="body" dir="auto">Discover what our clients think about our service</p></div><div class="grid-text-item"><p dir="auto" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="grid-text-item"><p dir="auto" class="body">Daisy Shah</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="grid-image-container"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="grid-image-element" loading="lazy"></div><div class="grid-text-item"><p dir="auto" class="body">Angad Bajwa</p></div><div class="grid-text-item"><h6 dir="auto">★★★★★</h6></div><div class="grid-text-item"><h6 dir="auto">★★★★★</h6></div>
           </div>
         </section>
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 style=" letter-spacing: normal; margin-bottom: 24px" dir="auto">Get Verified on Twitter in <span class='text-blue-500'>Global</span> with RETRIEVAL!</h4></div><div class="grid-text-item"><p class="body" dir="auto">Establishing the legitimacy of a business is essential in the current social media scene, which is extremely cluttered. Obtaining the desired blue verification badge on Twitter is a sign of credibility and enhances the likelihood of being discovered.</p><p class="body" dir="auto">The verification process on Twitter takes into account a larger variety of parameters, in contrast to other platforms that depend exclusively on the number of followers.</p><p class="body" dir="auto">Because of this, the blue badge is a distinguishing feature that differentiates authentic accounts from those who are impersonating them and increases users' trust in the platform. RETRIEVAL provides its customers in <span class='text-blue-500'>Global</span> with thorough Twitter verification services that will assist them in navigating the procedure.</p><p class="body" dir="auto"><span style="font-weight: bold">The Benefits of Verification That Can Be Satisfied</span></p><p class="body" dir="auto">A Twitter account that has been verified helps to cultivate trust and boosts the reputation of your company. The fact that it gives consumers the assurance that they are interacting with a legitimate person leads to an increase in the number of followers and engagement<br></p><p class="body" dir="auto">Additionally, verified accounts have enhanced search ranking inside the site, which allows you to reach the most number of people possible.</p><p class="body" dir="auto">There is a correlation between verified accounts and an increase in the number of followers, website traffic, and mentions of the brand, according to studies. This amounts to a large return on investment for the social media approach that you have implemented.</p><p class="body" dir="auto"><span style="font-weight: bold">Twitter Blue: Revealing the Mysteries in <span class='text-blue-500'>Global</span></span></p><p class="body" dir="auto">One of the benefits that Twitter Blue, a subscription service that was just recently introduced in <span class='text-blue-500'>Global</span>, provides is the ability to verify your account. In spite of this, Twitter's internal review procedure continues to be applicable to the verification process itself. Although having a Twitter Blue membership displays your dedication to the platform, it does not certain that you will receive a blue badge associated with it.</p></div>
+            <div class="grid-text-item"><h4 dir="auto">Get Verified on Twitter in Global with RETRIEVAL!</h4></div><div class="grid-text-item"><p class="body" dir="auto">Establishing the legitimacy of a business is essential in the current social media scene, which is extremely cluttered. Obtaining the desired blue verification badge on Twitter is a sign of credibility and enhances the likelihood of being discovered.</p><p class="body" dir="auto">The verification process on Twitter takes into account a larger variety of parameters, in contrast to other platforms that depend exclusively on the number of followers.</p><p class="body" dir="auto">Because of this, the blue badge is a distinguishing feature that differentiates authentic accounts from those who are impersonating them and increases users' trust in the platform. RETRIEVAL provides its customers in Global with thorough Twitter verification services that will assist them in navigating the procedure.</p><p class="body" dir="auto">The Benefits of Verification That Can Be Satisfied</p><p class="body" dir="auto">A Twitter account that has been verified helps to cultivate trust and boosts the reputation of your company. The fact that it gives consumers the assurance that they are interacting with a legitimate person leads to an increase in the number of followers and engagement<br></p><p class="body" dir="auto">Additionally, verified accounts have enhanced search ranking inside the site, which allows you to reach the most number of people possible.</p><p class="body" dir="auto">There is a correlation between verified accounts and an increase in the number of followers, website traffic, and mentions of the brand, according to studies. This amounts to a large return on investment for the social media approach that you have implemented.</p><p class="body" dir="auto">Twitter Blue: Revealing the Mysteries in Global</p><p class="body" dir="auto">One of the benefits that Twitter Blue, a subscription service that was just recently introduced in Global, provides is the ability to verify your account. In spite of this, Twitter's internal review procedure continues to be applicable to the verification process itself. Although having a Twitter Blue membership displays your dedication to the platform, it does not certain that you will receive a blue badge associated with it.</p></div>
           </div>
         </section>
         
         <section class="block-section" style="">
           <div class="block-container">
-            <div class="grid-text-item"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 48px; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Have any questions?</h4></div>
+            <div class="grid-text-item"><h4 dir="auto">Have any questions?</h4></div>
         <div class="grid-button-wrapper">
           <a href="https://t.me/unban777" target="_blank" class="grid-button-primary">
-            Consult Desk →
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            <span>Consult Desk →</span>
           </a>
         </div>
         
@@ -968,10 +1002,19 @@
           <p class="footer-desc">
             High-tier social media recovery, enterprise verification, and digital asset defense. Zero credential exposure with 100% escrow protection.
           </p>
-          <div class="footer-contacts">
-            <div>Email: <a href="mailto:support@retrieval.co.in">support@retrieval.co.in</a></div>
-            <div>Desk: <a href="https://t.me/unban777" target="_blank">@unban777</a></div>
-            <div>Channel: <a href="https://t.me/retrieval" target="_blank">t.me/retrieval</a></div>
+          <div class="footer-contacts" style="display: flex; align-items: center; gap: 12px; margin-top: 18px; margin-bottom: 20px;">
+            <a href="mailto:support@retrieval.co.in" class="footer-icon-btn" title="support@retrieval.co.in" aria-label="Email Support">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="https://t.me/unban777" target="_blank" class="footer-icon-btn" title="Telegram Desk (@unban777)" aria-label="Telegram Desk">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </a>
+            <a href="https://t.me/retrieval" target="_blank" class="footer-icon-btn" title="Telegram Channel (t.me/retrieval)" aria-label="Telegram Channel">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </a>
+            <a href="https://retrieval.co.in" class="footer-icon-btn" title="retrieval.co.in" aria-label="Official Website">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
           </div>
           <div class="footer-copy">© 2026 RETRIEVAL. All rights reserved.</div>
         </div>
@@ -1009,10 +1052,9 @@
       </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct Telegram Dispatch">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      <span>Direct Desk</span>
+    <!-- Floating Action Button (Pure Circular Telegram Logo) -->
+    <a href="https://t.me/unban777" target="_blank" class="floating-cta" aria-label="Direct Telegram Desk" title="Telegram Desk (@unban777)">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffffff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
     </a>
 
     <script>
