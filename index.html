@@ -104,53 +104,58 @@
   </header>
 
   <!-- Full-Screen Native iPhone Navigation Overlay (Hidden on Desktop) -->
-  <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-5 sm:px-6 safe-top safe-bottom">
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay md:hidden px-6 safe-top safe-bottom">
     
-    <!-- Top Bar inside Modal -->
-    <div class="h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg overflow-hidden bg-black border border-white/20 flex items-center justify-center p-0.5 shrink-0">
-          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
-        </div>
-        <span class="font-display font-bold text-sm text-white">RETRIEVAL</span>
-      </div>
-      <button id="mobile-nav-close" onclick="window.closeMobileNav()" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Close Navigation Menu">
+    <!-- Top Bar inside Modal: Close Left, Logo Center -->
+    <div class="h-16 flex items-center justify-between relative border-b border-white/10 shrink-0">
+      <button id="mobile-nav-close" onclick="window.closeMobileNav()" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Close Navigation Menu">
         <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
+
+      <div class="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-black border border-white/25 flex items-center justify-center p-1 shadow-lg">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.4)]"/>
+        </div>
+      </div>
+
+      <div class="w-10 h-10"></div>
     </div>
 
-    <!-- Navigation Links -->
-    <div class="flex flex-col justify-center my-auto py-6">
-      <a href="index.html" class="mobile-nav-link active">
-        <span>Overview</span>
-        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">01</span>
-      </a>
-      <a href="#work" class="mobile-nav-link">
-        <span>Selected Work</span>
-        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">02</span>
-      </a>
-      <a href="services.html" class="mobile-nav-link">
-        <span>Capabilities</span>
-        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">03</span>
-      </a>
-      <a href="how-it-works.html" class="mobile-nav-link">
-        <span>Methodology</span>
-        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">04</span>
-      </a>
-      <a href="contact.html" class="mobile-nav-link">
-        <span>Contact</span>
-        <span class="font-mono text-xs text-zinc-500 font-normal tracking-widest">05</span>
-      </a>
+    <!-- Navigation Links & Inline CTA (Top-aligned stack as in reference) -->
+    <div class="flex flex-col pt-8 pb-8 flex-grow justify-start space-y-6">
+      <nav class="flex flex-col space-y-3">
+        <a href="index.html" class="mobile-nav-item active">
+          <span>OVERVIEW</span>
+        </a>
+        <a href="#work" class="mobile-nav-item">
+          <span>SELECTED WORK</span>
+        </a>
+        <a href="services.html" class="mobile-nav-item">
+          <span>CAPABILITIES</span>
+        </a>
+        <a href="how-it-works.html" class="mobile-nav-item">
+          <span>METHODOLOGY</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+          <span>CONTACT</span>
+        </a>
+      </nav>
+
+      <!-- Prominent Action CTA Pill placed directly below the navigation items -->
+      <div class="pt-2">
+        <a href="contact.html" class="touch-btn-primary !min-h-[50px] px-6 py-3 justify-center w-full sm:w-auto inline-flex">
+          <span>START AN ENGAGEMENT</span>
+          <span class="material-symbols-outlined text-base ml-2">arrow_forward</span>
+        </a>
+      </div>
     </div>
 
-    <!-- Bottom CTA Button (Safe Area Aware) -->
-    <div class="pt-4 pb-2 border-t border-white/10">
-      <a href="contact.html" class="touch-btn-primary w-full justify-between">
-        <span>START AN ENGAGEMENT</span>
-        <span class="material-symbols-outlined text-base">arrow_forward</span>
-      </a>
+    <!-- Bottom Studio Footer Info in Modal -->
+    <div class="py-4 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-zinc-500 shrink-0">
+      <span>RETRIEVAL STUDIO</span>
+      <span class="text-zinc-400">© 2026</span>
     </div>
 
   </div>
