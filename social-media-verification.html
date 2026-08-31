@@ -303,10 +303,41 @@
       top: 0;
       z-index: 100000;
       background-color: rgba(7, 8, 12, 0.95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      
+      -webkit-
       border-bottom: 1px solid var(--border-color);
       box-shadow: none;
+    }
+    .hero-title {
+      font-size: clamp(30px, 5.2vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: #ffffff;
+      margin-bottom: 22px;
+      word-break: break-word;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 999px;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+    .hero-eyebrow span {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #60a5fa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .header-container {
       max-width: 1224px;
@@ -481,24 +512,27 @@
       display: none !important;
     }
 
-    /* Ultra-Minimal Typographic iOS Mobile Drawer */
+    /* Ultra-Minimal Typographic iOS Mobile Drawer - Solid & Stable */
     .mobile-drawer {
       position: fixed !important;
       top: 64px !important;
       left: 0 !important;
       right: 0 !important;
       bottom: 0 !important;
-      width: 100vw !important;
-      height: calc(100vh - 64px) !important;
-      height: calc(100dvh - 64px) !important;
-      background-color: #06070a !important;
+      width: 100% !important;
+      height: auto !important;
+      max-height: calc(100vh - 64px) !important;
+      background-color: #07080c !important;
       padding: 16px 20px 60px 20px !important;
-      overflow-y: scroll !important;
+      overflow-y: auto !important;
+      overscroll-behavior: contain !important;
       -webkit-overflow-scrolling: touch !important;
       z-index: 99999 !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
       touch-action: pan-y;
+      transform: translateZ(0);
+      will-change: transform;
     }
     .mobile-drawer.hidden {
       display: none !important;
@@ -509,6 +543,7 @@
       gap: 0;
       padding-bottom: 40px;
       max-width: 480px;
+      background-color: #07080c;
     }
     .drawer-link-main {
       font-size: 15px;
@@ -869,50 +904,67 @@
         <nav class="desktop-nav">
           <a href="index.html" class="nav-item">Home</a>
           
-          <!-- Segment 1: Recoveries -->
+                    <!-- Segment 1: Recoveries -->
           <div class="nav-dropdown-wrapper">
             <button class="nav-dropdown-trigger">
               <span>Recoveries</span>
               <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="nav-dropdown-menu">
-              <a href="instagram-recovery.html" class="dropdown-item">Instagram</a>
-              <a href="social-media-recovery.html" class="dropdown-item">Facebook</a>
-              <a href="social-media-recovery.html#whatsapp" class="dropdown-item">WhatsApp</a>
+              <a href="instagram-recovery.html" class="dropdown-item">Instagram Account Recovery</a>
+              <a href="social-media-recovery.html" class="dropdown-item">Facebook &amp; WhatsApp Recovery</a>
+              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="dropdown-item">Business Manager &amp; Ad Account</a>
             </div>
           </div>
 
-          <!-- Segment 2: Verification (Blue Badge) -->
+          <!-- Segment 2: Removals & Takedowns -->
           <div class="nav-dropdown-wrapper">
             <button class="nav-dropdown-trigger">
-              <span>Verification (Blue Badge)</span>
+              <span>Removals</span>
               <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="nav-dropdown-menu">
-              <a href="instagram-verification.html" class="dropdown-item">Instagram Custom Meta</a>
-              <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp Meta</a>
-              <a href="instagram-verification.html#legacy" class="dropdown-item">Instagram Legacy</a>
-              <a href="whatsapp-api-service.html#legacy" class="dropdown-item">WhatsApp Legacy</a>
-              <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp Business API</a>
+              <a href="account-removal.html" class="dropdown-item">Account &amp; Page Removals</a>
+              <a href="negative-news-links-removal-service.html" class="dropdown-item">Google Search De-Indexing</a>
+              <a href="orm-services.html" class="dropdown-item">Post &amp; Video Removals</a>
             </div>
           </div>
 
-          <!-- Segment 3, 4, 5: Removals, Reputation Repair & De-Indexing -->
+          <!-- Segment 3: Lookups & SPY -->
           <div class="nav-dropdown-wrapper">
             <button class="nav-dropdown-trigger">
-              <span>Removals &amp; De-Indexing</span>
+              <span>Lookups &amp; SPY</span>
               <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="nav-dropdown-menu">
-              <div style="font-size: 11px; font-weight: 700; color: #64748b; padding: 6px 16px 2px; text-transform: uppercase; letter-spacing: 0.05em;">Removals</div>
-              <a href="negative-news-links-removal-service.html#instagram-removal" class="dropdown-item">Instagram Acc Removal</a>
-              <a href="negative-news-links-removal-service.html#facebook-removal" class="dropdown-item">FB Acc/Page Removal</a>
-              <a href="negative-news-links-removal-service.html#whatsapp-removal" class="dropdown-item">WhatsApp Number Removal</a>
-              <div style="font-size: 11px; font-weight: 700; color: #64748b; padding: 6px 16px 2px; text-transform: uppercase; letter-spacing: 0.05em; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 4px;">Reputation Repair</div>
-              <a href="orm-services.html#social-post-removal" class="dropdown-item">IG/FB Post Removals</a>
-              <a href="orm-services.html#youtube-removal" class="dropdown-item">YT Video Removals</a>
-              <div style="font-size: 11px; font-weight: 700; color: #64748b; padding: 6px 16px 2px; text-transform: uppercase; letter-spacing: 0.05em; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 4px;">De-Indexing</div>
-              <a href="negative-news-links-removal-service.html" class="dropdown-item">Negative Articles Removal</a>
+              <a href="lookup-spy.html" class="dropdown-item">Account Lookups &amp; SPY Desk</a>
+              <a href="lookup-spy.html#bm-spy" class="dropdown-item">Business Manager &amp; Ad SPY</a>
+              <a href="lookup-spy.html#details-lookup" class="dropdown-item">Linked Emails, Numbers &amp; IP Lookup</a>
+            </div>
+          </div>
+
+          <!-- Segment 4: Reputation & Google Reviews -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">
+              <span>Reputation Repair</span>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="orm-services.html" class="dropdown-item">Reputation Management &amp; Post Removal</a>
+              <a href="orm-services.html#google-reviews" class="dropdown-item">5-Star Google Reviews &amp; Rating</a>
+            </div>
+          </div>
+
+          <!-- Segment 5: Verification & VIP Whitelist -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-dropdown-trigger">
+              <span>Badges &amp; Shield</span>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px; display: inline-block; vertical-align: middle;"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="instagram-verification.html" class="dropdown-item">Instagram Custom Meta Verification</a>
+              <a href="instagram-verification.html#shield" class="dropdown-item">VIP Whitelist Ban Protection</a>
+              <a href="whatsapp-api-service.html" class="dropdown-item">WhatsApp API &amp; Legacy Badge</a>
             </div>
           </div>
 
@@ -955,64 +1007,79 @@
             <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="drawer-sublinks">
-            <a href="instagram-recovery.html">Instagram</a>
-            <a href="social-media-recovery.html">Facebook</a>
-            <a href="social-media-recovery.html#whatsapp">WhatsApp</a>
+            <a href="instagram-recovery.html">Instagram Account Recovery</a>
+            <a href="social-media-recovery.html">Facebook &amp; WhatsApp Recovery</a>
+            <a href="facebook-ad-account-and-business-manager-recovery-service.html">Business Manager &amp; Ad Accounts</a>
           </div>
         </div>
 
-        <!-- Segment 2: Verification (Blue Badge) -->
+        <!-- Segment 2: Account Removals -->
         <div class="drawer-accordion-group">
           <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Verification (Blue Badge)</span>
+            <span>Account Removals</span>
             <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="drawer-sublinks">
-            <a href="instagram-verification.html">Instagram Custom Meta</a>
-            <a href="whatsapp-api-service.html">WhatsApp Meta</a>
-            <a href="instagram-verification.html#legacy">Instagram Legacy</a>
-            <a href="whatsapp-api-service.html#legacy">WhatsApp Legacy</a>
-            <a href="whatsapp-api-service.html">WhatsApp Business API</a>
+            <a href="account-removal.html">Account &amp; Page Removals Desk</a>
+            <a href="account-removal.html#instagram">Instagram Account Removal</a>
+            <a href="account-removal.html#facebook">Facebook Page / Account Removal</a>
+            <a href="account-removal.html#whatsapp">WhatsApp Number Removal</a>
+            <a href="account-removal.html#tiktok">TikTok Account Removal</a>
           </div>
         </div>
 
-        <!-- Segment 3: Removals -->
+        <!-- Segment 3: Lookups & SPY Intelligence -->
         <div class="drawer-accordion-group">
           <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
-            <span>Removals</span>
+            <span>Lookups &amp; SPY Intelligence</span>
             <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="drawer-sublinks">
-            <a href="negative-news-links-removal-service.html#instagram-removal">Instagram Acc Removal</a>
-            <a href="negative-news-links-removal-service.html#facebook-removal">FB Acc/Page Removal</a>
-            <a href="negative-news-links-removal-service.html#whatsapp-removal">WhatsApp Number Removal</a>
+            <a href="lookup-spy.html">Account Lookups &amp; SPY Desk</a>
+            <a href="lookup-spy.html#bm-spy">Business Manager &amp; Ad SPY</a>
+            <a href="lookup-spy.html#details-lookup">Linked Emails, Numbers &amp; IP Lookup</a>
           </div>
         </div>
 
-        <!-- Segment 4: Reputation Repair (BOLD) -->
+        <!-- Segment 4: De-Indexing & Websites -->
         <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false" style="font-weight: 700;">
-            <span style="font-weight: 700; color: #ffffff;">Reputation Repair</span>
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Google De-Indexing</span>
             <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="drawer-sublinks">
-            <a href="orm-services.html#social-post-removal">IG/FB Post Removals</a>
-            <a href="orm-services.html#youtube-removal">YT Video Removals</a>
+            <a href="negative-news-links-removal-service.html">Google Negative Articles Removal</a>
+            <a href="negative-news-links-removal-service.html#website-takedowns">Rogue Website Takedowns</a>
           </div>
         </div>
 
-        <!-- Segment 5: De-Indexing (BOLD) -->
+        <!-- Segment 5: Reputation Repair & Post Removals -->
         <div class="drawer-accordion-group">
-          <button type="button" class="drawer-accordion-trigger" aria-expanded="false" style="font-weight: 700;">
-            <span style="font-weight: 700; color: #ffffff;">De-Indexing</span>
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Reputation &amp; Reviews</span>
             <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="drawer-sublinks">
-            <a href="negative-news-links-removal-service.html">Negative Articles Removal</a>
+            <a href="orm-services.html">Post &amp; Reel Removals</a>
+            <a href="orm-services.html#reddit">Reddit &amp; YouTube Removals</a>
+            <a href="orm-services.html#google-reviews">5-Star Google Reviews &amp; Rating</a>
           </div>
         </div>
 
-        <!-- Segment 6: PR & Media -->
+        <!-- Segment 6: Verification & VIP Whitelisting -->
+        <div class="drawer-accordion-group">
+          <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
+            <span>Badges &amp; VIP Shield</span>
+            <svg class="accordion-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="drawer-sublinks">
+            <a href="instagram-verification.html">Instagram Custom Verification</a>
+            <a href="instagram-verification.html#shield">VIP Whitelist Ban Protection</a>
+            <a href="whatsapp-api-service.html">WhatsApp API &amp; Legacy Badge</a>
+          </div>
+        </div>
+
+        <!-- Segment 7: PR & Media -->
         <div class="drawer-accordion-group">
           <button type="button" class="drawer-accordion-trigger" aria-expanded="false">
             <span>PR &amp; Media</span>
@@ -1029,7 +1096,6 @@
             Direct to Telegram
           </a>
         </div>
-
       </div>
     </div>
     
@@ -1325,6 +1391,88 @@
               </div>
             </section>
             
+        <!-- Official Contact & Instant Telegram Inquiry Dispatch Section -->
+        <section id="contact-hub" class="block-section" style="background-color: #07080c; border-top: 1px solid rgba(255,255,255,0.06); padding: 80px 0;">
+          <div class="block-container" style="max-width: 860px; margin: 0 auto;">
+            
+            <div class="grid-text-item" style="text-align: center; margin-bottom: 32px;">
+              <p style="font-family: 'Geist Mono', monospace; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: #3b82f6; margin-bottom: 12px;">
+                GET IN TOUCH
+              </p>
+              <h2 style="font-size: 32px; font-weight: 800; color: #ffffff; margin-bottom: 14px; letter-spacing: -0.01em;">
+                Direct Inquiry &amp; Fast Support
+              </h2>
+              <p class="body-large" style="color: #94a3b8; font-size: 15px; line-height: 1.6; max-width: 600px; margin: 0 auto 24px auto;">
+                Reach out directly on Telegram or submit your username below to start your case.
+              </p>
+
+              <!-- Small Direct Contact Icons Row -->
+              <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                
+                <!-- Admin Telegram (Profile Icon) -->
+                <a href="https://t.me/unban777" target="_blank" title="Direct to Telegram" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: #0c0e15; border: 1px solid rgba(255,255,255,0.12); color: #3b82f6; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#1d4ed8'; this.style.color='#ffffff'; this.style.borderColor='#3b82f6';" onmouseout="this.style.background='#0c0e15'; this.style.color='#3b82f6'; this.style.borderColor='rgba(255,255,255,0.12)';">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </a>
+
+                <!-- Gmail / Mail Icon -->
+                <a href="mailto:support@retrievel.co.in" title="Official Email (support@retrievel.co.in)" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: #0c0e15; border: 1px solid rgba(255,255,255,0.12); color: #3b82f6; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#1d4ed8'; this.style.color='#ffffff'; this.style.borderColor='#3b82f6';" onmouseout="this.style.background='#0c0e15'; this.style.color='#3b82f6'; this.style.borderColor='rgba(255,255,255,0.12)';">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+
+                <!-- Telegram Broadcast Icon -->
+                <a href="https://t.me/retrieval" target="_blank" title="Official Broadcast (t.me/retrieval)" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: #0c0e15; border: 1px solid rgba(255,255,255,0.12); color: #3b82f6; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#1d4ed8'; this.style.color='#ffffff'; this.style.borderColor='#3b82f6';" onmouseout="this.style.background='#0c0e15'; this.style.color='#3b82f6'; this.style.borderColor='rgba(255,255,255,0.12)';">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                </a>
+
+                <!-- Web / Globe Icon -->
+                <a href="https://retrievel.co.in" title="Official Web Domain (retrievel.co.in)" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; background: #0c0e15; border: 1px solid rgba(255,255,255,0.12); color: #3b82f6; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='#1d4ed8'; this.style.color='#ffffff'; this.style.borderColor='#3b82f6';" onmouseout="this.style.background='#0c0e15'; this.style.color='#3b82f6'; this.style.borderColor='rgba(255,255,255,0.12)';">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Interactive Quick Inquiry Box to Admin Telegram (Simple 2-Field) -->
+            <div style="background-color: #0c0e15; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px 24px; max-width: 580px; margin: 0 auto;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <div style="width: 8px; height: 8px; border-radius: 50%; background: #3b82f6;"></div>
+                  <span style="font-family: 'Geist Mono', monospace; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #3b82f6;">
+                    Direct Telegram Inquiry
+                  </span>
+                </div>
+                <span style="font-size: 12px; color: #94a3b8; font-family: 'Geist Mono', monospace;">
+                  Telegram Desk
+                </span>
+              </div>
+
+              <form onsubmit="event.preventDefault(); const t = document.getElementById('inq-topic').value.trim(); const u = document.getElementById('inq-username').value.trim(); const payload = 'Direct Inquiry\n\n• Inquiry Topic: ' + (t || 'General Evaluation') + '\n• Target Username: ' + (u || 'N/A'); window.open('https://t.me/unban777?text=' + encodeURIComponent(payload), '_blank');" style="display: flex; flex-direction: column; gap: 14px;">
+                
+                <div>
+                  <label style="display: block; font-size: 11.5px; font-family: 'Geist Mono', monospace; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase;">Inquiry Topic</label>
+                  <input id="inq-topic" type="text" placeholder="e.g. Instagram Unban / Verification / Account Removal / De-Indexing..." style="width: 100%; background: #07080c; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 14px; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box;">
+                </div>
+
+                <div>
+                  <label style="display: block; font-size: 11.5px; font-family: 'Geist Mono', monospace; color: #94a3b8; margin-bottom: 6px; text-transform: uppercase;">Target Username or Link</label>
+                  <input id="inq-username" type="text" placeholder="e.g. @username or asset link" style="width: 100%; background: #07080c; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 12px 14px; color: #ffffff; font-size: 14px; outline: none; box-sizing: border-box;">
+                </div>
+
+                <button type="submit" class="grid-button-primary" style="width: 100%; justify-content: center; padding: 13px; font-size: 14px; font-weight: 700; margin-top: 4px;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                  <span>Direct to Telegram</span>
+                </button>
+
+                <div style="font-size: 11.5px; color: #64748b; text-align: center; font-family: 'Geist Mono', monospace;">
+                  Encrypted Dispatch • Zero Credential Storage • 100% Escrow Protected
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </section>
+        
   </main>
   
     <footer class="site-footer">
@@ -1415,14 +1563,12 @@
           if (iconOpen) iconOpen.classList.add('hidden');
           if (iconClose) iconClose.classList.remove('hidden');
           document.body.style.overflow = 'hidden';
-          document.documentElement.style.overflow = 'hidden';
         } else {
           drawer.classList.add('hidden');
           drawer.style.display = 'none';
           if (iconOpen) iconOpen.classList.remove('hidden');
           if (iconClose) iconClose.classList.add('hidden');
           document.body.style.overflow = '';
-          document.documentElement.style.overflow = '';
         }
       }
 

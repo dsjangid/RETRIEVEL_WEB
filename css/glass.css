@@ -5,8 +5,8 @@
   /* Best Shades of Obsidian & Void Black */
   --bg-obsidian: #07080c;
   --bg-surface: #0c0e15;
-  --bg-card: rgba(13, 17, 26, 0.78);
-  --bg-card-hover: rgba(18, 24, 38, 0.92);
+  --bg-card: #0c0e15;
+  --bg-card-hover: #11141d;
 
   /* Best Shades of Electric Precision & Midnight Blue */
   --primary-blue: #2563eb;
@@ -82,7 +82,7 @@ body {
 .orb {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(120px);
+  
   opacity: 0.55;
   mix-blend-mode: screen;
   pointer-events: none;
@@ -212,15 +212,15 @@ body {
 }
 
 .header-glass {
-  background: rgba(5, 6, 8, 0.75);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: #07080c;
+  
+  -webkit-
   border-bottom: 1px solid transparent;
   transition: all 0.3s var(--ease-apple);
 }
 
 .header-scrolled {
-  background: rgba(5, 6, 8, 0.92);
+  background: #07080c;
   border-bottom-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
@@ -231,8 +231,8 @@ body {
 
 .touch-card {
   background: var(--bg-card);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  
+  -webkit-
   border: 1px solid var(--border-card);
   border-radius: 1.5rem;
   box-shadow: 
@@ -299,8 +299,8 @@ body {
   padding: 0.65rem 1.4rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  
+  -webkit-
   border: 1px solid var(--border-subtle);
   color: var(--text-bright);
   font-weight: 500;
@@ -337,9 +337,9 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(5, 6, 8, 0.96);
-  backdrop-filter: blur(36px);
-  -webkit-backdrop-filter: blur(36px);
+  background: #07080c;
+  
+  -webkit-
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -414,7 +414,7 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
   padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(16px);
+  
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: 'Geist Mono', monospace;
   font-size: 0.6875rem;
@@ -508,4 +508,28 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* Zero Glassmorphism & Solid Clean Architecture */
+.orb, .bg-scene, .ambient-glow {
+  display: none !important;
+}
+
+.site-header {
+  background-color: #07080c !important;
+  border-bottom: 1px solid #1a1e29 !important;
+}
+
+.nav-dropdown-menu {
+  background-color: #0c0e15 !important;
+  border: 1px solid #242b3b !important;
+}
+
+.mobile-drawer {
+  background-color: #07080c !important;
+}
+
+.touch-card {
+  background: #0c0e15 !important;
+  border: 1px solid #1a1e29 !important;
 }
