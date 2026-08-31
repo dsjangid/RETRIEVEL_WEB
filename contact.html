@@ -89,15 +89,17 @@
         <a href="contact.html" class="hidden md:inline-flex touch-btn-primary !min-h-[40px] !py-1.5 !px-4 !text-xs">
           <span>Start Project</span>
         </a>
-        <button id="mobile-menu-btn" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform" aria-label="Open Navigation Menu">
-          <span class="material-symbols-outlined text-xl">menu</span>
+        <button id="mobile-menu-btn" onclick="window.openMobileNav()" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Open Navigation Menu">
+          <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
       </div>
 
     </div>
   </header>
 
-  <!-- Full-Screen Native Mobile Navigation Overlay -->
+  <!-- Full-Screen Native iPhone Navigation Overlay -->
   <div id="mobile-nav-overlay" class="mobile-nav-overlay px-5 sm:px-6 safe-top safe-bottom">
     
     <div class="h-16 flex items-center justify-between">
@@ -107,8 +109,10 @@
         </div>
         <span class="font-display font-bold text-sm text-white">RETRIEVAL</span>
       </div>
-      <button id="mobile-nav-close" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform" aria-label="Close Navigation Menu">
-        <span class="material-symbols-outlined text-xl">close</span>
+      <button id="mobile-nav-close" onclick="window.closeMobileNav()" class="w-11 h-11 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white active:scale-95 transition-transform cursor-pointer" aria-label="Close Navigation Menu">
+        <svg class="w-5 h-5 text-white pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
       </button>
     </div>
 

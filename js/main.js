@@ -1,16 +1,97 @@
 /**
- * RETRIEVAL STUDIO — iPhone Safari Optimized Interaction & Atmospheric Engine
+ * RETRIEVAL STUDIO — Fail-Proof Mobile Navigation & Atmospheric Engine
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+// Global Navigation Controller (Works directly via inline onclick and event listeners)
+window.openMobileNav = function() {
+  const overlay = document.getElementById('mobile-nav-overlay');
+  if (!overlay) return;
+  overlay.classList.add('open');
+  overlay.style.display = 'flex';
+  overlay.style.opacity = '1';
+  overlay.style.pointerEvents = 'auto';
+  overlay.style.transform = 'translateY(0)';
+  document.body.style.overflow = 'hidden';
+  document.body.style.touchAction = 'none';
+};
+
+window.closeMobileNav = function() {
+  const overlay = document.getElementById('mobile-nav-overlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  overlay.style.opacity = '0';
+  overlay.style.pointerEvents = 'none';
+  overlay.style.transform = 'translateY(-8px)';
+  setTimeout(() => {
+    if (!overlay.classList.contains('open')) {
+      overlay.style.display = 'none';
+    }
+  }, 300);
+  document.body.style.overflow = '';
+  document.body.style.touchAction = '';
+};
+
+window.toggleMobileNav = function() {
+  const overlay = document.getElementById('mobile-nav-overlay');
+  if (!overlay) return;
+  if (overlay.classList.contains('open')) {
+    window.closeMobileNav();
+  } else {
+    window.openMobileNav();
+  }
+};
+
+function initApp() {
   initBackgroundCanvas();
   initCursorSpotlight();
   initHeaderScroll();
-  initFullscreenMobileNav();
+  initMobileNavListeners();
   initSmoothScroll();
-});
+}
 
-// 1. Interactive Ambient Particle & Neural Constellation Canvas
+// Ensure execution regardless of script load timing
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
+// 1. Mobile Nav Listeners
+function initMobileNavListeners() {
+  const openBtn = document.getElementById('mobile-menu-btn');
+  const closeBtn = document.getElementById('mobile-nav-close');
+  const overlay = document.getElementById('mobile-nav-overlay');
+
+  if (openBtn) {
+    openBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.openMobileNav();
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.closeMobileNav();
+    });
+  }
+
+  if (overlay) {
+    overlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        window.closeMobileNav();
+      });
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      window.closeMobileNav();
+    }
+  });
+}
+
+// 2. Interactive Ambient Particle & Neural Constellation Canvas
 function initBackgroundCanvas() {
   const canvas = document.getElementById('ambient-canvas');
   if (!canvas) return;
@@ -20,8 +101,8 @@ function initBackgroundCanvas() {
   let particles = [];
   let mouse = { x: null, y: null, radius: 140 };
 
-  const particleCount = window.innerWidth < 768 ? 30 : 65;
-  const maxDistance = window.innerWidth < 768 ? 90 : 125;
+  const particleCount = window.innerWidth < 768 ? 28 : 60;
+  const maxDistance = window.innerWidth < 768 ? 85 : 120;
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -131,7 +212,7 @@ function initBackgroundCanvas() {
   render();
 }
 
-// 2. Interactive Cursor Spotlight / Ambient Glow
+// 3. Interactive Cursor Spotlight / Ambient Glow
 function initCursorSpotlight() {
   const spotlight = document.getElementById('cursor-spotlight');
   if (!spotlight) return;
@@ -164,7 +245,7 @@ function initCursorSpotlight() {
   animate();
 }
 
-// 3. Header scroll solidify on iPhone Safari
+// 4. Header scroll solidify on iPhone Safari
 function initHeaderScroll() {
   const header = document.getElementById('main-header');
   if (!header) return;
@@ -179,41 +260,6 @@ function initHeaderScroll() {
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-}
-
-// 4. Fullscreen Native iPhone Mobile Navigation Overlay
-function initFullscreenMobileNav() {
-  const openBtn = document.getElementById('mobile-menu-btn');
-  const closeBtn = document.getElementById('mobile-nav-close');
-  const overlay = document.getElementById('mobile-nav-overlay');
-  if (!openBtn || !overlay) return;
-
-  const openNav = () => {
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.body.style.touchAction = 'none';
-  };
-
-  const closeNav = () => {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    document.body.style.touchAction = '';
-  };
-
-  openBtn.addEventListener('click', openNav);
-  if (closeBtn) closeBtn.addEventListener('click', closeNav);
-
-  overlay.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      closeNav();
-    });
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) {
-      closeNav();
-    }
-  });
 }
 
 // 5. Native Smooth Scroll
