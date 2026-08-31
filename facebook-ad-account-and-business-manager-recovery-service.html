@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Business Manager Recovery — RETRIEVAL</title>
+  <title>Meta BM & Ad Account Recovery — RETRIEVAL</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       -webkit-tap-highlight-color: transparent;
@@ -18,406 +18,292 @@
       color: #f8fafc;
       overflow-x: hidden;
     }
-    .prose-content h1, .prose-content h2, .prose-content h3, .prose-content h4 {
-      color: #ffffff !important;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-top: 0.8em;
-      margin-bottom: 0.4em;
+    .font-mono {
+      font-family: 'Geist Mono', monospace;
     }
-    .prose-content h1 { font-size: clamp(1.75rem, 5vw, 3.2rem); line-height: 1.15; }
-    .prose-content h2 { font-size: clamp(1.4rem, 4vw, 2.5rem); line-height: 1.2; }
-    .prose-content h3 { font-size: clamp(1.2rem, 3.5vw, 2rem); line-height: 1.25; }
-    .prose-content h4 { font-size: clamp(1.05rem, 3vw, 1.5rem); line-height: 1.3; }
-    
-    .prose-content p {
-      color: #cbd5e1 !important;
-      font-weight: 300;
-      font-size: clamp(0.9rem, 2vw, 1.05rem);
-      line-height: 1.7;
-      margin-top: 0.6em;
-      margin-bottom: 0.6em;
+    .glass-card {
+      background: rgba(13, 17, 26, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
     }
-    .prose-content strong, .prose-content b {
-      color: #ffffff !important;
-      font-weight: 700;
+    .glass-card:hover {
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
     }
   </style>
 </head>
 <body class="bg-[#07080c] text-[#f8fafc] antialiased selection:bg-[#2563eb] selection:text-white">
   
-    <!-- Header Navigation (Exact Fametick Structure & Hierarchy) -->
-    <header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
-        
-        <!-- Left: Mobile Menu Toggle & Brand Logo -->
-        <div class="flex items-center gap-3">
-          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 focus:outline-none transition-all active:scale-95" aria-label="Toggle Navigation Menu">
-            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-          </button>
-
-          <a href="index.html" class="flex items-center gap-3 group">
-            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:border-blue-500/50 transition-all">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
-                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-                <polygon points="325,166 492,233 275,348 368,245" />
-                <polygon points="266,335 334,472 443,468 322,382" />
-              </svg>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-black text-sm sm:text-base tracking-[0.15em] text-white leading-none">RETRIEVAL</span>
-              <span class="font-mono text-[8px] sm:text-[9px] tracking-[0.25em] text-[#94a3b8] uppercase leading-none mt-1">retrieval.co.in</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- Desktop Navigation Menu (Matching Fametick Dropdowns) -->
-        <nav class="hidden lg:flex items-center gap-5 xl:gap-7 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
-          <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
-          
-          <!-- Dropdown: ABOUT -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>About</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-52 z-50 backdrop-blur-2xl">
-              <a href="our-story.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Story</a>
-              <a href="clients.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Our Clients</a>
-              <a href="careers.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Careers</a>
-              <a href="blog.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Blog</a>
-            </div>
-          </div>
-
-          <!-- Dropdown: REACH -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Reach</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="ipo-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">IPO Marketing Service</a>
-              <a href="twitter-trending-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Trending Services</a>
-              <a href="podcast-marketing-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Podcast Marketing</a>
-            </div>
-          </div>
-
-          <!-- Dropdown: REPUTATION -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Reputation</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="personal-branding.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Personal Branding</a>
-              <a href="wikipedia-creation.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Creation</a>
-              <a href="twitter-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Twitter Verification</a>
-              <a href="telegram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Telegram Verification</a>
-              <a href="facebook-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook Verification</a>
-              <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Verification</a>
-              <a href="social-media-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Verification</a>
-              <a href="google-knowledge-panel-1.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
-              <a href="instagram-username-claim.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Username Claim</a>
-            </div>
-          </div>
-
-          <!-- Dropdown: RECOVERY -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Recovery</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Recovery</a>
-              <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Social Media Recovery</a>
-              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Business Manager Recovery</a>
-            </div>
-          </div>
-
-          <!-- Dropdown: REMOVAL -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>Removal</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 z-50 backdrop-blur-2xl">
-              <a href="negative-news-links-removal-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Negative Links Removal</a>
-              <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">ORM Services</a>
-            </div>
-          </div>
-
-          <!-- Dropdown: PR -->
-          <div class="relative group py-2">
-            <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
-              <span>PR</span>
-              <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
-            </button>
-            <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-60 max-h-80 overflow-y-auto z-50 backdrop-blur-2xl">
-              <a href="pr-agency-in-delhi.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Delhi</a>
-              <a href="pr-agency-in-pune.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Pune</a>
-              <a href="pr-agency-in-goa.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Goa</a>
-              <a href="pr-agency-in-bangalore.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Bangalore</a>
-              <a href="pr-agency-in-jaipur.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Jaipur</a>
-              <a href="pr-agency-in-kolkata.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Kolkata</a>
-              <a href="pr-agency-in-ahmedabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Ahmedabad</a>
-              <a href="pr-agency-in-hyderabad.html" class="block px-4 py-2 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">PR Agency in Hyderabad</a>
-            </div>
-          </div>
-
-          <a href="refund.html" class="hover:text-white transition-colors py-2">Refund</a>
-        </nav>
-
-        <!-- Right: Contact CTA Button -->
-        <div class="flex items-center gap-2">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md active:scale-95 whitespace-nowrap">
-            Contact Now
-          </a>
-        </div>
-      </div>
-
-      <!-- iOS Slide-Out Mobile Navigation Drawer -->
-      <div id="mobile-nav-drawer" class="hidden lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#07080c]/98 backdrop-blur-2xl border-t border-white/10 p-6 overflow-y-auto z-50">
-        <div class="flex flex-col space-y-6">
-          <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
-          
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Recovery</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Recovery</a>
-              <a href="social-media-recovery.html" class="py-1 hover:text-white">Social Media Recovery</a>
-              <a href="facebook-ad-account-and-business-manager-recovery-service.html" class="py-1 hover:text-white">Business Manager Recovery</a>
-            </div>
-          </div>
-
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Reputation & Verification</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="personal-branding.html" class="py-1 hover:text-white">Personal Branding</a>
-              <a href="instagram-verification.html" class="py-1 hover:text-white">Instagram Verification</a>
-              <a href="facebook-verification.html" class="py-1 hover:text-white">Facebook Verification</a>
-              <a href="twitter-verification.html" class="py-1 hover:text-white">Twitter Verification</a>
-              <a href="google-knowledge-panel-1.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
-            </div>
-          </div>
-
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removal & PR</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="negative-news-links-removal-service.html" class="py-1 hover:text-white">Negative Links Removal</a>
-              <a href="orm-services.html" class="py-1 hover:text-white">ORM Services</a>
-              <a href="pr-agency-in-delhi.html" class="py-1 hover:text-white">PR Agency in Delhi</a>
-              <a href="pr-agency-in-bangalore.html" class="py-1 hover:text-white">PR Agency in Bangalore</a>
-            </div>
-          </div>
-
-          <div class="border-b border-white/5 pb-3">
-            <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Company</span>
-            <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
-              <a href="our-story.html" class="py-1 hover:text-white">Our Story</a>
-              <a href="clients.html" class="py-1 hover:text-white">Our Clients</a>
-              <a href="careers.html" class="py-1 hover:text-white">Careers</a>
-              <a href="refund.html" class="py-1 hover:text-white">Refund Policy</a>
-            </div>
-          </div>
-
-          <a href="https://t.me/unban777" target="_blank" class="w-full py-3.5 rounded-xl bg-[#2563eb] text-white text-center font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25">
-            Chat on Telegram (@unban777) →
-          </a>
-        </div>
-      </div>
-    </header>
+<!-- Header Navigation -->
+<header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
     
+    <!-- Left: Mobile Menu Toggle & Brand Logo -->
+    <div class="flex items-center gap-3">
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 focus:outline-none transition-all active:scale-95" aria-label="Toggle Navigation Menu">
+        <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:border-blue-500/50 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+            <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+            <polygon points="325,166 492,233 275,348 368,245" />
+            <polygon points="266,335 334,472 443,468 322,382" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-black text-sm sm:text-base tracking-[0.15em] text-white leading-none">RETRIEVAL</span>
+          <span class="font-mono text-[8px] sm:text-[9px] tracking-[0.25em] text-[#94a3b8] uppercase leading-none mt-1">retrieval.co.in</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="hidden lg:flex items-center gap-5 xl:gap-7 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
+      <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
+      
+      <!-- Dropdown: RECOVERIES -->
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+          <span>Recoveries</span>
+          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
+          <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Permanent Unban</a>
+          <a href="instagram-recovery.html#compromised" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Hacked & 2FA Bypass Recovery</a>
+          <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook BM & Ad Account</a>
+          <a href="social-media-recovery.html#whatsapp" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">WhatsApp & Telegram Unbans</a>
+        </div>
+      </div>
+
+      <!-- Dropdown: VERIFICATION & SHIELD -->
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+          <span>Verification & Shield</span>
+          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
+          <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Meta & Instagram Verification</a>
+          <a href="instagram-verification.html#shield" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Official Account Whitelisting</a>
+          <a href="google-knowledge-panel-1.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Creation & Defense</a>
+        </div>
+      </div>
+
+      <!-- Dropdown: REMOVALS & ORM -->
+      <div class="relative group py-2">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
+          <span>Removals & ORM</span>
+          <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
+        </button>
+        <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
+          <a href="negative-news-links-removal-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Defamatory Article Removal</a>
+          <a href="negative-news-links-removal-service.html#dmca" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">DMCA Copyright Takedowns</a>
+          <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Online Reputation Management</a>
+        </div>
+      </div>
+
+      <a href="how-it-works.html" class="hover:text-white transition-colors py-2">Protocol</a>
+      <a href="our-story.html" class="hover:text-white transition-colors py-2">Security & About</a>
+      <a href="refund.html" class="hover:text-white transition-colors py-2">Escrow Policy</a>
+    </nav>
+
+    <!-- Right: Priority Consultation CTA Button -->
+    <div class="flex items-center gap-2">
+      <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md active:scale-95 whitespace-nowrap">
+        <span>Consult Desk</span>
+        <span class="font-mono">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- iOS Slide-Out Mobile Navigation Drawer -->
+  <div id="mobile-nav-drawer" class="hidden lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#07080c]/98 backdrop-blur-2xl border-t border-white/10 p-6 overflow-y-auto z-50">
+    <div class="flex flex-col space-y-6">
+      <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
+      
+      <div class="border-b border-white/5 pb-3">
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Asset Recoveries</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Permanent Unbans</a>
+          <a href="instagram-recovery.html#compromised" class="py-1 hover:text-white">Hacked & 2FA Bypass Recovery</a>
+          <a href="social-media-recovery.html" class="py-1 hover:text-white">Facebook BM & Ad Account Recovery</a>
+          <a href="social-media-recovery.html#whatsapp" class="py-1 hover:text-white">WhatsApp & Telegram Unbans</a>
+        </div>
+      </div>
+
+      <div class="border-b border-white/5 pb-3">
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Verification & Shield</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="instagram-verification.html" class="py-1 hover:text-white">Meta Blue Tick Verification</a>
+          <a href="instagram-verification.html#shield" class="py-1 hover:text-white">Official Account Whitelisting</a>
+          <a href="google-knowledge-panel-1.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html" class="py-1 hover:text-white">Wikipedia Page Management</a>
+        </div>
+      </div>
+
+      <div class="border-b border-white/5 pb-3">
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removals & ORM</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="negative-news-links-removal-service.html" class="py-1 hover:text-white">Defamatory Article Removal</a>
+          <a href="negative-news-links-removal-service.html#dmca" class="py-1 hover:text-white">DMCA & Copyright Takedowns</a>
+          <a href="orm-services.html" class="py-1 hover:text-white">Online Reputation Management (ORM)</a>
+        </div>
+      </div>
+
+      <div class="border-b border-white/5 pb-3">
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Trust & Company</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="how-it-works.html" class="py-1 hover:text-white">Execution Protocol & SLAs</a>
+          <a href="our-story.html" class="py-1 hover:text-white">Security Infrastructure & Story</a>
+          <a href="refund.html" class="py-1 hover:text-white">Escrow & Milestone Refund Policy</a>
+          <a href="contact.html" class="py-1 hover:text-white">Direct Case Dispatch</a>
+        </div>
+      </div>
+
+      <a href="https://t.me/unban777" target="_blank" class="w-full py-3.5 rounded-xl bg-[#2563eb] text-white text-center font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25">
+        Chat with Direct Desk (@unban777) →
+      </a>
+    </div>
+  </div>
+</header>
+
   <main>
     
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h1 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 32px; --fontSizeDesktop: 48px; margin-bottom: 24px;" dir="auto">Facebook Ad Account Recovery & Business Manager Recovery </h1></div><div class="prose-content my-2 leading-relaxed"><h3 style="--lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 24px; --fontSizeDesktop: 24px;" dir="auto">When Your Entire Advertising System Suddenly Stops</h3><p class="body" dir="auto">For many businesses, Facebook advertising is the backbone of digital growth. Campaigns generate leads, retarget visitors, drive e-commerce sales, and scale brand visibility. When a <strong>Facebook Ad Account</strong> or an entire <strong>Business Manager</strong> gets disabled, operations can come to an abrupt halt.</p><p class="body" dir="auto">Access disappears. Campaigns stop delivering. Pixels stop tracking. Revenue slows down.</p><p class="body" dir="auto">At <strong>RETRIEVAL</strong>, we provide structured, policy-aligned <strong>Facebook Ad Account Recovery and Business Manager Recovery Services</strong> to help businesses restore access responsibly while protecting long-term advertising stability.</p></div>
-        <div class="my-5 text-center">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
-            <span>Consult Desk →</span>
-          </a>
-        </div>
-        
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 style=" letter-spacing: normal; margin-bottom: 40px" dir="auto">Featured On</h3></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><a href="https://www.tribuneindia.com/news/brand-connect/afzal-anis-shares-his-global-expansion-goals-for-his-firms-fametick-media-and-first-helpcare-329443" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-1-aw5ZPhfIwp4ViB60.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://yourstory.com/companies/fametick-media" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-7-XPcKKTsQXAAXtDGd.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.theweek.in/news/biz-tech/2022/07/07/Afzal-Anis-founder-of-First-HelpCare-NGO-and-Fametick-Media-and-Rony-Das-a-cyber-security-researcher-partnered-up-for-new-endeavours.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-2-aWR71kbIEfLPPeHL.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.outlookindia.com/outlook-spotlight/afzal-anis-founder-of-first-helpcare-ngo-and-aditya-sharma-founder-of-givebharat-social-welfare-foundation-join-hands-for-collaboration-news-196089" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-GJTk0BLzJeVfyJFi.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.news18.com/news/press-release/afzal-anis-the-youngest-digital-marketer-in-india-making-it-big-in-digital-marketing-worldwide-2504201.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-5-ONciFjej6iGdXVJl.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.jagran.com/jharkhand/ranchi-ranchi-based-afzal-anis-become-young-digital-marketer-of-india-20361659.html" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-3-getXcrGBXiVn8axK.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.indiatoday.in/impact-feature/story/in-conversation-with-afzal-anis-founder-of-first-helpcare-ngo-and-fametick-media-and-rony-das-a-cyber-security-researcher-1983231-2022-08-03" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-6-2SWSLHOLptuOn2yu.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div><div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-4-hwnHTXOQSmZgV1wd.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div><div class="p-2 inline-flex items-center justify-center"><a href="https://www.telegraphindia.com/india/afzal-anis-founder-of-first-helpcare-ngo-fametick-media-and-rony-das-a-cyber-security-researcher-teamed-up-for-a-startup/cid/1875643" target="_blank" rel="nofollow"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_200-h_200-cg_true-8-neNXNiiROsItvg3u.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></a></div>
-            </div>
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto">Why Facebook Ad Accounts and Business Managers Get Disabled</h2></div><div class="prose-content my-2 leading-relaxed"><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body-large" dir="auto">Facebook’s systems are built around automated risk detection. Accounts may be disabled due to policy misunderstandings, flagged ad creatives, payment disputes, suspicious activity, or linked asset violations. In many cases, advertisers receive limited explanation.</p><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto">A Business Manager restriction can be even more serious. When Business Manager is disabled, it can affect:</p><ul dir="auto"><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Ad accounts</strong></p></li><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Facebook Pages</strong></p></li><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Instagram accounts</strong></p></li><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Payment methods</strong></p></li><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Pixels and tracking data</strong></p></li><li><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"><strong>Team member access</strong></p><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto"></p></li></ul><p style="--lineHeightMobile: 1.3; --fontSizeMobile: 14px;" class="body" dir="auto">The impact spreads across the entire advertising ecosystem.</p></div>
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px" dir="auto"><span style="">Daisy Shah</span></h3></div><div class="prose-content my-2 leading-relaxed"><p class="body" style="" dir="auto"><span style=" text-transform: none; letter-spacing: normal; font-family: Roboto, arial, sans-serif; font-weight: 400">Daisy Shah is an <span class='text-[#3b82f6] font-extrabold'>India</span>n actress, model and dancer who primarily appears in Hindi and Kannada films. She has worked as an assistant to choreographer Ganesh Acharya. Her first breakthrough came when she was selected to play the lead role in the 2011 Kannada film Bhadra.</span></p></div><div class="prose-content my-2 leading-relaxed"><h1 style="" dir="auto">Client Testimonial</h1></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Sahil Khan</h3></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body"><span style="font-weight: bold">Sahil Khan</span> (born 5 November 1976) an <span class='text-[#3b82f6] font-extrabold'>India</span>n actor, fitness entrepreneur, and YouTuber, known for his role in Hindi-language films Style and Xcuse Me. Khan started his career with a musical video of Stereo Nation Nachange Sari Raat.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Jannat Zubair Rahmani is an <span class='text-[#3b82f6] font-extrabold'>India</span>n actress who predominantly acts in Hindi-language television shows and films. She is best known for portraying Kashi in Kashi – Ab Na Rahe Tera Kagaz Kora, Phulwa in Phulwa, and Pankti in Tu Aashiqui.</p></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Jannat Zubair</h3></div><div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Muddassar Khan</h3></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Mudassar Khan is an <span class='text-[#3b82f6] font-extrabold'>India</span>n dancer and film choreographer. He was a dance teacher in Thakur Public School Kandivali from 2001 to 2006. He is a judge in the dance reality television series Dance <span class='text-[#3b82f6] font-extrabold'>India</span> Dance.</p></div>
-            
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/OJ36--TfmCc?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/AK0U_Ua0D-k?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dfR6-zn0u6w?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            
-            <div class="my-6 rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0c0e15] aspect-video max-w-2xl mx-auto">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/SELrQ1jo3AY?rel=0" title="Video proof" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 dir="auto" style=" letter-spacing: normal; margin-bottom: 40px;">Why Businesses Trust RETRIEVAL</h2></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" class="body">Clients choose RETRIEVAL because we provide clarity before action. We assess feasibility honestly and communicate realistic expectations.</p><p dir="auto" class="body">With experience in PR, online reputation management, and platform compliance handling, we understand that advertising restrictions affect both revenue and brand credibility. Our approach balances technical recovery with long-term reputation protection.</p></div>
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h3 dir="auto" style="--lineHeightDesktop: 1.3; --fontSizeDesktop: 48px">Hear from our clients</h3></div><div class="prose-content my-2 leading-relaxed"><p class="body" style="" dir="auto">Discover what our clients think about our service</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">As an actress, maintaining a positive public image is essential. RETRIEVAL's social media content creation keeps my fans engaged and my brand thriving.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" class="body"><span style="font-weight: 400">Daisy Shah</span></p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" style="" class="body">Launching a new business requires strategic marketing. RETRIEVAL provided invaluable guidance and executed a comprehensive digital marketing plan.</p></div><div class="prose-content my-2 leading-relaxed"><p dir="auto" class="body"><span style="font-weight: 400">Angad Bajwa</span></p></div><div class="prose-content my-2 leading-relaxed"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div><div class="prose-content my-2 leading-relaxed"><h6 dir="auto" style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 20px">★★★★★</h6></div>
-            
-            <div class="my-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-yAST9wDj79mUZ7fx.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div><div class="p-2 inline-flex items-center justify-center"><img src="https://assets.zyrosite.com/OWDs3NB1U71asyo1/rs-w_100-h_100-cg_true-m-eSkcoP9PwOuyq5A0.webp" alt="" class="rounded-2xl max-h-16 sm:max-h-20 w-auto object-contain hover:scale-105 transition-transform" loading="lazy"></div>
-            </div>
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h2 style=" --lineHeightDesktop: 1.3; --fontSizeDesktop: 48px; margin-bottom: 40px;" dir="auto">Protect Your Advertising Infrastructure</h2></div><div class="prose-content my-2 leading-relaxed"><p class="body" dir="auto">A disabled Ad Account or Business Manager can stall growth overnight. Acting quickly — and correctly — makes all the difference.</p><p class="body" dir="auto">RETRIEVAL helps businesses navigate Facebook Ad Account and Business Manager recovery <strong>professionally, ethically, and strategically</strong>, ensuring your advertising foundation is rebuilt with stability in mind.</p></div>
-            
-            
-          </div>
-        </section>
-        
-        <section class="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/5" style="">
-          <div class="max-w-5xl mx-auto relative z-10 text-[#f8fafc]">
-            <div class="prose-content my-2 leading-relaxed"><h4 style=" --lineHeightMobile: 1.3; --lineHeightDesktop: 1.3; --fontSizeMobile: 48px; --fontSizeDesktop: 48px; margin-bottom: 24px" dir="auto">Have any questions?</h4></div>
-        <div class="my-5 text-center">
-          <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
-            <span>Consult Desk →</span>
-          </a>
-        </div>
-        
-            
-            
-          </div>
-        </section>
-        
+<section class="py-20 px-4 sm:px-6 lg:px-8 border-b border-white/10" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.98)), url('assets/images/server_infrastructure.jpg'); background-size: cover; background-position: center;">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#cbd5e1] mb-6">
+      <span class="w-2 h-2 rounded-full bg-[#2563eb]"></span>
+      <span>ENTERPRISE ASSET RESCUE</span>
+    </div>
+    <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6">
+      Meta Business Manager, WhatsApp & <span class="text-[#3b82f6]">Platform Recovery</span>
+    </h1>
+    <p class="text-sm sm:text-base text-[#94a3b8] font-light leading-relaxed max-w-2xl mx-auto mb-8">
+      Unfreezing restricted ad accounts, releasing trapped capital, unblocking enterprise WhatsApp numbers, and reclaiming hijacked executive profiles.
+    </p>
+    <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:bg-[#1d4ed8]">
+      <span>Submit Business Asset</span>
+      <span class="font-mono">→</span>
+    </a>
+  </div>
+</section>
+
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15]">
+  <div class="max-w-5xl mx-auto space-y-8">
+    
+    <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+      <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-widest block">META AD INFRASTRUCTURE</span>
+      <h3 class="text-xl font-bold text-white">Facebook Business Manager & Ad Accounts</h3>
+      <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
+        Ad account suspensions can paralyze multimillion-dollar e-commerce operations. We handle disabled Business Managers, rejected business verifications, and unlinked administrator locks through direct Meta advertising compliance channels.
+      </p>
+    </div>
+
+    <div id="whatsapp" class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+      <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-widest block">WHATSAPP OFFICIAL PROTOCOL</span>
+      <h3 class="text-xl font-bold text-white">WhatsApp Business & API Number Unbans</h3>
+      <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
+        Flagged for automated broadcast triggers or user spam reports? We process official unban petitions through WhatsApp Business internal compliance desks within 12 to 24 hours.
+      </p>
+    </div>
+
+  </div>
+</section>
+
   </main>
   
-    <!-- Footer (Exact Fametick Layout) -->
-    <footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
-                <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
-                <polygon points="325,166 492,233 275,348 368,245" />
-                <polygon points="266,335 334,472 443,468 322,382" />
-              </svg>
-            </div>
-            <div class="flex flex-col">
-              <span class="font-black text-base text-white tracking-[0.15em] leading-none">RETRIEVAL</span>
-              <span class="font-mono text-[9px] tracking-[0.25em] text-[#64748b] uppercase leading-none mt-1">retrieval.co.in</span>
-            </div>
-          </div>
-          <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
-            Leading social media recovery, verification, and reputation agency.
-          </p>
-          <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
-            <div>Email: <a href="mailto:support@retrieval.co.in" class="text-white hover:text-blue-400">support@retrieval.co.in</a></div>
-            <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
-            <div>Channel: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
-          </div>
-          <div class="text-xs text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+<!-- Footer Component -->
+<footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-[#000000] border border-white/20 p-1 flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-full h-full fill-white">
+            <polygon points="325,166 167,222 215,272 147,485 220,432 278,248" />
+            <polygon points="325,166 492,233 275,348 368,245" />
+            <polygon points="266,335 334,472 443,468 322,382" />
+          </svg>
         </div>
-
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Recovery Services</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Recovery</a></li>
-            <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Social Media Recovery</a></li>
-            <li><a href="facebook-ad-account-and-business-manager-recovery-service.html" class="hover:text-white transition-colors">Business Manager Recovery</a></li>
-            <li><a href="negative-news-links-removal-service.html" class="hover:text-white transition-colors">Negative Links Removal</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Instagram Verification</a></li>
-            <li><a href="facebook-verification.html" class="hover:text-white transition-colors">Facebook Verification</a></li>
-            <li><a href="twitter-verification.html" class="hover:text-white transition-colors">Twitter Verification</a></li>
-            <li><a href="google-knowledge-panel-1.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
-            <li><a href="whatsapp-api-service.html" class="hover:text-white transition-colors">WhatsApp API</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Quick Links</h4>
-          <ul class="space-y-2 text-xs text-[#cbd5e1]">
-            <li><a href="our-story.html" class="hover:text-white transition-colors">Our Story</a></li>
-            <li><a href="clients.html" class="hover:text-white transition-colors">Our Clients</a></li>
-            <li><a href="careers.html" class="hover:text-white transition-colors">Careers</a></li>
-            <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-            <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
-          </ul>
+        <div class="flex flex-col">
+          <span class="font-black text-base text-white tracking-[0.15em] leading-none">RETRIEVAL</span>
+          <span class="font-mono text-[9px] tracking-[0.25em] text-[#64748b] uppercase leading-none mt-1">retrieval.co.in</span>
         </div>
       </div>
-    </footer>
+      <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
+        Enterprise digital asset recovery, proactive shielding, and executive reputation defense. Zero credential exposure with 100% escrow protection.
+      </p>
+      <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
+        <div>Email: <a href="mailto:support@retrieval.co.in" class="text-white hover:text-blue-400">support@retrieval.co.in</a></div>
+        <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
+        <div>Updates: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
+      </div>
+      <div class="text-xs text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+    </div>
 
-    <!-- Floating Action Button -->
-    <a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#2563eb] text-white font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
-      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      <span class="hidden sm:inline">Direct Desk</span>
-    </a>
+    <div>
+      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Asset Recovery</h4>
+      <ul class="space-y-2 text-xs text-[#cbd5e1]">
+        <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Permanent Unban</a></li>
+        <li><a href="instagram-recovery.html#compromised" class="hover:text-white transition-colors">Hacked & 2FA Bypass Recovery</a></li>
+        <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Facebook BM & Ad Accounts</a></li>
+        <li><a href="social-media-recovery.html#whatsapp" class="hover:text-white transition-colors">WhatsApp & Telegram Unbans</a></li>
+        <li><a href="instagram-username-claim.html" class="hover:text-white transition-colors">Inactive Username Claims</a></li>
+      </ul>
+    </div>
 
-    <script>
-      function toggleMobileMenu() {
-        const drawer = document.getElementById('mobile-nav-drawer');
-        const iconOpen = document.getElementById('menu-icon-open');
-        const iconClose = document.getElementById('menu-icon-close');
-        if (drawer.classList.contains('hidden')) {
-          drawer.classList.remove('hidden');
-          iconOpen.classList.add('hidden');
-          iconClose.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-        } else {
-          drawer.classList.add('hidden');
-          iconOpen.classList.remove('hidden');
-          iconClose.classList.add('hidden');
-          document.body.style.overflow = '';
-        }
-      }
-    </script>
-    
+    <div>
+      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification & ORM</h4>
+      <ul class="space-y-2 text-xs text-[#cbd5e1]">
+        <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Meta Blue Tick Portal</a></li>
+        <li><a href="instagram-verification.html#shield" class="hover:text-white transition-colors">Official Account Whitelist</a></li>
+        <li><a href="negative-news-links-removal-service.html" class="hover:text-white transition-colors">Defamatory Article Removal</a></li>
+        <li><a href="google-knowledge-panel-1.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
+        <li><a href="wikipedia-creation.html" class="hover:text-white transition-colors">Wikipedia Page Management</a></li>
+        <li><a href="orm-services.html" class="hover:text-white transition-colors">Online Reputation Management</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Security & Trust</h4>
+      <ul class="space-y-2 text-xs text-[#cbd5e1]">
+        <li><a href="how-it-works.html" class="hover:text-white transition-colors">Direct Portal Workflow & SLA</a></li>
+        <li><a href="our-story.html" class="hover:text-white transition-colors">Security Architecture</a></li>
+        <li><a href="refund.html" class="hover:text-white transition-colors">Escrow Guarantee Policy</a></li>
+        <li><a href="contact.html" class="hover:text-white transition-colors">Direct Case Submission</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Action Button -->
+<a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 sm:px-5 py-3 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
+  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+  <span>Direct Desk</span>
+</a>
+
+<script>
+  function toggleMobileMenu() {
+    const drawer = document.getElementById('mobile-nav-drawer');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    if (drawer.classList.contains('hidden')) {
+      drawer.classList.remove('hidden');
+      iconOpen.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    } else {
+      drawer.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+
 </body>
 </html>

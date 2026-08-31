@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Execution Protocol & Security — RETRIEVAL</title>
+  <title>Standard Operating Protocol & Security — RETRIEVAL</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +26,17 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
     }
     .glass-card:hover {
-      border-color: rgba(37, 99, 235, 0.4);
+      border-color: rgba(37, 99, 235, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
     }
   </style>
 </head>
 <body class="bg-[#07080c] text-[#f8fafc] antialiased selection:bg-[#2563eb] selection:text-white">
   
+<!-- Header Navigation -->
 <header class="sticky top-0 z-50 bg-[#07080c]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
     
@@ -60,58 +63,59 @@
     </div>
 
     <!-- Desktop Navigation Menu -->
-    <nav class="hidden lg:flex items-center gap-6 xl:gap-8 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
+    <nav class="hidden lg:flex items-center gap-5 xl:gap-7 font-mono text-xs tracking-wider uppercase text-[#cbd5e1]">
       <a href="index.html" class="hover:text-white transition-colors py-2">Home</a>
       
-      <!-- Dropdown: Recoveries -->
+      <!-- Dropdown: RECOVERIES -->
       <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
           <span>Recoveries</span>
           <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
         </button>
         <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
-          <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Unbans & Recovery</a>
-          <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook BM & Page Recovery</a>
-          <a href="social-media-recovery.html#whatsapp" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">WhatsApp & Telegram Unban</a>
+          <a href="instagram-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Instagram Permanent Unban</a>
+          <a href="instagram-recovery.html#compromised" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Hacked & 2FA Bypass Recovery</a>
+          <a href="social-media-recovery.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Facebook BM & Ad Account</a>
+          <a href="social-media-recovery.html#whatsapp" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">WhatsApp & Telegram Unbans</a>
         </div>
       </div>
 
-      <!-- Dropdown: Verification & Shielding -->
+      <!-- Dropdown: VERIFICATION & SHIELD -->
       <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
           <span>Verification & Shield</span>
           <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
         </button>
         <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
           <a href="instagram-verification.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Meta & Instagram Verification</a>
           <a href="instagram-verification.html#shield" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Official Account Whitelisting</a>
-          <a href="google-knowledge-panel.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
-          <a href="google-knowledge-panel.html#wiki" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Page Management</a>
+          <a href="google-knowledge-panel-1.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Wikipedia Creation & Defense</a>
         </div>
       </div>
 
-      <!-- Dropdown: Removals & ORM -->
+      <!-- Dropdown: REMOVALS & ORM -->
       <div class="relative group py-2">
-        <button class="flex items-center gap-1.5 hover:text-white transition-colors uppercase cursor-pointer">
+        <button class="flex items-center gap-1 hover:text-white transition-colors uppercase cursor-pointer">
           <span>Removals & ORM</span>
           <span class="text-[9px] text-[#64748b] group-hover:text-white transition-colors">▾</span>
         </button>
         <div class="absolute left-0 top-full hidden group-hover:block bg-[#0c0e15] border border-white/10 rounded-2xl shadow-2xl py-2.5 w-64 z-50 backdrop-blur-2xl">
-          <a href="negative-links-removal.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Negative Article Removal</a>
-          <a href="negative-links-removal.html#dmca" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">DMCA & Copyright Takedowns</a>
-          <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Reputation Management (ORM)</a>
+          <a href="negative-news-links-removal-service.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Defamatory Article Removal</a>
+          <a href="negative-news-links-removal-service.html#dmca" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">DMCA Copyright Takedowns</a>
+          <a href="orm-services.html" class="block px-4 py-2.5 text-xs text-[#cbd5e1] hover:bg-white/5 hover:text-white transition-colors">Online Reputation Management</a>
         </div>
       </div>
 
-      <a href="services.html" class="hover:text-white transition-colors py-2">Directory</a>
       <a href="how-it-works.html" class="hover:text-white transition-colors py-2">Protocol</a>
-      <a href="our-story.html" class="hover:text-white transition-colors py-2">About</a>
+      <a href="our-story.html" class="hover:text-white transition-colors py-2">Security & About</a>
+      <a href="refund.html" class="hover:text-white transition-colors py-2">Escrow Policy</a>
     </nav>
 
-    <!-- Right: Consultation CTA Button -->
-    <div class="flex items-center gap-2 sm:gap-3">
-      <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md hover:shadow-blue-500/25 active:scale-95 whitespace-nowrap">
-        <span>Consult Agent</span>
+    <!-- Right: Priority Consultation CTA Button -->
+    <div class="flex items-center gap-2">
+      <a href="https://t.me/unban777" target="_blank" class="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white text-[#07080c] font-mono font-bold text-[10px] sm:text-xs uppercase tracking-wider hover:bg-[#2563eb] hover:text-white transition-all shadow-md active:scale-95 whitespace-nowrap">
+        <span>Consult Desk</span>
         <span class="font-mono">→</span>
       </a>
     </div>
@@ -123,40 +127,41 @@
       <a href="index.html" class="text-base font-bold text-white border-b border-white/5 pb-3">Home</a>
       
       <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Recoveries</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Unbans & Recovery</a>
-          <a href="social-media-recovery.html" class="py-1 hover:text-white">Facebook BM & Page Recovery</a>
-          <a href="social-media-recovery.html#whatsapp" class="py-1 hover:text-white">WhatsApp & Telegram Unban</a>
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Asset Recoveries</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="instagram-recovery.html" class="py-1 hover:text-white">Instagram Permanent Unbans</a>
+          <a href="instagram-recovery.html#compromised" class="py-1 hover:text-white">Hacked & 2FA Bypass Recovery</a>
+          <a href="social-media-recovery.html" class="py-1 hover:text-white">Facebook BM & Ad Account Recovery</a>
+          <a href="social-media-recovery.html#whatsapp" class="py-1 hover:text-white">WhatsApp & Telegram Unbans</a>
         </div>
       </div>
 
       <div class="border-b border-white/5 pb-3">
         <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Verification & Shield</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="instagram-verification.html" class="py-1 hover:text-white">Meta & Instagram Verification</a>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="instagram-verification.html" class="py-1 hover:text-white">Meta Blue Tick Verification</a>
           <a href="instagram-verification.html#shield" class="py-1 hover:text-white">Official Account Whitelisting</a>
-          <a href="google-knowledge-panel.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
-          <a href="google-knowledge-panel.html#wiki" class="py-1 hover:text-white">Wikipedia Page Management</a>
+          <a href="google-knowledge-panel-1.html" class="py-1 hover:text-white">Google Knowledge Panel</a>
+          <a href="wikipedia-creation.html" class="py-1 hover:text-white">Wikipedia Page Management</a>
         </div>
       </div>
 
       <div class="border-b border-white/5 pb-3">
         <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Removals & ORM</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="negative-links-removal.html" class="py-1 hover:text-white">Negative Article Removal</a>
-          <a href="negative-links-removal.html#dmca" class="py-1 hover:text-white">DMCA & Copyright Takedowns</a>
-          <a href="orm-services.html" class="py-1 hover:text-white">Reputation Management (ORM)</a>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="negative-news-links-removal-service.html" class="py-1 hover:text-white">Defamatory Article Removal</a>
+          <a href="negative-news-links-removal-service.html#dmca" class="py-1 hover:text-white">DMCA & Copyright Takedowns</a>
+          <a href="orm-services.html" class="py-1 hover:text-white">Online Reputation Management (ORM)</a>
         </div>
       </div>
 
       <div class="border-b border-white/5 pb-3">
-        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Navigation</span>
-        <div class="grid grid-cols-1 gap-2.5 pl-2 text-sm text-[#cbd5e1]">
-          <a href="services.html" class="py-1 hover:text-white">Capabilities Directory</a>
-          <a href="how-it-works.html" class="py-1 hover:text-white">Execution Protocol</a>
-          <a href="our-story.html" class="py-1 hover:text-white">About Retrieval</a>
-          <a href="contact.html" class="py-1 hover:text-white">Direct Dispatch</a>
+        <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-widest block mb-2">Trust & Company</span>
+        <div class="grid grid-cols-1 gap-2 pl-2 text-sm text-[#cbd5e1]">
+          <a href="how-it-works.html" class="py-1 hover:text-white">Execution Protocol & SLAs</a>
+          <a href="our-story.html" class="py-1 hover:text-white">Security Infrastructure & Story</a>
+          <a href="refund.html" class="py-1 hover:text-white">Escrow & Milestone Refund Policy</a>
+          <a href="contact.html" class="py-1 hover:text-white">Direct Case Dispatch</a>
         </div>
       </div>
 
@@ -169,69 +174,320 @@
 
   <main>
     
-<section class="py-20 px-4 sm:px-6 lg:px-8 border-b border-white/10" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.98)), url('assets/images/server_infrastructure.jpg'); background-size: cover; background-position: center;">
-  <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#cbd5e1] mb-6">
-      <span class="w-2 h-2 rounded-full bg-[#2563eb]"></span>
-      <span>STANDARD OPERATING PROTOCOL</span>
+<!-- Hero Section -->
+<section class="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-white/10 overflow-hidden" style="background-image: linear-gradient(to bottom, rgba(7,8,12,0.85), rgba(7,8,12,0.98)), url('assets/images/hero_globe.jpg'); background-size: cover; background-position: center;">
+  <div class="max-w-5xl mx-auto text-center relative z-10">
+    
+    <!-- Top Monospace Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#cbd5e1] mb-6 backdrop-blur-md">
+      <span class="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse"></span>
+      <span class="tracking-wider uppercase">Direct Platform Portals // Strict Zero-Credential Protocol</span>
     </div>
-    <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight mb-6">
-      How We Execute <span class="text-[#3b82f6]">& Protect</span>
+
+    <!-- Main Headline -->
+    <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] mb-6">
+      High-Tier Social Media Recovery & <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#60a5fa]">Digital Asset Defense</span>
     </h1>
-    <p class="text-base text-[#94a3b8] font-light leading-relaxed max-w-2xl mx-auto mb-8">
-      A transparent 4-stage workflow with zero credential exposure and escrow-backed milestone guarantees.
+
+    <!-- Expanded Authoritative Subtitle -->
+    <p class="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-[#94a3b8] font-light leading-relaxed mb-10">
+      When algorithmic false-positives, coordinated sabotage, or unauthorized breaches disable your digital presence, standard automated forms lead to dead-ends. <strong>RETRIEVAL</strong> executes high-tier direct-portal restorations and legal escalations for creators, public figures, and global enterprises.
     </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://t.me/unban777" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-all">
+        <span>Start Recovery Case</span>
+        <span class="font-mono">→</span>
+      </a>
+      <a href="#how-it-works" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-mono font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all">
+        Execution Protocol
+      </a>
+    </div>
+
+    <!-- Telemetry & Trust Metrics Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 pt-10 border-t border-white/10 text-left">
+      <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <div class="font-mono text-2xl sm:text-3xl font-black text-white">99.4%</div>
+        <div class="font-mono text-[10px] text-[#64748b] uppercase tracking-wider mt-1">Resolution Rate</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <div class="font-mono text-2xl sm:text-3xl font-black text-[#3b82f6]">&lt; 24h</div>
+        <div class="font-mono text-[10px] text-[#64748b] uppercase tracking-wider mt-1">Avg Urgent Turnaround</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <div class="font-mono text-2xl sm:text-3xl font-black text-white">1,200+</div>
+        <div class="font-mono text-[10px] text-[#64748b] uppercase tracking-wider mt-1">Enterprise Assets Restored</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+        <div class="font-mono text-2xl sm:text-3xl font-black text-[#3b82f6]">0 Passwords</div>
+        <div class="font-mono text-[10px] text-[#64748b] uppercase tracking-wider mt-1">Zero Credential Exposure</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0c0e15]">
-  <div class="max-w-5xl mx-auto space-y-6">
+<!-- Media Recognition & Trust Grid -->
+<section class="py-12 bg-[#0c0e15] border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <span class="font-mono text-[10px] text-[#64748b] uppercase tracking-[0.25em] block mb-6">RECOGNIZED & VERIFIED ACROSS GLOBAL MEDIA & PUBLICATIONS</span>
+    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 opacity-80 font-mono font-bold text-xs sm:text-sm tracking-widest text-[#94a3b8]">
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">THE TRIBUNE</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">YOURSTORY</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">THE WEEK</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">OUTLOOK</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">DAINIK JAGRAN</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">INDIA TODAY</span>
+      <span class="px-3 py-1 rounded bg-white/5 hover:text-white transition-colors">THE PRINT</span>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Narrative Section: Why Automated Appeals Fail -->
+<section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/10">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-14 items-center">
+    <div class="lg:col-span-7 space-y-5">
+      <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-[0.2em] block">Why Standard Appeals Fail</span>
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+        Modern Platform Moderation Is Run by Bots. Direct Escalations Require Direct Desks.
+      </h2>
+      <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed">
+        Over 97% of modern social media suspensions are automated AI algorithmic flags. When your Instagram account, Facebook Business Manager, or WhatsApp number gets restricted, the standard "Submit an Appeal" button simply feeds your data back into the exact same automated loop that banned you.
+      </p>
+      <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed">
+        <strong>RETRIEVAL operates differently.</strong> We do not fill public forms. We utilize established tier-2 partner media portals, internal compliance desks, and forensic legal affidavits to escalate cases directly to human decision-makers inside platform integrity teams.
+      </p>
+      <div class="pt-2 flex flex-wrap gap-4 font-mono text-xs">
+        <div class="flex items-center gap-2 text-white"><span class="text-[#3b82f6]">✓</span> 100% Escrow Milestone Protection</div>
+        <div class="flex items-center gap-2 text-white"><span class="text-[#3b82f6]">✓</span> Never Give Out Passwords or OTPs</div>
+        <div class="flex items-center gap-2 text-white"><span class="text-[#3b82f6]">✓</span> 24/7 Dedicated Case Handler</div>
+      </div>
+    </div>
     
-    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-6 items-start">
-      <div class="font-mono text-3xl font-black text-[#3b82f6]">01</div>
-      <div>
-        <h3 class="text-xl font-bold text-white mb-2">Case Intake & Feasibility Audit</h3>
-        <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
-          You provide the handle and ban reason. We evaluate internal ticket history, check ban depth on internal databases, and quote exact turnaround.
-        </p>
+    <div class="lg:col-span-5">
+      <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 space-y-4">
+        <div class="font-mono text-xs text-[#3b82f6] uppercase tracking-wider pb-3 border-b border-white/10 flex items-center justify-between">
+          <span>SLA & Resolution Speed</span>
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        </div>
+        <div class="space-y-3 font-mono text-xs text-[#cbd5e1]">
+          <div class="flex justify-between pb-2 border-b border-white/5">
+            <span class="text-[#94a3b8]">Initial Case Review</span>
+            <span class="text-white font-bold">&lt; 60 Minutes</span>
+          </div>
+          <div class="flex justify-between pb-2 border-b border-white/5">
+            <span class="text-[#94a3b8]">Instagram Unban Escalation</span>
+            <span class="text-white font-bold">12 - 48 Hours</span>
+          </div>
+          <div class="flex justify-between pb-2 border-b border-white/5">
+            <span class="text-[#94a3b8]">Meta Business Manager</span>
+            <span class="text-white font-bold">24 - 72 Hours</span>
+          </div>
+          <div class="flex justify-between pb-2 border-b border-white/5">
+            <span class="text-[#94a3b8]">Defamation De-indexing</span>
+            <span class="text-white font-bold">3 - 7 Days</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-[#94a3b8]">Security Model</span>
+            <span class="text-[#3b82f6] font-bold">Zero Credential</span>
+          </div>
+        </div>
+        <a href="https://t.me/unban777" target="_blank" class="w-full mt-4 py-3 rounded-xl bg-[#2563eb] text-white text-center font-mono font-bold text-xs uppercase tracking-wider block hover:bg-[#1d4ed8] transition-colors">
+          Dispatch Case to Desk →
+        </a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-6 items-start">
-      <div class="font-mono text-3xl font-black text-[#3b82f6]">02</div>
-      <div>
-        <h3 class="text-xl font-bold text-white mb-2">Escrow Fund Deposit</h3>
-        <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
-          Payment is held in a secure third-party escrow service or released only upon verified restoration proof.
-        </p>
-      </div>
+<!-- Core Service Matrix (Expanded Detailed Bento Cards) -->
+<section class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] border-b border-white/10">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-[0.2em] block mb-3">01 // Primary Capabilities</span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">Engineered Recovery & Digital Asset Defense</h2>
+      <p class="text-sm sm:text-base text-[#94a3b8] font-light mt-4">Restorations, legal takedowns, and institutional verification executed through verified platform infrastructure.</p>
     </div>
 
-    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-6 items-start">
-      <div class="font-mono text-3xl font-black text-[#3b82f6]">03</div>
-      <div>
-        <h3 class="text-xl font-bold text-white mb-2">Direct Portal Escalation</h3>
-        <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
-          Our internal team drafts legal affidavits and routes the case through direct tier-2 and executive platform portals.
-        </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1: Instagram Recovery -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Instagram Permanent Unbans</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            Direct unban petitions for artificial activity flags, impersonation strikes, Terms of Service violations, and repeat 30-day appeal rejections.
+          </p>
+        </div>
+        <a href="instagram-recovery.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Recovery Protocols</span>
+          <span>→</span>
+        </a>
       </div>
+
+      <!-- Card 2: Compromised & Hacked Accounts -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Hacked & 2FA Bypass Recovery</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            For accounts where the hacker changed email, phone number, and enabled an authenticator app. We submit direct root ownership records to regain control.
+          </p>
+        </div>
+        <a href="instagram-recovery.html#compromised" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Recovery Protocols</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Card 3: Meta BM & Ad Accounts -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Meta BM & Ad Account Recovery</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            Unfreeze disabled Facebook Business Managers, release trapped ad spend budgets, and resolve rejected business verification reviews.
+          </p>
+        </div>
+        <a href="social-media-recovery.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Recovery Protocols</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Card 4: Defamatory Link Removal -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Negative Articles & Links Removal</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            Permanent removal of defamatory news, unauthorized leaked media, and harmful blog posts from Google SERP index and host servers.
+          </p>
+        </div>
+        <a href="negative-news-links-removal-service.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Takedown Protocols</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Card 5: Meta & Telegram Verification -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Meta & Telegram Verification</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            Guaranteed badge verification for notable public figures, music artists, founders, and corporate brands via direct media submission portals.
+          </p>
+        </div>
+        <a href="instagram-verification.html" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Badge Protocols</span>
+          <span>→</span>
+        </a>
+      </div>
+
+      <!-- Card 6: Account Whitelisting -->
+      <div class="glass-card p-6 sm:p-8 rounded-3xl relative flex flex-col justify-between group">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:border-blue-500/50 transition-colors">
+            <svg class="w-6 h-6 text-[#3b82f6]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Instagram Official Whitelisting</h3>
+          <p class="text-xs sm:text-sm text-[#cbd5e1] font-light leading-relaxed mb-6">
+            Proactive anti-ban immunity layer to protect high-profile handles against competitor mass-reporting attacks and algorithmic strikes.
+          </p>
+        </div>
+        <a href="instagram-verification.html#shield" class="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-[#3b82f6] group-hover:text-white transition-colors">
+          <span>View Shield Protocols</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Step-by-Step Execution Protocol -->
+<section id="how-it-works" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 bg-[#07080c] border-b border-white/10">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-[0.2em] block mb-3">02 // Standard Operating Procedure</span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">The 4-Stage Recovery Protocol</h2>
+      <p class="text-sm sm:text-base text-[#94a3b8] font-light mt-4">Transparent execution with zero credential disclosure and milestone escrow releases.</p>
     </div>
 
-    <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 flex flex-col md:flex-row gap-6 items-start">
-      <div class="font-mono text-3xl font-black text-[#3b82f6]">04</div>
-      <div>
-        <h3 class="text-xl font-bold text-white mb-2">Access Restored & Whitelisting</h3>
-        <p class="text-xs sm:text-sm text-[#cbd5e1] leading-relaxed">
-          The account is live. You confirm full operational access. We apply proactive shielding to prevent future automated strikes.
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+        <div class="font-mono text-2xl font-black text-[#3b82f6]">STAGE 01 // CASE INTAKE</div>
+        <h3 class="text-lg font-bold text-white">Forensic Ban Audit & Depth Verification</h3>
+        <p class="text-xs text-[#cbd5e1] leading-relaxed">
+          Submit your username, suspension date, and error screen. We check internal platform databases to verify if the ban is algorithmic, manual, or legal, and quote an exact turnaround SLA.
         </p>
       </div>
-    </div>
 
+      <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+        <div class="font-mono text-2xl font-black text-[#3b82f6]">STAGE 02 // ESCROW DEPOSIT</div>
+        <h3 class="text-lg font-bold text-white">Secured Milestone & Financial Protection</h3>
+        <p class="text-xs text-[#cbd5e1] leading-relaxed">
+          Payment is placed into a secured escrow account. You never risk funds upfront — capital is only settled once live account reactivation is confirmed by you.
+        </p>
+      </div>
+
+      <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+        <div class="font-mono text-2xl font-black text-[#3b82f6]">STAGE 03 // DIRECT DISPATCH</div>
+        <h3 class="text-lg font-bold text-white">Tier-2 Internal Compliance Escalation</h3>
+        <p class="text-xs text-[#cbd5e1] leading-relaxed">
+          Our internal desk prepares legal affidavits and routes your case through direct partner compliance portals, bypassing automated frontline review queues.
+        </p>
+      </div>
+
+      <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-3">
+        <div class="font-mono text-2xl font-black text-[#3b82f6]">STAGE 04 // LIVE RESTORATION</div>
+        <h3 class="text-lg font-bold text-white">Access Reclaimed & Proactive Shielding</h3>
+        <p class="text-xs text-[#cbd5e1] leading-relaxed">
+          Your account is fully restored with followers, content, and ad accounts intact. We apply proactive shielding protocols to safeguard against repeat strikes.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Direct Escalation Inquiry Banner -->
+<section class="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0e15] relative">
+  <div class="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl border border-white/10 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-blue-600/10 pointer-events-none"></div>
+    <span class="font-mono text-xs text-[#3b82f6] uppercase tracking-[0.2em] block mb-3">Direct Escalation Desk</span>
+    <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">Have an Active Suspension or Brand Crisis?</h2>
+    <p class="text-xs sm:text-sm text-[#94a3b8] font-light max-w-xl mx-auto mb-8">
+      Connect directly with our senior case handlers via Telegram (<a href="https://t.me/unban777" class="text-blue-400 font-bold">@unban777</a>). Initial case audits and feasibility reviews are conducted within 60 minutes.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://t.me/unban777" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-500/30 hover:bg-[#1d4ed8] transition-all">
+        <span>Connect with Desk (@unban777)</span>
+        <span class="font-mono">→</span>
+      </a>
+      <a href="mailto:support@retrieval.co.in" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-mono font-bold text-xs uppercase tracking-wider hover:bg-white/10 transition-all">
+        Email: support@retrieval.co.in
+      </a>
+    </div>
   </div>
 </section>
 
   </main>
   
+<!-- Footer Component -->
 <footer class="bg-[#050608] text-[#94a3b8] py-14 sm:py-16 border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
     <div>
@@ -249,14 +505,14 @@
         </div>
       </div>
       <p class="text-xs text-[#94a3b8] leading-relaxed mb-4">
-        High-tier social media recovery, enterprise verification, and targeted digital asset defense.
+        Enterprise digital asset recovery, proactive shielding, and executive reputation defense. Zero credential exposure with 100% escrow protection.
       </p>
       <div class="space-y-1 text-xs text-[#cbd5e1] font-mono">
         <div>Email: <a href="mailto:support@retrieval.co.in" class="text-white hover:text-blue-400">support@retrieval.co.in</a></div>
         <div>Desk: <a href="https://t.me/unban777" target="_blank" class="text-white hover:text-blue-400">@unban777</a></div>
         <div>Updates: <a href="https://t.me/retrieval" target="_blank" class="text-white hover:text-blue-400">t.me/retrieval</a></div>
       </div>
-      <div class="text-[11px] text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
+      <div class="text-xs text-[#64748b] font-mono mt-4">© 2026 RETRIEVAL. All rights reserved.</div>
     </div>
 
     <div>
@@ -264,36 +520,38 @@
       <ul class="space-y-2 text-xs text-[#cbd5e1]">
         <li><a href="instagram-recovery.html" class="hover:text-white transition-colors">Instagram Permanent Unban</a></li>
         <li><a href="instagram-recovery.html#compromised" class="hover:text-white transition-colors">Hacked & 2FA Bypass Recovery</a></li>
-        <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Facebook BM & Page Restoration</a></li>
+        <li><a href="social-media-recovery.html" class="hover:text-white transition-colors">Facebook BM & Ad Accounts</a></li>
         <li><a href="social-media-recovery.html#whatsapp" class="hover:text-white transition-colors">WhatsApp & Telegram Unbans</a></li>
+        <li><a href="instagram-username-claim.html" class="hover:text-white transition-colors">Inactive Username Claims</a></li>
       </ul>
     </div>
 
     <div>
       <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Verification & ORM</h4>
       <ul class="space-y-2 text-xs text-[#cbd5e1]">
-        <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Meta Blue Tick Verification</a></li>
-        <li><a href="instagram-verification.html#shield" class="hover:text-white transition-colors">Instagram Official Whitelist</a></li>
-        <li><a href="negative-links-removal.html" class="hover:text-white transition-colors">Defamatory Article Takedowns</a></li>
-        <li><a href="google-knowledge-panel.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
+        <li><a href="instagram-verification.html" class="hover:text-white transition-colors">Meta Blue Tick Portal</a></li>
+        <li><a href="instagram-verification.html#shield" class="hover:text-white transition-colors">Official Account Whitelist</a></li>
+        <li><a href="negative-news-links-removal-service.html" class="hover:text-white transition-colors">Defamatory Article Removal</a></li>
+        <li><a href="google-knowledge-panel-1.html" class="hover:text-white transition-colors">Google Knowledge Panel</a></li>
+        <li><a href="wikipedia-creation.html" class="hover:text-white transition-colors">Wikipedia Page Management</a></li>
         <li><a href="orm-services.html" class="hover:text-white transition-colors">Online Reputation Management</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Protocol & Trust</h4>
+      <h4 class="font-mono font-bold text-xs text-white uppercase tracking-wider mb-4 pb-1 border-b border-white/10">Security & Trust</h4>
       <ul class="space-y-2 text-xs text-[#cbd5e1]">
-        <li><a href="services.html" class="hover:text-white transition-colors">Capabilities Directory</a></li>
-        <li><a href="how-it-works.html" class="hover:text-white transition-colors">Execution SLA & Security</a></li>
-        <li><a href="our-story.html" class="hover:text-white transition-colors">Security Infrastructure</a></li>
-        <li><a href="contact.html" class="hover:text-white transition-colors">Encrypted Case Dispatch</a></li>
+        <li><a href="how-it-works.html" class="hover:text-white transition-colors">Direct Portal Workflow & SLA</a></li>
+        <li><a href="our-story.html" class="hover:text-white transition-colors">Security Architecture</a></li>
+        <li><a href="refund.html" class="hover:text-white transition-colors">Escrow Guarantee Policy</a></li>
+        <li><a href="contact.html" class="hover:text-white transition-colors">Direct Case Submission</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<!-- Floating Action Button for Telegram / WhatsApp Direct Desk -->
-<a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2.5 px-4 sm:px-5 py-3 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
+<!-- Floating Action Button -->
+<a href="https://t.me/unban777" target="_blank" class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 sm:px-5 py-3 rounded-full bg-[#2563eb] text-white font-mono font-bold text-xs uppercase tracking-wider shadow-2xl shadow-blue-500/40 hover:bg-[#1d4ed8] hover:scale-105 active:scale-95 transition-transform" aria-label="Direct Telegram Dispatch">
   <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
   <span>Direct Desk</span>
 </a>
