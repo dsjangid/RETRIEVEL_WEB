@@ -56,6 +56,7 @@ function initApp() {
   initHeaderScroll();
   initMobileNavListeners();
   initSmoothScroll();
+  initScrollReveal();
 }
 
 // Ensure execution regardless of script load timing
@@ -299,5 +300,35 @@ function initSmoothScroll() {
         });
       }
     });
+  });
+}
+
+// 6. Scroll Reveal Observer (Smooth entrance from Down to Up)
+function initScrollReveal() {
+  const elements = document.querySelectorAll('section, .touch-card, .timeline-node');
+  
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.04
+  });
+
+  elements.forEach(el => {
+    if (!el.classList.contains('no-reveal')) {
+      el.classList.add('reveal');
+      observer.observe(el);
+    }
   });
 }

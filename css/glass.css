@@ -417,3 +417,51 @@ button, a, .touch-btn-primary, .touch-btn-secondary, .touch-card, .mobile-nav-it
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
+
+/* ==========================================================================
+   Smooth Upward Entrance & Scroll Reveal Animation (Down to Up)
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s var(--ease-apple) forwards;
+}
+
+/* Scroll-triggered reveal elements (Down to Up) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s var(--ease-apple), transform 0.7s var(--ease-apple);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay utilities */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .animate-fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
