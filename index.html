@@ -48,7 +48,7 @@
 </head>
 <body class="bg-obsidian text-zinc-100 min-h-screen relative antialiased selection:bg-primary selection:text-white">
 
-  <!-- Atmospheric Background Layer System (Orbs, Noise, Dot Matrix & Canvas) -->
+  <!-- Atmospheric Background Layer System -->
   <div class="bg-scene">
     <div class="orb orb-primary"></div>
     <div class="orb orb-cyan"></div>
@@ -62,16 +62,16 @@
 
   <!-- Floating Island Navigation -->
   <header class="fixed top-6 left-0 right-0 z-50 px-4 sm:px-8 max-w-6xl mx-auto">
-    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-3 flex items-center justify-between transition-all duration-300">
+    <nav class="agency-island-nav rounded-full px-5 sm:px-7 py-2.5 flex items-center justify-between transition-all duration-300">
       
-      <!-- Brand & Geometric Logo -->
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full overflow-hidden border border-white/20 bg-black/80 p-1.5 flex items-center justify-center group-hover:border-white/40 transition-colors">
-          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"/>
+      <!-- Brand & Geometric Logo (Clean Vertically Aligned) -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-8 h-8 rounded-lg overflow-hidden border border-white/20 bg-black flex items-center justify-center p-0.5 group-hover:border-white/40 transition-colors shrink-0 shadow-sm">
+          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"/>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col justify-center">
           <span class="font-display font-bold tracking-tight text-sm text-white leading-none">RETRIEVAL</span>
-          <span class="font-mono text-[9px] tracking-widest text-zinc-400 uppercase leading-none mt-1">STUDIO // SYSTEMS</span>
+          <span class="font-mono text-[8px] tracking-[0.2em] text-zinc-400 uppercase leading-none mt-1">SYSTEMS STUDIO</span>
         </div>
       </a>
 
@@ -168,12 +168,18 @@
               </p>
             </div>
 
-            <!-- Center Logo Emblem -->
+            <!-- Center Telemetry Metric (Clean Code UI, No Logo Image) -->
             <div class="md:col-span-4 flex flex-col items-center justify-center">
-              <div class="w-32 h-32 rounded-3xl border border-white/10 bg-black/90 flex items-center justify-center p-6 shadow-2xl">
-                <img src="assets/logo.jpeg" alt="RETRIEVAL Emblem" class="w-full h-full object-contain"/>
+              <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl border border-white/10 bg-black/80 flex flex-col items-center justify-center p-4 relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/15 to-transparent pointer-events-none"></div>
+                <div class="font-mono text-2xl sm:text-3xl font-extrabold text-white tracking-tight">0.28<span class="text-xs text-emerald-400 font-normal ml-0.5">ms</span></div>
+                <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mt-1">P99 DISPATCH</div>
+                <div class="flex items-center gap-1.5 mt-2.5 px-2.5 py-0.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-[9px] font-mono text-emerald-400">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span>ACTIVE</span>
+                </div>
               </div>
-              <span class="font-mono text-[10px] text-zinc-500 mt-3 tracking-widest uppercase">PRECISION ARCHITECTURE</span>
+              <span class="font-mono text-[10px] text-zinc-500 mt-3 tracking-widest uppercase">REAL-TIME TELEMETRY</span>
             </div>
 
             <!-- Right Key Metrics -->
@@ -428,13 +434,14 @@
     </section>
 
 
-    <!-- Agency Project Inquiry Section -->
+    <!-- Agency Project Inquiry Section (Clean, No Logo Image) -->
     <section class="pt-32">
       <div class="double-bezel">
         <div class="double-bezel-inner p-8 sm:p-14 text-center max-w-3xl mx-auto">
           
-          <div class="w-12 h-12 rounded-2xl border border-white/20 bg-black/80 p-2 mx-auto mb-6 flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-400 mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>CLIENT ENGAGEMENTS</span>
           </div>
 
           <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight mb-4">
@@ -463,20 +470,18 @@
   </main>
 
 
-  <!-- Minimalist Studio Footer -->
+  <!-- Minimalist Studio Footer (Clean Typographic Branding, No Logo Image) -->
   <footer class="border-t border-white/10 bg-black/80 backdrop-blur-xl relative z-10 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-sans text-zinc-400">
       
+      <!-- Brand Info -->
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-full overflow-hidden border border-white/20 bg-black p-1 flex items-center justify-center">
-          <img src="assets/logo.jpeg" alt="RETRIEVAL" class="w-full h-full object-contain"/>
-        </div>
-        <div>
-          <span class="text-white font-medium">RETRIEVAL</span>
-          <span class="text-zinc-500 ml-2">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
-        </div>
+        <span class="text-white font-bold font-display tracking-tight text-sm">RETRIEVAL</span>
+        <span class="text-zinc-600 font-mono text-[11px]">/</span>
+        <span class="text-zinc-500 text-xs">© 2026 RETRIEVAL SYSTEMS STUDIO.</span>
       </div>
 
+      <!-- Navigation Links -->
       <div class="flex items-center gap-6">
         <a href="#work" class="hover:text-white transition-colors">Work</a>
         <a href="services.html" class="hover:text-white transition-colors">Capabilities</a>
@@ -484,6 +489,7 @@
         <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
       </div>
 
+      <!-- Studio Status Badge -->
       <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
         <span>STUDIO ONLINE // SFO &amp; NYC</span>
