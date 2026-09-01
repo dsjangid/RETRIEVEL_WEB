@@ -78,6 +78,8 @@ html {
 body {
   position: relative;
   background-color: #07090e;
+  background-image: radial-gradient(ellipse 70% 380px at 50% 0px, rgba(37, 99, 235, 0.08), transparent 70%);
+  background-repeat: no-repeat;
   color: var(--text-body);
   font-family: var(--font-primary);
   font-size: 14.5px;
@@ -101,10 +103,6 @@ body {
 .reveal-on-scroll {
   opacity: 1 !important;
   transform: none !important;
-}
-
-img, svg, a, button, .bento-card, .contact-icon-card, .faq-question, .nav-item, .dropdown-item, .footer-icon-btn {
-  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
 }
 
 [style*="color: #3b82f6"],
@@ -217,7 +215,6 @@ a {
   color: inherit;
   text-decoration: none;
   touch-action: manipulation;
-  transition: color 0.15s ease, opacity 0.15s ease;
 }
 
 button, a, input, select, textarea {
@@ -314,7 +311,6 @@ button, a, input, select, textarea {
   justify-content: center;
   padding: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-  transition: border-color 0.15s ease, transform 0.12s var(--ease-apple);
 }
 
 .brand-logo-link:active .brand-logo-badge {
@@ -377,7 +373,6 @@ button, a, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  transition: color 0.15s ease;
 }
 
 .nav-item:hover, .nav-dropdown-trigger:hover {
@@ -407,12 +402,6 @@ button, a, input, select, textarea {
 .nav-dropdown-wrapper:hover .nav-dropdown-menu,
 .nav-dropdown-wrapper.touch-active .nav-dropdown-menu {
   display: block;
-  animation: fadeInMenu 0.14s var(--ease-apple) forwards;
-}
-
-@keyframes fadeInMenu {
-  from { opacity: 0; transform: translateY(3px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .dropdown-item {
@@ -424,7 +413,6 @@ button, a, input, select, textarea {
   font-weight: 450;
   color: #cbd5e1;
   text-decoration: none;
-  transition: background 0.12s ease, color 0.12s ease;
 }
 
 .dropdown-item:hover {
@@ -457,7 +445,6 @@ button, a, input, select, textarea {
   text-decoration: none;
   border: 1px solid #ffffff;
   box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
-  transition: transform 0.12s var(--ease-apple), background-color 0.15s ease;
   white-space: nowrap;
 }
 
@@ -480,7 +467,6 @@ button, a, input, select, textarea {
   color: #ffffff;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.12s ease, transform 0.12s var(--ease-apple);
 }
 
 .mobile-toggle-btn:active {
@@ -515,12 +501,6 @@ button, a, input, select, textarea {
 
 .mobile-drawer.active {
   display: block !important;
-  animation: drawerSlide 0.18s var(--ease-apple) forwards;
-}
-
-@keyframes drawerSlide {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .drawer-inner {
@@ -564,7 +544,6 @@ button, a, input, select, textarea {
 
 .drawer-accordion-trigger .accordion-arrow {
   color: var(--text-muted);
-  transition: transform 0.18s var(--ease-apple);
 }
 
 .drawer-accordion-group.active .accordion-arrow {
@@ -623,7 +602,6 @@ button, a, input, select, textarea {
   min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
-  transition: border-color 0.15s ease;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -660,7 +638,6 @@ button, a, input, select, textarea {
   text-decoration: none;
   border: 1px solid #ffffff;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.12);
-  transition: transform 0.14s var(--ease-apple), background-color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -668,7 +645,6 @@ button, a, input, select, textarea {
 @media (hover: hover) and (pointer: fine) {
   .grid-button-primary:hover, .btn-primary:hover, .touch-btn-primary:hover {
     background-color: #f8fafc;
-    transform: translateY(-1px);
     box-shadow: 0 4px 16px rgba(255, 255, 255, 0.22);
   }
 }
@@ -694,7 +670,6 @@ button, a, input, select, textarea {
   letter-spacing: -0.01em;
   text-decoration: none;
   border: 1px solid var(--border-subtle);
-  transition: transform 0.14s var(--ease-apple), background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -704,7 +679,6 @@ button, a, input, select, textarea {
     background-color: rgba(255, 255, 255, 0.06);
     border-color: var(--border-medium);
     color: #ffffff;
-    transform: translateY(-1.5px);
   }
 }
 
@@ -745,13 +719,11 @@ button, a, input, select, textarea {
   border-radius: var(--radius-card);
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  transition: transform 0.12s var(--ease-apple), border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .contact-icon-card:hover {
   border-color: var(--border-medium);
   background-color: var(--bg-card-hover);
-  transform: translateY(-2px);
 }
 
 .contact-icon-card:active {
@@ -768,7 +740,6 @@ button, a, input, select, textarea {
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .contact-icon-card:hover .contact-icon-circle {
@@ -829,7 +800,6 @@ button, a, input, select, textarea {
   border: 1px solid var(--border-subtle);
   color: var(--text-muted);
   flex-shrink: 0;
-  transition: transform 0.18s var(--ease-apple), background-color 0.15s ease, color 0.15s ease;
   font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1;
@@ -897,7 +867,6 @@ button, a, input, select, textarea {
   color: #ffffff;
   border: 1px solid var(--border-subtle);
   text-decoration: none;
-  transition: transform 0.12s var(--ease-apple), background-color 0.12s ease;
 }
 
 .footer-icon-btn:hover {
@@ -932,7 +901,6 @@ button, a, input, select, textarea {
   font-size: 13px;
   color: var(--text-body);
   text-decoration: none;
-  transition: color 0.12s ease;
 }
 
 .footer-links a:hover {
@@ -967,7 +935,6 @@ button, a, input, select, textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   z-index: 900;
-  transition: transform 0.12s var(--ease-apple), background-color 0.15s ease;
   text-decoration: none;
 }
 
@@ -1016,7 +983,6 @@ button, a, input, select, textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .review-card:hover, .case-study-card:hover {
@@ -1092,7 +1058,6 @@ button, a, input, select, textarea {
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .form-input:focus {
@@ -1224,7 +1189,7 @@ button, a, input, select, textarea {
 .rounded-2xl { border-radius: 1rem; }
 .rounded-3xl { border-radius: 1.5rem; }
 .opacity-80 { opacity: 0.8; }
-.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+.transition-colors { }
 
 @media (min-width: 640px) {
   .sm:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
