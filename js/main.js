@@ -91,91 +91,15 @@ window.dispatchToTelegram = function(topicInputId, targetInputId) {
 };
 
 function initApp() {
-  // Clean up any previous ambient containers if present in DOM
-  const existingAmbient = document.querySelector('.ambient-light-container');
+  // Clean up any previous ambient/spotlight containers if present in DOM
+  const existingAmbient = document.querySelector('.ambient-light-container, .interactive-spotlight');
   if (existingAmbient) existingAmbient.remove();
 
-  initInteractiveSpotlight();
   initHeaderScroll();
   initMobileAccordions();
   initSmoothScroll();
   initResponsiveWatcher();
   initDropdownToggles();
-  initScrollReveal();
-}
-
-function initInteractiveSpotlight() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  let spotlight = document.querySelector('.interactive-spotlight');
-  if (!spotlight) {
-    spotlight = document.createElement('div');
-    spotlight.className = 'interactive-spotlight';
-    spotlight.setAttribute('aria-hidden', 'true');
-    document.body.prepend(spotlight);
-  }
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 3;
-  let currX = mouseX;
-  let currY = mouseY;
-  let isMoving = false;
-
-  const updateSpotlight = () => {
-    currX += (mouseX - currX) * 0.09;
-    currY += (mouseY - currY) * 0.09;
-    spotlight.style.transform = `translate3d(${currX}px, ${currY}px, 0)`;
-
-    if (Math.abs(mouseX - currX) > 0.2 || Math.abs(mouseY - currY) > 0.2) {
-      requestAnimationFrame(updateSpotlight);
-    } else {
-      isMoving = false;
-    }
-  };
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    if (!isMoving) {
-      isMoving = true;
-      spotlight.classList.add('active');
-      requestAnimationFrame(updateSpotlight);
-    }
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', () => {
-    spotlight.classList.remove('active');
-  });
-}
-
-function initScrollReveal() {
-  if (!('IntersectionObserver' in window)) {
-    document.querySelectorAll('.bento-card, .review-card, .case-study-card, .stat-item, .faq-item, .grid-form-card, section h2, .glass-card, .touch-card')
-      .forEach(el => el.classList.add('revealed'));
-    return;
-  }
-
-  const elements = document.querySelectorAll('.bento-card, .review-card, .case-study-card, .stat-item, .faq-item, .grid-form-card, section h2, .glass-card, .touch-card');
-  
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.02,
-    rootMargin: '0px 0px 60px 0px'
-  });
-
-  elements.forEach((el, index) => {
-    el.classList.add('reveal-on-scroll');
-    if (el.parentElement && (el.parentElement.classList.contains('stats-metrics-grid') || el.parentElement.classList.contains('grid-capabilities'))) {
-      el.style.transitionDelay = `${(index % 4) * 0.05}s`;
-    }
-    observer.observe(el);
-  });
 }
 
 function initHeaderScroll() {
