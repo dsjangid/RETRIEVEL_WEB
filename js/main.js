@@ -30,7 +30,19 @@ window.toggleMobileMenu = function(e) {
   }
 };
 
-window.openMobileNav = window.toggleMobileMenu;
+window.openMobileNav = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const drawer = document.getElementById('mobile-nav-drawer') || document.getElementById('mobile-nav-overlay');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  if (!drawer) return;
+  drawer.classList.remove('hidden');
+  drawer.classList.add('active');
+  drawer.style.display = 'block';
+  if (iconOpen) iconOpen.classList.add('hidden');
+  if (iconClose) iconClose.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+};
 window.closeMobileNav = function(e) {
   if (e && e.preventDefault) e.preventDefault();
   const drawer = document.getElementById('mobile-nav-drawer') || document.getElementById('mobile-nav-overlay');
@@ -131,8 +143,8 @@ function initMobileAccordions() {
     });
   });
 
-  // Close drawer on clicking inner sublinks
-  const links = document.querySelectorAll('.drawer-sublinks a, .drawer-link-main');
+  // Close drawer on clicking inner sublinks or CTA links
+  const links = document.querySelectorAll('.drawer-sublinks a, .drawer-link-main, .drawer-inner a');
   links.forEach(link => {
     link.addEventListener('click', () => {
       window.closeMobileNav();
@@ -162,6 +174,9 @@ function initDropdownToggles() {
       trigger.addEventListener('click', (e) => {
         if (window.innerWidth >= 1024 && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
           e.preventDefault();
+          wrappers.forEach(w => {
+            if (w !== wrapper) w.classList.remove('touch-active');
+          });
           wrapper.classList.toggle('touch-active');
         }
       });
@@ -179,7 +194,7 @@ function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
-      if (!href || href === '#') return;
+      if (!href || href === '#' || href === '#!') return;
       try {
         const targetId = href.replace(/^#/, '');
         const target = document.getElementById(targetId) || document.querySelector(href);
@@ -187,7 +202,7 @@ function initSmoothScroll() {
           e.preventDefault();
           const headerOffset = 80;
           const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition = elementPosition + (window.scrollY || window.pageYOffset || 0) - headerOffset;
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'

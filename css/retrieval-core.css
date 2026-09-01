@@ -1109,7 +1109,7 @@ button, a, input, select, textarea {
 .max-w-5xl { max-width: 64rem; }
 .max-w-7xl { max-width: 80rem; }
 
-.gap-1\.5, .gap-1\.5 { gap: 0.375rem; }
+.gap-1\.5 { gap: 0.375rem; }
 .gap-2 { gap: 0.5rem; }
 .gap-4 { gap: 1rem; }
 .gap-6 { gap: 1.5rem; }
@@ -1193,7 +1193,7 @@ button, a, input, select, textarea {
 .rounded-2xl { border-radius: 1rem; }
 .rounded-3xl { border-radius: 1.5rem; }
 .opacity-80 { opacity: 0.8; }
-.transition-colors { }
+.transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
 
 @media (min-width: 640px) {
   .sm:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
