@@ -79,11 +79,15 @@ body {
   position: relative;
   background-color: #07090e;
   background-image: 
-    radial-gradient(circle 1px at center, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    radial-gradient(ellipse 60% 360px at 50% 0px, rgba(37, 99, 235, 0.035), transparent 70%),
-    linear-gradient(to bottom, rgba(7, 9, 14, 0.4) 0%, #07090e 100%);
-  background-size: 32px 32px, 100% 100%, 100% 100%;
-  background-attachment: fixed, scroll, fixed;
+    radial-gradient(ellipse 85% 580px at 50% -40px, rgba(37, 99, 235, 0.15) 0%, rgba(99, 102, 241, 0.06) 45%, transparent 75%),
+    radial-gradient(circle 520px at 90% 28%, rgba(30, 58, 138, 0.09) 0%, transparent 65%),
+    radial-gradient(circle 540px at 10% 62%, rgba(79, 70, 229, 0.07) 0%, transparent 65%),
+    radial-gradient(circle 500px at 85% 88%, rgba(37, 99, 235, 0.08) 0%, transparent 65%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    radial-gradient(circle 1px at center, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px, 48px 48px;
+  background-attachment: scroll, scroll, scroll, scroll, fixed, fixed, fixed;
   color: var(--text-body);
   font-family: var(--font-primary);
   font-size: 14.5px;
@@ -108,7 +112,35 @@ body::before {
   height: 100vh;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(ellipse 80% 400px at 50% -80px, rgba(56, 114, 224, 0.025), transparent 65%);
+  background: radial-gradient(ellipse 90% 480px at 50% -80px, rgba(56, 114, 224, 0.08) 0%, transparent 70%);
+  animation: atmosphericPulse 18s ease-in-out infinite alternate;
+}
+
+@keyframes atmosphericPulse {
+  0% { opacity: 0.75; transform: scaleY(1); }
+  100% { opacity: 1; transform: scaleY(1.08); }
+}
+
+.interactive-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.065) 0%, rgba(99, 102, 241, 0.02) 40%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  will-change: transform;
+}
+
+.interactive-spotlight.active {
+  opacity: 1;
 }
 
 .site-header, main, .site-footer {
@@ -116,36 +148,48 @@ body::before {
   z-index: 1;
 }
 
-/* Fluid Scroll Reveal */
+/* Fluid Scroll Reveal & Hardware Acceleration */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
+  transform: translate3d(0, 14px, 0);
+  transition: opacity 0.5s var(--ease-apple), transform 0.5s var(--ease-apple);
   will-change: opacity, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .reveal-on-scroll.revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translate3d(0, 14px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .hero-copy > * {
-  animation: fadeUp 0.7s var(--ease-apple) both;
+  animation: fadeUp 0.65s var(--ease-apple) both;
+  will-change: opacity, transform;
 }
 
-.hero-copy > *:nth-child(2) { animation-delay: 0.06s; }
-.hero-copy > *:nth-child(3) { animation-delay: 0.12s; }
+.hero-copy > *:nth-child(2) { animation-delay: 0.05s; }
+.hero-copy > *:nth-child(3) { animation-delay: 0.1s; }
+.hero-copy > *:nth-child(4) { animation-delay: 0.15s; }
 .hero-copy > *:nth-child(4) { animation-delay: 0.18s; }
 
 img, svg, a, button, .bento-card, .contact-icon-card, .faq-question, .nav-item, .dropdown-item, .footer-icon-btn {
